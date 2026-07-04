@@ -183,7 +183,10 @@ function DiseaseSection({
 
   return (
     <div className="mt-12">
-      <h3 className="font-display text-2xl font-bold text-foreground">{title}</h3>
+      <h3
+        id={title === "Skin Diseases" ? "skin-diseases" : title === "Hair Diseases" ? "hair-diseases" : undefined}
+        className="font-display text-2xl font-bold text-foreground scroll-mt-24"
+      >{title}</h3>
       <p className="mt-1 text-sm text-muted-foreground">
         Click on a condition to learn more about symptoms and treatments.
       </p>

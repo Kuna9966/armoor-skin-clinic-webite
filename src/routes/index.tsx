@@ -8,8 +8,6 @@ import {
   Clock,
   Check,
   Sparkles,
-  Scissors,
-  Baby,
   Stethoscope,
   ShieldCheck,
   HeartPulse,
@@ -37,6 +35,8 @@ import profileImg from "@/assets/Profile.jpg";
 import clinicExteriorImg from "@/assets/Clinic Exterior.webp";
 import consultationRoomImg from "@/assets/Clinic Interior Consultation Room.webp";
 import adBannerImg from "@/assets/AdBanner.jpg";
+import skinDiseaseImg from "@/assets/SkinDisease.png";
+import hairDiseaseImg from "@/assets/Hairdisease.jpg";
 import {
   CLINIC_NAME,
   DOCTOR_NAME,
@@ -90,72 +90,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-
-const SERVICES = [
-  {
-    icon: Stethoscope,
-    title: "Skin Diseases",
-    desc: "Comprehensive medical treatment for a full range of dermatological conditions.",
-    slug: "skin-diseases",
-    items: [
-      "Acne & Pimples",
-      "Psoriasis",
-      "Eczema",
-      "Chronic Urticaria",
-      "Fungal Infections",
-      "Skin Allergies",
-      "Pigmentation Disorders",
-      "Vitiligo",
-      "Melasma",
-      "Skin Rashes",
-      "Bacterial & Viral Skin Infections",
-      "Warts, Corns & Calluses",
-      "Nail Disorders",
-    ],
-  },
-  {
-    icon: Scissors,
-    title: "Hair Treatments",
-    desc: "Evidence-based diagnosis and treatment for hair and scalp concerns.",
-    slug: "hair-treatments",
-    items: [
-      "Hair Fall Treatment",
-      "Baldness Evaluation",
-      "Dandruff Treatment",
-      "Alopecia",
-      "Scalp Disorders",
-      "Hair Growth Management",
-    ],
-  },
-  {
-    icon: Baby,
-    title: "Pediatric Dermatology",
-    desc: "Gentle, specialised skin care for infants and children.",
-    slug: "pediatric-dermatology",
-    items: [
-      "Skin disorders in infants & children",
-      "Eczema",
-      "Birthmarks",
-      "Allergic skin conditions",
-      "Childhood skin infections",
-    ],
-  },
-  {
-    icon: Sparkles,
-    title: "Cosmetic Dermatology",
-    desc: "Advanced cosmetic procedures to restore and rejuvenate your skin.",
-    slug: "cosmetic-dermatology",
-    items: [
-      "Acne Scar Treatment",
-      "Chemical Peels",
-      "Skin Rejuvenation",
-      "Pigmentation Treatment",
-      "Mole & Wart Removal",
-      "Anti-Aging Skin Care",
-      "Laser Procedures",
-    ],
-  },
-];
 
 const WHY_US = [
   { icon: Stethoscope, label: "Experienced Dermatologist" },
@@ -241,7 +175,7 @@ function Home() {
       <Timings />
       <About />
       <Doctor />
-      <Services />
+      <Treatments />
       <WhyUs />
       <Gallery />
       <FAQ />
@@ -473,73 +407,71 @@ function Doctor() {
   );
 }
 
-/* ---------------- Services ---------------- */
-function Services() {
-  const [active, setActive] = useState(0);
+/* ---------------- Treatments ---------------- */
+function Treatments() {
   return (
-    <Section id="services" eyebrow="Our Services" title="Comprehensive skin, hair & cosmetic care">
-      <div className="mb-8 flex flex-wrap gap-2">
-        {SERVICES.map((s, i) => (
-          <button
-            key={s.title}
-            onClick={() => setActive(i)}
-            className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all ${
-              active === i
-                ? "border-primary bg-primary text-primary-foreground shadow-[var(--shadow-soft)]"
-                : "border-border bg-card text-foreground/80 hover:border-primary/40 hover:text-primary"
-            }`}
-          >
-            <s.icon className="h-4 w-4" /> {s.title}
-          </button>
-        ))}
-      </div>
+    <Section id="treatments" eyebrow="Our Treatments" title="Healthy Skin. Healthy Hair. Expert Care.">
+      <p className="mx-auto -mt-8 mb-10 max-w-2xl text-center text-[15px] leading-relaxed text-muted-foreground">
+        Explore our comprehensive dermatology treatments for skin, hair, and cosmetic concerns.
+        Click below to discover every condition we diagnose and treat.
+      </p>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {SERVICES.map((s, i) => {
-          const isActive = i === active;
-          return (
-            <Link
-              key={s.title}
-              to="/treatments"
-              className={`group relative block rounded-2xl border p-6 transition-all duration-300 ${
-                isActive
-                  ? "border-primary bg-card shadow-[var(--shadow-elegant)]"
-                  : "border-border bg-card hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
-              }`}
-            >
-              <div
-                className={`grid h-12 w-12 place-items-center rounded-xl transition-colors duration-300 ${
-                  isActive ? "bg-primary text-primary-foreground" : "bg-primary/5 text-primary group-hover:bg-primary group-hover:text-primary-foreground"
-                }`}
-              >
-                <s.icon className="h-6 w-6" />
-              </div>
-              <h3 className="mt-5 font-display text-lg font-bold text-foreground">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-              <div className="mt-4 h-px w-full bg-border" />
-              <ul className="mt-4 space-y-2">
-                {s.items.slice(0, isActive ? s.items.length : 4).map((it) => {
-                  const content = (
-                    <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                      <span>{it}</span>
-                    </li>
-                  );
-                  return content;
-                })}
-                {!isActive && s.items.length > 4 && (
-                  <li className="pt-1 text-xs font-medium text-primary">
-                    +{s.items.length - 4} more
-                  </li>
-                )}
-              </ul>
-              <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-primary">
-                <span>Explore Treatments</span>
-                <ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
-              </div>
-            </Link>
-          );
-        })}
+      <div className="grid gap-6 sm:grid-cols-2">
+        <Link
+          to="/treatments"
+          hash="skin-diseases"
+          className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]"
+        >
+          <div className="relative aspect-[3/2] sm:aspect-[600/420] overflow-hidden">
+            <img
+              src={skinDiseaseImg}
+              alt="Skin disease diagnosis and treatment"
+              loading="lazy"
+              className="h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 transition-all duration-500 ease-out group-hover:from-black/85 group-hover:via-black/40" />
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/60">
+                Skin Care
+              </p>
+              <h3 className="mt-1.5 font-display text-2xl font-bold text-white sm:text-3xl">
+                Skin Diseases
+              </h3>
+              <p className="mt-2 flex items-center gap-2 text-sm font-semibold text-white/80 transition-all duration-400 ease-out group-hover:translate-x-1">
+                Explore 100+ Skin Conditions
+                <ArrowRight className="h-4 w-4 transition-transform duration-400 ease-out group-hover:translate-x-1" />
+              </p>
+            </div>
+          </div>
+        </Link>
+
+        <Link
+          to="/treatments"
+          hash="hair-diseases"
+          className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]"
+        >
+          <div className="relative aspect-[3/2] sm:aspect-[600/420] overflow-hidden">
+            <img
+              src={hairDiseaseImg}
+              alt="Hair treatment and scalp diagnosis"
+              loading="lazy"
+              className="h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 transition-all duration-500 ease-out group-hover:from-black/85 group-hover:via-black/40" />
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/60">
+                Hair Care
+              </p>
+              <h3 className="mt-1.5 font-display text-2xl font-bold text-white sm:text-3xl">
+                Hair Treatments
+              </h3>
+              <p className="mt-2 flex items-center gap-2 text-sm font-semibold text-white/80 transition-all duration-400 ease-out group-hover:translate-x-1">
+                Explore Hair &amp; Scalp Disorders
+                <ArrowRight className="h-4 w-4 transition-transform duration-400 ease-out group-hover:translate-x-1" />
+              </p>
+            </div>
+          </div>
+        </Link>
       </div>
     </Section>
   );
