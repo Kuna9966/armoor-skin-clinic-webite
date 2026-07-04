@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Stethoscope } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { DiseaseExplorer } from "@/components/DiseaseExplorer";
+import { skinDiseases, hairDiseases } from "../lib/disease-data";
 import { treatments } from "../lib/treatments";
 import {
   CLINIC_NAME,
@@ -42,6 +44,7 @@ function TreatmentsPage() {
       <Header />
       <main>
         <HeroSection />
+        <DiseaseExplorer skinDiseases={skinDiseases} hairDiseases={hairDiseases} />
         <TreatmentGrid />
         <CTASection />
       </main>

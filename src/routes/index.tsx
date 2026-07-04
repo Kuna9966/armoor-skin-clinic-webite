@@ -91,22 +91,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const SERVICE_ITEM_LINKS: Record<string, string> = {
-  "Acne & Pimples": "/treatments/acne-treatment",
-  "Acne Scar Treatment": "/treatments/acne-treatment",
-  Psoriasis: "/treatments/psoriasis-treatment",
-  Eczema: "/treatments/eczema-treatment",
-  "Fungal Infections": "/treatments/fungal-infection-treatment",
-  "Skin Allergies": "/treatments/skin-allergy-treatment",
-  "Pigmentation Disorders": "/treatments/pigmentation-treatment",
-  "Pigmentation Treatment": "/treatments/pigmentation-treatment",
-  Vitiligo: "/treatments/vitiligo-treatment",
-  "Hair Fall Treatment": "/treatments/hair-loss-treatment",
-  "Dandruff Treatment": "/treatments/dandruff-treatment",
-  "Nail Disorders": "/treatments/nail-disorders",
-  "Mole & Wart Removal": "/treatments/mole-removal",
-};
-
 const SERVICES = [
   {
     icon: Stethoscope,
@@ -514,18 +498,18 @@ function Services() {
         {SERVICES.map((s, i) => {
           const isActive = i === active;
           return (
-            <div
+            <Link
               key={s.title}
-              onClick={() => setActive(i)}
-              className={`group relative cursor-pointer rounded-2xl border p-6 transition-all ${
+              to="/treatments"
+              className={`group relative block rounded-2xl border p-6 transition-all duration-300 ${
                 isActive
                   ? "border-primary bg-card shadow-[var(--shadow-elegant)]"
                   : "border-border bg-card hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
               }`}
             >
               <div
-                className={`grid h-12 w-12 place-items-center rounded-xl transition-colors ${
-                  isActive ? "bg-primary text-primary-foreground" : "bg-primary/5 text-primary"
+                className={`grid h-12 w-12 place-items-center rounded-xl transition-colors duration-300 ${
+                  isActive ? "bg-primary text-primary-foreground" : "bg-primary/5 text-primary group-hover:bg-primary group-hover:text-primary-foreground"
                 }`}
               >
                 <s.icon className="h-6 w-6" />
@@ -535,33 +519,25 @@ function Services() {
               <div className="mt-4 h-px w-full bg-border" />
               <ul className="mt-4 space-y-2">
                 {s.items.slice(0, isActive ? s.items.length : 4).map((it) => {
-                  const link = SERVICE_ITEM_LINKS[it];
                   const content = (
                     <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                       <span>{it}</span>
                     </li>
                   );
-                  if (link) {
-                    return (
-                      <Link
-                        key={it}
-                        to={link}
-                        className="block transition-colors hover:text-primary"
-                      >
-                        {content}
-                      </Link>
-                    );
-                  }
                   return content;
                 })}
                 {!isActive && s.items.length > 4 && (
                   <li className="pt-1 text-xs font-medium text-primary">
-                    +{s.items.length - 4} more · tap to view
+                    +{s.items.length - 4} more
                   </li>
                 )}
               </ul>
-            </div>
+              <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-primary">
+                <span>Explore Treatments</span>
+                <ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
+              </div>
+            </Link>
           );
         })}
       </div>
