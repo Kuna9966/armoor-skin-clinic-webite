@@ -371,7 +371,7 @@ function Hero() {
             {[
               { k: "6+", v: "Years Experience" },
               { k: "50k+", v: "Happy Patients" },
-              { k: "15k+", v: "Treatments Offered" },
+              { k: "16k+", v: "Treatments Offered" },
             ].map((s) => (
               <div key={s.v}>
                 <div className="font-display text-2xl font-bold text-white sm:text-3xl">{s.k}</div>
@@ -780,10 +780,7 @@ function Contact() {
   const [isSaving, setIsSaving] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const firstAvailableDate = getFirstAvailableDate();
-  const GSHEET_URL =
-    "https://script.google.com/macros/s/AKfycbyT7WH2Keyv2fYa8oPR8QtvYVJHoLtD5m4VmwIOUteV/dev";
-
-  const handleAppointmentSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleAppointmentSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitError("");
 
@@ -806,45 +803,26 @@ function Contact() {
 
     setIsSaving(true);
 
-    try {
-      const res = await fetch(GSHEET_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: fullName,
-          phone: mobile,
-          email,
-          department,
-          date: preferredDate,
-          time: preferredTime,
-        }),
-      });
+    const message = [
+      "🏥 *New Appointment Request*",
+      "",
+      `👤 *Full Name:* ${fullName}`,
+      "",
+      `📞 *Mobile:* ${mobile}`,
+      "",
+      `📧 *Email:* ${email}`,
+      "",
+      `🩺 *Department:* ${department}`,
+      "",
+      `📅 *Preferred Date:* ${preferredDate}`,
+      "",
+      `🕒 *Preferred Time:* ${preferredTime}`,
+      "",
+      "Please confirm my appointment.",
+    ].join("\n");
 
-      const message = [
-        "🏥 *New Appointment Request*",
-        "",
-        `👤 *Full Name:* ${fullName}`,
-        "",
-        `📞 *Mobile:* ${mobile}`,
-        "",
-        `📧 *Email:* ${email}`,
-        "",
-        `🩺 *Department:* ${department}`,
-        "",
-        `📅 *Preferred Date:* ${preferredDate}`,
-        "",
-        `🕒 *Preferred Time:* ${preferredTime}`,
-        "",
-        "Please confirm my appointment.",
-      ].join("\n");
-
-      setIsSaving(false);
-      window.location.href = `https://wa.me/919603752752?text=${encodeURIComponent(message)}`;
-    } catch {
-      setIsSaving(false);
-      setSubmitError("Unable to save your appointment. Please try again.");
-    }
+    setIsSaving(false);
+    window.location.href = `https://wa.me/919603752752?text=${encodeURIComponent(message)}`;
   };
 
   return (
