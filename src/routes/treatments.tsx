@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Stethoscope } from "lucide-react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { treatments } from "../lib/treatments";
 import {
   CLINIC_NAME,
@@ -45,65 +47,6 @@ function TreatmentsPage() {
       </main>
       <Footer />
     </div>
-  );
-}
-
-function Header() {
-  return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-background/85 backdrop-blur-lg border-b border-border shadow-[var(--shadow-soft)]">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="flex min-w-0 items-center gap-3">
-          <div className="text-sm font-bold text-primary">Armoor Skin & Hair Clinic</div>
-        </Link>
-        <nav className="hidden items-center gap-8 lg:flex">
-          <Link
-            to="/"
-            className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-          >
-            Home
-          </Link>
-          <Link
-            to="/"
-            hash="about"
-            className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-          >
-            About
-          </Link>
-          <Link to="/treatments" className="text-sm font-medium text-primary transition-colors">
-            Treatments
-          </Link>
-          <Link
-            to="/"
-            hash="doctor"
-            className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-          >
-            Doctor
-          </Link>
-          <Link
-            to="/"
-            hash="contact"
-            className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-          >
-            Contact
-          </Link>
-        </nav>
-        <div className="hidden items-center gap-2 md:flex">
-          <a
-            href={`tel:${PHONE_TEL}`}
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-semibold text-primary transition-all hover:border-primary"
-          >
-            {PHONE}
-          </a>
-          <Link
-            to="/"
-            hash="contact"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary-glow"
-          >
-            Book Appointment
-          </Link>
-        </div>
-      </div>
-    </header>
   );
 }
 
@@ -205,24 +148,4 @@ function CTASection() {
   );
 }
 
-function Footer() {
-  return (
-    <footer
-      className="relative pt-12 pb-8 text-white"
-      style={{ background: "var(--gradient-navy)" }}
-    >
-      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-        <p className="text-sm text-white/70">
-          &copy; 2026 {CLINIC_NAME}. All rights reserved. |{" "}
-          <Link to="/" className="hover:text-gold">
-            Home
-          </Link>{" "}
-          |{" "}
-          <Link to="/treatments" className="hover:text-gold">
-            Treatments
-          </Link>
-        </p>
-      </div>
-    </footer>
-  );
-}
+

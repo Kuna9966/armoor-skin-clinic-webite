@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Calendar, Clock, Phone, User } from "lucide-react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import {
   CLINIC_NAME,
   DOCTOR_NAME,
@@ -214,32 +216,6 @@ function BlogPostPage() {
   );
 }
 
-function Header() {
-  return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-background/85 backdrop-blur-lg border-b border-border shadow-[var(--shadow-soft)]">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="font-display text-sm font-bold text-primary">
-          {CLINIC_NAME}
-        </Link>
-        <nav className="hidden items-center gap-8 lg:flex">
-          <Link to="/" className="text-sm font-medium text-foreground/80 hover:text-primary">
-            Home
-          </Link>
-          <Link
-            to="/treatments"
-            className="text-sm font-medium text-foreground/80 hover:text-primary"
-          >
-            Treatments
-          </Link>
-          <Link to="/blog" className="text-sm font-medium text-primary">
-            Blog
-          </Link>
-        </nav>
-      </div>
-    </header>
-  );
-}
-
 function PostHeader({ post }: { post: BlogPost }) {
   return (
     <div
@@ -341,24 +317,4 @@ function CTASection() {
   );
 }
 
-function Footer() {
-  return (
-    <footer
-      className="relative pt-12 pb-8 text-white"
-      style={{ background: "var(--gradient-navy)" }}
-    >
-      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-        <p className="text-sm text-white/70">
-          &copy; 2026 {CLINIC_NAME}. All rights reserved. |{" "}
-          <Link to="/" className="hover:text-gold">
-            Home
-          </Link>{" "}
-          |{" "}
-          <Link to="/blog" className="hover:text-gold">
-            Blog
-          </Link>
-        </p>
-      </div>
-    </footer>
-  );
-}
+

@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
-  Menu,
   X,
   Phone,
   Calendar,
@@ -20,9 +19,6 @@ import {
   User,
   Smile,
   FlaskConical,
-  Facebook,
-  Instagram,
-  Twitter,
   Mail,
   ImageIcon,
   ArrowRight,
@@ -34,8 +30,9 @@ import {
 } from "lucide-react";
 import { Calendar as DatePicker } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import heroImg from "@/assets/Clinic Exterior.jpg";
-import logoCircleImg from "@/assets/logocircle.png";
 import profileImg from "@/assets/Profile.jpg";
 import clinicExteriorImg from "@/assets/Clinic Exterior.webp";
 import consultationRoomImg from "@/assets/Clinic Interior Consultation Room.webp";
@@ -93,16 +90,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-
-const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Treatments", href: "/treatments" },
-  { label: "Doctor", href: "#doctor" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
-];
 
 const SERVICE_ITEM_LINKS: Record<string, string> = {
   "Acne & Pimples": "/treatments/acne-treatment",
@@ -278,141 +265,6 @@ function Home() {
       <Footer />
       <StickyCTA />
     </div>
-  );
-}
-
-/* ---------------- Header ---------------- */
-function Header() {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/85 backdrop-blur-lg border-b border-border shadow-[var(--shadow-soft)]"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#home" className="flex min-w-0 items-center gap-3">
-          <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-white shadow-[var(--shadow-soft)]">
-            <img
-              src={logoCircleImg}
-              alt="Armoor Skin & Hair Clinic logo"
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <div className="min-w-0 leading-tight">
-            <div className="truncate font-display text-sm font-bold text-primary sm:text-base">
-              Armoor Skin & Hair Clinic
-            </div>
-            <div className="truncate text-[11px] text-muted-foreground">
-              Dermatology · Trichology · Cosmetology
-            </div>
-          </div>
-        </a>
-
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
-          {NAV.map((n) =>
-            n.href.startsWith("/") ? (
-              <Link
-                key={n.href}
-                to={n.href}
-                className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-              >
-                {n.label}
-              </Link>
-            ) : (
-              <a
-                key={n.href}
-                href={n.href}
-                className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-              >
-                {n.label}
-              </a>
-            ),
-          )}
-        </nav>
-
-        <div className="hidden items-center gap-2 md:flex">
-          <a
-            href={`tel:${PHONE_TEL}`}
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-semibold text-primary transition-all hover:border-primary hover:shadow-[var(--shadow-soft)]"
-          >
-            <Phone className="h-4 w-4" /> {PHONE}
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:bg-primary-glow hover:shadow-[var(--shadow-elegant)]"
-          >
-            <Calendar className="h-4 w-4" /> Book Appointment
-          </a>
-        </div>
-
-        <button
-          className="grid h-10 w-10 place-items-center rounded-lg border border-border text-primary lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </div>
-
-      {open && (
-        <div className="border-t border-border bg-background/95 backdrop-blur lg:hidden">
-          <div
-            className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4"
-            role="navigation"
-            aria-label="Mobile navigation"
-          >
-            {NAV.map((n) =>
-              n.href.startsWith("/") ? (
-                <Link
-                  key={n.href}
-                  to={n.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-primary"
-                >
-                  {n.label}
-                </Link>
-              ) : (
-                <a
-                  key={n.href}
-                  href={n.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-primary"
-                >
-                  {n.label}
-                </a>
-              ),
-            )}
-            <div className="mt-2 flex flex-col gap-2">
-              <a
-                href={`tel:${PHONE_TEL}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-primary"
-              >
-                <Phone className="h-4 w-4" /> Call {PHONE}
-              </a>
-              <a
-                href="#contact"
-                onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground"
-              >
-                <Calendar className="h-4 w-4" /> Book Appointment
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-    </header>
   );
 }
 
@@ -1231,123 +1083,6 @@ function formatAppointmentDate(date: Date) {
 }
 
 /* ---------------- Footer ---------------- */
-function Footer() {
-  return (
-    <footer
-      className="relative pt-16 pb-8 text-white"
-      style={{ background: "var(--gradient-navy)" }}
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-4">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3">
-              <div className="h-12 w-12 overflow-hidden rounded-full bg-white shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
-                <img
-                  src={logoCircleImg}
-                  alt="Armoor Skin & Hair Clinic logo"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <div className="font-display text-base font-bold">Armoor Skin & Hair Clinic</div>
-                <div className="text-xs text-white/60">Dermatology · Trichology · Cosmetology</div>
-              </div>
-            </div>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70">
-              Advanced dermatology care led by Dr. Raghavendhra — medical, pediatric, and cosmetic
-              skin & hair treatments for patients of all ages.
-            </p>
-            <div className="mt-6 flex gap-3">
-              <a
-                href={SOCIAL.facebook}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Follow Armoor Skin & Hair Clinic on Facebook"
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition-all hover:border-gold hover:text-gold"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href={SOCIAL.instagram}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Follow Armoor Skin & Hair Clinic on Instagram"
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition-all hover:border-gold hover:text-gold"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a
-                href={SOCIAL.twitter}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Follow Armoor Skin & Hair Clinic on Twitter"
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition-all hover:border-gold hover:text-gold"
-              >
-                <Twitter className="h-4 w-4" />
-              </a>
-              <a
-                href={`mailto:contact@armoorskinclinic.com`}
-                aria-label="Email Armoor Skin & Hair Clinic"
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition-all hover:border-gold hover:text-gold"
-              >
-                <Mail className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
-          <div>
-            <div className="text-sm font-semibold text-white">Quick Links</div>
-            <ul className="mt-4 space-y-2.5">
-              {NAV.map((n) => (
-                <li key={n.href}>
-                  {n.href.startsWith("/") ? (
-                    <Link to={n.href} className="text-sm text-white/70 hover:text-gold">
-                      {n.label}
-                    </Link>
-                  ) : (
-                    <a href={n.href} className="text-sm text-white/70 hover:text-gold">
-                      {n.label}
-                    </a>
-                  )}
-                </li>
-              ))}
-              <li>
-                <Link to="/blog" className="text-sm text-white/70 hover:text-gold">
-                  Blog
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <div className="text-sm font-semibold text-white">Reach Us</div>
-            <ul className="mt-4 space-y-3 text-sm text-white/70">
-              <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <span>
-                  Opposite VR Hospital, Beside LK Hospital, Mahalaxmi Colony, Armoor, Telangana
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <a href={`tel:${PHONE_TEL}`} className="hover:text-gold">
-                  {PHONE}
-                </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <span>Morning 11:00 AM · Evening 6:00 PM onwards</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row">
-          <div>© 2026 Armoor Skin & Hair Clinic. All rights reserved.</div>
-          <div>Designed with care for our patients.</div>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 /* ---------------- FAQ ---------------- */
 function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
