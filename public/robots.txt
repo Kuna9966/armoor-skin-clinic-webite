@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /treatments/
+Allow: /blog/
+Disallow: /admin/
+
+Sitemap: https://armoorskinclinic.com/sitemap.xml
+
+# Allow indexing of all public-facing pages
+# Main content areas and treatment pages are fully accessible

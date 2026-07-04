@@ -11,6 +11,19 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import {
+  CLINIC_NAME,
+  DOCTOR_NAME,
+  QUALIFICATION,
+  SITE_URL,
+  SITE_DESCRIPTION,
+  ADDRESS,
+  PHONE_TEL,
+  PHONE,
+  HOURS,
+  COORDINATES,
+  WHATSAPP,
+} from "../lib/clinic-data";
 
 function NotFoundComponent() {
   return (
@@ -60,12 +73,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           >
             Try again
           </button>
-          <a
-            href="/"
+          <Link
+            to="/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
             Go home
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -77,45 +90,61 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Armoor Skin & Hair Clinic — Dr. Raghavendhra, Dermatologist in Armoor" },
       {
-        name: "description",
-        content:
-          "Advanced dermatology, hair and cosmetic skin care in Armoor, Telangana. Led by Dr. Raghavendhra, MD DVL. Book your consultation today.",
+        title: `Best Skin & Hair Clinic in Armoor | ${DOCTOR_NAME} ${QUALIFICATION} | Dermatologist`,
       },
       {
+        name: "description",
+        content: SITE_DESCRIPTION,
+      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "googlebot", content: "index, follow, max-image-preview:large" },
+      { name: "theme-color", content: "#0A1F44" },
+      { name: "geo.region", content: "IN-TG" },
+      { name: "geo.placename", content: "Armoor, Nizamabad, Telangana" },
+      { name: "geo.position", content: `${COORDINATES.latitude};${COORDINATES.longitude}` },
+      { name: "ICBM", content: `${COORDINATES.latitude}, ${COORDINATES.longitude}` },
+      {
         property: "og:title",
-        content: "Armoor Skin & Hair Clinic — Dr. Raghavendhra, Dermatologist in Armoor",
+        content: `Best Skin & Hair Clinic in Armoor | ${DOCTOR_NAME} ${QUALIFICATION}`,
       },
       {
         property: "og:description",
-        content:
-          "Advanced dermatology, hair and cosmetic skin care in Armoor, Telangana. Led by Dr. Raghavendhra, MD DVL. Book your consultation today.",
+        content: SITE_DESCRIPTION,
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:site_name", content: CLINIC_NAME },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Armoor Skin & Hair Clinic — Dr. Raghavendhra, Dermatologist in Armoor",
+        content: `Best Skin & Hair Clinic in Armoor | ${DOCTOR_NAME} ${QUALIFICATION}`,
       },
       {
         name: "twitter:description",
-        content:
-          "Advanced dermatology, hair and cosmetic skin care in Armoor, Telangana. Led by Dr. Raghavendhra, MD DVL. Book your consultation today.",
-      },
-      {
-        property: "og:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f8dc7623-f5c2-4559-9fe1-62bc4f3d6760/id-preview-b9b31371--203d3f13-1163-4575-91b4-e7d5e40c5adf.lovable.app-1783076325664.png",
+        content: SITE_DESCRIPTION,
       },
       {
         name: "twitter:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f8dc7623-f5c2-4559-9fe1-62bc4f3d6760/id-preview-b9b31371--203d3f13-1163-4575-91b4-e7d5e40c5adf.lovable.app-1783076325664.png",
+        content: `${SITE_URL}/og-image.jpg`,
+      },
+      {
+        property: "og:image",
+        content: `${SITE_URL}/og-image.jpg`,
+      },
+      {
+        property: "og:image:width",
+        content: "1200",
+      },
+      {
+        property: "og:image:height",
+        content: "630",
       },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: SITE_URL },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -123,6 +152,160 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "apple-touch-icon", href: "/favicon.ico" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "MedicalClinic",
+              "@id": `${SITE_URL}/#clinic`,
+              name: CLINIC_NAME,
+              alternateName: "Armoor Skin & Hair Clinic",
+              description: SITE_DESCRIPTION,
+              url: SITE_URL,
+              telephone: PHONE_TEL,
+              email: "contact@armoorskinclinic.com",
+              logo: `${SITE_URL}/favicon.ico`,
+              image: `${SITE_URL}/og-image.jpg`,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Opposite VR Hospital, Beside LK Hospital, Mahalaxmi Colony",
+                addressLocality: "Armoor",
+                addressRegion: "Telangana",
+                postalCode: "503224",
+                addressCountry: "IN",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: COORDINATES.latitude,
+                longitude: COORDINATES.longitude,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                  opens: "11:00",
+                  closes: "18:00",
+                },
+              ],
+              medicalSpecialty: "Dermatology",
+              availableService: [
+                "Acne Treatment",
+                "Hair Loss Treatment",
+                "Psoriasis Treatment",
+                "Vitiligo Treatment",
+                "Pigmentation Treatment",
+                "Eczema Treatment",
+                "Skin Allergy Treatment",
+                "Fungal Infection Treatment",
+                "Dandruff Treatment",
+                "Nail Disorders Treatment",
+                "Wart Removal",
+                "Mole Removal",
+                "Chemical Peels",
+                "PRP Therapy",
+                "Phototherapy",
+                "Pediatric Dermatology",
+                "Cosmetic Dermatology",
+              ],
+              founder: {
+                "@type": "Person",
+                name: DOCTOR_NAME,
+              },
+              sameAs: [
+                "https://facebook.com/armoorskinclinic",
+                "https://instagram.com/armoorskinclinic",
+                "https://twitter.com/armoorskinclinic",
+              ],
+            },
+            {
+              "@type": "Physician",
+              "@id": `${SITE_URL}/#doctor`,
+              name: `${DOCTOR_NAME}, ${QUALIFICATION}`,
+              description: "Consultant Dermatologist at Armoor Skin & Hair Clinic",
+              medicalSpecialty: "Dermatology",
+              url: `${SITE_URL}/#doctor`,
+              image: `${SITE_URL}/og-image.jpg`,
+              knowsAbout: [
+                "Acne Treatment",
+                "Hair Loss Treatment",
+                "Psoriasis",
+                "Eczema",
+                "Vitiligo",
+                "Pigmentation",
+                "Skin Allergies",
+                "Fungal Infections",
+                "Pediatric Dermatology",
+                "Cosmetic Dermatology",
+              ],
+              worksFor: {
+                "@id": `${SITE_URL}/#clinic`,
+              },
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": `${SITE_URL}/#business`,
+              name: CLINIC_NAME,
+              url: SITE_URL,
+              telephone: PHONE_TEL,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Opposite VR Hospital, Beside LK Hospital, Mahalaxmi Colony",
+                addressLocality: "Armoor",
+                addressRegion: "Telangana",
+                addressCountry: "IN",
+              },
+              priceRange: "₹",
+              openingHours: "Mo-Sa 11:00-18:00",
+              image: `${SITE_URL}/og-image.jpg`,
+            },
+            {
+              "@type": "Organization",
+              "@id": `${SITE_URL}/#organization`,
+              name: CLINIC_NAME,
+              url: SITE_URL,
+              logo: `${SITE_URL}/favicon.ico`,
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: PHONE_TEL,
+                contactType: "appointment",
+                availableLanguage: ["English", "Telugu", "Hindi", "Urdu"],
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
+              name: CLINIC_NAME,
+              url: SITE_URL,
+              description: SITE_DESCRIPTION,
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+                },
+                "query-input": "required name=search_term_string",
+              },
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": `${SITE_URL}/#breadcrumbs`,
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: SITE_URL,
+                },
+              ],
+            },
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -133,7 +316,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-IN" dir="ltr">
       <head>
         <HeadContent />
       </head>
@@ -150,7 +333,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
   );

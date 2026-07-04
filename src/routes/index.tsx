@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   Menu,
@@ -30,6 +30,7 @@ import {
   Award,
   Star,
   Loader2,
+  MessageCircle,
 } from "lucide-react";
 import { Calendar as DatePicker } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -39,29 +40,92 @@ import profileImg from "@/assets/Profile.jpg";
 import clinicExteriorImg from "@/assets/Clinic Exterior.webp";
 import consultationRoomImg from "@/assets/Clinic Interior Consultation Room.webp";
 import adBannerImg from "@/assets/AdBanner.jpg";
+import {
+  CLINIC_NAME,
+  DOCTOR_NAME,
+  QUALIFICATION,
+  PHONE,
+  PHONE_TEL,
+  WHATSAPP,
+  ADDRESS,
+  MAP_LINK,
+  SOCIAL,
+  SITE_URL,
+} from "../lib/clinic-data";
+import { treatments, treatmentSlugs } from "../lib/treatments";
+import { generalFAQs } from "../lib/faq-data";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: generalFAQs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.a,
+            },
+          })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Treatments",
+              item: `${SITE_URL}/treatments`,
+            },
+          ],
+        }),
+      },
+    ],
+  }),
   component: Home,
 });
-
-const PHONE = "9603 752 752";
-const PHONE_TEL = "+919603752752";
-const CLINIC_MAP_LINK = "https://maps.app.goo.gl/fKuVMvEnVS5Pjtne8?g_st=aw";
 
 const NAV = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Treatments", href: "/treatments" },
   { label: "Doctor", href: "#doctor" },
   { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
+
+const SERVICE_ITEM_LINKS: Record<string, string> = {
+  "Acne & Pimples": "/treatments/acne-treatment",
+  "Acne Scar Treatment": "/treatments/acne-treatment",
+  Psoriasis: "/treatments/psoriasis-treatment",
+  Eczema: "/treatments/eczema-treatment",
+  "Fungal Infections": "/treatments/fungal-infection-treatment",
+  "Skin Allergies": "/treatments/skin-allergy-treatment",
+  "Pigmentation Disorders": "/treatments/pigmentation-treatment",
+  "Pigmentation Treatment": "/treatments/pigmentation-treatment",
+  Vitiligo: "/treatments/vitiligo-treatment",
+  "Hair Fall Treatment": "/treatments/hair-loss-treatment",
+  "Dandruff Treatment": "/treatments/dandruff-treatment",
+  "Nail Disorders": "/treatments/nail-disorders",
+  "Mole & Wart Removal": "/treatments/mole-removal",
+};
 
 const SERVICES = [
   {
     icon: Stethoscope,
     title: "Skin Diseases",
     desc: "Comprehensive medical treatment for a full range of dermatological conditions.",
+    slug: "skin-diseases",
     items: [
       "Acne & Pimples",
       "Psoriasis",
@@ -82,6 +146,7 @@ const SERVICES = [
     icon: Scissors,
     title: "Hair Treatments",
     desc: "Evidence-based diagnosis and treatment for hair and scalp concerns.",
+    slug: "hair-treatments",
     items: [
       "Hair Fall Treatment",
       "Baldness Evaluation",
@@ -95,6 +160,7 @@ const SERVICES = [
     icon: Baby,
     title: "Pediatric Dermatology",
     desc: "Gentle, specialised skin care for infants and children.",
+    slug: "pediatric-dermatology",
     items: [
       "Skin disorders in infants & children",
       "Eczema",
@@ -107,6 +173,7 @@ const SERVICES = [
     icon: Sparkles,
     title: "Cosmetic Dermatology",
     desc: "Advanced cosmetic procedures to restore and rejuvenate your skin.",
+    slug: "cosmetic-dermatology",
     items: [
       "Acne Scar Treatment",
       "Chemical Peels",
@@ -173,19 +240,25 @@ function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {showAd && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4">
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Advertisement"
+        >
           <div className="relative w-full max-w-[90vw] sm:max-w-[1000px]">
             <button
               onClick={() => setShowAd(false)}
               className="absolute -top-3 right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/70 text-white transition-colors hover:bg-black"
-              aria-label="Close ad"
+              aria-label="Close advertisement"
             >
               <X className="h-5 w-5" />
             </button>
             <img
               src={adBannerImg}
-              alt="Advertisement"
+              alt="Armoor Skin & Hair Clinic promotional banner - Book your dermatology consultation"
               className="w-full h-auto rounded-lg shadow-2xl object-contain"
+              loading="lazy"
             />
           </div>
         </div>
@@ -198,8 +271,10 @@ function Home() {
       <Services />
       <WhyUs />
       <Gallery />
+      <FAQ />
       <Contact />
       <Footer />
+      <StickyCTA />
     </div>
   );
 }
@@ -243,16 +318,26 @@ function Header() {
           </div>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
-          {NAV.map((n) => (
-            <a
-              key={n.href}
-              href={n.href}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-            >
-              {n.label}
-            </a>
-          ))}
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
+          {NAV.map((n) =>
+            n.href.startsWith("/") ? (
+              <Link
+                key={n.href}
+                to={n.href}
+                className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              >
+                {n.label}
+              </Link>
+            ) : (
+              <a
+                key={n.href}
+                href={n.href}
+                className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              >
+                {n.label}
+              </a>
+            ),
+          )}
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
@@ -281,17 +366,32 @@ function Header() {
 
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur lg:hidden">
-          <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
-            {NAV.map((n) => (
-              <a
-                key={n.href}
-                href={n.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-primary"
-              >
-                {n.label}
-              </a>
-            ))}
+          <div
+            className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
+            {NAV.map((n) =>
+              n.href.startsWith("/") ? (
+                <Link
+                  key={n.href}
+                  to={n.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-primary"
+                >
+                  {n.label}
+                </Link>
+              ) : (
+                <a
+                  key={n.href}
+                  href={n.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-primary"
+                >
+                  {n.label}
+                </a>
+              ),
+            )}
             <div className="mt-2 flex flex-col gap-2">
               <a
                 href={`tel:${PHONE_TEL}`}
@@ -328,8 +428,9 @@ function Hero() {
       <div className="absolute inset-0 mx-auto max-w-[1905px] max-h-[1000px]">
         <img
           src={heroImg}
-          alt=""
+          alt="Armoor Skin & Hair Clinic exterior - dermatology clinic in Armoor"
           className="h-full w-full object-cover mix-blend-multiply"
+          loading="eager"
         />
       </div>
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-4 pb-16 pt-32 sm:px-6 lg:px-8">
@@ -339,14 +440,12 @@ function Hero() {
             Trusted Dermatology Care in Armoor
           </div>
           <h1 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-            <span className="mb-4 block text-5xl font-extrabold text-white sm:text-6xl lg:text-7xl">
-              Armoor Skin & Hair Clinic
-            </span>
-            <span className="text-2xl font-semibold text-white/90 sm:text-3xl lg:text-4xl">
-              Your Trusted Destination for <span className="text-gold">Healthy Skin</span> &{" "}
-              <span className="text-gold">Beautiful Hair</span>
-            </span>
+            Best Skin & Hair Clinic in Armoor
           </h1>
+          <p className="mt-4 text-2xl font-semibold text-white/90 sm:text-3xl lg:text-4xl">
+            Your Trusted Destination for <span className="text-gold">Healthy Skin</span> &{" "}
+            <span className="text-gold">Beautiful Hair</span>
+          </p>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
             Advanced, safe, and effective dermatology care for patients of all ages — delivered with
             precision, compassion, and modern medical expertise.
@@ -446,15 +545,13 @@ function Doctor() {
           <div className="absolute -left-4 -top-4 h-72 w-72 rounded-3xl bg-gradient-to-br from-teal-400/20 to-blue-400/10 md:h-80 md:w-80" />
           <div className="absolute -bottom-3 -right-3 h-48 w-48 rounded-full bg-primary/[0.04]" />
           <div className="relative overflow-hidden rounded-3xl border-2 border-white/50 shadow-[0_20px_60px_-15px_oklch(0.16_0.06_265/0.3)]">
-            <div
-              className="absolute inset-0"
-              style={{ background: "var(--gradient-navy)" }}
-            />
+            <div className="absolute inset-0" style={{ background: "var(--gradient-navy)" }} />
             <div className="relative aspect-[3/4] overflow-hidden">
               <img
                 src={profileImg}
-                alt="Dr. Raghavendhra"
+                alt="Dr. Raghavendhra MD, DVL - Consultant Dermatologist at Armoor Skin & Hair Clinic"
                 className="h-full w-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -475,14 +572,13 @@ function Doctor() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Meet Your Dermatologist
           </p>
-          <h3 className="mt-3 font-display text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-display text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
             Dr. Raghavendhra
-          </h3>
-          <p className="mt-2 text-sm font-medium text-primary">
-            MD, DVL (Osmania Medical College)
-          </p>
+          </h2>
+          <p className="mt-2 text-sm font-medium text-primary">MD, DVL (Osmania Medical College)</p>
           <p className="text-xs text-muted-foreground">
-            Skin Specialist <span className="mx-1.5 text-primary/30">•</span> Consultant Dermatologist
+            Skin Specialist <span className="mx-1.5 text-primary/30">•</span> Consultant
+            Dermatologist
           </p>
 
           {/* Trust Cards */}
@@ -584,12 +680,27 @@ function Services() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
               <div className="mt-4 h-px w-full bg-border" />
               <ul className="mt-4 space-y-2">
-                {s.items.slice(0, isActive ? s.items.length : 4).map((it) => (
-                  <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                    <span>{it}</span>
-                  </li>
-                ))}
+                {s.items.slice(0, isActive ? s.items.length : 4).map((it) => {
+                  const link = SERVICE_ITEM_LINKS[it];
+                  const content = (
+                    <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                      <span>{it}</span>
+                    </li>
+                  );
+                  if (link) {
+                    return (
+                      <Link
+                        key={it}
+                        to={link}
+                        className="block transition-colors hover:text-primary"
+                      >
+                        {content}
+                      </Link>
+                    );
+                  }
+                  return content;
+                })}
                 {!isActive && s.items.length > 4 && (
                   <li className="pt-1 text-xs font-medium text-primary">
                     +{s.items.length - 4} more · tap to view
@@ -687,18 +798,14 @@ function Timings() {
                 <p className="mt-1 font-display text-4xl font-bold leading-none tracking-tight text-white sm:text-5xl lg:text-6xl">
                   11:00 AM – 6:00 PM
                 </p>
-                <p className="mt-2 text-base font-medium text-white/80">
-                  Monday – Saturday
-                </p>
+                <p className="mt-2 text-base font-medium text-white/80">Monday – Saturday</p>
               </div>
             </div>
             <div className="shrink-0 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-center backdrop-blur">
               <p className="text-xs font-semibold uppercase tracking-wider text-white/60">
                 Walk-ins Welcome
               </p>
-              <p className="text-sm font-semibold text-white">
-                Appointments Recommended
-              </p>
+              <p className="text-sm font-semibold text-white">Appointments Recommended</p>
             </div>
           </div>
         </div>
@@ -735,12 +842,8 @@ function Timings() {
               <div className="grid h-11 w-11 place-items-center rounded-xl bg-primary/5 text-primary transition-colors group-hover/card:bg-primary group-hover/card:text-white">
                 <card.icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 font-display text-lg font-bold text-foreground">
-                {card.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {card.desc}
-              </p>
+              <h3 className="mt-4 font-display text-lg font-bold text-foreground">{card.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{card.desc}</p>
             </div>
           ))}
         </div>
@@ -753,7 +856,8 @@ function Timings() {
               <div>
                 <p className="text-sm font-semibold text-foreground">Clinic Hours</p>
                 <p className="text-sm text-muted-foreground">
-                  Monday – Saturday: <span className="font-medium text-foreground">11:00 AM – 6:00 PM</span>
+                  Monday – Saturday:{" "}
+                  <span className="font-medium text-foreground">11:00 AM – 6:00 PM</span>
                 </p>
               </div>
             </div>
@@ -841,7 +945,7 @@ function Contact() {
                   India
                 </p>
                 <a
-                  href={CLINIC_MAP_LINK}
+                  href={MAP_LINK}
                   target="_blank"
                   rel="noreferrer"
                   className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3.5 py-2 text-xs font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground"
@@ -865,8 +969,8 @@ function Contact() {
           </a>
           <div className="overflow-hidden rounded-2xl border border-border">
             <iframe
-              title="Armoor Skin & Hair Clinic Location"
-              src="https://www.google.com/maps?q=Armoor,Telangana,India&output=embed"
+              title="Armoor Skin & Hair Clinic - Opposite VR Hospital, Mahalaxmi Colony, Armoor"
+              src="https://www.google.com/maps?q=Opposite+VR+Hospital+Mahalaxmi+Colony+Armoor+Telangana&output=embed"
               width="100%"
               height="280"
               loading="lazy"
@@ -1152,16 +1256,40 @@ function Footer() {
               skin & hair treatments for patients of all ages.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Facebook, Instagram, Twitter, Mail].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label="Social link"
-                  className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition-all hover:border-gold hover:text-gold"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              <a
+                href={SOCIAL.facebook}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Follow Armoor Skin & Hair Clinic on Facebook"
+                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition-all hover:border-gold hover:text-gold"
+              >
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a
+                href={SOCIAL.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Follow Armoor Skin & Hair Clinic on Instagram"
+                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition-all hover:border-gold hover:text-gold"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                href={SOCIAL.twitter}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Follow Armoor Skin & Hair Clinic on Twitter"
+                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition-all hover:border-gold hover:text-gold"
+              >
+                <Twitter className="h-4 w-4" />
+              </a>
+              <a
+                href={`mailto:contact@armoorskinclinic.com`}
+                aria-label="Email Armoor Skin & Hair Clinic"
+                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/80 transition-all hover:border-gold hover:text-gold"
+              >
+                <Mail className="h-4 w-4" />
+              </a>
             </div>
           </div>
           <div>
@@ -1169,11 +1297,22 @@ function Footer() {
             <ul className="mt-4 space-y-2.5">
               {NAV.map((n) => (
                 <li key={n.href}>
-                  <a href={n.href} className="text-sm text-white/70 hover:text-gold">
-                    {n.label}
-                  </a>
+                  {n.href.startsWith("/") ? (
+                    <Link to={n.href} className="text-sm text-white/70 hover:text-gold">
+                      {n.label}
+                    </Link>
+                  ) : (
+                    <a href={n.href} className="text-sm text-white/70 hover:text-gold">
+                      {n.label}
+                    </a>
+                  )}
                 </li>
               ))}
+              <li>
+                <Link to="/blog" className="text-sm text-white/70 hover:text-gold">
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -1204,6 +1343,127 @@ function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+/* ---------------- FAQ ---------------- */
+function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const midPoint = Math.ceil(generalFAQs.length / 2);
+  const leftCol = generalFAQs.slice(0, midPoint);
+  const rightCol = generalFAQs.slice(midPoint);
+
+  return (
+    <Section id="faq" eyebrow="FAQ" title="Frequently Asked Questions">
+      <div className="mx-auto max-w-5xl">
+        <p className="mb-10 text-center text-[15px] leading-relaxed text-muted-foreground">
+          Find answers to common questions about our dermatology services at {CLINIC_NAME} in
+          Armoor.
+        </p>
+        <div className="grid gap-6 lg:grid-cols-2">
+          {[leftCol, rightCol].map((col, colIdx) => (
+            <div key={colIdx} className="space-y-3">
+              {col.map((faq, i) => {
+                const idx = colIdx * midPoint + i;
+                const isOpen = openIndex === idx;
+                return (
+                  <div
+                    key={idx}
+                    className={`rounded-2xl border bg-card p-5 transition-all ${isOpen ? "border-primary/30 shadow-[var(--shadow-soft)]" : "border-border"}`}
+                  >
+                    <button
+                      onClick={() => setOpenIndex(isOpen ? null : idx)}
+                      className="flex w-full items-center justify-between gap-4 text-left"
+                      aria-expanded={isOpen}
+                      aria-controls={`faq-answer-${idx}`}
+                    >
+                      <span className="text-sm font-semibold text-foreground">{faq.q}</span>
+                      <span
+                        className={`shrink-0 text-primary transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+                      >
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          aria-hidden="true"
+                        >
+                          <line x1="10" y1="3" x2="10" y2="17" />
+                          <line x1="3" y1="10" x2="17" y2="10" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div
+                      id={`faq-answer-${idx}`}
+                      role="region"
+                      className={`overflow-hidden transition-all duration-300 ${isOpen ? "mt-3 max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+                    >
+                      <p className="text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            to="/"
+            hash="contact"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary-glow"
+          >
+            Have more questions? Ask {DOCTOR_NAME}
+          </Link>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+/* ---------------- Sticky CTA ---------------- */
+function StickyCTA() {
+  return (
+    <>
+      <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-background/95 backdrop-blur-lg p-3 md:hidden">
+        <div className="flex items-center gap-2">
+          <a
+            href={`tel:${PHONE_TEL}`}
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-border py-3 text-sm font-semibold text-primary transition-all hover:border-primary"
+            aria-label={`Call ${CLINIC_NAME} at ${PHONE}`}
+          >
+            <Phone className="h-4 w-4" /> Call
+          </a>
+          <a
+            href={`https://wa.me/${WHATSAPP}?text=Hi, I want to book an appointment at Armoor Skin & Hair Clinic.`}
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-green-600 py-3 text-sm font-semibold text-white transition-all hover:bg-green-700"
+            aria-label={`Send WhatsApp message to ${CLINIC_NAME}`}
+          >
+            <MessageCircle className="h-4 w-4" /> WhatsApp
+          </a>
+          <a
+            href="#contact"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary-glow"
+          >
+            <Calendar className="h-4 w-4" /> Book
+          </a>
+        </div>
+      </div>
+      <div className="hidden md:block">
+        <a
+          href={`https://wa.me/${WHATSAPP}?text=Hi, I want to book an appointment at Armoor Skin & Hair Clinic.`}
+          target="_blank"
+          rel="noreferrer"
+          className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full bg-green-600 text-white shadow-[0_8px_25px_rgba(22,163,74,0.4)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(22,163,74,0.5)]"
+          aria-label={`Chat with ${CLINIC_NAME} on WhatsApp`}
+        >
+          <MessageCircle className="h-7 w-7" />
+        </a>
+      </div>
+    </>
   );
 }
 
@@ -1265,7 +1525,7 @@ function ImagePlaceholder({
       {image && (
         <img
           src={image}
-          alt={`${label} - ${sublabel}`}
+          alt={`${label}${sublabel ? ` - ${sublabel}` : ""} at Armoor Skin & Hair Clinic, Armoor`}
           className="absolute inset-0 h-full w-full object-cover"
           loading="lazy"
         />
