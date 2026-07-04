@@ -1,9 +1,9 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ArrowUpRight, Check, Stethoscope, Microscope, HeartPulse, ShieldCheck, Sparkles, Phone, Calendar, Quote } from "lucide-react";
+import { Search, ArrowUpRight, Check, ShieldCheck, Phone, Calendar, Quote } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { Disease } from "../lib/disease-data";
-import { PHONE, PHONE_TEL, CLINIC_NAME, DOCTOR_NAME } from "../lib/clinic-data";
+import { PHONE, PHONE_TEL, CLINIC_NAME } from "../lib/clinic-data";
 
 const FILTERS = [
   { label: "All", value: "all" },
@@ -120,19 +120,25 @@ export function DiseaseExplorer({ skinDiseases, hairDiseases }: DiseaseExplorerP
           onToggle={setExpandedId}
         />
 
-        <div className="mt-16">
-          <DiseaseSection
-            title="Hair Diseases"
-            diseases={hairFiltered}
-            expandedId={expandedId}
-            onToggle={setExpandedId}
-          />
-        </div>
+        {hairFiltered.length > 0 && (
+          <div className="mt-16">
+            <DiseaseSection
+              title="Hair Diseases"
+              diseases={hairFiltered}
+              expandedId={expandedId}
+              onToggle={setExpandedId}
+            />
+          </div>
+        )}
       </div>
     </section>
   );
 }
 
+/* -------------------------------------------------------- */
+/*  Disease Section — renders grid + inserts full-width     */
+/*  expanded panel after the row containing the active card  */
+/* -------------------------------------------------------- */
 function DiseaseSection({
   title,
   diseases,
@@ -146,6 +152,35 @@ function DiseaseSection({
 }) {
   if (diseases.length === 0) return null;
 
+  const expandedIndex = expandedId
+    ? diseases.findIndex((d) => d.id === expandedId)
+    : -1;
+  const expandedRow =
+    expandedIndex >= 0 ? Math.floor(expandedIndex / 2) : -1;
+  // Insert the full-width panel after the last item in the expanded row
+  const insertAfter =
+    expandedIndex >= 0
+      ? Math.min(expandedRow * 2 + 1, diseases.length - 1)
+      : -1;
+
+  // Build flat render list
+  const renderItems: {
+    key: string;
+    type: "card" | "panel";
+    disease: Disease;
+  }[] = [];
+
+  for (let i = 0; i < diseases.length; i++) {
+    renderItems.push({ key: `card-${diseases[i].id}`, type: "card", disease: diseases[i] });
+    if (i === insertAfter) {
+      renderItems.push({
+        key: `panel-${expandedId}`,
+        type: "panel",
+        disease: diseases.find((d) => d.id === expandedId)!,
+      });
+    }
+  }
+
   return (
     <div className="mt-12">
       <h3 className="font-display text-2xl font-bold text-foreground">{title}</h3>
@@ -153,22 +188,32 @@ function DiseaseSection({
         Click on a condition to learn more about symptoms and treatments.
       </p>
 
-      <motion.div layout className="mt-6 grid gap-5 sm:grid-cols-2" style={{ alignItems: "start" }}>
+      <motion.div layout className="mt-6 flex flex-wrap -m-2">
         <AnimatePresence mode="popLayout">
-          {diseases.map((disease) => (
+          {renderItems.map((item) => (
             <motion.div
-              key={disease.id}
+              key={item.key}
               layout
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+              transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+              className={item.type === "panel" ? "w-full p-2" : "w-full sm:w-1/2 p-2"}
             >
-              <DiseaseCard
-                disease={disease}
-                isExpanded={expandedId === disease.id}
-                onToggle={() => onToggle(expandedId === disease.id ? null : disease.id)}
-              />
+              {item.type === "card" ? (
+                <DiseaseCard
+                  disease={item.disease}
+                  isExpanded={false}
+                  onToggle={() =>
+                    onToggle(expandedId === item.disease.id ? null : item.disease.id)
+                  }
+                />
+              ) : (
+                <ExpandedPanel
+                  disease={item.disease}
+                  onClose={() => onToggle(null)}
+                />
+              )}
             </motion.div>
           ))}
         </AnimatePresence>
@@ -177,6 +222,9 @@ function DiseaseSection({
   );
 }
 
+/* -------------------------------------------------------- */
+/*  Disease Card                                            */
+/* -------------------------------------------------------- */
 function DiseaseCard({
   disease,
   isExpanded,
@@ -192,7 +240,6 @@ function DiseaseCard({
         onClick={onToggle}
         className="group relative block w-full overflow-hidden text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
         aria-expanded={isExpanded}
-        aria-controls={`disease-panel-${disease.id}`}
       >
         <div className="relative aspect-[620/230] overflow-hidden sm:aspect-[620/230]">
           <img
@@ -210,100 +257,106 @@ function DiseaseCard({
           <div className="absolute right-4 top-4">
             <ArrowUpRight
               className={`h-5 w-5 text-white/80 transition-all duration-400 ease-out ${
-                isExpanded ? "translate-x-0.5 -translate-y-0.5 rotate-45" : "group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:rotate-45"
+                isExpanded
+                  ? "translate-x-0.5 -translate-y-0.5 rotate-45"
+                  : "group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:rotate-45"
               }`}
             />
           </div>
         </div>
       </button>
+    </div>
+  );
+}
 
-      <AnimatePresence initial={false}>
-        {isExpanded && (
-          <motion.div
-            id={`disease-panel-${disease.id}`}
-            key="panel"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="overflow-hidden"
-          >
-            <div className="border-t border-border p-6 sm:p-8">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div className="overflow-hidden rounded-xl">
-                  <img
-                    src={disease.image}
-                    alt={disease.name}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="space-y-5">
-                  <h4 className="font-display text-xl font-bold text-foreground">{disease.name}</h4>
+/* -------------------------------------------------------- */
+/*  Expanded Panel — full-width landscape row               */
+/* -------------------------------------------------------- */
+function ExpandedPanel({
+  disease,
+  onClose,
+}: {
+  disease: Disease;
+  onClose: () => void;
+}) {
+  return (
+    <div className="overflow-hidden rounded-3xl border border-border bg-white shadow-[var(--shadow-elegant)]">
+      <div className="flex flex-col sm:flex-row min-h-[320px] sm:min-h-[360px] lg:min-h-[400px]">
+        {/* Image side — 35-40% */}
+        <div className="relative w-full sm:w-[38%] min-h-[200px] sm:min-h-full overflow-hidden">
+          <img
+            src={disease.image}
+            alt={disease.name}
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
 
-                  <div className="relative border-l-4 border-primary/40 bg-primary/5 pl-4 pr-4 py-4 rounded-r-lg">
-                    <Quote className="absolute -left-3 top-3 h-6 w-6 text-primary/20" />
-                    <p className="text-sm italic leading-relaxed text-foreground/80">
-                      &ldquo;{disease.quote}&rdquo;
-                    </p>
-                  </div>
+        {/* Content side — 60-65% */}
+        <div className="flex flex-1 flex-col justify-center gap-4 p-6 sm:p-8 lg:p-10 overflow-y-auto">
+          <h4 className="font-display text-xl font-bold text-foreground sm:text-2xl">
+            {disease.name}
+          </h4>
 
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {disease.description}
-                  </p>
+          <div className="relative border-l-4 border-primary/40 bg-primary/5 pl-4 pr-4 py-3 rounded-r-lg">
+            <Quote className="absolute -left-3 top-2 h-5 w-5 text-primary/20" />
+            <p className="text-sm italic leading-relaxed text-foreground/80">
+              &ldquo;{disease.quote}&rdquo;
+            </p>
+          </div>
 
-                  <div>
-                    <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-primary">
-                      Common Symptoms
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {disease.symptoms.map((s) => (
-                        <span
-                          key={s}
-                          className="inline-flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-foreground/80"
-                        >
-                          <Check className="h-3 w-3 text-primary" />
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+          <p className="text-sm leading-relaxed text-muted-foreground line-clamp-2 sm:line-clamp-3">
+            {disease.description}
+          </p>
 
-                  <div>
-                    <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-primary">
-                      Treatment Available at {CLINIC_NAME}
-                    </p>
-                    <div className="space-y-2">
-                      {disease.treatments.map((t) => (
-                        <div key={t} className="flex items-center gap-2 text-sm text-foreground/80">
-                          <ShieldCheck className="h-4 w-4 shrink-0 text-primary" />
-                          <span>{t}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-3 pt-2">
-                    <Link
-                      to="/"
-                      hash="contact"
-                      className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
-                    >
-                      <Calendar className="h-4 w-4" /> Book Consultation
-                    </Link>
-                    <a
-                      href={`tel:${PHONE_TEL}`}
-                      className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[var(--shadow-soft)]"
-                    >
-                      <Phone className="h-4 w-4" /> Call {PHONE}
-                    </a>
-                  </div>
-                </div>
-              </div>
+          <div>
+            <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
+              Common Symptoms
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {disease.symptoms.map((s) => (
+                <span
+                  key={s}
+                  className="inline-flex items-center gap-1 rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-foreground/80"
+                >
+                  <Check className="h-3 w-3 text-primary" />
+                  {s}
+                </span>
+              ))}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+
+          <div>
+            <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
+              Treatment Available at {CLINIC_NAME}
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-1">
+              {disease.treatments.map((t) => (
+                <div key={t} className="flex items-center gap-1.5 text-sm text-foreground/80">
+                  <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-primary" />
+                  <span>{t}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-3 pt-1">
+            <Link
+              to="/"
+              hash="contact"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
+            >
+              <Calendar className="h-4 w-4" /> Book Consultation
+            </Link>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[var(--shadow-soft)]"
+            >
+              <Phone className="h-4 w-4" /> Call {PHONE}
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
