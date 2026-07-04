@@ -32,36 +32,39 @@ export const Route = createFileRoute("/treatments/$slug")({
     if (!treatment) throw notFound();
     return { treatment };
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: loaderData.treatment.title },
-      { name: "description", content: loaderData.treatment.metaDescription },
-      { name: "robots", content: "index, follow" },
-      { property: "og:title", content: loaderData.treatment.title },
-      { property: "og:description", content: loaderData.treatment.metaDescription },
-      { property: "og:url", content: `${SITE_URL}/treatments/${loaderData.treatment.slug}` },
-      { name: "twitter:title", content: loaderData.treatment.title },
-      { name: "twitter:description", content: loaderData.treatment.metaDescription },
-    ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/${loaderData.treatment.slug}` }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "MedicalProcedure",
-          name: loaderData.treatment.shortTitle,
-          description: loaderData.treatment.intro,
-          provider: {
-            "@type": "MedicalClinic",
-            name: CLINIC_NAME,
-            url: SITE_URL,
-          },
-          relevantSpecialty: "Dermatology",
-        }),
-      },
-    ],
-  }),
+  head: ({ loaderData }) => {
+    if (!loaderData) return {};
+    return {
+      meta: [
+        { title: loaderData.treatment.title },
+        { name: "description", content: loaderData.treatment.metaDescription },
+        { name: "robots", content: "index, follow" },
+        { property: "og:title", content: loaderData.treatment.title },
+        { property: "og:description", content: loaderData.treatment.metaDescription },
+        { property: "og:url", content: `${SITE_URL}/treatments/${loaderData.treatment.slug}` },
+        { name: "twitter:title", content: loaderData.treatment.title },
+        { name: "twitter:description", content: loaderData.treatment.metaDescription },
+      ],
+      links: [{ rel: "canonical", href: `${SITE_URL}/treatments/${loaderData.treatment.slug}` }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            name: loaderData.treatment.shortTitle,
+            description: loaderData.treatment.intro,
+            provider: {
+              "@type": "MedicalClinic",
+              name: CLINIC_NAME,
+              url: SITE_URL,
+            },
+            relevantSpecialty: "Dermatology",
+          }),
+        },
+      ],
+    };
+  },
   component: TreatmentDetailPage,
   notFoundComponent: () => (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">

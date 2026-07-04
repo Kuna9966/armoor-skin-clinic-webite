@@ -137,40 +137,43 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!post) throw notFound();
     return { post };
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: `${loaderData.post.title} | ${CLINIC_NAME} Blog` },
-      { name: "description", content: loaderData.post.excerpt },
-      { name: "robots", content: "index, follow" },
-      { property: "og:title", content: loaderData.post.title },
-      { property: "og:description", content: loaderData.post.excerpt },
-      { property: "og:url", content: `${SITE_URL}/blog/${loaderData.post.slug}` },
-      { property: "og:type", content: "article" },
-      { name: "twitter:title", content: loaderData.post.title },
-      { name: "twitter:description", content: loaderData.post.excerpt },
-    ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/blog/${loaderData.post.slug}` }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: loaderData.post.title,
-          description: loaderData.post.excerpt,
-          author: {
-            "@type": "Person",
-            name: DOCTOR_NAME,
-          },
-          publisher: {
-            "@type": "Organization",
-            name: CLINIC_NAME,
-          },
-          datePublished: loaderData.post.date,
-        }),
-      },
-    ],
-  }),
+  head: ({ loaderData }) => {
+    if (!loaderData) return {};
+    return {
+      meta: [
+        { title: `${loaderData.post.title} | ${CLINIC_NAME} Blog` },
+        { name: "description", content: loaderData.post.excerpt },
+        { name: "robots", content: "index, follow" },
+        { property: "og:title", content: loaderData.post.title },
+        { property: "og:description", content: loaderData.post.excerpt },
+        { property: "og:url", content: `${SITE_URL}/blog/${loaderData.post.slug}` },
+        { property: "og:type", content: "article" },
+        { name: "twitter:title", content: loaderData.post.title },
+        { name: "twitter:description", content: loaderData.post.excerpt },
+      ],
+      links: [{ rel: "canonical", href: `${SITE_URL}/blog/${loaderData.post.slug}` }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: loaderData.post.title,
+            description: loaderData.post.excerpt,
+            author: {
+              "@type": "Person",
+              name: DOCTOR_NAME,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: CLINIC_NAME,
+            },
+            datePublished: loaderData.post.date,
+          }),
+        },
+      ],
+    };
+  },
   component: BlogPostPage,
   notFoundComponent: () => (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">

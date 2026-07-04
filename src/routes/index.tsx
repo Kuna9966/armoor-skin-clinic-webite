@@ -234,8 +234,10 @@ const GALLERY = [
   { label: "Clinic Interior", tag: "Treatment Room" },
 ];
 
+let adDismissed = false;
+
 function Home() {
-  const [showAd, setShowAd] = useState(true);
+  const [showAd, setShowAd] = useState(!adDismissed);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -248,7 +250,7 @@ function Home() {
         >
           <div className="relative w-full max-w-[90vw] sm:max-w-[1000px]">
             <button
-              onClick={() => setShowAd(false)}
+              onClick={() => { adDismissed = true; setShowAd(false); }}
               className="absolute -top-3 right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/70 text-white transition-colors hover:bg-black"
               aria-label="Close advertisement"
             >
