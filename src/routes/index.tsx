@@ -799,13 +799,13 @@ function Contact() {
           </a>
           <div className="overflow-hidden rounded-2xl border border-border">
             <iframe
-              title="Armoor Skin & Hair Clinic - Opposite VR Hospital, Mahalaxmi Colony, Armoor"
-              src="https://www.google.com/maps?q=Opposite+VR+Hospital+Mahalaxmi+Colony+Armoor+Telangana&output=embed"
+              title="Armoor Skin and Hair Clinic - Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d304.65572520099533!2d78.29268087788058!3d18.788069622388445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcdc12ba7e05a7f%3A0xa73aa9e1111d2666!2sArmoor%20skin%20and%20hair%20clinic!5e0!3m2!1sen!2sin!4v1783178474466!5m2!1sen!2sin"
               width="100%"
-              height="280"
+              height="450"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="block h-[280px] w-full border-0"
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="block h-[450px] w-full border-0"
             />
           </div>
         </div>
