@@ -29,6 +29,7 @@ import {
   GraduationCap,
   Award,
   Star,
+  Loader2,
 } from "lucide-react";
 import { Calendar as DatePicker } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -776,10 +777,15 @@ function Contact() {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
   const [dateOpen, setDateOpen] = useState(false);
   const [dateError, setDateError] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const firstAvailableDate = getFirstAvailableDate();
+  const GSHEET_URL =
+    "https://script.google.com/macros/s/AKfycbxWlStlskGOUPyf8MjiLszKzFyxs_HiDAbpuJZ_crN6POo-0k1EKn0wr3anXQhg9ZzkXw/exec";
 
-  const handleAppointmentSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleAppointmentSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitError("");
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -798,25 +804,47 @@ function Contact() {
     const preferredTime = String(formData.get("preferred-time") ?? "").trim();
     const preferredDate = formatAppointmentDate(selectedDate);
 
-    const message = [
-      "🏥 *New Appointment Request*",
-      "",
-      `👤 *Full Name:* ${fullName}`,
-      "",
-      `📞 *Mobile:* ${mobile}`,
-      "",
-      `📧 *Email:* ${email}`,
-      "",
-      `🩺 *Department:* ${department}`,
-      "",
-      `📅 *Preferred Date:* ${preferredDate}`,
-      "",
-      `🕒 *Preferred Time:* ${preferredTime}`,
-      "",
-      "Please confirm my appointment.",
-    ].join("\n");
+    setIsSaving(true);
 
-    window.location.href = `https://wa.me/919603752752?text=${encodeURIComponent(message)}`;
+    try {
+      const res = await fetch(GSHEET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: fullName,
+          phone: mobile,
+          email,
+          department,
+          date: preferredDate,
+          time: preferredTime,
+        }),
+      });
+
+      const message = [
+        "🏥 *New Appointment Request*",
+        "",
+        `👤 *Full Name:* ${fullName}`,
+        "",
+        `📞 *Mobile:* ${mobile}`,
+        "",
+        `📧 *Email:* ${email}`,
+        "",
+        `🩺 *Department:* ${department}`,
+        "",
+        `📅 *Preferred Date:* ${preferredDate}`,
+        "",
+        `🕒 *Preferred Time:* ${preferredTime}`,
+        "",
+        "Please confirm my appointment.",
+      ].join("\n");
+
+      setIsSaving(false);
+      window.location.href = `https://wa.me/919603752752?text=${encodeURIComponent(message)}`;
+    } catch {
+      setIsSaving(false);
+      setSubmitError("Unable to save your appointment. Please try again.");
+    }
   };
 
   return (
@@ -1002,12 +1030,27 @@ function Contact() {
             </AppointmentSelect>
           </div>
 
+          {submitError && (
+            <p className="mt-4 rounded-xl bg-red-50 px-4 py-3 text-center text-sm font-medium text-red-600">
+              {submitError}
+            </p>
+          )}
           <button
             type="submit"
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(37,99,235,0.28)] transition-all hover:-translate-y-0.5 hover:bg-[#1D4ED8] hover:shadow-[0_20px_45px_rgba(37,99,235,0.34)] focus:outline-none focus:ring-4 focus:ring-blue-100"
+            disabled={isSaving}
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(37,99,235,0.28)] transition-all hover:-translate-y-0.5 hover:bg-[#1D4ED8] hover:shadow-[0_20px_45px_rgba(37,99,235,0.34)] focus:outline-none focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:bg-[#2563EB]"
           >
-            <Calendar className="h-4 w-4" />
-            Book Appointment
+            {isSaving ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" />
+                Saving your appointment...
+              </>
+            ) : (
+              <>
+                <Calendar className="h-4 w-4" />
+                Book Appointment
+              </>
+            )}
           </button>
         </form>
       </div>
