@@ -75,13 +75,14 @@ export function Header() {
                 {n.label}
               </Link>
             ) : (
-              <a
+              <Link
                 key={n.href}
-                href={n.href}
+                to="/"
+                hash={n.href.replace("#", "")}
                 className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
               >
                 {n.label}
-              </a>
+              </Link>
             ),
           )}
         </nav>
@@ -93,12 +94,13 @@ export function Header() {
           >
             <Phone className="h-4 w-4" /> {PHONE}
           </a>
-          <a
-            href="#contact"
+          <Link
+            to="/"
+            hash="contact"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:bg-primary-glow hover:shadow-[var(--shadow-elegant)]"
           >
             <Calendar className="h-4 w-4" /> Book Appointment
-          </a>
+          </Link>
         </div>
 
         <button
@@ -128,14 +130,15 @@ export function Header() {
                   {n.label}
                 </Link>
               ) : (
-                <a
+                <Link
                   key={n.href}
-                  href={n.href}
+                  to="/"
+                  hash={n.href.replace("#", "")}
                   onClick={() => setOpen(false)}
                   className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-primary"
                 >
                   {n.label}
-                </a>
+                </Link>
               ),
             )}
             <div className="mt-2 flex flex-col gap-2">
@@ -145,13 +148,14 @@ export function Header() {
               >
                 <Phone className="h-4 w-4" /> Call {PHONE}
               </a>
-              <a
-                href="#contact"
+              <Link
+                to="/"
+                hash="contact"
                 onClick={() => setOpen(false)}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground"
               >
                 <Calendar className="h-4 w-4" /> Book Appointment
-              </a>
+              </Link>
             </div>
           </div>
         </div>
