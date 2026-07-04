@@ -781,7 +781,7 @@ function Contact() {
   const [submitError, setSubmitError] = useState("");
   const firstAvailableDate = getFirstAvailableDate();
   const GSHEET_URL =
-    "https://script.google.com/macros/s/AKfycbxWlStlskGOUPyf8MjiLszKzFyxs_HiDAbpuJZ_crN6POo-0k1EKn0wr3anXQhg9ZzkXw/exec";
+    "https://script.google.com/macros/s/AKfycbyT7WH2Keyv2fYa8oPR8QtvYVJHoLtD5m4VmwIOUteV/dev";
 
   const handleAppointmentSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
