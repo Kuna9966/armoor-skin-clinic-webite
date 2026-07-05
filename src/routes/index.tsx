@@ -25,6 +25,7 @@ import {
   Star,
   Loader2,
   MessageCircle,
+  Quote,
 } from "lucide-react";
 import { Calendar as DatePicker } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -155,7 +156,10 @@ function Home() {
         >
           <div className="relative w-full max-w-[90vw] sm:max-w-[1000px]">
             <button
-              onClick={() => { adDismissed = true; setShowAd(false); }}
+              onClick={() => {
+                adDismissed = true;
+                setShowAd(false);
+              }}
               className="absolute -top-3 right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/70 text-white transition-colors hover:bg-black"
               aria-label="Close advertisement"
             >
@@ -178,6 +182,7 @@ function Home() {
       <Treatments />
       <WhyUs />
       <Gallery />
+      <Reviews />
       <FAQ />
       <Contact />
       <Footer />
@@ -410,7 +415,11 @@ function Doctor() {
 /* ---------------- Treatments ---------------- */
 function Treatments() {
   return (
-    <Section id="treatments" eyebrow="Our Treatments" title="Healthy Skin. Healthy Hair. Expert Care.">
+    <Section
+      id="treatments"
+      eyebrow="Our Treatments"
+      title="Healthy Skin. Healthy Hair. Expert Care."
+    >
       <p className="mx-auto -mt-8 mb-10 max-w-2xl text-center text-[15px] leading-relaxed text-muted-foreground">
         Explore our comprehensive dermatology treatments for skin, hair, and cosmetic concerns.
         Click below to discover every condition we diagnose and treat.
@@ -990,80 +999,279 @@ function formatAppointmentDate(date: Date) {
   });
 }
 
-/* ---------------- Footer ---------------- */
-/* ---------------- FAQ ---------------- */
-function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const midPoint = Math.ceil(generalFAQs.length / 2);
-  const leftCol = generalFAQs.slice(0, midPoint);
-  const rightCol = generalFAQs.slice(midPoint);
+/* ---------------- Reviews ---------------- */
+function Reviews() {
+  const reviews = [
+    {
+      name: "Srinivas Reddy",
+      location: "Armoor",
+      text: "I was struggling with hair fall for months and tried everything. Dr. Raghavendhra diagnosed the root cause and put me on a treatment plan that actually worked. After three months, my hair fall reduced by 80%. Truly grateful!",
+      rating: 5,
+    },
+    {
+      name: "Rajeshwari",
+      location: "Kotha Armur",
+      text: "The acne scar treatment at this clinic changed my confidence completely. The chemical peels and microneedling sessions were comfortable and the results are amazing. My skin has never looked this good.",
+      rating: 5,
+    },
+    {
+      name: "Venkatesh",
+      location: "Nizamabad",
+      text: "I had a stubborn fungal infection that wouldn't go away with over-the-counter creams. The doctor prescribed the right medication, and it cleared up within weeks. Professional and thorough care.",
+      rating: 5,
+    },
+    {
+      name: "Anjali",
+      location: "Mortad",
+      text: "My daughter's eczema was causing her so much discomfort. The paediatric dermatology care here is wonderful — gentle, effective, and the doctor explained everything so well. Highly recommended for children.",
+      rating: 5,
+    },
+    {
+      name: "Prakash",
+      location: "Bheemgal",
+      text: "I was worried about a mole on my back. The doctor examined it carefully, assured me it was benign, and explained what to watch for. The thoroughness and transparency really put my mind at ease.",
+      rating: 5,
+    },
+    {
+      name: "Laxmi",
+      location: "Balkonda",
+      text: "Psoriasis was affecting my daily life. The treatment plan at this clinic has given me months of clear skin. The doctor is compassionate and takes time to answer all my questions. Best dermatologist in Armoor.",
+      rating: 5,
+    },
+    {
+      name: "Ravi Kumar",
+      location: "Kammarpalle",
+      text: "The PRP treatment for my hair loss has been remarkable. I was sceptical at first but after four sessions, I can see visible regrowth in my crown area. The staff is very supportive throughout the process.",
+      rating: 5,
+    },
+    {
+      name: "Swetha",
+      location: "Mupkal",
+      text: "I came in for pigmentation on my face and the treatment exceeded my expectations. The doctor customised the plan for my skin type and the results started showing within weeks. Very professional clinic.",
+      rating: 5,
+    },
+  ];
 
   return (
-    <Section id="faq" eyebrow="FAQ" title="Frequently Asked Questions">
-      <div className="mx-auto max-w-5xl">
-        <p className="mb-10 text-center text-[15px] leading-relaxed text-muted-foreground">
-          Find answers to common questions about our dermatology services at {CLINIC_NAME} in
-          Armoor.
-        </p>
-        <div className="grid gap-6 lg:grid-cols-2">
-          {[leftCol, rightCol].map((col, colIdx) => (
-            <div key={colIdx} className="space-y-3">
-              {col.map((faq, i) => {
-                const idx = colIdx * midPoint + i;
-                const isOpen = openIndex === idx;
-                return (
-                  <div
-                    key={idx}
-                    className={`rounded-2xl border bg-card p-5 transition-all ${isOpen ? "border-primary/30 shadow-[var(--shadow-soft)]" : "border-border"}`}
-                  >
-                    <button
-                      onClick={() => setOpenIndex(isOpen ? null : idx)}
-                      className="flex w-full items-center justify-between gap-4 text-left"
-                      aria-expanded={isOpen}
-                      aria-controls={`faq-answer-${idx}`}
-                    >
-                      <span className="text-sm font-semibold text-foreground">{faq.q}</span>
-                      <span
-                        className={`shrink-0 text-primary transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
-                      >
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          aria-hidden="true"
-                        >
-                          <line x1="10" y1="3" x2="10" y2="17" />
-                          <line x1="3" y1="10" x2="17" y2="10" />
-                        </svg>
-                      </span>
-                    </button>
-                    <div
-                      id={`faq-answer-${idx}`}
-                      role="region"
-                      className={`overflow-hidden transition-all duration-300 ${isOpen ? "mt-3 max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
-                    >
-                      <p className="text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
-                    </div>
-                  </div>
-                );
-              })}
+    <section className="relative overflow-hidden py-20 sm:py-28">
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, oklch(0.16 0.06 265) 0%, oklch(0.20 0.07 265) 55%, oklch(0.24 0.08 265) 100%)",
+        }}
+      />
+      <div className="absolute inset-0 opacity-[0.07]" aria-hidden>
+        <div className="absolute left-1/4 top-10 h-72 w-72 rounded-full bg-gold blur-3xl" />
+        <div className="absolute right-1/4 bottom-10 h-72 w-72 rounded-full bg-primary blur-3xl" />
+      </div>
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            Patient Reviews
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
+            What Our Patients Say
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-white/70">
+            Real experiences from real patients at {CLINIC_NAME} in Armoor. We are proud to have
+            helped thousands achieve healthier skin and hair.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-6 flex flex-wrap justify-center gap-6">
+          {[
+            { label: "Overall Rating", value: "4.9/5", sub: "500+ Reviews" },
+            { label: "Happy Patients", value: "50k+", sub: "And Growing" },
+            { label: "Years of Trust", value: "6+", sub: "in Armoor" },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-center backdrop-blur"
+            >
+              <p className="font-display text-2xl font-bold text-gold">{stat.value}</p>
+              <p className="mt-0.5 text-xs font-semibold text-white/80">{stat.label}</p>
+              <p className="text-[10px] text-white/50">{stat.sub}</p>
             </div>
           ))}
         </div>
-        <div className="mt-10 text-center">
-          <Link
-            to="/"
-            hash="contact"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary-glow"
-          >
-            Have more questions? Ask {DOCTOR_NAME}
-          </Link>
+
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {reviews.map((review) => (
+            <div
+              key={review.name}
+              className="group rounded-2xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur transition-all hover:-translate-y-1 hover:border-gold/30 hover:bg-white/[0.10]"
+            >
+              <div className="flex items-center gap-1">
+                {Array.from({ length: review.rating }).map((_, i) => (
+                  <Star key={i} className="h-3.5 w-3.5 fill-gold text-gold" />
+                ))}
+              </div>
+              <Quote className="mt-3 h-6 w-6 text-white/20" />
+              <p className="mt-2 text-sm leading-relaxed text-white/80 line-clamp-4">
+                "{review.text}"
+              </p>
+              <div className="mt-4 flex items-center gap-3 border-t border-white/10 pt-4">
+                <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gold/20 text-xs font-bold text-gold">
+                  {review.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">{review.name}</p>
+                  <p className="text-xs text-white/60">{review.location}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </Section>
+    </section>
+  );
+}
+
+/* ---------------- FAQ ---------------- */
+function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const categories = [
+    { label: "Appointments", icon: Calendar, faqs: [12, 13, 14] },
+    { label: "Skin Care", icon: Sparkles, faqs: [1, 3, 5, 8] },
+    { label: "Hair Care", icon: Users, faqs: [2, 6, 10] },
+    { label: "General", icon: HeartPulse, faqs: [0, 4, 7, 9, 11] },
+  ] as const;
+  const getCategory = (idx: number) =>
+    categories.find((c) => c.faqs.includes(idx))?.label ?? "General";
+
+  return (
+    <section className="relative overflow-hidden py-20 sm:py-28">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            Have Questions?
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-bold text-foreground sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-muted-foreground">
+            Find answers to common questions about our dermatology services at {CLINIC_NAME} in
+            Armoor.
+          </p>
+        </div>
+
+        <div className="mt-12 flex flex-wrap justify-center gap-2">
+          {categories.map((cat) => {
+            const Icon = cat.icon;
+            return (
+              <span
+                key={cat.label}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-medium text-muted-foreground"
+              >
+                <Icon className="h-3 w-3 text-primary" />
+                {cat.label}
+              </span>
+            );
+          })}
+        </div>
+
+        <div className="mx-auto mt-8 max-w-3xl space-y-3">
+          {generalFAQs.map((faq, idx) => {
+            const isOpen = openIndex === idx;
+            const cat = getCategory(idx);
+            return (
+              <div
+                key={idx}
+                className={`rounded-2xl border bg-card transition-all duration-300 ${
+                  isOpen
+                    ? "border-primary/30 shadow-[var(--shadow-soft)]"
+                    : "border-border hover:border-primary/15"
+                }`}
+              >
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${idx}`}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-primary/10 text-[10px] font-bold text-primary">
+                      <Stethoscope className="h-3 w-3" />
+                    </span>
+                    <span className="text-sm font-semibold text-foreground leading-snug">
+                      {faq.q}
+                    </span>
+                  </div>
+                  <span
+                    className={`shrink-0 grid h-6 w-6 place-items-center rounded-full border transition-all duration-300 ${
+                      isOpen
+                        ? "border-primary bg-primary text-primary-foreground rotate-45"
+                        : "border-border text-muted-foreground"
+                    }`}
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      aria-hidden="true"
+                    >
+                      <line x1="7" y1="2" x2="7" y2="12" />
+                      <line x1="2" y1="7" x2="12" y2="7" />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  id={`faq-answer-${idx}`}
+                  role="region"
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="border-t border-border/50 px-5 pb-4 pt-3">
+                    <div className="flex items-start gap-3">
+                      <span className="mt-0.5 shrink-0 text-[10px] font-medium uppercase tracking-wider text-primary/60">
+                        {cat}
+                      </span>
+                      <p className="text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="relative mx-auto mt-10 max-w-2xl">
+          <div
+            className="rounded-2xl p-8 text-center"
+            style={{ background: "var(--gradient-navy)" }}
+          >
+            <h3 className="font-display text-xl font-bold text-white">Still have questions?</h3>
+            <p className="mt-2 text-sm text-white/70">
+              We are here to help. Reach out to {DOCTOR_NAME} directly.
+            </p>
+            <div className="mt-5 flex flex-wrap justify-center gap-3">
+              <Link
+                to="/"
+                hash="contact"
+                className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-gold-foreground transition-all hover:brightness-110"
+              >
+                <Calendar className="h-4 w-4" /> Book an Appointment
+              </Link>
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition-all hover:bg-white/15"
+              >
+                <Phone className="h-4 w-4" /> Call {PHONE}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
