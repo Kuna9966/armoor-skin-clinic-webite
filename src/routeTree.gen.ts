@@ -12,6 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TreatmentsRouteImport } from './routes/treatments'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as TreatmentsPsoriasisTreatmentArmoorRouteImport } from './routes/treatments.psoriasis-treatment-armoor'
+import { Route as TreatmentsHairFallTreatmentArmoorRouteImport } from './routes/treatments.hair-fall-treatment-armoor'
+import { Route as TreatmentsEczemaTreatmentArmoorRouteImport } from './routes/treatments.eczema-treatment-armoor'
+import { Route as TreatmentsAcneTreatmentArmoorRouteImport } from './routes/treatments.acne-treatment-armoor'
 import { Route as TreatmentsSlugRouteImport } from './routes/treatments.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
@@ -30,6 +34,30 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TreatmentsPsoriasisTreatmentArmoorRoute =
+  TreatmentsPsoriasisTreatmentArmoorRouteImport.update({
+    id: '/psoriasis-treatment-armoor',
+    path: '/psoriasis-treatment-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsHairFallTreatmentArmoorRoute =
+  TreatmentsHairFallTreatmentArmoorRouteImport.update({
+    id: '/hair-fall-treatment-armoor',
+    path: '/hair-fall-treatment-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsEczemaTreatmentArmoorRoute =
+  TreatmentsEczemaTreatmentArmoorRouteImport.update({
+    id: '/eczema-treatment-armoor',
+    path: '/eczema-treatment-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsAcneTreatmentArmoorRoute =
+  TreatmentsAcneTreatmentArmoorRouteImport.update({
+    id: '/acne-treatment-armoor',
+    path: '/acne-treatment-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
 const TreatmentsSlugRoute = TreatmentsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -47,6 +75,10 @@ export interface FileRoutesByFullPath {
   '/treatments': typeof TreatmentsRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/treatments/$slug': typeof TreatmentsSlugRoute
+  '/treatments/acne-treatment-armoor': typeof TreatmentsAcneTreatmentArmoorRoute
+  '/treatments/eczema-treatment-armoor': typeof TreatmentsEczemaTreatmentArmoorRoute
+  '/treatments/hair-fall-treatment-armoor': typeof TreatmentsHairFallTreatmentArmoorRoute
+  '/treatments/psoriasis-treatment-armoor': typeof TreatmentsPsoriasisTreatmentArmoorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +86,10 @@ export interface FileRoutesByTo {
   '/treatments': typeof TreatmentsRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/treatments/$slug': typeof TreatmentsSlugRoute
+  '/treatments/acne-treatment-armoor': typeof TreatmentsAcneTreatmentArmoorRoute
+  '/treatments/eczema-treatment-armoor': typeof TreatmentsEczemaTreatmentArmoorRoute
+  '/treatments/hair-fall-treatment-armoor': typeof TreatmentsHairFallTreatmentArmoorRoute
+  '/treatments/psoriasis-treatment-armoor': typeof TreatmentsPsoriasisTreatmentArmoorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,12 +98,34 @@ export interface FileRoutesById {
   '/treatments': typeof TreatmentsRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/treatments/$slug': typeof TreatmentsSlugRoute
+  '/treatments/acne-treatment-armoor': typeof TreatmentsAcneTreatmentArmoorRoute
+  '/treatments/eczema-treatment-armoor': typeof TreatmentsEczemaTreatmentArmoorRoute
+  '/treatments/hair-fall-treatment-armoor': typeof TreatmentsHairFallTreatmentArmoorRoute
+  '/treatments/psoriasis-treatment-armoor': typeof TreatmentsPsoriasisTreatmentArmoorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/blog' | '/treatments' | '/blog/$slug' | '/treatments/$slug'
+  fullPaths:
+    | '/'
+    | '/blog'
+    | '/treatments'
+    | '/blog/$slug'
+    | '/treatments/$slug'
+    | '/treatments/acne-treatment-armoor'
+    | '/treatments/eczema-treatment-armoor'
+    | '/treatments/hair-fall-treatment-armoor'
+    | '/treatments/psoriasis-treatment-armoor'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/blog' | '/treatments' | '/blog/$slug' | '/treatments/$slug'
+  to:
+    | '/'
+    | '/blog'
+    | '/treatments'
+    | '/blog/$slug'
+    | '/treatments/$slug'
+    | '/treatments/acne-treatment-armoor'
+    | '/treatments/eczema-treatment-armoor'
+    | '/treatments/hair-fall-treatment-armoor'
+    | '/treatments/psoriasis-treatment-armoor'
   id:
     | '__root__'
     | '/'
@@ -75,6 +133,10 @@ export interface FileRouteTypes {
     | '/treatments'
     | '/blog/$slug'
     | '/treatments/$slug'
+    | '/treatments/acne-treatment-armoor'
+    | '/treatments/eczema-treatment-armoor'
+    | '/treatments/hair-fall-treatment-armoor'
+    | '/treatments/psoriasis-treatment-armoor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +168,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/treatments/psoriasis-treatment-armoor': {
+      id: '/treatments/psoriasis-treatment-armoor'
+      path: '/psoriasis-treatment-armoor'
+      fullPath: '/treatments/psoriasis-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsPsoriasisTreatmentArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/hair-fall-treatment-armoor': {
+      id: '/treatments/hair-fall-treatment-armoor'
+      path: '/hair-fall-treatment-armoor'
+      fullPath: '/treatments/hair-fall-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsHairFallTreatmentArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/eczema-treatment-armoor': {
+      id: '/treatments/eczema-treatment-armoor'
+      path: '/eczema-treatment-armoor'
+      fullPath: '/treatments/eczema-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsEczemaTreatmentArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/acne-treatment-armoor': {
+      id: '/treatments/acne-treatment-armoor'
+      path: '/acne-treatment-armoor'
+      fullPath: '/treatments/acne-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsAcneTreatmentArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
     '/treatments/$slug': {
       id: '/treatments/$slug'
       path: '/$slug'
@@ -135,10 +225,20 @@ const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface TreatmentsRouteChildren {
   TreatmentsSlugRoute: typeof TreatmentsSlugRoute
+  TreatmentsAcneTreatmentArmoorRoute: typeof TreatmentsAcneTreatmentArmoorRoute
+  TreatmentsEczemaTreatmentArmoorRoute: typeof TreatmentsEczemaTreatmentArmoorRoute
+  TreatmentsHairFallTreatmentArmoorRoute: typeof TreatmentsHairFallTreatmentArmoorRoute
+  TreatmentsPsoriasisTreatmentArmoorRoute: typeof TreatmentsPsoriasisTreatmentArmoorRoute
 }
 
 const TreatmentsRouteChildren: TreatmentsRouteChildren = {
   TreatmentsSlugRoute: TreatmentsSlugRoute,
+  TreatmentsAcneTreatmentArmoorRoute: TreatmentsAcneTreatmentArmoorRoute,
+  TreatmentsEczemaTreatmentArmoorRoute: TreatmentsEczemaTreatmentArmoorRoute,
+  TreatmentsHairFallTreatmentArmoorRoute:
+    TreatmentsHairFallTreatmentArmoorRoute,
+  TreatmentsPsoriasisTreatmentArmoorRoute:
+    TreatmentsPsoriasisTreatmentArmoorRoute,
 }
 
 const TreatmentsRouteWithChildren = TreatmentsRoute._addFileChildren(

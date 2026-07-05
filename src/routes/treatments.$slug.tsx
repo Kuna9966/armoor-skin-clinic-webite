@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import {
   ArrowRight,
   Calendar,
@@ -10,8 +10,6 @@ import {
   HeartPulse,
   Sparkles,
 } from "lucide-react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { treatments } from "../lib/treatments";
 import {
   CLINIC_NAME,
@@ -30,6 +28,9 @@ function findTreatment(slug: string): TreatmentData | undefined {
 
 export const Route = createFileRoute("/treatments/$slug")({
   loader: ({ params }) => {
+    if (params.slug === "acne-treatment") {
+      throw redirect({ to: "/treatments/acne-treatment-armoor" });
+    }
     const treatment = findTreatment(params.slug);
     if (!treatment) throw notFound();
     return { treatment };
@@ -92,17 +93,13 @@ function TreatmentDetailPage() {
   const { treatment } = Route.useLoaderData();
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Header />
-      <main>
-        <TreatmentHero treatment={treatment} />
-        <TreatmentContent treatment={treatment} />
-        <TreatmentFAQ treatment={treatment} />
-        <RelatedTreatments currentSlug={treatment.slug} />
-        <BookingCTA />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <TreatmentHero treatment={treatment} />
+      <TreatmentContent treatment={treatment} />
+      <TreatmentFAQ treatment={treatment} />
+      <RelatedTreatments currentSlug={treatment.slug} />
+      <BookingCTA />
+    </>
   );
 }
 
