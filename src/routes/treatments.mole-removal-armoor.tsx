@@ -11,7 +11,6 @@ import {
   Star,
   MapPin,
   Quote,
-  Clock,
   AlertCircle,
   Users,
 } from "lucide-react";
@@ -28,37 +27,37 @@ import {
   MAP_LINK,
 } from "../lib/clinic-data";
 
-export const Route = createFileRoute("/treatments/hair-fall-treatment-armoor")({
+export const Route = createFileRoute("/treatments/mole-removal-armoor")({
   head: () => ({
     meta: [
       {
-        title: `Hair Fall Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        title: `Mole Removal in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         name: "description",
-        content: `Expert hair fall treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced solutions for hair loss, thinning, and baldness at ${CLINIC_NAME}. Book your consultation today.`,
+        content: `Expert mole removal in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Safe removal of raised moles, flat moles, and atypical nevi with dermoscopic evaluation at ${CLINIC_NAME}. Book your consultation.`,
       },
       { name: "robots", content: "index, follow" },
       {
         property: "og:title",
-        content: `Hair Fall Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        content: `Mole Removal in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         property: "og:description",
-        content: `Effective hair fall and hair loss treatment in Armoor by Dr. Raghavendhra MD, DVL. Personalised therapies for healthier, fuller hair at Armoor Skin & Hair Clinic.`,
+        content: `Safe and precise mole removal in Armoor by Dr. Raghavendhra MD, DVL. Surgical excision, shave removal, laser treatment, and mole evaluation at Armoor Skin & Hair Clinic.`,
       },
-      { property: "og:url", content: `${SITE_URL}/treatments/hair-fall-treatment-armoor` },
+      { property: "og:url", content: `${SITE_URL}/treatments/mole-removal-armoor` },
       { property: "og:type", content: "website" },
       {
         name: "twitter:title",
-        content: `Hair Fall Treatment in Armoor | ${CLINIC_NAME}`,
+        content: `Mole Removal in Armoor | ${CLINIC_NAME}`,
       },
       {
         name: "twitter:description",
-        content: `Expert hair fall treatment in Armoor by Dr. Raghavendhra — personalised care for healthier, fuller hair.`,
+        content: `Expert mole removal in Armoor by Dr. Raghavendhra — safe, precise, and caring treatment for all mole types.`,
       },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/hair-fall-treatment-armoor` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/mole-removal-armoor` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -67,9 +66,9 @@ export const Route = createFileRoute("/treatments/hair-fall-treatment-armoor")({
           "@graph": [
             {
               "@type": "MedicalClinic",
-              "@id": `${SITE_URL}/treatments/hair-fall-treatment-armoor#clinic`,
+              "@id": `${SITE_URL}/treatments/mole-removal-armoor#clinic`,
               name: CLINIC_NAME,
-              description: `Hair fall and hair loss treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
+              description: `Mole removal in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
               url: SITE_URL,
               telephone: PHONE_TEL,
               address: {
@@ -95,7 +94,7 @@ export const Route = createFileRoute("/treatments/hair-fall-treatment-armoor")({
             },
             {
               "@type": "LocalBusiness",
-              "@id": `${SITE_URL}/treatments/hair-fall-treatment-armoor#business`,
+              "@id": `${SITE_URL}/treatments/mole-removal-armoor#business`,
               name: CLINIC_NAME,
               image: `${SITE_URL}/og-image.jpg`,
               telephone: PHONE_TEL,
@@ -111,7 +110,7 @@ export const Route = createFileRoute("/treatments/hair-fall-treatment-armoor")({
             },
             {
               "@type": "BreadcrumbList",
-              "@id": `${SITE_URL}/treatments/hair-fall-treatment-armoor#breadcrumbs`,
+              "@id": `${SITE_URL}/treatments/mole-removal-armoor#breadcrumbs`,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -122,102 +121,94 @@ export const Route = createFileRoute("/treatments/hair-fall-treatment-armoor")({
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "Hair Fall Treatment in Armoor",
-                  item: `${SITE_URL}/treatments/hair-fall-treatment-armoor`,
+                  name: "Mole Removal in Armoor",
+                  item: `${SITE_URL}/treatments/mole-removal-armoor`,
                 },
               ],
             },
             {
               "@type": "FAQPage",
-              "@id": `${SITE_URL}/treatments/hair-fall-treatment-armoor#faq`,
+              "@id": `${SITE_URL}/treatments/mole-removal-armoor#faq`,
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "What causes hair fall?",
+                  name: "Is mole removal safe?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Hair fall can be caused by genetics, hormonal changes, nutritional deficiencies, stress, thyroid disorders, scalp infections, dandruff, certain medications, and lifestyle factors. A thorough evaluation by a dermatologist can help identify the specific cause.",
+                    text: "Yes, mole removal is a safe procedure when performed by a qualified dermatologist. At our clinic, we follow strict sterilisation protocols, use dermoscopic evaluation before removal, and recommend histopathological examination for suspicious moles to ensure complete safety.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is hair fall permanent?",
+                  name: "Will mole removal leave a scar?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Not all hair fall is permanent. Temporary hair shedding caused by stress, nutritional deficiencies, or illness often reverses with proper treatment. However, genetic hair loss (androgenetic alopecia) is progressive and requires ongoing management to slow its progression.",
+                    text: "Most mole removals leave minimal scarring that fades significantly over time. Our techniques are designed to minimise visible marks, and we provide post-procedure care instructions to promote optimal healing. Shave excisions typically leave flatter scars than surgical excisions.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can hair grow back after falling out?",
+                  name: "When should I get a mole checked?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "In many cases, yes. If the hair follicle is still alive and has not been scarred, hair can regrow with appropriate treatment. Early intervention significantly improves the chances of regrowth.",
+                    text: "You should get any mole checked if it changes in size, shape, or colour, becomes itchy or bleeds, has irregular borders or multiple colours, or if you have a family history of skin cancer. We recommend an annual skin check for everyone, especially those with multiple moles or fair skin.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How long does hair fall treatment take to show results?",
+                  name: "Does mole removal hurt?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Hair growth is a slow process. Most patients notice a reduction in hair fall within 4–8 weeks of starting treatment. Visible new hair growth typically takes 3–6 months, and optimal results may require 6–12 months of consistent treatment.",
+                    text: "Mole removal is performed under local anaesthesia, so you will not feel pain during the procedure. You may feel a mild pinprick from the anaesthetic injection. After the procedure, mild discomfort or soreness is normal and can be managed with over-the-counter pain relievers if needed.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Which vitamin deficiency causes hair fall?",
+                  name: "How long does mole removal take?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Common vitamin deficiencies linked to hair fall include iron (ferritin), vitamin D, vitamin B12, zinc, and biotin. A blood test can identify deficiencies, and correction through diet or supplements can help reduce hair loss.",
+                    text: "The procedure itself typically takes 15 to 30 minutes, depending on the size, depth, and location of the mole. This includes cleaning the area, administering local anaesthesia, removing the mole, and placing sutures if required. You can go home immediately after the procedure.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Does dandruff cause hair fall?",
+                  name: "Can moles grow back after removal?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, severe dandruff and scalp inflammation can contribute to hair fall. Itching and scratching can damage hair follicles, and the inflammation can disrupt the normal hair growth cycle. Treating dandruff often helps reduce associated hair loss.",
+                    text: "If a mole is completely removed, it generally does not grow back. However, some moles, especially those removed by shave excision, may have a small chance of regrowth if a few pigment cells remain. Surgical excision with clear margins has the lowest recurrence rate.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can stress increase hair loss?",
+                  name: "Are all moles cancerous?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, stress is a well-known trigger for hair loss. Conditions like telogen effluvium (temporary shedding) and trichotillomania (hair pulling) are directly linked to stress. Managing stress through lifestyle changes can help reduce its impact on hair health.",
+                    text: "No, the vast majority of moles are benign (non-cancerous). Only a small percentage of moles develop into melanoma or other skin cancers. However, any changing or atypical mole should be evaluated by a dermatologist to rule out malignancy.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "When should I see a dermatologist for hair fall?",
+                  name: "What is the difference between a mole and a skin tag?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "You should consult a dermatologist if you notice sudden or excessive hair shedding, visible thinning, bald patches, receding hairline, or if hair fall is affecting your confidence. Early diagnosis leads to better treatment outcomes.",
+                    text: "Moles (nevi) are growths of pigment-producing cells (melanocytes) and can be flat or raised, brown, black, or flesh-coloured. Skin tags are small, soft, flesh-coloured growths made of loose collagen fibres and blood vessels, usually attached by a thin stalk. Both can be removed for cosmetic or medical reasons.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How much does hair fall treatment cost in Armoor?",
+                  name: "How much does mole removal cost in Armoor?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `The cost of hair fall treatment at ${CLINIC_NAME} varies depending on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is PRP treatment effective for hair loss?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "PRP (Platelet-Rich Plasma) therapy has shown promising results for certain types of hair loss, particularly androgenetic alopecia. It involves injecting concentrated platelets from your own blood into the scalp to stimulate hair follicles. Our dermatologist can assess if you are a suitable candidate.",
+                    text: `The cost of mole removal at ${CLINIC_NAME} depends on the size, type, and number of moles being removed, as well as the removal technique used. We offer affordable and transparent pricing. Please book a consultation for a personalised evaluation and cost estimate.`,
                   },
                 },
               ],
             },
             {
               "@type": "MedicalProcedure",
-              name: "Hair Fall Treatment in Armoor",
+              name: "Mole Removal in Armoor",
               description:
-                "Comprehensive hair fall treatment services including diagnosis, medications, PRP therapy, mesotherapy, and personalised care plans.",
+                "Comprehensive mole removal services including shave excision, surgical excision, laser removal, and cryotherapy for all mole types.",
               provider: {
                 "@type": "MedicalClinic",
                 name: CLINIC_NAME,
@@ -237,17 +228,17 @@ export const Route = createFileRoute("/treatments/hair-fall-treatment-armoor")({
       },
     ],
   }),
-  component: HairFallTreatmentArmoorPage,
+  component: MoleRemovalArmoorPage,
 });
 
-function HairFallTreatmentArmoorPage() {
+function MoleRemovalArmoorPage() {
   return (
     <>
       <HeroSection />
       <WhatIsSection />
-      <SignsSymptomsSection />
+      <SymptomsSection />
       <CausesSection />
-      <WhoCanExperienceSection />
+      <TypesSection />
       <DiagnosisSection />
       <TreatmentsSection />
       <WhyChooseSection />
@@ -278,21 +269,21 @@ function HeroSection() {
             Treatments
           </Link>
           <span>/</span>
-          <span className="text-white/90">Hair Fall Treatment in Armoor</span>
+          <span className="text-white/90">Mole Removal in Armoor</span>
         </nav>
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
               <Star className="h-3.5 w-3.5 text-gold" />
-              Trusted Hair Care in Armoor
+              Expert Mole Removal in Armoor
             </div>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              Hair Fall Treatment in Armoor
+              Mole Removal in Armoor
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
-              Effective hair fall and hair loss treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
-              {QUALIFICATION} — Armoor's trusted dermatologist for personalised hair care and
-              restoration.
+              Safe and precise mole removal at {CLINIC_NAME}. Led by {DOCTOR_NAME}, {QUALIFICATION}{" "}
+              — Armoor's trusted dermatologist for mole evaluation, removal, and skin cancer
+              screening.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -317,9 +308,9 @@ function HeroSection() {
               <ul className="mt-4 space-y-3">
                 {[
                   `Expert dermatologist ${DOCTOR_NAME} ${QUALIFICATION}`,
-                  "Personalised treatment for all hair types",
-                  "PRP therapy & advanced hair care",
-                  "Affordable consultation in Armoor",
+                  "Dermoscopic evaluation of all moles",
+                  "Safe removal with minimal scarring",
+                  "Histopathology for suspicious moles",
                   `${HOURS.weekdayDays}, ${HOURS.weekday}`,
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-white/70">
@@ -343,52 +334,51 @@ function WhatIsSection() {
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-start">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-              Understanding Hair Fall
+              Understanding Moles
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              What is Hair Fall?
+              What are Moles?
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                It is normal to lose 50 to 100 hairs every day as part of the natural hair growth
-                cycle. This is called hair shedding — old hairs fall out to make room for new ones.
-                Most people do not notice this level of shedding.
+                Moles, medically known as nevi, are common skin growths that develop when
+                pigment-producing cells called melanocytes grow in clusters rather than being spread
+                evenly throughout the skin. They can appear anywhere on the body, alone or in
+                groups, and vary widely in colour, size, and shape.
               </p>
               <p>
-                Hair fall becomes a concern when you begin losing more hair than usual, or when hair
-                does not grow back at the same rate. Excessive hair fall can lead to visible
-                thinning, receding hairlines, and bald patches over time.
+                Most moles develop during childhood and adolescence, and the average adult has
+                between 10 and 40 moles. They can be flat or raised, smooth or rough, and range in
+                colour from pink and tan to brown, blue, or black. Some moles are present at birth
+                (congenital nevi), while others develop later in life.
               </p>
               <p>
-                <strong>Hair thinning</strong> refers to a gradual reduction in hair density across
-                the scalp, while <strong>hair loss</strong> involves actual shedding where the
-                follicle stops producing hair. It is important to understand the difference between
-                temporary shedding (telogen effluvium) and progressive hair loss (androgenetic
-                alopecia), as the treatment approach differs for each.
+                The vast majority of moles are harmless. However, some moles — particularly atypical
+                or dysplastic nevi — have a higher risk of developing into melanoma, a serious form
+                of skin cancer. This is why regular skin checks and mole evaluation by a
+                dermatologist are important, especially if you have many moles or a family history
+                of skin cancer.
               </p>
               <p>
-                Temporary hair fall often resolves once the underlying trigger is addressed.
-                Permanent or genetic hair loss requires ongoing management to slow progression and
-                stimulate regrowth. Early evaluation by a dermatologist is the best way to determine
-                which type you are experiencing.
+                Mole removal may be recommended for medical reasons (suspicious or changing moles),
+                cosmetic reasons (unwanted appearance), or functional reasons (moles that are
+                irritated by clothing, jewellery, or shaving). At {CLINIC_NAME}, we perform thorough
+                dermoscopic evaluation before recommending any removal procedure.
               </p>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Hair thinning illustration */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <AlertCircle className="h-8 w-8" />
                 </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Hair Growth Cycle Illustration
+                <p className="mt-4 text-sm font-medium text-muted-foreground">Mole on Skin</p>
+                <p className="mt-1 text-xs text-muted-foreground/60">
+                  Replace with an image showing different types of moles
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing normal vs. thinning hair
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration comparing healthy hair density to thinning hair
+                  Alt: Illustration of various mole types on skin
                 </p>
               </div>
             </div>
@@ -399,35 +389,39 @@ function WhatIsSection() {
   );
 }
 
-function SignsSymptomsSection() {
-  const signs = [
+function SymptomsSection() {
+  const symptoms = [
     {
-      title: "Excessive Hair Shedding",
-      desc: "Finding large amounts of hair on your pillow, in the shower drain, or on your hairbrush. Losing more than 100–150 hairs per day is considered excessive.",
+      title: "Brown or Black Spots",
+      desc: "Moles typically appear as brown, black, or flesh-coloured spots on the skin. They may be flat or slightly raised and can vary in size from a pinpoint to several centimetres across.",
     },
     {
-      title: "Thinning Hair",
-      desc: "Gradual reduction in hair volume, especially on the crown or top of the scalp. The hair may feel less dense and the scalp may become more visible.",
+      title: "Raised Growths",
+      desc: "Some moles are raised above the skin surface. These may have a smooth, dome-shaped appearance or a rough, wart-like texture. Raised moles are common on the face, neck, and trunk.",
     },
     {
-      title: "Receding Hairline",
-      desc: "The hairline moves backward, typically starting at the temples. This is a common early sign of genetic hair loss in both men and women.",
+      title: "Changes in Size or Shape",
+      desc: "Moles that change in size, shape, or colour — especially those that become asymmetric or develop irregular borders — require immediate evaluation by a dermatologist.",
     },
     {
-      title: "Bald Patches",
-      desc: "Circular or patchy areas of complete hair loss on the scalp. This may indicate alopecia areata or other medical conditions requiring prompt evaluation.",
+      title: "Itching or Bleeding",
+      desc: "A mole that becomes itchy, painful, tender, or starts bleeding or crusting may indicate underlying changes and should be examined promptly. This can be a sign of irritation or, in some cases, malignancy.",
     },
     {
-      title: "Hair Breakage",
-      desc: "Hair becomes brittle and breaks off easily, often due to damage, nutritional deficiencies, or underlying scalp conditions.",
+      title: "Multiple Colours",
+      desc: "Moles that contain multiple colours — such as tan, brown, black, red, white, or blue — are considered atypical and warrant a thorough dermoscopic evaluation to rule out melanoma.",
     },
     {
-      title: "Widening Part Line",
-      desc: "The part line on your scalp becomes noticeably wider over time. This is often one of the earliest signs of female pattern hair loss.",
+      title: "Irregular Borders",
+      desc: "Moles with irregular, notched, or blurred borders are characteristic of dysplastic nevi and may require biopsy. Normal moles typically have smooth, round, or oval borders.",
     },
     {
-      title: "Reduced Hair Density",
-      desc: "The overall fullness and thickness of your hair decreases. Ponytails may feel thinner, and the scalp may be more visible under bright light.",
+      title: "Large Diameter",
+      desc: "Moles larger than 6 millimetres in diameter (about the size of a pencil eraser) should be evaluated. Larger moles, especially congenital nevi, have a higher risk of malignant transformation.",
+    },
+    {
+      title: "New Moles in Adulthood",
+      desc: "While new moles commonly appear in childhood, the appearance of a new mole after age 30 should be evaluated by a dermatologist to ensure it is benign.",
     },
   ];
 
@@ -436,42 +430,42 @@ function SignsSymptomsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Recognising the Signs
+            Recognising Moles
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Common Signs and Symptoms
+            Signs and Appearance of Moles
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Hair fall can present in different ways. Recognising these signs early can help you seek
-            treatment at the right time.
+            Moles can vary widely in appearance. Knowing what to look for helps in early detection
+            of potentially problematic moles.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {signs.map((sign) => (
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {symptoms.map((s) => (
             <div
-              key={sign.title}
+              key={s.title}
               className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <h3 className="font-display text-base font-bold text-foreground">{sign.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{sign.desc}</p>
+              <h3 className="font-display text-base font-bold text-foreground">{s.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
             </div>
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Signs of hair fall illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <AlertCircle className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Hair Fall Symptoms Illustration
+                ABCDE Mole Check Guide
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common signs of hair fall
+                Replace with an ABCDE mole self-examination infographic
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing receding hairline, thinning crown, and widening part line
+                Alt: ABCDE rule for mole self-examination — Asymmetry, Border, Colour, Diameter,
+                Evolving
               </p>
             </div>
           </div>
@@ -485,43 +479,35 @@ function CausesSection() {
   const causes = [
     {
       title: "Genetics",
-      desc: "Family history is the most common cause of hair loss. Androgenetic alopecia (male or female pattern baldness) is hereditary and progressive.",
+      desc: "Family history plays a significant role in the number and type of moles you develop. People with a family history of many moles or atypical moles (dysplastic nevi) are at higher risk.",
     },
     {
-      title: "Hormonal Imbalance",
-      desc: "Changes in hormone levels — including pregnancy, menopause, and thyroid disorders — can trigger temporary or persistent hair fall.",
+      title: "Sun Exposure",
+      desc: "Ultraviolet radiation from the sun can stimulate melanocytes to produce more pigment and form new moles. Sun exposure also increases the risk of existing moles becoming atypical or malignant.",
     },
     {
-      title: "Nutritional Deficiencies",
-      desc: "Low levels of iron, vitamin D, vitamin B12, zinc, and biotin are strongly linked to hair thinning and increased shedding.",
+      title: "Hormonal Changes",
+      desc: "Hormonal fluctuations during puberty, pregnancy, and menopause can cause existing moles to darken, enlarge, or become more prominent. New moles may also appear during these periods.",
     },
     {
-      title: "Stress",
-      desc: "Physical or emotional stress can push hair follicles into a resting phase, causing noticeable shedding 2–3 months after the stressful event.",
+      title: "Melanocyte Clustering",
+      desc: "Moles form when melanocytes grow in clusters rather than evenly distributing in the skin. The reason this occurs is not fully understood, but it is believed to involve both genetic and environmental factors.",
     },
     {
-      title: "Thyroid Disorders",
-      desc: "Both hyperthyroidism and hypothyroidism can disrupt the hair growth cycle. Treating the underlying thyroid condition often improves hair health.",
+      title: "Fair Skin",
+      desc: "People with fair skin, light hair, and light eyes tend to develop more moles than those with darker skin. They are also at higher risk for sun damage and melanoma.",
     },
     {
-      title: "PCOS",
-      desc: "Polycystic Ovary Syndrome causes hormonal imbalances that can lead to thinning hair on the scalp along with excess facial or body hair.",
+      title: "Age",
+      desc: "Moles commonly appear during childhood and adolescence. Most people develop their full set of moles by early adulthood. New moles appearing after age 30 warrant evaluation.",
     },
     {
-      title: "Scalp Infections",
-      desc: "Fungal or bacterial infections of the scalp, such as ringworm, can cause patchy hair loss and scaling. These are treatable with medications.",
+      title: "Immune Suppression",
+      desc: "Individuals with weakened immune systems — due to medications, organ transplantation, or medical conditions — may develop more moles and have a higher risk of mole-related skin cancers.",
     },
     {
-      title: "Dandruff & Scalp Inflammation",
-      desc: "Chronic dandruff and seborrheic dermatitis create an unhealthy scalp environment that weakens hair follicles and increases shedding.",
-    },
-    {
-      title: "Certain Medications",
-      desc: "Some drugs — including blood thinners, antidepressants, chemotherapy drugs, and high-dose vitamin A — can cause temporary hair loss.",
-    },
-    {
-      title: "Lifestyle Factors",
-      desc: "Poor diet, smoking, excessive alcohol consumption, lack of sleep, and crash dieting can all contribute to hair fall by affecting overall health.",
+      title: "Congenital Factors",
+      desc: "Some moles are present at birth (congenital nevi). Larger congenital nevi, particularly those over 20 cm, carry a higher risk of developing into melanoma and require regular monitoring.",
     },
   ];
 
@@ -530,14 +516,14 @@ function CausesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Why It Happens
+            Causes
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Causes of Hair Fall
+            What Causes Moles?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Hair fall can result from a combination of factors. Identifying the root cause is the
-            first step toward effective treatment.
+            Moles develop due to a combination of genetic, environmental, and hormonal factors.
+            Understanding these can help you assess your risk.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -556,56 +542,53 @@ function CausesSection() {
   );
 }
 
-function WhoCanExperienceSection() {
+function TypesSection() {
+  const types = [
+    {
+      title: "Junction Nevus",
+      desc: "A flat, brown to black mole where the nests of melanocytes are located at the junction of the epidermis and dermis. These are typically benign and common in childhood. They may evolve into compound nevi over time.",
+    },
+    {
+      title: "Compound Nevus",
+      desc: "A raised, light to dark brown mole where melanocyte nests are present in both the epidermis and dermis. Compound nevi are very common in adults and often have a dome-shaped appearance with a smooth or slightly rough surface.",
+    },
+    {
+      title: "Intradermal Nevus",
+      desc: "A flesh-coloured to light brown, dome-shaped mole where melanocyte nests are located entirely within the dermis. These are common on the face and neck in adults and often have a soft, rubbery texture with hair growing from them.",
+    },
+    {
+      title: "Dysplastic Nevus",
+      desc: "An atypical mole that is larger than normal moles and has irregular borders, uneven colour distribution, and a mixture of tan, brown, black, and sometimes pink hues. Dysplastic nevi have a higher risk of developing into melanoma and require regular monitoring.",
+    },
+    {
+      title: "Congenital Nevus",
+      desc: "A mole present at birth, ranging from small to very large. Small congenital nevi are common and generally low risk. Large or giant congenital nevi (over 20 cm) carry a significantly higher risk of melanoma and need lifelong monitoring.",
+    },
+  ];
+
   return (
     <section className="bg-secondary/40 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Who Is Affected
+            Types of Moles
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Who Can Experience Hair Fall?
+            Different Types of Moles (Nevi)
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Hair fall does not discriminate. It can affect anyone, though the underlying causes may
-            vary from person to person.
+            Moles are classified based on their location in the skin layers and their microscopic
+            features. Each type has distinct characteristics and risk profiles.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              icon: Users,
-              title: "Men",
-              desc: "Male pattern baldness is the most common type of hair loss in men, often starting with a receding hairline and thinning crown. It can begin as early as the late teens or early twenties.",
-            },
-            {
-              icon: Users,
-              title: "Women",
-              desc: "Female pattern hair loss typically presents as diffuse thinning over the top of the scalp. Hormonal changes during pregnancy, postpartum, and menopause are common triggers.",
-            },
-            {
-              icon: Users,
-              title: "Teenagers",
-              desc: "Hair fall in teenagers is often linked to nutritional deficiencies, stress, hormonal changes during puberty, or conditions like PCOS. Early treatment yields good results.",
-            },
-            {
-              icon: Users,
-              title: "Older Adults",
-              desc: "Age-related hair thinning is natural, but underlying medical conditions, medications, and reduced nutrient absorption can worsen hair fall in older adults.",
-            },
-          ].map((group) => (
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {types.map((type) => (
             <div
-              key={group.title}
-              className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
+              key={type.title}
+              className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/5 text-primary">
-                <group.icon className="h-6 w-6" />
-              </div>
-              <h3 className="mt-5 font-display text-base font-bold text-foreground">
-                {group.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{group.desc}</p>
+              <h3 className="font-display text-base font-bold text-foreground">{type.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{type.desc}</p>
             </div>
           ))}
         </div>
@@ -624,37 +607,40 @@ function DiagnosisSection() {
               Diagnosis
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              How We Diagnose Hair Fall
+              How We Evaluate Moles
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                At {CLINIC_NAME}, we take a thorough and systematic approach to diagnosing hair
-                fall. Every patient receives a detailed evaluation to identify the root cause before
-                any treatment begins.
+                At {CLINIC_NAME}, we use a comprehensive approach to evaluate every mole before
+                recommending any treatment. Our goal is to accurately identify benign moles while
+                detecting any suspicious or potentially malignant lesions early.
               </p>
               <p>
-                Your consultation will include a review of your medical history, lifestyle, diet,
-                and any medications you are taking. This helps us understand factors that may be
-                contributing to your hair fall.
+                The evaluation begins with a thorough medical history and a full-body skin
+                examination. We assess each mole's size, shape, colour, border, and evolution over
+                time — following the ABCDE rule (Asymmetry, Border irregularity, Colour variation,
+                Diameter, Evolving).
               </p>
               <p>
-                We perform a careful scalp examination using good lighting and, when necessary, a
-                dermatoscope to assess your scalp and hair follicle health. The hair pull test helps
-                determine the severity of active shedding.
+                We use dermoscopy, a non-invasive technique that allows us to examine the
+                microscopic structures of moles using a specialised magnifying device with polarised
+                light. Dermoscopy significantly improves diagnostic accuracy and helps us identify
+                moles that require biopsy or removal.
               </p>
               <p>
-                If indicated, we may recommend blood tests to check for nutritional deficiencies
-                (iron, vitamin D, zinc, B12), thyroid function, and hormonal imbalances. Based on
-                the findings, a personalised treatment plan is created specifically for you.
+                For moles that appear suspicious on dermoscopic examination, we recommend excision
+                biopsy with histopathological analysis. This involves removing the mole and sending
+                it to a laboratory for microscopic examination to rule out or confirm malignancy.
               </p>
             </div>
             <div className="mt-8 space-y-3">
               {[
-                "Detailed medical history review",
-                "Scalp and hair follicle examination",
-                "Hair pull test for shedding assessment",
-                "Blood tests when necessary (iron, vitamins, thyroid, hormones)",
-                "Personalised diagnosis and treatment plan",
+                "Comprehensive full-body skin examination",
+                "Dermoscopic evaluation of every mole",
+                "ABCDE mole assessment for skin cancer screening",
+                "Photographic documentation for mole mapping",
+                "Excision biopsy with histopathology when indicated",
+                "Accurate diagnosis before any treatment decision",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -664,18 +650,20 @@ function DiagnosisSection() {
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Scalp examination */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <Stethoscope className="h-8 w-8" />
+                  <Microscope className="h-8 w-8" />
                 </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">Scalp Examination</p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's scalp
+                <p className="mt-4 text-sm font-medium text-muted-foreground">
+                  Dermoscopic Evaluation
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist performing scalp examination at Armoor Skin & Hair Clinic
+                  Replace with a photo of dermoscopic mole examination
+                </p>
+                <p className="mt-1 text-xs text-muted-foreground/60">
+                  Alt: Dermatologist using a dermoscope to examine a mole at Armoor Skin & Hair
+                  Clinic
                 </p>
               </div>
             </div>
@@ -695,67 +683,53 @@ function TreatmentsSection() {
             Our Treatments
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Hair Fall Treatments Available in Armoor
+            Mole Removal Treatments Available in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We offer a range of evidence-based treatments tailored to your specific type and cause
-            of hair fall.
+            We offer several mole removal techniques tailored to the type, size, and location of the
+            mole, as well as your cosmetic preferences.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {[
             {
-              title: "Medications",
+              title: "Surgical Excision",
               items: [
-                "Topical minoxidil to stimulate hair growth",
-                "Oral finasteride for male pattern hair loss (under medical supervision)",
-                "Anti-androgen therapy for hormonally related hair fall in women",
-                "Vitamin and mineral supplements to correct deficiencies",
+                "Removal of the entire mole along with a small margin of healthy skin",
+                "Closed with fine sutures for optimal healing",
+                "Ideal for deep, suspicious, or large moles",
+                "Tissue can be sent for histopathological examination",
+                "Minimal recurrence rate",
               ],
             },
             {
-              title: "Nutritional Correction",
+              title: "Shave Excision",
               items: [
-                "Personalised dietary guidance for hair health",
-                "Iron, vitamin D, zinc, and biotin supplementation",
-                "Protein intake optimisation",
-                "Addressing deficiencies identified through blood tests",
+                "Raised moles are shaved off at the skin surface level",
+                "No sutures required — heals naturally",
+                "Quick procedure with minimal discomfort",
+                "Suitable for benign raised or dome-shaped moles",
+                "May leave a flat scar that fades over time",
               ],
             },
             {
-              title: "PRP Therapy",
+              title: "Laser Removal",
               items: [
-                "Platelet-Rich Plasma injections to stimulate hair follicles",
-                "Uses your own blood components for natural regeneration",
-                "Recommended for androgenetic alopecia and thinning hair",
-                "Series of sessions for optimal results",
+                "Targeted laser energy breaks down pigment in flat moles",
+                "Minimal downtime and no surgical incision",
+                "Suitable for small, flat, benign moles",
+                "May require multiple sessions for complete clearance",
+                "Less scarring compared to surgical methods",
               ],
             },
             {
-              title: "Scalp Care & Dandruff Management",
+              title: "Cryotherapy",
               items: [
-                "Medicated shampoos and scalp treatments",
-                "Management of seborrheic dermatitis and scalp inflammation",
-                "Reducing itch and irritation that worsen hair fall",
-                "Regular scalp care routine guidance",
-              ],
-            },
-            {
-              title: "Lifestyle Guidance",
-              items: [
-                "Stress management techniques",
-                "Sleep hygiene recommendations",
-                "Dietary improvements for better hair health",
-                "Avoiding hairstyles and practices that damage hair",
-              ],
-            },
-            {
-              title: "Ongoing Monitoring",
-              items: [
-                "Regular follow-up visits to track progress",
-                "Adjustments to treatment based on response",
-                "Hair growth assessment at each visit",
-                "Long-term maintenance plans",
+                "Liquid nitrogen is used to freeze and destroy mole tissue",
+                "Quick, in-office procedure with no anaesthesia",
+                "Suitable for small, superficial, benign moles",
+                "The mole crusts and falls off within 1–2 weeks",
+                "May leave a small white or light scar",
               ],
             },
           ].map((treatment, i) => (
@@ -788,22 +762,22 @@ function WhyChooseSection() {
     {
       icon: Stethoscope,
       title: `Expert Dermatologist`,
-      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of hair fall — from temporary shedding to genetic baldness.`,
+      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in mole evaluation, dermoscopy, and skin cancer screening — ensuring accurate diagnosis and safe removal.`,
     },
     {
       icon: Microscope,
-      title: "Thorough Diagnosis",
-      desc: "We do not guess. Every patient receives a detailed scalp examination and, when needed, blood tests to identify the exact cause of hair fall before treatment begins.",
+      title: "Dermoscopic Evaluation",
+      desc: "We examine every mole using a high-resolution dermoscope, allowing us to see structures beneath the skin surface and detect suspicious moles that may not be visible to the naked eye.",
     },
     {
       icon: ShieldCheck,
-      title: "Personalised Treatment",
-      desc: "Your hair fall treatment plan is tailored to your specific condition, hair type, lifestyle, and goals. No two treatment plans are the same.",
+      title: "Safe Removal",
+      desc: "All removal procedures are performed under strict sterile conditions. We prioritise safety, minimal scarring, and histopathological examination of any suspicious tissue.",
     },
     {
       icon: Sparkles,
-      title: "Patient Education",
-      desc: "We believe in empowering you with knowledge. You will understand your condition, the treatment options, and how to maintain healthy hair at home.",
+      title: "Cosmetic Excellence",
+      desc: "We understand that cosmetic outcome matters. Our techniques are chosen to minimise visible scarring, and we provide comprehensive aftercare instructions for optimal healing.",
     },
   ];
 
@@ -815,11 +789,11 @@ function WhyChooseSection() {
             Why Choose Us
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Why {CLINIC_NAME} for Hair Fall Treatment?
+            Why {CLINIC_NAME} for Mole Removal?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We combine medical expertise with genuine care to help you achieve healthier, fuller
-            hair.
+            We combine medical precision with cosmetic care to deliver safe and satisfying mole
+            removal outcomes.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -850,18 +824,18 @@ function ProcessSection() {
     },
     {
       step: "02",
-      title: "Hair & Scalp Examination",
-      desc: `${DOCTOR_NAME} evaluates your scalp and hair, discusses your medical history, and performs necessary assessments to identify the cause.`,
+      title: "Mole Evaluation",
+      desc: `${DOCTOR_NAME} examines your mole(s) using dermoscopy, assess them using the ABCDE criteria, and discusses your concerns and goals.`,
     },
     {
       step: "03",
-      title: "Personalised Treatment Plan",
-      desc: "A customised treatment plan is created based on your diagnosis — combining medications, procedures, and lifestyle recommendations.",
+      title: "Personalised Removal Plan",
+      desc: "Based on the mole type, size, location, and your preferences, we recommend the most suitable removal technique and explain the procedure in detail.",
     },
     {
       step: "04",
-      title: "Follow-up & Monitoring",
-      desc: "Regular follow-up visits to track your progress, adjust treatment as needed, and ensure you achieve the best possible results.",
+      title: "Procedure & Aftercare",
+      desc: "The mole removal is performed under local anaesthesia. You receive detailed aftercare instructions and a follow-up schedule for wound care and suture removal if needed.",
     },
   ];
 
@@ -873,10 +847,10 @@ function ProcessSection() {
             Your Journey
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Our Treatment Process
+            Our Mole Removal Process
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            From your first visit to long-term hair health — here is what you can expect.
+            From your first consultation to post-procedure care — here is what you can expect.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -898,54 +872,46 @@ function ProcessSection() {
 function TipsSection() {
   const tips = [
     {
-      title: "Eat a Balanced Diet",
-      desc: "Include protein-rich foods (eggs, fish, legumes), iron-rich greens, and vitamin-rich fruits in your daily meals. Hair is made of protein, and deficiencies directly impact growth.",
+      title: "Perform Regular Self-Exams",
+      desc: "Check your skin monthly for new moles or changes in existing ones. Use the ABCDE rule to spot warning signs and visit your dermatologist if you notice anything unusual.",
     },
     {
-      title: "Prioritise Protein Intake",
-      desc: "Since hair is primarily composed of keratin (a protein), insufficient protein intake can slow hair growth and lead to brittle, weak hair.",
+      title: "Protect Your Skin from the Sun",
+      desc: "UV exposure can increase mole formation and the risk of melanoma. Use a broad-spectrum sunscreen with SPF 30+, wear protective clothing, and avoid tanning beds.",
     },
     {
-      title: "Include Iron & Vitamin-Rich Foods",
-      desc: "Leafy greens, nuts, seeds, citrus fruits, and dairy products provide essential nutrients like iron, vitamin C, vitamin D, and zinc that support healthy hair growth.",
+      title: "Don't Pick at Moles",
+      desc: "Picking, scratching, or attempting to remove moles at home can cause infection, bleeding, scarring, and may mask important diagnostic features. Always consult a dermatologist.",
     },
     {
-      title: "Be Gentle With Your Hair",
-      desc: "Avoid tight hairstyles, excessive brushing, hot styling tools, and chemical treatments. Use a wide-tooth comb and let hair air-dry when possible.",
+      title: "Keep a Mole Diary",
+      desc: "If you have many moles or atypical moles, keep a photographic record to track changes over time. Your dermatologist can use this information during regular check-ups.",
     },
     {
-      title: "Manage Stress Effectively",
-      desc: "Chronic stress can trigger or worsen hair fall. Incorporate relaxation techniques like meditation, deep breathing, or gentle exercise into your routine.",
+      title: "Know Your Family History",
+      desc: "A family history of melanoma or atypical moles significantly increases your risk. Inform your dermatologist about any family history so they can plan an appropriate screening schedule.",
     },
     {
-      title: "Get Adequate Sleep",
-      desc: "Your body repairs and regenerates cells, including hair follicles, during sleep. Aim for 7–8 hours of quality sleep each night.",
-    },
-    {
-      title: "Avoid Harsh Chemicals",
-      desc: "Limit the use of hair dyes, bleaches, perms, and relaxers. When you do use them, opt for gentle, ammonia-free products and space out treatments.",
-    },
-    {
-      title: "Seek Help Early",
-      desc: "If you notice persistent or excessive hair fall, consult a dermatologist promptly. Early intervention significantly improves treatment outcomes.",
+      title: "Follow Post-Removal Care Instructions",
+      desc: "After mole removal, keep the area clean and dry, apply any prescribed ointments, avoid sun exposure, and attend follow-up appointments for suture removal and wound assessment.",
     },
   ];
+
   return (
     <section className="py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Hair Care Tips
+            Skin Care Tips
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Hair Care Tips for Healthier Hair
+            Tips for Healthy Moles and Skin
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Small changes in your daily routine can make a big difference in maintaining healthy
-            hair and reducing hair fall.
+            Simple habits can help you monitor your moles and maintain healthy skin.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {tips.map((tip) => (
             <div
               key={tip.title}
@@ -957,20 +923,19 @@ function TipsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Healthy hair illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <Sparkles className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Healthy Hair Illustration
+                Skin Self-Examination Guide
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing healthy, well-maintained hair
+                Replace with an illustration showing monthly skin self-examination steps
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of healthy, strong hair after treatment
+                Alt: Step-by-step guide for performing a monthly skin self-examination
               </p>
             </div>
           </div>
@@ -983,52 +948,44 @@ function TipsSection() {
 function FAQSection() {
   const faqs = [
     {
-      q: "What causes hair fall?",
-      a: "Hair fall can be caused by genetics, hormonal imbalances, nutritional deficiencies (iron, vitamin D, zinc, B12), stress, thyroid disorders, PCOS, scalp infections, dandruff, certain medications, and lifestyle factors. A dermatologist can help identify the specific cause through evaluation and tests.",
+      q: "Is mole removal safe?",
+      a: "Yes, mole removal is a safe procedure when performed by a qualified dermatologist. We follow strict sterilisation protocols, use dermoscopic evaluation before removal, and recommend histopathological examination for suspicious moles to ensure complete safety.",
     },
     {
-      q: "Is hair fall permanent?",
-      a: "Not all hair fall is permanent. Temporary shedding from stress, illness, or nutritional deficiencies often reverses with treatment. Genetic hair loss (androgenetic alopecia) is progressive and requires ongoing management, but treatment can significantly slow its progression and stimulate regrowth.",
+      q: "Will mole removal leave a scar?",
+      a: "Most mole removals leave minimal scarring that fades significantly over time. Our techniques are designed to minimise visible marks. Shave excisions typically produce flatter scars than surgical excisions. We provide comprehensive aftercare to promote optimal healing.",
     },
     {
-      q: "Can hair grow back after falling out?",
-      a: "In many cases, yes. If the hair follicle is still active and has not been scarred, regrowth is possible with appropriate treatment. The earlier treatment is started, the better the chances of regrowth.",
+      q: "When should I get a mole checked?",
+      a: "You should get any mole checked if it changes in size, shape, or colour, becomes itchy or bleeds, has irregular borders or multiple colours, or if you have a family history of skin cancer. We recommend an annual skin check for everyone.",
     },
     {
-      q: "How long does hair fall treatment take to show results?",
-      a: "Hair grows slowly. Most patients notice reduced shedding within 4–8 weeks. Visible new hair growth typically takes 3–6 months, and optimal results may require 6–12 months of consistent treatment and follow-up.",
+      q: "Does mole removal hurt?",
+      a: "Mole removal is performed under local anaesthesia, so you will not feel pain during the procedure. You may feel a mild pinprick from the anaesthetic injection. Mild discomfort after the procedure is normal and can be managed with simple pain relievers.",
     },
     {
-      q: "Is PRP effective for hair loss?",
-      a: "PRP (Platelet-Rich Plasma) therapy has shown good results for androgenetic alopecia and certain types of hair thinning. It uses your own blood platelets to stimulate hair follicles. Our dermatologist can assess whether you are a suitable candidate during your consultation.",
+      q: "How long does mole removal take?",
+      a: "The procedure typically takes 15 to 30 minutes depending on the size, depth, and location of the mole. This includes cleaning, anaesthesia, removal, and sutures if needed. You can go home immediately after the procedure.",
     },
     {
-      q: "Which vitamin deficiency causes hair fall?",
-      a: "Common deficiencies linked to hair fall include iron (low ferritin), vitamin D, vitamin B12, zinc, and biotin. A simple blood test can identify these deficiencies, and correction through diet or supplements can help reduce hair loss.",
+      q: "Can moles grow back after removal?",
+      a: "If a mole is completely removed, it generally does not grow back. Shave excisions have a small chance of regrowth if pigment cells remain. Surgical excision with clear margins has the lowest recurrence rate.",
     },
     {
-      q: "Does dandruff cause hair fall?",
-      a: "Yes, persistent dandruff and scalp inflammation can contribute to hair fall. Itching and scratching weaken hair follicles, and inflammation can disrupt the normal hair growth cycle. Treating dandruff often helps reduce associated hair loss.",
+      q: "Are all moles cancerous?",
+      a: "No, the vast majority of moles are benign. Only a small percentage develop into melanoma or other skin cancers. However, any changing or atypical mole should be evaluated by a dermatologist to rule out malignancy.",
     },
     {
-      q: "Can stress increase hair loss?",
-      a: "Yes, stress is a common trigger for hair loss. Conditions like telogen effluvium (temporary excessive shedding) often follow stressful events. Managing stress through lifestyle changes, exercise, and relaxation techniques can help improve hair health.",
+      q: "What is the difference between a mole and a skin tag?",
+      a: "Moles are growths of pigment-producing cells and can be flat or raised, brown or black. Skin tags are small, soft, flesh-coloured growths made of collagen fibres, usually attached by a thin stalk. Both can be removed for cosmetic or medical reasons.",
     },
     {
-      q: "When should I see a dermatologist for hair fall?",
-      a: "You should consult a dermatologist if you notice sudden or excessive hair shedding, visible thinning, bald patches, a receding hairline, or if hair fall is causing you concern. Early diagnosis leads to more effective treatment.",
+      q: "Can I remove a mole at home?",
+      a: "No, you should never attempt to remove a mole at home. Home removal methods can cause infection, bleeding, scarring, and may prevent proper diagnosis of potentially malignant tissue. Always consult a dermatologist for safe removal.",
     },
     {
-      q: "How much does hair fall treatment cost in Armoor?",
-      a: `The cost depends on the type and duration of treatment required. At ${CLINIC_NAME}, we offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
-    },
-    {
-      q: "Can hair fall be reversed naturally?",
-      a: "Mild, temporary hair fall caused by stress or nutritional issues may improve with lifestyle changes, a balanced diet, and stress management. However, genetic or medical hair loss typically requires professional treatment for meaningful improvement.",
-    },
-    {
-      q: "Is it normal to lose hair after shampooing?",
-      a: "Yes, losing 50–100 hairs per day is normal, and many of these shed during washing. However, if you notice clumps of hair or significantly more shedding than usual, it is worth consulting a dermatologist for evaluation.",
+      q: "How much does mole removal cost in Armoor?",
+      a: `The cost of mole removal at ${CLINIC_NAME} depends on the size, type, number of moles, and the removal technique used. We offer affordable and transparent pricing. Please book a consultation for a personalised cost estimate.`,
     },
   ];
 
@@ -1040,7 +997,7 @@ function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-center text-[15px] text-muted-foreground">
-            Common questions about hair fall treatment at our clinic in Armoor.
+            Common questions about mole removal at our clinic in Armoor.
           </p>
           <div className="mt-8 space-y-4">
             {faqs.map((faq, i) => (
@@ -1074,27 +1031,27 @@ function FAQSection() {
 function ReviewsSection() {
   const reviews = [
     {
-      name: "Srinivas Reddy",
+      name: "Srinivas",
       location: "Armoor",
-      text: "I was losing a lot of hair and tried many products that did not work. Dr. Raghavendhra took the time to understand my condition and ran blood tests that showed I was low on iron and vitamin D. After three months of treatment, my hair fall has reduced significantly, and I can see new growth. Highly recommend.",
+      text: "I had a raised mole on my cheek that I wanted removed for cosmetic reasons. Dr. Raghavendhra examined it with a dermoscope and explained that it was benign. The shave excision was quick and painless. The scar has faded beautifully. I am very happy with the result.",
       rating: 5,
     },
     {
-      name: "Rajeshwari",
-      location: "Balkonda",
-      text: "I was very anxious about my hair thinning. The doctor explained everything clearly and put together a treatment plan that suited my lifestyle. The PRP sessions were comfortable, and the staff made me feel at ease. I have been coming here for six months and am happy with the progress.",
-      rating: 5,
-    },
-    {
-      name: "Kishan Rao",
+      name: "Lakshmi",
       location: "Nizamabad",
-      text: "After chemotherapy, I was worried my hair would not grow back. Dr. Raghavendhra reassured me and guided me through the recovery process. My hair has started growing back steadily. Grateful for the care and support.",
+      text: "I had a large mole on my back that kept getting irritated by my saree blouse. The doctor recommended surgical excision and it was done in about 20 minutes. Healing was smooth thanks to the clear aftercare instructions. So glad I finally got it done.",
       rating: 5,
     },
     {
-      name: "Anjali",
+      name: "Rajesh",
+      location: "Balkonda",
+      text: "I noticed a mole on my arm changing colour and shape. I was worried it might be something serious. Dr. Raghavendhra examined it immediately, did a dermoscopic evaluation, and removed it for biopsy. Thankfully it was benign. The professional care put my mind at ease.",
+      rating: 5,
+    },
+    {
+      name: "Anita",
       location: "Mortad",
-      text: "I had dandruff and hair fall for over a year. A friend recommended this clinic, and I am glad I came. The scalp treatment and medicated shampoos helped control the dandruff, and the hair fall has reduced. The doctor advised me on diet changes too. Very satisfied.",
+      text: "My daughter had a mole on her face that she was very self-conscious about. The doctor was very gentle and reassuring with her. The removal went smoothly and the healing has been excellent. The confidence my daughter has gained is priceless.",
       rating: 5,
     },
   ];
@@ -1110,7 +1067,7 @@ function ReviewsSection() {
             What Our Patients Say
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Real experiences from patients who have undergone hair fall treatment at our clinic.
+            Real experiences from patients who have undergone mole removal at our clinic.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -1172,9 +1129,9 @@ function AreasWeServeSection() {
             Conveniently Located in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert hair
-            fall treatment. Our clinic is easily accessible and welcomes patients from all nearby
-            towns and villages.
+            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert mole
+            removal. Our clinic is easily accessible and welcomes patients from all nearby towns and
+            villages.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -1208,27 +1165,18 @@ function AreasWeServeSection() {
 }
 
 function RelatedTreatmentsSection() {
-  const related: { name: string; to: string; params?: Record<string, string> }[] = [
+  const related: { name: string; to: string }[] = [
     { name: "Acne Treatment", to: "/treatments/acne-treatment-armoor" },
-    { name: "Dandruff Treatment", to: "/treatments/$slug", params: { slug: "dandruff-treatment" } },
-    {
-      name: "Psoriasis Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "psoriasis-treatment" },
-    },
-    {
-      name: "Skin Allergy Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "skin-allergy-treatment" },
-    },
-    { name: "Vitiligo Treatment", to: "/treatments/$slug", params: { slug: "vitiligo-treatment" } },
-    {
-      name: "Fungal Infection Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "fungal-infection-treatment" },
-    },
-    { name: "Warts Treatment", to: "/treatments/$slug", params: { slug: "warts-treatment" } },
-    { name: "Eczema Treatment", to: "/treatments/$slug", params: { slug: "eczema-treatment" } },
+    { name: "Hair Loss Treatment", to: "/treatments/hair-loss-treatment-armoor" },
+    { name: "Psoriasis Treatment", to: "/treatments/psoriasis-treatment-armoor" },
+    { name: "Eczema Treatment", to: "/treatments/eczema-treatment-armoor" },
+    { name: "Fungal Infection Treatment", to: "/treatments/fungal-infection-treatment-armoor" },
+    { name: "Dandruff Treatment", to: "/treatments/dandruff-treatment-armoor" },
+    { name: "Vitiligo Treatment", to: "/treatments/vitiligo-treatment-armoor" },
+    { name: "Pigmentation Treatment", to: "/treatments/pigmentation-treatment-armoor" },
+    { name: "Skin Allergy Treatment", to: "/treatments/skin-allergy-treatment-armoor" },
+    { name: "Nail Disorders", to: "/treatments/nail-disorders-armoor" },
+    { name: "Wart Removal", to: "/treatments/wart-removal-armoor" },
   ];
 
   return (
@@ -1250,7 +1198,6 @@ function RelatedTreatmentsSection() {
             <Link
               key={treatment.name}
               to={treatment.to}
-              {...(treatment.params ? { params: treatment.params } : {})}
               className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-muted-foreground transition-all hover:border-primary/30 hover:text-primary hover:shadow-[var(--shadow-soft)]"
             >
               {treatment.name}
@@ -1267,11 +1214,11 @@ function BookingCTA() {
     <section className="py-20" style={{ background: "var(--gradient-navy)" }}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          Ready to Get Healthier Hair?
+          Ready to Get That Mole Checked?
         </h2>
         <p className="mt-4 text-lg text-white/80">
-          Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Take
-          the first step towards fuller, healthier hair.
+          Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Get
+          professional mole evaluation and safe removal you can trust.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link

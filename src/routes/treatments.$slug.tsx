@@ -28,10 +28,28 @@ function findTreatment(slug: string): TreatmentData | undefined {
 
 export const Route = createFileRoute("/treatments/$slug")({
   loader: ({ params }) => {
-    if (params.slug === "acne-treatment") {
-      throw redirect({ to: "/treatments/acne-treatment-armoor" });
+    const armoorRedirects: Record<string, string> = {
+      "acne-treatment": "/treatments/acne-treatment-armoor",
+      "hair-loss-treatment": "/treatments/hair-loss-treatment-armoor",
+      "psoriasis-treatment": "/treatments/psoriasis-treatment-armoor",
+      "eczema-treatment": "/treatments/eczema-treatment-armoor",
+      "fungal-infection-treatment": "/treatments/fungal-infection-treatment-armoor",
+      "dandruff-treatment": "/treatments/dandruff-treatment-armoor",
+      "vitiligo-treatment": "/treatments/vitiligo-treatment-armoor",
+      "pigmentation-treatment": "/treatments/pigmentation-treatment-armoor",
+      "skin-allergy-treatment": "/treatments/skin-allergy-treatment-armoor",
+      "nail-disorders": "/treatments/nail-disorders-armoor",
+      "wart-removal": "/treatments/wart-removal-armoor",
+      "mole-removal": "/treatments/mole-removal-armoor",
+    };
+    const redirectTo = armoorRedirects[params.slug];
+    if (redirectTo) {
+      throw redirect({ to: redirectTo });
     }
-    const treatment = findTreatment(params.slug);
+    const dataSlug = params.slug.endsWith("-armoor")
+      ? params.slug.replace(/-armoor$/, "")
+      : params.slug;
+    const treatment = findTreatment(dataSlug);
     if (!treatment) throw notFound();
     return { treatment };
   },
@@ -308,5 +326,3 @@ function BookingCTA() {
     </section>
   );
 }
-
-

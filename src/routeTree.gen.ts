@@ -12,9 +12,17 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TreatmentsRouteImport } from './routes/treatments'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as TreatmentsWartRemovalArmoorRouteImport } from './routes/treatments.wart-removal-armoor'
+import { Route as TreatmentsVitiligoTreatmentArmoorRouteImport } from './routes/treatments.vitiligo-treatment-armoor'
+import { Route as TreatmentsSkinAllergyTreatmentArmoorRouteImport } from './routes/treatments.skin-allergy-treatment-armoor'
 import { Route as TreatmentsPsoriasisTreatmentArmoorRouteImport } from './routes/treatments.psoriasis-treatment-armoor'
-import { Route as TreatmentsHairFallTreatmentArmoorRouteImport } from './routes/treatments.hair-fall-treatment-armoor'
+import { Route as TreatmentsPigmentationTreatmentArmoorRouteImport } from './routes/treatments.pigmentation-treatment-armoor'
+import { Route as TreatmentsNailDisordersArmoorRouteImport } from './routes/treatments.nail-disorders-armoor'
+import { Route as TreatmentsMoleRemovalArmoorRouteImport } from './routes/treatments.mole-removal-armoor'
+import { Route as TreatmentsHairLossTreatmentArmoorRouteImport } from './routes/treatments.hair-loss-treatment-armoor'
+import { Route as TreatmentsFungalInfectionTreatmentArmoorRouteImport } from './routes/treatments.fungal-infection-treatment-armoor'
 import { Route as TreatmentsEczemaTreatmentArmoorRouteImport } from './routes/treatments.eczema-treatment-armoor'
+import { Route as TreatmentsDandruffTreatmentArmoorRouteImport } from './routes/treatments.dandruff-treatment-armoor'
 import { Route as TreatmentsAcneTreatmentArmoorRouteImport } from './routes/treatments.acne-treatment-armoor'
 import { Route as TreatmentsSlugRouteImport } from './routes/treatments.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -34,22 +42,70 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TreatmentsWartRemovalArmoorRoute =
+  TreatmentsWartRemovalArmoorRouteImport.update({
+    id: '/wart-removal-armoor',
+    path: '/wart-removal-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsVitiligoTreatmentArmoorRoute =
+  TreatmentsVitiligoTreatmentArmoorRouteImport.update({
+    id: '/vitiligo-treatment-armoor',
+    path: '/vitiligo-treatment-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsSkinAllergyTreatmentArmoorRoute =
+  TreatmentsSkinAllergyTreatmentArmoorRouteImport.update({
+    id: '/skin-allergy-treatment-armoor',
+    path: '/skin-allergy-treatment-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
 const TreatmentsPsoriasisTreatmentArmoorRoute =
   TreatmentsPsoriasisTreatmentArmoorRouteImport.update({
     id: '/psoriasis-treatment-armoor',
     path: '/psoriasis-treatment-armoor',
     getParentRoute: () => TreatmentsRoute,
   } as any)
-const TreatmentsHairFallTreatmentArmoorRoute =
-  TreatmentsHairFallTreatmentArmoorRouteImport.update({
-    id: '/hair-fall-treatment-armoor',
-    path: '/hair-fall-treatment-armoor',
+const TreatmentsPigmentationTreatmentArmoorRoute =
+  TreatmentsPigmentationTreatmentArmoorRouteImport.update({
+    id: '/pigmentation-treatment-armoor',
+    path: '/pigmentation-treatment-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsNailDisordersArmoorRoute =
+  TreatmentsNailDisordersArmoorRouteImport.update({
+    id: '/nail-disorders-armoor',
+    path: '/nail-disorders-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsMoleRemovalArmoorRoute =
+  TreatmentsMoleRemovalArmoorRouteImport.update({
+    id: '/mole-removal-armoor',
+    path: '/mole-removal-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsHairLossTreatmentArmoorRoute =
+  TreatmentsHairLossTreatmentArmoorRouteImport.update({
+    id: '/hair-loss-treatment-armoor',
+    path: '/hair-loss-treatment-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsFungalInfectionTreatmentArmoorRoute =
+  TreatmentsFungalInfectionTreatmentArmoorRouteImport.update({
+    id: '/fungal-infection-treatment-armoor',
+    path: '/fungal-infection-treatment-armoor',
     getParentRoute: () => TreatmentsRoute,
   } as any)
 const TreatmentsEczemaTreatmentArmoorRoute =
   TreatmentsEczemaTreatmentArmoorRouteImport.update({
     id: '/eczema-treatment-armoor',
     path: '/eczema-treatment-armoor',
+    getParentRoute: () => TreatmentsRoute,
+  } as any)
+const TreatmentsDandruffTreatmentArmoorRoute =
+  TreatmentsDandruffTreatmentArmoorRouteImport.update({
+    id: '/dandruff-treatment-armoor',
+    path: '/dandruff-treatment-armoor',
     getParentRoute: () => TreatmentsRoute,
   } as any)
 const TreatmentsAcneTreatmentArmoorRoute =
@@ -76,9 +132,17 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/treatments/$slug': typeof TreatmentsSlugRoute
   '/treatments/acne-treatment-armoor': typeof TreatmentsAcneTreatmentArmoorRoute
+  '/treatments/dandruff-treatment-armoor': typeof TreatmentsDandruffTreatmentArmoorRoute
   '/treatments/eczema-treatment-armoor': typeof TreatmentsEczemaTreatmentArmoorRoute
-  '/treatments/hair-fall-treatment-armoor': typeof TreatmentsHairFallTreatmentArmoorRoute
+  '/treatments/fungal-infection-treatment-armoor': typeof TreatmentsFungalInfectionTreatmentArmoorRoute
+  '/treatments/hair-loss-treatment-armoor': typeof TreatmentsHairLossTreatmentArmoorRoute
+  '/treatments/mole-removal-armoor': typeof TreatmentsMoleRemovalArmoorRoute
+  '/treatments/nail-disorders-armoor': typeof TreatmentsNailDisordersArmoorRoute
+  '/treatments/pigmentation-treatment-armoor': typeof TreatmentsPigmentationTreatmentArmoorRoute
   '/treatments/psoriasis-treatment-armoor': typeof TreatmentsPsoriasisTreatmentArmoorRoute
+  '/treatments/skin-allergy-treatment-armoor': typeof TreatmentsSkinAllergyTreatmentArmoorRoute
+  '/treatments/vitiligo-treatment-armoor': typeof TreatmentsVitiligoTreatmentArmoorRoute
+  '/treatments/wart-removal-armoor': typeof TreatmentsWartRemovalArmoorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -87,9 +151,17 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/treatments/$slug': typeof TreatmentsSlugRoute
   '/treatments/acne-treatment-armoor': typeof TreatmentsAcneTreatmentArmoorRoute
+  '/treatments/dandruff-treatment-armoor': typeof TreatmentsDandruffTreatmentArmoorRoute
   '/treatments/eczema-treatment-armoor': typeof TreatmentsEczemaTreatmentArmoorRoute
-  '/treatments/hair-fall-treatment-armoor': typeof TreatmentsHairFallTreatmentArmoorRoute
+  '/treatments/fungal-infection-treatment-armoor': typeof TreatmentsFungalInfectionTreatmentArmoorRoute
+  '/treatments/hair-loss-treatment-armoor': typeof TreatmentsHairLossTreatmentArmoorRoute
+  '/treatments/mole-removal-armoor': typeof TreatmentsMoleRemovalArmoorRoute
+  '/treatments/nail-disorders-armoor': typeof TreatmentsNailDisordersArmoorRoute
+  '/treatments/pigmentation-treatment-armoor': typeof TreatmentsPigmentationTreatmentArmoorRoute
   '/treatments/psoriasis-treatment-armoor': typeof TreatmentsPsoriasisTreatmentArmoorRoute
+  '/treatments/skin-allergy-treatment-armoor': typeof TreatmentsSkinAllergyTreatmentArmoorRoute
+  '/treatments/vitiligo-treatment-armoor': typeof TreatmentsVitiligoTreatmentArmoorRoute
+  '/treatments/wart-removal-armoor': typeof TreatmentsWartRemovalArmoorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -99,9 +171,17 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/treatments/$slug': typeof TreatmentsSlugRoute
   '/treatments/acne-treatment-armoor': typeof TreatmentsAcneTreatmentArmoorRoute
+  '/treatments/dandruff-treatment-armoor': typeof TreatmentsDandruffTreatmentArmoorRoute
   '/treatments/eczema-treatment-armoor': typeof TreatmentsEczemaTreatmentArmoorRoute
-  '/treatments/hair-fall-treatment-armoor': typeof TreatmentsHairFallTreatmentArmoorRoute
+  '/treatments/fungal-infection-treatment-armoor': typeof TreatmentsFungalInfectionTreatmentArmoorRoute
+  '/treatments/hair-loss-treatment-armoor': typeof TreatmentsHairLossTreatmentArmoorRoute
+  '/treatments/mole-removal-armoor': typeof TreatmentsMoleRemovalArmoorRoute
+  '/treatments/nail-disorders-armoor': typeof TreatmentsNailDisordersArmoorRoute
+  '/treatments/pigmentation-treatment-armoor': typeof TreatmentsPigmentationTreatmentArmoorRoute
   '/treatments/psoriasis-treatment-armoor': typeof TreatmentsPsoriasisTreatmentArmoorRoute
+  '/treatments/skin-allergy-treatment-armoor': typeof TreatmentsSkinAllergyTreatmentArmoorRoute
+  '/treatments/vitiligo-treatment-armoor': typeof TreatmentsVitiligoTreatmentArmoorRoute
+  '/treatments/wart-removal-armoor': typeof TreatmentsWartRemovalArmoorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -112,9 +192,17 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/treatments/$slug'
     | '/treatments/acne-treatment-armoor'
+    | '/treatments/dandruff-treatment-armoor'
     | '/treatments/eczema-treatment-armoor'
-    | '/treatments/hair-fall-treatment-armoor'
+    | '/treatments/fungal-infection-treatment-armoor'
+    | '/treatments/hair-loss-treatment-armoor'
+    | '/treatments/mole-removal-armoor'
+    | '/treatments/nail-disorders-armoor'
+    | '/treatments/pigmentation-treatment-armoor'
     | '/treatments/psoriasis-treatment-armoor'
+    | '/treatments/skin-allergy-treatment-armoor'
+    | '/treatments/vitiligo-treatment-armoor'
+    | '/treatments/wart-removal-armoor'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -123,9 +211,17 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/treatments/$slug'
     | '/treatments/acne-treatment-armoor'
+    | '/treatments/dandruff-treatment-armoor'
     | '/treatments/eczema-treatment-armoor'
-    | '/treatments/hair-fall-treatment-armoor'
+    | '/treatments/fungal-infection-treatment-armoor'
+    | '/treatments/hair-loss-treatment-armoor'
+    | '/treatments/mole-removal-armoor'
+    | '/treatments/nail-disorders-armoor'
+    | '/treatments/pigmentation-treatment-armoor'
     | '/treatments/psoriasis-treatment-armoor'
+    | '/treatments/skin-allergy-treatment-armoor'
+    | '/treatments/vitiligo-treatment-armoor'
+    | '/treatments/wart-removal-armoor'
   id:
     | '__root__'
     | '/'
@@ -134,9 +230,17 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/treatments/$slug'
     | '/treatments/acne-treatment-armoor'
+    | '/treatments/dandruff-treatment-armoor'
     | '/treatments/eczema-treatment-armoor'
-    | '/treatments/hair-fall-treatment-armoor'
+    | '/treatments/fungal-infection-treatment-armoor'
+    | '/treatments/hair-loss-treatment-armoor'
+    | '/treatments/mole-removal-armoor'
+    | '/treatments/nail-disorders-armoor'
+    | '/treatments/pigmentation-treatment-armoor'
     | '/treatments/psoriasis-treatment-armoor'
+    | '/treatments/skin-allergy-treatment-armoor'
+    | '/treatments/vitiligo-treatment-armoor'
+    | '/treatments/wart-removal-armoor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -168,6 +272,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/treatments/wart-removal-armoor': {
+      id: '/treatments/wart-removal-armoor'
+      path: '/wart-removal-armoor'
+      fullPath: '/treatments/wart-removal-armoor'
+      preLoaderRoute: typeof TreatmentsWartRemovalArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/vitiligo-treatment-armoor': {
+      id: '/treatments/vitiligo-treatment-armoor'
+      path: '/vitiligo-treatment-armoor'
+      fullPath: '/treatments/vitiligo-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsVitiligoTreatmentArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/skin-allergy-treatment-armoor': {
+      id: '/treatments/skin-allergy-treatment-armoor'
+      path: '/skin-allergy-treatment-armoor'
+      fullPath: '/treatments/skin-allergy-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsSkinAllergyTreatmentArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
     '/treatments/psoriasis-treatment-armoor': {
       id: '/treatments/psoriasis-treatment-armoor'
       path: '/psoriasis-treatment-armoor'
@@ -175,11 +300,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TreatmentsPsoriasisTreatmentArmoorRouteImport
       parentRoute: typeof TreatmentsRoute
     }
-    '/treatments/hair-fall-treatment-armoor': {
-      id: '/treatments/hair-fall-treatment-armoor'
-      path: '/hair-fall-treatment-armoor'
-      fullPath: '/treatments/hair-fall-treatment-armoor'
-      preLoaderRoute: typeof TreatmentsHairFallTreatmentArmoorRouteImport
+    '/treatments/pigmentation-treatment-armoor': {
+      id: '/treatments/pigmentation-treatment-armoor'
+      path: '/pigmentation-treatment-armoor'
+      fullPath: '/treatments/pigmentation-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsPigmentationTreatmentArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/nail-disorders-armoor': {
+      id: '/treatments/nail-disorders-armoor'
+      path: '/nail-disorders-armoor'
+      fullPath: '/treatments/nail-disorders-armoor'
+      preLoaderRoute: typeof TreatmentsNailDisordersArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/mole-removal-armoor': {
+      id: '/treatments/mole-removal-armoor'
+      path: '/mole-removal-armoor'
+      fullPath: '/treatments/mole-removal-armoor'
+      preLoaderRoute: typeof TreatmentsMoleRemovalArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/hair-loss-treatment-armoor': {
+      id: '/treatments/hair-loss-treatment-armoor'
+      path: '/hair-loss-treatment-armoor'
+      fullPath: '/treatments/hair-loss-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsHairLossTreatmentArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/fungal-infection-treatment-armoor': {
+      id: '/treatments/fungal-infection-treatment-armoor'
+      path: '/fungal-infection-treatment-armoor'
+      fullPath: '/treatments/fungal-infection-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsFungalInfectionTreatmentArmoorRouteImport
       parentRoute: typeof TreatmentsRoute
     }
     '/treatments/eczema-treatment-armoor': {
@@ -187,6 +340,13 @@ declare module '@tanstack/react-router' {
       path: '/eczema-treatment-armoor'
       fullPath: '/treatments/eczema-treatment-armoor'
       preLoaderRoute: typeof TreatmentsEczemaTreatmentArmoorRouteImport
+      parentRoute: typeof TreatmentsRoute
+    }
+    '/treatments/dandruff-treatment-armoor': {
+      id: '/treatments/dandruff-treatment-armoor'
+      path: '/dandruff-treatment-armoor'
+      fullPath: '/treatments/dandruff-treatment-armoor'
+      preLoaderRoute: typeof TreatmentsDandruffTreatmentArmoorRouteImport
       parentRoute: typeof TreatmentsRoute
     }
     '/treatments/acne-treatment-armoor': {
@@ -226,19 +386,40 @@ const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 interface TreatmentsRouteChildren {
   TreatmentsSlugRoute: typeof TreatmentsSlugRoute
   TreatmentsAcneTreatmentArmoorRoute: typeof TreatmentsAcneTreatmentArmoorRoute
+  TreatmentsDandruffTreatmentArmoorRoute: typeof TreatmentsDandruffTreatmentArmoorRoute
   TreatmentsEczemaTreatmentArmoorRoute: typeof TreatmentsEczemaTreatmentArmoorRoute
-  TreatmentsHairFallTreatmentArmoorRoute: typeof TreatmentsHairFallTreatmentArmoorRoute
+  TreatmentsFungalInfectionTreatmentArmoorRoute: typeof TreatmentsFungalInfectionTreatmentArmoorRoute
+  TreatmentsHairLossTreatmentArmoorRoute: typeof TreatmentsHairLossTreatmentArmoorRoute
+  TreatmentsMoleRemovalArmoorRoute: typeof TreatmentsMoleRemovalArmoorRoute
+  TreatmentsNailDisordersArmoorRoute: typeof TreatmentsNailDisordersArmoorRoute
+  TreatmentsPigmentationTreatmentArmoorRoute: typeof TreatmentsPigmentationTreatmentArmoorRoute
   TreatmentsPsoriasisTreatmentArmoorRoute: typeof TreatmentsPsoriasisTreatmentArmoorRoute
+  TreatmentsSkinAllergyTreatmentArmoorRoute: typeof TreatmentsSkinAllergyTreatmentArmoorRoute
+  TreatmentsVitiligoTreatmentArmoorRoute: typeof TreatmentsVitiligoTreatmentArmoorRoute
+  TreatmentsWartRemovalArmoorRoute: typeof TreatmentsWartRemovalArmoorRoute
 }
 
 const TreatmentsRouteChildren: TreatmentsRouteChildren = {
   TreatmentsSlugRoute: TreatmentsSlugRoute,
   TreatmentsAcneTreatmentArmoorRoute: TreatmentsAcneTreatmentArmoorRoute,
+  TreatmentsDandruffTreatmentArmoorRoute:
+    TreatmentsDandruffTreatmentArmoorRoute,
   TreatmentsEczemaTreatmentArmoorRoute: TreatmentsEczemaTreatmentArmoorRoute,
-  TreatmentsHairFallTreatmentArmoorRoute:
-    TreatmentsHairFallTreatmentArmoorRoute,
+  TreatmentsFungalInfectionTreatmentArmoorRoute:
+    TreatmentsFungalInfectionTreatmentArmoorRoute,
+  TreatmentsHairLossTreatmentArmoorRoute:
+    TreatmentsHairLossTreatmentArmoorRoute,
+  TreatmentsMoleRemovalArmoorRoute: TreatmentsMoleRemovalArmoorRoute,
+  TreatmentsNailDisordersArmoorRoute: TreatmentsNailDisordersArmoorRoute,
+  TreatmentsPigmentationTreatmentArmoorRoute:
+    TreatmentsPigmentationTreatmentArmoorRoute,
   TreatmentsPsoriasisTreatmentArmoorRoute:
     TreatmentsPsoriasisTreatmentArmoorRoute,
+  TreatmentsSkinAllergyTreatmentArmoorRoute:
+    TreatmentsSkinAllergyTreatmentArmoorRoute,
+  TreatmentsVitiligoTreatmentArmoorRoute:
+    TreatmentsVitiligoTreatmentArmoorRoute,
+  TreatmentsWartRemovalArmoorRoute: TreatmentsWartRemovalArmoorRoute,
 }
 
 const TreatmentsRouteWithChildren = TreatmentsRoute._addFileChildren(

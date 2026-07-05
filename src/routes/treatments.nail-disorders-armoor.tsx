@@ -12,11 +12,6 @@ import {
   MapPin,
   Quote,
   AlertCircle,
-  Users,
-  Wind,
-  Droplets,
-  Scissors,
-  Sun,
 } from "lucide-react";
 import {
   CLINIC_NAME,
@@ -31,37 +26,37 @@ import {
   MAP_LINK,
 } from "../lib/clinic-data";
 
-export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
+export const Route = createFileRoute("/treatments/nail-disorders-armoor")({
   head: () => ({
     meta: [
       {
-        title: `Acne Treatment in Armoor | Pimple & Scar Removal | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        title: `Nail Disorders Treatment in Armoor | Fungal & Ingrown Nail | ${DOCTOR_NAME}`,
       },
       {
         name: "description",
-        content: `Expert acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced solutions for pimples, cystic acne, acne scars, and hormonal breakouts at ${CLINIC_NAME}. Book your consultation today.`,
+        content: `Expert nail disorders treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced care for fungal nail infections, ingrown toenails, brittle nails, and paronychia at ${CLINIC_NAME}. Book your consultation.`,
       },
       { name: "robots", content: "index, follow" },
       {
         property: "og:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        content: `Nail Disorders Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         property: "og:description",
-        content: `Effective acne and pimple treatment in Armoor by Dr. Raghavendhra MD, DVL. Advanced therapies for acne scars, cystic acne, and hormonal breakouts at Armoor Skin & Hair Clinic.`,
+        content: `Effective nail disorder treatment in Armoor by Dr. Raghavendhra MD, DVL. Personalised care for fungal nails, ingrown nails, brittle nails, and paronychia at Armoor Skin & Hair Clinic.`,
       },
-      { property: "og:url", content: `${SITE_URL}/treatments/acne-treatment-armoor` },
+      { property: "og:url", content: `${SITE_URL}/treatments/nail-disorders-armoor` },
       { property: "og:type", content: "website" },
       {
         name: "twitter:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME}`,
+        content: `Nail Disorders Treatment in Armoor | ${CLINIC_NAME}`,
       },
       {
         name: "twitter:description",
-        content: `Expert acne treatment in Armoor by Dr. Raghavendhra — personalised care for clear, healthy skin.`,
+        content: `Expert nail disorders treatment in Armoor by Dr. Raghavendhra — personalised care for healthy, strong nails.`,
       },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/acne-treatment-armoor` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/nail-disorders-armoor` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -70,9 +65,9 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
           "@graph": [
             {
               "@type": "MedicalClinic",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#clinic`,
+              "@id": `${SITE_URL}/treatments/nail-disorders-armoor#clinic`,
               name: CLINIC_NAME,
-              description: `Acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
+              description: `Nail disorders treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
               url: SITE_URL,
               telephone: PHONE_TEL,
               address: {
@@ -98,7 +93,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "LocalBusiness",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#business`,
+              "@id": `${SITE_URL}/treatments/nail-disorders-armoor#business`,
               name: CLINIC_NAME,
               image: `${SITE_URL}/og-image.jpg`,
               telephone: PHONE_TEL,
@@ -114,7 +109,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "BreadcrumbList",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#breadcrumbs`,
+              "@id": `${SITE_URL}/treatments/nail-disorders-armoor#breadcrumbs`,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -125,118 +120,102 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "Acne Treatment in Armoor",
-                  item: `${SITE_URL}/treatments/acne-treatment-armoor`,
+                  name: "Nail Disorders Treatment in Armoor",
+                  item: `${SITE_URL}/treatments/nail-disorders-armoor`,
                 },
               ],
             },
             {
               "@type": "FAQPage",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#faq`,
+              "@id": `${SITE_URL}/treatments/nail-disorders-armoor#faq`,
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Can acne be cured permanently?",
+                  name: "How long does nail fungus treatment take?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+                    text: "Nail fungus treatment typically takes 3–6 months for fingernails and 6–12 months for toenails, as nails grow slowly and medication needs time to reach the infection site. Consistent treatment is essential for complete clearance.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How long does acne treatment take to show results?",
+                  name: "Can brittle nails be treated?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+                    text: "Yes, brittle nails can be improved by identifying the underlying cause. Treatment may include nutritional supplementation (biotin, iron), moisturizing treatments, avoiding harsh chemicals, and proper nail care routines prescribed by a dermatologist.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can acne scars be removed completely?",
+                  name: "Is nail fungus contagious?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+                    text: "Yes, fungal nail infections are contagious. They can spread from person to person through direct contact or via contaminated surfaces like floors, towels, nail clippers, and shoes. Prompt treatment reduces the risk of spreading.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne treatment painful?",
+                  name: "Do I need to see a dermatologist for nail problems?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort. Your dermatologist will ensure you are comfortable throughout the process.",
+                    text: "Yes, a dermatologist can accurately diagnose nail conditions through clinical examination and lab tests. Many nail disorders look similar but require different treatments, so professional diagnosis is important for effective care.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What is the best treatment for cystic acne?",
+                  name: "Can nail problems indicate other health issues?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach based on your condition.",
+                    text: "Yes, nail changes can be a sign of underlying health conditions such as thyroid disorders, anaemia, psoriasis, diabetes, nutritional deficiencies, and circulatory problems. A dermatologist can help identify these associations.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne caused by diet?",
+                  name: "Are fungal nail infections painful?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+                    text: "Fungal nail infections are not always painful in the early stages. As the infection progresses, the nail may become thick, causing discomfort when wearing shoes, or pressure pain on the nail bed. Treatment helps relieve pain by resolving the infection.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How much does acne treatment cost in Armoor?",
+                  name: "Can ingrown toenails be treated without surgery?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+                    text: "Mild ingrown toenails can often be managed with conservative measures such as proper nail trimming, wearing appropriate footwear, warm soaks, and antibiotic ointments. However, recurrent or severe cases may require a minor in-clinic procedure.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can hormonal acne be treated?",
+                  name: "Can nail psoriasis be treated?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+                    text: "Yes, nail psoriasis can be treated with topical medications, corticosteroid injections, oral therapies, and laser treatment. Early treatment is more effective, and consistent care can significantly improve nail appearance and comfort.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Does popping pimples make acne worse?",
+                  name: "How can I prevent nail infections?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+                    text: "To prevent nail infections, keep nails clean and dry, trim them straight across, avoid sharing nail clippers or towels, wear breathable footwear, change socks daily, and use antifungal powder in shoes. Avoid walking barefoot in public showers or pools.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What should I avoid during acne treatment?",
+                  name: "How much does nail disorders treatment cost in Armoor?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance for your specific treatment plan.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can adults get acne?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is isotretinoin safe for acne treatment?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+                    text: `The cost of nail disorders treatment at ${CLINIC_NAME} depends on the type of condition, severity, and treatment approach. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
                   },
                 },
               ],
             },
             {
               "@type": "MedicalProcedure",
-              name: "Acne Treatment in Armoor",
+              name: "Nail Disorders Treatment in Armoor",
               description:
-                "Comprehensive acne treatment services including topical and oral medications, chemical peels, microneedling, laser therapy, and personalised skincare plans.",
+                "Comprehensive nail disorders treatment including antifungal therapy, ingrown nail care, paronychia management, and nail psoriasis treatment.",
               provider: {
                 "@type": "MedicalClinic",
                 name: CLINIC_NAME,
@@ -256,10 +235,10 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
       },
     ],
   }),
-  component: AcneTreatmentArmoorPage,
+  component: NailDisordersArmoorPage,
 });
 
-function AcneTreatmentArmoorPage() {
+function NailDisordersArmoorPage() {
   return (
     <>
       <HeroSection />
@@ -297,22 +276,21 @@ function HeroSection() {
             Treatments
           </Link>
           <span>/</span>
-          <span className="text-white/90">Acne Treatment in Armoor</span>
+          <span className="text-white/90">Nail Disorders Treatment in Armoor</span>
         </nav>
-        {/* IMAGE PLACEHOLDER: Hero image for acne treatment page */}
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
               <Star className="h-3.5 w-3.5 text-gold" />
-              Expert Acne Care in Armoor
+              Expert Nail Disorder Care in Armoor
             </div>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              Acne Treatment in Armoor
+              Nail Disorders Treatment in Armoor
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
-              Effective acne and pimple treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
-              {QUALIFICATION} — Armoor's trusted dermatologist for personalised acne care, scar
-              treatment, and lasting skin clarity.
+              Expert nail disorders treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
+              {QUALIFICATION} — Armoor's trusted dermatologist for fungal nail infections, ingrown
+              toenails, brittle nails, and paronychia.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -337,8 +315,8 @@ function HeroSection() {
               <ul className="mt-4 space-y-3">
                 {[
                   `Expert dermatologist ${DOCTOR_NAME} ${QUALIFICATION}`,
-                  "Customised treatment for all skin types",
-                  "Chemical peels, microneedling & laser therapy",
+                  "Comprehensive nail disorder diagnosis",
+                  "Medical & cosmetic nail treatments",
                   "Affordable consultation in Armoor",
                   `${HOURS.weekdayDays}, ${HOURS.weekday}`,
                 ].map((item) => (
@@ -363,56 +341,51 @@ function WhatIsSection() {
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-start">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-              Understanding Acne
+              Understanding Nail Disorders
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              What is Acne?
+              What Are Nail Disorders?
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                Acne is a common skin condition that occurs when hair follicles become clogged with
-                oil (sebum) and dead skin cells. It manifests as pimples, blackheads, whiteheads,
-                and deeper lumps like nodules and cysts. At {CLINIC_NAME}, we treat the root causes
-                of acne — excess oil production, bacteria, inflammation, and clogged pores — for
-                lasting skin clarity.
+                Nail disorders are conditions that affect the appearance, strength, and health of
+                fingernails and toenails. They can be caused by infections, injuries, underlying
+                medical conditions, or environmental factors. Nail problems can range from mild
+                cosmetic concerns to painful conditions that interfere with daily activities.
               </p>
               <p>
-                Acne develops when sebaceous glands produce excess sebum, which mixes with dead skin
-                cells and blocks the follicle opening. The bacterium Cutibacterium acnes (C. acnes)
-                thrives in this environment, triggering inflammation and the formation of red,
-                swollen pimples. Acne most commonly affects the face, chest, back, and shoulders.
+                Common nail disorders include fungal infections (onychomycosis), ingrown toenails,
+                paronychia (bacterial infection around the nail), brittle nail syndrome, nail
+                psoriasis, and nail discolouration. Each condition requires a specific approach to
+                diagnosis and treatment.
               </p>
               <p>
-                Acne is not just a teenage problem. Many adults, particularly women, experience acne
-                well into their 30s, 40s, and beyond. Hormonal fluctuations, stress, diet, and
-                certain medications can all trigger or worsen breakouts at any age. Effective
-                treatment begins with understanding what is driving your acne.
+                Your nails can also serve as a window to your overall health. Changes in nail
+                colour, texture, shape, or growth rate may indicate underlying health issues such as
+                thyroid disorders, anaemia, nutritional deficiencies, or autoimmune conditions. This
+                is why professional evaluation by a dermatologist is important.
               </p>
               <p>
-                A common misconception is that acne is caused by poor hygiene or eating greasy food.
-                While diet can play a role in some individuals, acne is primarily a medical
-                condition driven by hormones, genetics, and bacterial activity. Even people with
-                meticulous skincare routines can experience acne. A dermatologist's evaluation is
-                essential for effective treatment.
+                At {CLINIC_NAME}, we provide comprehensive care for all types of nail disorders. Our
+                approach combines accurate diagnosis with effective, evidence-based treatments to
+                restore nail health and relieve discomfort.
               </p>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Acne skin condition */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <AlertCircle className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Condition
+                  Nail Disorders Condition
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing acne-affected facial skin
+                  Replace with an image showing nail disorders
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing acne breakouts on facial skin including whiteheads,
-                  blackheads, and inflamed pimples
+                  Alt: Illustration showing common nail disorders and conditions
                 </p>
               </div>
             </div>
@@ -426,36 +399,36 @@ function WhatIsSection() {
 function SymptomsSection() {
   const symptoms = [
     {
-      title: "Whiteheads",
-      desc: "Small, flesh-coloured or white bumps that form when pores are completely blocked with oil and dead skin. They remain closed at the surface and appear as tiny white spots on the skin.",
+      title: "Thickened Nails",
+      desc: "Nails become abnormally thick, often due to fungal infections. Thick toenails can press against shoes, causing discomfort and difficulty trimming.",
     },
     {
-      title: "Blackheads",
-      desc: "Open clogged pores that turn dark due to oxidation of the trapped oil and skin cells on exposure to air. Blackheads are not dirt and can be effectively treated with topical retinoids.",
+      title: "Discolouration",
+      desc: "Nails may turn yellow, brown, green, white, or black depending on the cause. Fungal infections often cause yellow-brown discolouration, while trauma may cause dark spots.",
     },
     {
-      title: "Papules",
-      desc: "Small, red, tender bumps that indicate inflammation in the hair follicle. Papules are a sign of active infection and should not be picked or squeezed as they can worsen inflammation.",
+      title: "Brittle or Splitting Nails",
+      desc: "Nails become weak, thin, and prone to splitting or peeling. This can be caused by nutritional deficiencies, thyroid disorders, or repeated exposure to water and chemicals.",
     },
     {
-      title: "Pustules",
-      desc: "Red bumps with a white or yellow pus-filled centre. These are commonly called pimples or zits and are caused by bacterial activity and inflammation within the blocked pore.",
+      title: "Pain & Swelling",
+      desc: "Redness, swelling, and pain around the nail are common signs of paronychia (bacterial infection) or ingrown toenails. The area may feel warm and tender to touch.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, painful lumps beneath the skin surface. Nodular acne is a severe form that requires professional medical treatment and does not respond to over-the-counter products.",
+      title: "Nail Pitting",
+      desc: "Small depressions or pits on the nail surface are a classic sign of nail psoriasis. They can also occur in eczema and alopecia areata.",
     },
     {
-      title: "Cysts",
-      desc: "Deep, pus-filled, painful lesions that can cause scarring. Cystic acne is the most severe form and requires prompt dermatological intervention including oral medications and drainage.",
+      title: "Nail Separation",
+      desc: "The nail lifts away from the nail bed (onycholysis). This can be caused by fungal infection, trauma, psoriasis, or thyroid disease. It may trap debris underneath.",
     },
     {
-      title: "Acne Scars",
-      desc: "Permanent textural changes in the skin that result from severe or poorly treated acne. Scars can be atrophic (depressed) or hypertrophic (raised) and require specialised treatments.",
+      title: "White Spots or Streaks",
+      desc: "White spots (leukonychia) are usually harmless and result from minor trauma. However, persistent or widespread white patches may indicate fungal infection or systemic issues.",
     },
     {
-      title: "Post-Acne Pigmentation",
-      desc: "Dark spots or red marks that remain after acne lesions heal. This pigmentation can persist for months but responds well to treatments like chemical peels and topical brightening agents.",
+      title: "Ingrown Nail",
+      desc: "The nail edge grows into the surrounding skin, causing pain, redness, and swelling. It commonly affects the big toe and may lead to infection if untreated.",
     },
   ];
 
@@ -467,14 +440,14 @@ function SymptomsSection() {
             Recognising the Signs
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Common Symptoms of Acne
+            Common Symptoms of Nail Disorders
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne symptoms range from mild non-inflammatory comedones to severe painful cysts.
-            Recognising the type and severity helps in choosing the right treatment.
+            Nail disorder symptoms vary depending on the underlying cause. Early recognition helps
+            in seeking timely treatment.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {symptoms.map((s) => (
             <div
               key={s.title}
@@ -486,21 +459,20 @@ function SymptomsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne symptoms illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <AlertCircle className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Symptoms Illustration
+                Nail Disorders Symptoms Illustration
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common acne symptoms and lesion types
+                Replace with an infographic showing common nail disorder symptoms
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing different types of acne lesions from whiteheads to cystic
-                acne on facial skin
+                Alt: Illustration showing thickened, discoloured, and pitted nails with various nail
+                disorders
               </p>
             </div>
           </div>
@@ -513,40 +485,40 @@ function SymptomsSection() {
 function CausesSection() {
   const causes = [
     {
-      title: "Excess Oil Production",
-      desc: "Overactive sebaceous glands produce excessive sebum, the natural oil that moisturises the skin. When too much oil is produced, it can combine with dead skin cells to clog hair follicles and trigger acne.",
+      title: "Fungal Infections",
+      desc: "Dermatophyte fungi are the most common cause of nail disorders. They thrive in warm, moist environments and can infect nails through minor breaks in the skin or nail.",
     },
     {
-      title: "Clogged Hair Follicles",
-      desc: "Dead skin cells that are not shed properly can accumulate in hair follicles and mix with sebum to form a plug. This creates an ideal environment for bacteria to multiply and cause inflammation.",
+      title: "Bacterial Infections",
+      desc: "Bacteria such as Staphylococcus and Streptococcus can cause paronychia — an infection of the skin around the nail. It often occurs after injury or excessive moisture exposure.",
     },
     {
-      title: "Bacterial Overgrowth",
-      desc: "Cutibacterium acnes (C. acnes) bacteria naturally live on the skin. When follicles become blocked, these bacteria multiply rapidly, triggering inflammation and the formation of red, pus-filled pimples.",
+      title: "Trauma or Injury",
+      desc: "Repeated microtrauma from ill-fitting shoes, sports activities, or accidental impact can damage the nail matrix, leading to discolouration, thickening, or nail loss.",
     },
     {
-      title: "Hormonal Fluctuations",
-      desc: "Androgens, hormones that increase during puberty, menstrual cycles, pregnancy, and conditions like PCOS, stimulate sebaceous glands to produce more oil. This is why hormonal acne is common in teenagers and women.",
+      title: "Psoriasis",
+      desc: "Nail psoriasis is a common manifestation of psoriasis that affects the nail matrix and nail bed, causing pitting, thickening, onycholysis, and discolouration.",
     },
     {
-      title: "Genetics",
-      desc: "A family history of acne increases your likelihood of developing the condition. Genetic factors influence how your sebaceous glands function, how your skin sheds cells, and how your body responds to inflammation.",
+      title: "Nutritional Deficiencies",
+      desc: "Deficiencies in biotin, iron, zinc, calcium, and vitamins A, B12, and D can lead to brittle, weak, or abnormally shaped nails. Addressing deficiencies improves nail health.",
     },
     {
-      title: "Dietary Triggers",
-      desc: "High-glycemic foods such as refined sugars, white bread, and sugary drinks can spike insulin levels, leading to increased oil production. Dairy products may also trigger breakouts in some individuals.",
+      title: "Thyroid Disorders",
+      desc: "Both hyperthyroidism and hypothyroidism can affect nail growth and appearance. Thyroid-related nail changes include brittleness, ridging, and separation from the nail bed.",
     },
     {
-      title: "Stress",
-      desc: "Stress triggers the release of cortisol and other hormones that increase sebum production and inflammation. Stress can also slow wound healing, making acne lesions take longer to resolve.",
+      title: "Diabetes",
+      desc: "Diabetes can impair circulation and immunity, increasing susceptibility to fungal infections and slow nail growth. Poorly controlled diabetes may worsen nail complications.",
     },
     {
-      title: "Certain Medications",
-      desc: "Some medications can cause or worsen acne, including corticosteroids, lithium, certain anticonvulsants, and hormone-containing medications. Always inform your dermatologist about all medications you are taking.",
+      title: "Improper Nail Care",
+      desc: "Incorrect nail trimming, aggressive manicures, prolonged water exposure, and use of harsh chemicals can damage nails and predispose them to infections and brittleness.",
     },
     {
-      title: "Skincare & Cosmetic Products",
-      desc: "Oil-based, heavy, or comedogenic skincare and makeup products can clog pores and contribute to acne breakouts. Using non-comedogenic, oil-free products is recommended for acne-prone skin.",
+      title: "Ageing",
+      desc: "As we age, nails naturally become thicker, more brittle, and slower-growing. Age-related changes can also increase the risk of fungal infections and other nail conditions.",
     },
   ];
 
@@ -555,14 +527,14 @@ function CausesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Causes and Triggers
+            Causes and Risk Factors
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            What Causes Acne?
+            What Causes Nail Disorders?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne is caused by a combination of factors. Understanding the underlying cause is key to
-            effective treatment and prevention.
+            Nail disorders can result from infections, medical conditions, injuries, or lifestyle
+            factors. Identifying the root cause is essential for effective treatment.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -584,36 +556,36 @@ function CausesSection() {
 function TypesSection() {
   const types = [
     {
-      title: "Whiteheads (Closed Comedones)",
-      desc: "Small, flesh-coloured or white bumps that form when a pore is completely blocked by oil and dead skin. The surface remains closed, giving them a white appearance. They are non-inflammatory but can develop into inflamed acne.",
+      title: "Fungal Nail Infection (Onychomycosis)",
+      desc: "The most common nail disorder, caused by dermatophyte fungi. It leads to thickened, yellow-brown, crumbly nails. It can affect fingernails and toenails, with toenails being more commonly involved.",
     },
     {
-      title: "Blackheads (Open Comedones)",
-      desc: "Open clogged pores where the trapped oil and skin cells are exposed to air and oxidise, turning dark. Blackheads are not dirt and can be effectively treated with topical retinoids and gentle exfoliation.",
+      title: "Paronychia (Bacterial Infection)",
+      desc: "An infection of the nail fold causing redness, swelling, and pain around the nail. Acute paronychia is usually bacterial, while chronic paronychia is often associated with moisture and irritants.",
     },
     {
-      title: "Papules",
-      desc: "Small, red, inflamed bumps that are tender to the touch. Papules indicate that the follicle wall has ruptured, causing inflammation. They do not contain pus and should not be squeezed.",
+      title: "Nail Psoriasis",
+      desc: "Psoriasis affecting the nails causes pitting, thickening, discolouration (oil-drop sign), and separation of the nail from the nail bed. It often occurs with skin psoriasis but can appear alone.",
     },
     {
-      title: "Pustules",
-      desc: "Red, inflamed bumps with a visible white or yellow pus-filled centre. Pustules are the classic pimple and are caused by the immune system fighting bacterial overgrowth in the blocked follicle.",
+      title: "Ingrown Toenail (Onychocryptosis)",
+      desc: "The nail edge grows into the surrounding skin, causing pain, redness, swelling, and sometimes infection. It most commonly affects the big toe and can recur if not properly treated.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, firm, and painful lumps beneath the skin surface. Nodular acne does not have a visible head and can persist for weeks. It carries a high risk of scarring and requires oral medications.",
+      title: "Brittle Nail Syndrome",
+      desc: "Characterised by weak, splitting, or peeling nails. It can be caused by nutritional deficiencies, thyroid disorders, repeated wet-dry cycles, or exposure to harsh chemicals.",
     },
     {
-      title: "Cystic Acne",
-      desc: "The most severe form of acne, characterised by deep, soft, pus-filled lesions that are extremely painful. Cystic acne often leads to significant scarring and requires aggressive treatment including isotretinoin.",
+      title: "Onycholysis (Nail Lifting)",
+      desc: "The nail plate separates from the nail bed, often starting at the tip. Causes include fungal infection, trauma, psoriasis, thyroid disease, and certain medications.",
     },
     {
-      title: "Hormonal Acne",
-      desc: "Acne triggered by hormonal fluctuations, typically appearing along the jawline, chin, and lower cheeks. It is common in adult women and often presents as deep, tender cysts that appear cyclically.",
+      title: "Nail Discolouration",
+      desc: "Nails can turn yellow (fungus, smoking), green (bacterial infection), white (trauma, fungus), black (trauma, melanoma), or brown (fungus, medications). Colour changes help in diagnosis.",
     },
     {
-      title: "Acne Conglobata",
-      desc: "A rare but severe form of inflammatory acne characterised by large, interconnected nodules and abscesses that can cause extensive scarring. It requires immediate and intensive dermatological treatment.",
+      title: "Leukonychia (White Nails)",
+      desc: "White spots or streaks on the nails, usually caused by minor trauma to the nail matrix. It is generally harmless but persistent white discolouration may indicate fungal infection or systemic disease.",
     },
   ];
 
@@ -622,14 +594,14 @@ function TypesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Types of Acne
+            Types of Nail Disorders
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Different Types of Acne
+            Different Types of Nail Disorders
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne can present in various forms. Identifying the specific type helps guide treatment
-            decisions and improves outcomes.
+            Nail disorders can present in various forms. Identifying the specific type guides
+            treatment decisions and helps achieve the best outcome.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -658,40 +630,37 @@ function DiagnosisSection() {
               Diagnosis
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              How We Diagnose Acne
+              How We Diagnose Nail Disorders
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                At {CLINIC_NAME}, we diagnose acne through a thorough clinical examination of your
-                skin. The appearance, type, and distribution of acne lesions are usually sufficient
-                to determine the type and severity of your condition.
+                At {CLINIC_NAME}, we diagnose nail disorders through a thorough clinical evaluation
+                and, when necessary, laboratory tests. An accurate diagnosis is essential because
+                many nail conditions look similar but require different treatments.
               </p>
               <p>
-                We begin by reviewing your medical history, including any history of hormonal
-                disorders like PCOS, medications you are taking, your skincare routine, dietary
-                habits, and any previous acne treatments you may have tried. This comprehensive
-                history helps us identify contributing factors.
+                We begin by reviewing your medical history, including any underlying health
+                conditions, medications, occupation, and lifestyle factors that may contribute to
+                nail problems. We also ask about the duration and progression of your symptoms.
               </p>
               <p>
-                A detailed skin examination allows us to grade the severity of acne, identify the
-                types of lesions present (comedones, papules, pustules, nodules, cysts), and assess
-                for scarring and pigmentation. We also evaluate your skin type and oil production
-                levels to tailor treatment appropriately.
+                A detailed examination of your nails allows us to assess the colour, thickness,
+                shape, and texture of the nails, as well as the surrounding skin. We examine all
+                fingernails and toenails, as multiple nails are often affected in fungal infections.
               </p>
               <p>
-                In cases where hormonal acne is suspected, we may recommend blood tests to evaluate
-                hormone levels, including androgens. This helps us determine whether hormonal
-                therapy would be beneficial. We also assess for conditions like PCOS that may
-                underlie persistent acne.
+                In cases of suspected fungal infection, we may take a nail clipping or scraping for
+                potassium hydroxide (KOH) microscopy and culture. This confirms the presence of
+                fungus and helps identify the specific type, guiding treatment selection.
               </p>
             </div>
             <div className="mt-8 space-y-3">
               {[
-                "Comprehensive medical and skincare history review",
-                "Detailed skin examination and acne severity grading",
-                "Identification of acne type and lesion classification",
-                "Assessment of scarring, pigmentation, and skin type",
-                "Hormonal evaluation when indicated",
+                "Comprehensive medical history and lifestyle review",
+                "Detailed examination of all fingernails and toenails",
+                "KOH microscopy and fungal culture when indicated",
+                "Wood's lamp examination for certain nail conditions",
+                "Accurate diagnosis before treatment begins",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -701,21 +670,19 @@ function DiagnosisSection() {
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Dermatologist acne consultation */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <Stethoscope className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Consultation
+                  Nail Examination Consultation
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's facial skin
+                  Replace with a photo of a dermatologist examining a patient's nails
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist examining a patient's facial skin for acne at Armoor Skin &
-                  Hair Clinic
+                  Alt: Dermatologist examining a patient's nails at Armoor Skin & Hair Clinic
                 </p>
               </div>
             </div>
@@ -735,67 +702,67 @@ function TreatmentsSection() {
             Our Treatments
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Acne Treatments Available in Armoor
+            Nail Disorders Treatments Available in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We offer a comprehensive range of evidence-based treatments for all types of acne — from
-            mild comedones to severe cystic acne.
+            We offer a comprehensive range of evidence-based treatments for all types of nail
+            disorders to restore nail health and relieve discomfort.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {[
             {
-              title: "Topical Retinoids & Medications",
+              title: "Antifungal Medications",
               items: [
-                "Tretinoin, adapalene, and tazarotene for comedonal acne",
-                "Benzoyl peroxide to reduce bacteria and inflammation",
-                "Topical antibiotics like clindamycin for active breakouts",
-                "Topical dapsone for inflammatory acne in adults",
+                "Oral antifungal tablets (terbinafine, itraconazole) for moderate to severe infections",
+                "Topical antifungal lacquers and creams for mild cases",
+                "Combination therapy for resistant fungal infections",
+                "Regular monitoring of treatment progress with follow-up visits",
               ],
             },
             {
-              title: "Oral Medications",
+              title: "Ingrown Toenail Treatment",
               items: [
-                "Oral antibiotics for moderate to severe inflammatory acne",
-                "Isotretinoin for severe cystic and resistant acne",
-                "Hormonal therapy including oral contraceptives and spironolactone",
-                "Low-dose antibiotics for maintenance therapy",
+                "Conservative care with warm soaks and proper nail trimming",
+                "Antibiotic therapy if infection is present",
+                "Minor in-clinic procedure for chronic or severe cases",
+                "Guidance on preventing recurrence with proper footwear and nail care",
               ],
             },
             {
-              title: "Chemical Peels",
+              title: "Paronychia Management",
               items: [
-                "Salicylic acid peels for active acne and oil control",
-                "Glycolic acid peels for exfoliation and pigmentation",
-                "Lactic acid peels for sensitive skin types",
-                "Jessner's peel for stubborn comedonal acne",
+                "Antibiotic therapy for bacterial paronychia",
+                "Incision and drainage for abscess formation when needed",
+                "Moisture avoidance and skin barrier protection for chronic cases",
+                "Topical steroid and antifungal combinations for mixed infections",
               ],
             },
             {
-              title: "Microneedling for Scars",
+              title: "Nail Psoriasis Treatment",
               items: [
-                "Microneedling with derma roller or pen device",
-                "Platelet-rich plasma (PRP) combined with microneedling",
-                "Radiofrequency microneedling for deep scars",
-                "Multiple sessions for optimal scar reduction",
+                "Topical vitamin D analogues and corticosteroids for nail pitting",
+                "Corticosteroid injections into the nail matrix for stubborn cases",
+                "Oral medications for severe nail psoriasis with skin involvement",
+                "Laser therapy options for resistant nail psoriasis",
               ],
             },
             {
-              title: "Laser & Light Therapies",
+              title: "Brittle Nail Therapy",
               items: [
-                "Fractional CO2 laser for acne scar resurfacing",
-                "ND:YAG laser for active acne and inflammation",
-                "Blue light therapy for bacterial reduction",
-                "IPL for post-acne pigmentation and redness",
+                "Biotin and nutritional supplementation to strengthen nails",
+                "Moisturising treatments and nail hardeners",
+                "Identification and correction of underlying deficiencies",
+                "Avoidance of harsh chemicals and proper nail care routine",
               ],
             },
             {
-              title: "Long-Term Skin Health Maintenance",
+              title: "Nail Care & Hygiene Guidance",
               items: [
-                "Personalised maintenance treatment plans",
-                "Regular follow-up to monitor progress",
-                "Adjustment of treatment based on skin response",
-                "Preventive strategies to reduce recurrence",
+                "Proper nail trimming and filing techniques",
+                "Footwear recommendations to prevent nail problems",
+                "Hygiene practices to reduce infection risk",
+                "Lifestyle modifications for long-term nail health",
               ],
             },
           ].map((treatment, i) => (
@@ -828,22 +795,22 @@ function WhyChooseSection() {
     {
       icon: Stethoscope,
       title: `Expert Dermatologist`,
-      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of acne — from mild comedonal acne to severe cystic and hormonal acne.`,
+      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of nail disorders — from fungal infections to nail psoriasis.`,
     },
     {
       icon: Microscope,
       title: "Accurate Diagnosis",
-      desc: "We identify the root cause of your acne — whether it is hormonal imbalance, bacterial overgrowth, clogged pores, or dietary triggers — for targeted and effective treatment.",
+      desc: "We use clinical examination and laboratory tests (KOH, culture) to accurately diagnose your nail condition before starting treatment. No guesswork.",
     },
     {
       icon: ShieldCheck,
-      title: "Advanced Treatment Options",
-      desc: "We offer prescription-grade medications, medical-grade chemical peels, microneedling, laser therapy, and isotretinoin — all under expert supervision for safe results.",
+      title: "Personalised Treatment",
+      desc: "Every nail disorder is different. Your treatment plan is customised to the specific condition, severity, and your overall health for the best outcomes.",
     },
     {
       icon: Sparkles,
-      title: "Long-Term Skin Health",
-      desc: "Beyond treating active acne, we guide you on maintaining clear skin with personalised advice on skincare routines, products, diet, and lifestyle adjustments.",
+      title: "Comprehensive Care",
+      desc: "From medical treatments for infections to cosmetic improvement of nail appearance — we provide complete nail care under one roof in Armoor.",
     },
   ];
 
@@ -855,10 +822,11 @@ function WhyChooseSection() {
             Why Choose Us
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Why {CLINIC_NAME} for Acne Treatment?
+            Why {CLINIC_NAME} for Nail Disorders Treatment?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We combine medical expertise with genuine care to help you achieve clear, healthy skin.
+            We combine medical expertise with genuine care to help you achieve healthy, strong
+            nails.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -889,18 +857,18 @@ function ProcessSection() {
     },
     {
       step: "02",
-      title: "Skin Assessment",
-      desc: `${DOCTOR_NAME} examines your skin, discusses your acne history and skincare routine, and identifies the underlying cause of your breakouts.`,
+      title: "Nail Examination",
+      desc: `${DOCTOR_NAME} examines your nails, discusses your symptoms and medical history, and performs diagnostic tests if needed to identify the exact condition.`,
     },
     {
       step: "03",
       title: "Personalised Treatment Plan",
-      desc: "A customised treatment plan is created based on your acne type and severity — combining medications, in-clinic procedures, and skincare guidance.",
+      desc: "A customised treatment plan is created based on your nail condition, severity, and health status — combining medications, procedures, and nail care guidance.",
     },
     {
       step: "04",
-      title: "Follow-up & Maintenance",
-      desc: "Regular follow-up visits to assess response, adjust treatment as needed, and establish a long-term skincare routine to prevent recurrence.",
+      title: "Follow-up & Recovery",
+      desc: "Regular follow-up visits to monitor treatment response, adjust therapy as needed, and ensure complete recovery and prevention of recurrence.",
     },
   ];
 
@@ -915,7 +883,7 @@ function ProcessSection() {
             Our Treatment Process
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            From your first visit to long-term skin health — here is what you can expect.
+            From your first visit to full recovery — here is what you can expect.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -937,34 +905,28 @@ function ProcessSection() {
 function TipsSection() {
   const tips = [
     {
-      icon: Droplets,
-      title: "Cleanse Gently Twice Daily",
-      desc: "Wash your face with a gentle, non-comedogenic cleanser in the morning and evening. Avoid harsh scrubs that can irritate the skin and worsen inflammation.",
+      title: "Keep Nails Clean & Dry",
+      desc: "Wash and dry your nails thoroughly, especially after bathing or washing hands. Moisture creates an ideal environment for fungal and bacterial growth.",
     },
     {
-      icon: Wind,
-      title: "Follow a Consistent Skincare Routine",
-      desc: "Use a routine that suits your skin type: cleanse, treat (with prescribed medication), moisturise, and protect with sunscreen. Consistency is key to seeing results.",
+      title: "Trim Nails Properly",
+      desc: "Cut nails straight across and round the tips slightly. Avoid cutting them too short or digging into the corners, which can lead to ingrown toenails.",
     },
     {
-      icon: Sun,
-      title: "Protect Your Skin from the Sun",
-      desc: "Sun exposure can darken acne spots and cause pigmentation. Use an oil-free, non-comedogenic sunscreen with SPF 30+ daily, even on cloudy days.",
+      title: "Wear Breathable Footwear",
+      desc: "Choose shoes made of breathable materials and change socks daily. Use antifungal powder in shoes if you are prone to fungal infections.",
     },
     {
-      icon: Sparkles,
-      title: "Manage Stress Levels",
-      desc: "Stress can trigger hormonal changes that worsen acne. Incorporate relaxation techniques like meditation, yoga, or deep breathing into your daily routine.",
+      title: "Avoid Sharing Personal Items",
+      desc: "Do not share nail clippers, files, towels, or footwear with others. Nail infections can spread through contaminated personal care items.",
     },
     {
-      icon: Scissors,
-      title: "Avoid Picking or Popping Pimples",
-      desc: "Picking at acne lesions pushes bacteria deeper, increases inflammation, delays healing, and causes permanent scarring. Leave extractions to your dermatologist.",
+      title: "Moisturise Your Nails & Cuticles",
+      desc: "Apply moisturiser to your nails and cuticles regularly to prevent dryness and brittleness. Avoid harsh nail polish removers containing acetone.",
     },
     {
-      icon: ShieldCheck,
-      title: "Moisturise Daily",
-      desc: "Even oily, acne-prone skin needs moisturiser. Use a lightweight, oil-free, non-comedogenic moisturiser to keep the skin barrier healthy and prevent irritation from medications.",
+      title: "Protect Your Nails",
+      desc: "Wear gloves when doing household chores or working with chemicals. Avoid using nails as tools to open cans or scrape surfaces.",
     },
   ];
   return (
@@ -972,14 +934,14 @@ function TipsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Skincare Tips
+            Nail Care Tips
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Tips for Managing Acne
+            Tips for Healthy Nails
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Small changes in your skincare routine can make a significant difference in controlling
-            acne and keeping your skin clear.
+            Simple daily habits can prevent many nail problems and keep your nails healthy and
+            strong.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -988,29 +950,25 @@ function TipsSection() {
               key={tip.title}
               className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/5 text-primary">
-                <tip.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 font-display text-base font-bold text-foreground">{tip.title}</h3>
+              <h3 className="font-display text-base font-bold text-foreground">{tip.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{tip.desc}</p>
             </div>
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne skincare routine illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <Sparkles className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Skincare Routine
+                Nail Care Illustration
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing a skincare routine for acne-prone skin
+                Replace with an image showing proper nail care routine
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of daily skincare routine for managing acne-prone skin
+                Alt: Illustration of proper nail trimming and care techniques
               </p>
             </div>
           </div>
@@ -1023,52 +981,44 @@ function TipsSection() {
 function FAQSection() {
   const faqs = [
     {
-      q: "Can acne be cured permanently?",
-      a: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+      q: "How long does nail fungus treatment take?",
+      a: "Nail fungus treatment takes 3–6 months for fingernails and 6–12 months for toenails, as nails grow slowly and medication needs time to reach the infected area. Consistent treatment and follow-up are essential for complete clearance.",
     },
     {
-      q: "How long does acne treatment take to show results?",
-      a: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+      q: "Can brittle nails be treated?",
+      a: "Yes, brittle nails can be improved by identifying the underlying cause. Treatment may include biotin supplements, moisturising treatments, avoiding harsh chemicals, and proper nail care routines prescribed by a dermatologist.",
     },
     {
-      q: "Can acne scars be removed completely?",
-      a: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+      q: "Is nail fungus contagious?",
+      a: "Yes, fungal nail infections are contagious. They can spread through direct contact or via contaminated surfaces such as floors, towels, nail clippers, and footwear. Early treatment helps reduce the risk of spreading to others.",
     },
     {
-      q: "Is acne treatment painful?",
-      a: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort.",
+      q: "Do I need to see a dermatologist for nail problems?",
+      a: "Yes, a dermatologist can accurately diagnose nail conditions through clinical examination and lab tests. Many nail disorders look similar but require different treatments, so professional diagnosis is important.",
     },
     {
-      q: "What is the best treatment for cystic acne?",
-      a: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach.",
+      q: "Can nail problems indicate other health issues?",
+      a: "Yes, nail changes can be a sign of underlying health conditions such as thyroid disorders, anaemia, diabetes, psoriasis, nutritional deficiencies, and circulatory problems. A dermatologist can identify these associations.",
     },
     {
-      q: "Is acne caused by diet?",
-      a: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+      q: "Are fungal nail infections painful?",
+      a: "Fungal nail infections are not always painful in early stages. As the infection progresses, the nail may thicken and cause discomfort when wearing shoes. Advanced infections can cause pressure pain on the nail bed.",
     },
     {
-      q: "How much does acne treatment cost in Armoor?",
-      a: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+      q: "Can ingrown toenails be treated without surgery?",
+      a: "Mild ingrown toenails can often be managed with warm soaks, proper nail trimming, and wearing appropriate footwear. However, recurrent or severe cases may require a minor in-clinic procedure for permanent relief.",
     },
     {
-      q: "Can hormonal acne be treated?",
-      a: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+      q: "Can nail psoriasis be treated?",
+      a: "Yes, nail psoriasis can be treated with topical medications, corticosteroid injections, oral therapies, and laser treatment. Early treatment is more effective and can significantly improve nail appearance.",
     },
     {
-      q: "Does popping pimples make acne worse?",
-      a: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+      q: "How can I prevent nail infections?",
+      a: "Keep nails clean and dry, trim them straight across, avoid sharing nail tools or towels, wear breathable footwear, change socks daily, and avoid walking barefoot in public showers or swimming pools.",
     },
     {
-      q: "What should I avoid during acne treatment?",
-      a: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance.",
-    },
-    {
-      q: "Can adults get acne?",
-      a: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-    },
-    {
-      q: "Is isotretinoin safe for acne treatment?",
-      a: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+      q: "How much does nail disorders treatment cost in Armoor?",
+      a: `The cost of nail disorders treatment at ${CLINIC_NAME} depends on the type of condition, severity, and treatment approach required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
     },
   ];
 
@@ -1080,7 +1030,7 @@ function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-center text-[15px] text-muted-foreground">
-            Common questions about acne treatment at our clinic in Armoor.
+            Common questions about nail disorders treatment at our clinic in Armoor.
           </p>
           <div className="mt-8 space-y-4">
             {faqs.map((faq, i) => (
@@ -1114,27 +1064,27 @@ function FAQSection() {
 function ReviewsSection() {
   const reviews = [
     {
-      name: "Reshma",
+      name: "Srinivas",
       location: "Armoor",
-      text: "I struggled with acne for over 5 years and tried every product on the market. Dr. Raghavendhra diagnosed my condition as hormonal acne and put me on a combination of topical treatment and oral medication. Within 3 months, my skin cleared up significantly. I am so thankful for the personalised care I received.",
+      text: "I had a fungal infection on my toenails for over two years. I tried over-the-counter creams but nothing worked. Dr. Raghavendhra prescribed oral medication and within a few months my nails started clearing up. Very happy with the results.",
       rating: 5,
     },
     {
-      name: "Sandeep",
+      name: "Kavitha",
       location: "Nizamabad",
-      text: "I had severe cystic acne that left me with deep scars. The doctor recommended microneedling sessions along with medical treatment. After 4 sessions, my scars have faded remarkably and my active acne is under control. The clinic is very professional and the doctor explains everything in detail.",
+      text: "My son was suffering from an ingrown toenail that kept getting infected. The doctor performed a minor procedure in the clinic and gave us clear aftercare instructions. It healed perfectly and has not recurred. Highly recommend.",
       rating: 5,
     },
     {
-      name: "Anjali",
+      name: "Ravi",
       location: "Balkonda",
-      text: "My daughter's acne was getting worse and she was losing confidence. Dr. Raghavendhra was very gentle with her and designed a treatment plan that suited her sensitive skin. The chemical peels and topical medications made a huge difference. Her skin is now clear and glowing.",
+      text: "I have had brittle, splitting nails for years. The doctor checked my thyroid and vitamin levels, found deficiencies, and put me on supplements. My nails are so much stronger now. The attention to root cause made all the difference.",
       rating: 5,
     },
     {
-      name: "Mahesh",
+      name: "Swathi",
       location: "Mortad",
-      text: "I came to the clinic with persistent back acne that I had for years. The doctor prescribed a combination of medicated cleansers, topical treatments, and oral medication. The results have been excellent — my back is almost completely clear now. Highly recommend this clinic for acne treatment.",
+      text: "I was embarrassed by the yellow discolouration on my fingernails. I thought it was just staining until I visited the clinic. It turned out to be a fungal infection. The treatment worked well and my nails look normal again. Thank you!",
       rating: 5,
     },
   ];
@@ -1150,7 +1100,8 @@ function ReviewsSection() {
             What Our Patients Say
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Real experiences from patients who have undergone acne treatment at our clinic.
+            Real experiences from patients who have undergone nail disorders treatment at our
+            clinic.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -1192,12 +1143,13 @@ function AreasWeServeSection() {
   const areas = [
     { name: "Armoor", isLocal: true },
     { name: "Balkonda" },
-    { name: "Nizamabad" },
     { name: "Mortad" },
-    { name: "Bodhan" },
-    { name: "Kamareddy" },
-    { name: "Yellareddy" },
-    { name: "Sadasivanagar" },
+    { name: "Mupkal" },
+    { name: "Velpur" },
+    { name: "Kammarpally" },
+    { name: "Nandipet" },
+    { name: "Navipet" },
+    { name: "Nizamabad" },
   ];
 
   return (
@@ -1211,9 +1163,9 @@ function AreasWeServeSection() {
             Conveniently Located in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert acne
-            treatment. Our clinic is easily accessible and welcomes patients from all nearby towns
-            and villages.
+            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert nail
+            disorders treatment. Our clinic is easily accessible and welcomes patients from all
+            nearby towns and villages.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -1247,31 +1199,19 @@ function AreasWeServeSection() {
 }
 
 function RelatedTreatmentsSection() {
-  const related: { name: string; to: string; params?: Record<string, string> }[] = [
+  const related: { name: string; to: string }[] = [
+    { name: "Acne Treatment", to: "/treatments/acne-treatment-armoor" },
     { name: "Hair Loss Treatment", to: "/treatments/hair-loss-treatment-armoor" },
     { name: "Psoriasis Treatment", to: "/treatments/psoriasis-treatment-armoor" },
     { name: "Eczema Treatment", to: "/treatments/eczema-treatment-armoor" },
-    {
-      name: "Fungal Infection Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "fungal-infection-treatment" },
-    },
+    { name: "Fungal Infection Treatment", to: "/treatments/fungal-infection-treatment-armoor" },
     { name: "Dandruff Treatment", to: "/treatments/dandruff-treatment-armoor" },
-    { name: "Vitiligo Treatment", to: "/treatments/$slug", params: { slug: "vitiligo-treatment" } },
-    {
-      name: "Pigmentation Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "pigmentation-treatment" },
-    },
-    {
-      name: "Skin Allergy Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "skin-allergy-treatment" },
-    },
-    { name: "Nail Disorders", to: "/treatments/$slug", params: { slug: "nail-disorders" } },
-    { name: "Wart Removal", to: "/treatments/$slug", params: { slug: "wart-removal" } },
-    { name: "Mole Removal", to: "/treatments/$slug", params: { slug: "mole-removal" } },
-  ].filter((r) => r.name !== "Acne Treatment");
+    { name: "Vitiligo Treatment", to: "/treatments/vitiligo-treatment-armoor" },
+    { name: "Pigmentation Treatment", to: "/treatments/pigmentation-treatment-armoor" },
+    { name: "Skin Allergy Treatment", to: "/treatments/skin-allergy-treatment-armoor" },
+    { name: "Wart Removal", to: "/treatments/wart-removal-armoor" },
+    { name: "Mole Removal", to: "/treatments/mole-removal-armoor" },
+  ];
 
   return (
     <section className="py-20 sm:py-24">
@@ -1288,11 +1228,10 @@ function RelatedTreatmentsSection() {
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {related.slice(0, 6).map((treatment) => (
+          {related.map((treatment) => (
             <Link
               key={treatment.name}
               to={treatment.to}
-              {...(treatment.params ? { params: treatment.params } : {})}
               className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-muted-foreground transition-all hover:border-primary/30 hover:text-primary hover:shadow-[var(--shadow-soft)]"
             >
               {treatment.name}
@@ -1309,11 +1248,11 @@ function BookingCTA() {
     <section className="py-20" style={{ background: "var(--gradient-navy)" }}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          Ready to Get Clear Skin?
+          Ready to Restore Your Nail Health?
         </h2>
         <p className="mt-4 text-lg text-white/80">
           Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Take
-          the first step towards healthy, glowing skin.
+          the first step towards healthy, strong nails.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link

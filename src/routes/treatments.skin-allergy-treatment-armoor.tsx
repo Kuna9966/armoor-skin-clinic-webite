@@ -13,10 +13,6 @@ import {
   Quote,
   AlertCircle,
   Users,
-  Wind,
-  Droplets,
-  Scissors,
-  Sun,
 } from "lucide-react";
 import {
   CLINIC_NAME,
@@ -31,37 +27,37 @@ import {
   MAP_LINK,
 } from "../lib/clinic-data";
 
-export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
+export const Route = createFileRoute("/treatments/skin-allergy-treatment-armoor")({
   head: () => ({
     meta: [
       {
-        title: `Acne Treatment in Armoor | Pimple & Scar Removal | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        title: `Skin Allergy Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         name: "description",
-        content: `Expert acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced solutions for pimples, cystic acne, acne scars, and hormonal breakouts at ${CLINIC_NAME}. Book your consultation today.`,
+        content: `Expert skin allergy treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Effective relief for rashes, hives, contact dermatitis, and allergic skin reactions at ${CLINIC_NAME}. Book your consultation.`,
       },
       { name: "robots", content: "index, follow" },
       {
         property: "og:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        content: `Skin Allergy Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         property: "og:description",
-        content: `Effective acne and pimple treatment in Armoor by Dr. Raghavendhra MD, DVL. Advanced therapies for acne scars, cystic acne, and hormonal breakouts at Armoor Skin & Hair Clinic.`,
+        content: `Effective skin allergy treatment in Armoor by Dr. Raghavendhra MD, DVL. Personalised care for rashes, hives, and allergic skin conditions at Armoor Skin & Hair Clinic.`,
       },
-      { property: "og:url", content: `${SITE_URL}/treatments/acne-treatment-armoor` },
+      { property: "og:url", content: `${SITE_URL}/treatments/skin-allergy-treatment-armoor` },
       { property: "og:type", content: "website" },
       {
         name: "twitter:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME}`,
+        content: `Skin Allergy Treatment in Armoor | ${CLINIC_NAME}`,
       },
       {
         name: "twitter:description",
-        content: `Expert acne treatment in Armoor by Dr. Raghavendhra — personalised care for clear, healthy skin.`,
+        content: `Expert skin allergy treatment in Armoor by Dr. Raghavendhra — personalised care for healthier, comfortable skin.`,
       },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/acne-treatment-armoor` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/skin-allergy-treatment-armoor` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -70,9 +66,9 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
           "@graph": [
             {
               "@type": "MedicalClinic",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#clinic`,
+              "@id": `${SITE_URL}/treatments/skin-allergy-treatment-armoor#clinic`,
               name: CLINIC_NAME,
-              description: `Acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
+              description: `Skin allergy treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
               url: SITE_URL,
               telephone: PHONE_TEL,
               address: {
@@ -98,7 +94,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "LocalBusiness",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#business`,
+              "@id": `${SITE_URL}/treatments/skin-allergy-treatment-armoor#business`,
               name: CLINIC_NAME,
               image: `${SITE_URL}/og-image.jpg`,
               telephone: PHONE_TEL,
@@ -114,7 +110,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "BreadcrumbList",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#breadcrumbs`,
+              "@id": `${SITE_URL}/treatments/skin-allergy-treatment-armoor#breadcrumbs`,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -125,118 +121,94 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "Acne Treatment in Armoor",
-                  item: `${SITE_URL}/treatments/acne-treatment-armoor`,
+                  name: "Skin Allergy Treatment in Armoor",
+                  item: `${SITE_URL}/treatments/skin-allergy-treatment-armoor`,
                 },
               ],
             },
             {
               "@type": "FAQPage",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#faq`,
+              "@id": `${SITE_URL}/treatments/skin-allergy-treatment-armoor#faq`,
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Can acne be cured permanently?",
+                  name: "How are skin allergies diagnosed?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+                    text: "Skin allergies are diagnosed through clinical examination and detailed history. Patch testing may be recommended for contact dermatitis to identify specific allergens causing the reaction.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How long does acne treatment take to show results?",
+                  name: "Can skin allergies be cured?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+                    text: "Many skin allergies can be effectively managed by identifying and avoiding triggers, with medications to control symptoms during flare-ups. While some allergies may resolve over time, others require ongoing management.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can acne scars be removed completely?",
+                  name: "How quickly do allergy treatments work?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+                    text: "Antihistamines provide relief within 30–60 minutes. Topical corticosteroids for contact dermatitis show improvement within a few days. Chronic conditions like urticaria may take longer to control.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne treatment painful?",
+                  name: "Is skin allergy contagious?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort. Your dermatologist will ensure you are comfortable throughout the process.",
+                    text: "No, skin allergies are not contagious. They cannot be transmitted from one person to another. Allergic reactions are the body's immune response to a specific trigger and are not caused by an infection.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What is the best treatment for cystic acne?",
+                  name: "Can stress cause skin allergies?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach based on your condition.",
+                    text: "Yes, stress can trigger or worsen skin allergies. Stress releases chemicals in the body that can activate allergic reactions and histamine release, leading to hives and worsening of existing allergic skin conditions.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne caused by diet?",
+                  name: "What is the difference between skin allergy and eczema?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+                    text: "Skin allergy is an immune reaction to a specific allergen, while eczema (atopic dermatitis) is a chronic condition involving skin barrier dysfunction. However, people with eczema are more prone to developing skin allergies.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How much does acne treatment cost in Armoor?",
+                  name: "Can food allergies cause skin rashes?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+                    text: "Yes, food allergies commonly cause skin reactions including hives, redness, and swelling. Common triggers include nuts, shellfish, eggs, milk, and certain food additives. A dermatologist can help identify food-related triggers.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can hormonal acne be treated?",
+                  name: "When should I see a doctor for a skin allergy?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+                    text: "You should see a doctor if the rash is severe, spreading, painful, or does not improve with over-the-counter treatments. Immediate medical attention is needed if there is swelling of the face or lips, or difficulty breathing.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Does popping pimples make acne worse?",
+                  name: "How much does skin allergy treatment cost in Armoor?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "What should I avoid during acne treatment?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance for your specific treatment plan.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can adults get acne?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is isotretinoin safe for acne treatment?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+                    text: `The cost of skin allergy treatment at ${CLINIC_NAME} depends on the severity, type of allergic reaction, and treatment approach required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
                   },
                 },
               ],
             },
             {
               "@type": "MedicalProcedure",
-              name: "Acne Treatment in Armoor",
+              name: "Skin Allergy Treatment in Armoor",
               description:
-                "Comprehensive acne treatment services including topical and oral medications, chemical peels, microneedling, laser therapy, and personalised skincare plans.",
+                "Comprehensive skin allergy treatment services including antihistamines, topical corticosteroids, allergen avoidance strategies, and personalised care plans.",
               provider: {
                 "@type": "MedicalClinic",
                 name: CLINIC_NAME,
@@ -256,10 +228,10 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
       },
     ],
   }),
-  component: AcneTreatmentArmoorPage,
+  component: SkinAllergyTreatmentArmoorPage,
 });
 
-function AcneTreatmentArmoorPage() {
+function SkinAllergyTreatmentArmoorPage() {
   return (
     <>
       <HeroSection />
@@ -297,22 +269,21 @@ function HeroSection() {
             Treatments
           </Link>
           <span>/</span>
-          <span className="text-white/90">Acne Treatment in Armoor</span>
+          <span className="text-white/90">Skin Allergy Treatment in Armoor</span>
         </nav>
-        {/* IMAGE PLACEHOLDER: Hero image for acne treatment page */}
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
               <Star className="h-3.5 w-3.5 text-gold" />
-              Expert Acne Care in Armoor
+              Expert Allergy Care in Armoor
             </div>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              Acne Treatment in Armoor
+              Skin Allergy Treatment in Armoor
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
-              Effective acne and pimple treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
-              {QUALIFICATION} — Armoor's trusted dermatologist for personalised acne care, scar
-              treatment, and lasting skin clarity.
+              Effective relief from rashes, hives, and allergic skin reactions at {CLINIC_NAME}. Led
+              by {DOCTOR_NAME}, {QUALIFICATION} — Armoor's trusted dermatologist for personalised
+              skin allergy diagnosis and treatment.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -337,8 +308,8 @@ function HeroSection() {
               <ul className="mt-4 space-y-3">
                 {[
                   `Expert dermatologist ${DOCTOR_NAME} ${QUALIFICATION}`,
-                  "Customised treatment for all skin types",
-                  "Chemical peels, microneedling & laser therapy",
+                  "Comprehensive allergy evaluation",
+                  "Effective relief for acute and chronic allergies",
                   "Affordable consultation in Armoor",
                   `${HOURS.weekdayDays}, ${HOURS.weekday}`,
                 ].map((item) => (
@@ -363,56 +334,51 @@ function WhatIsSection() {
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-start">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-              Understanding Acne
+              Understanding Skin Allergies
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              What is Acne?
+              What is a Skin Allergy?
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                Acne is a common skin condition that occurs when hair follicles become clogged with
-                oil (sebum) and dead skin cells. It manifests as pimples, blackheads, whiteheads,
-                and deeper lumps like nodules and cysts. At {CLINIC_NAME}, we treat the root causes
-                of acne — excess oil production, bacteria, inflammation, and clogged pores — for
-                lasting skin clarity.
+                A skin allergy occurs when the immune system overreacts to a substance that is
+                normally harmless. This reaction triggers inflammation, redness, itching, and other
+                symptoms on the skin. Skin allergies can range from mild irritation to severe,
+                widespread reactions that significantly affect quality of life.
               </p>
               <p>
-                Acne develops when sebaceous glands produce excess sebum, which mixes with dead skin
-                cells and blocks the follicle opening. The bacterium Cutibacterium acnes (C. acnes)
-                thrives in this environment, triggering inflammation and the formation of red,
-                swollen pimples. Acne most commonly affects the face, chest, back, and shoulders.
+                Common forms of skin allergies include contact dermatitis (reaction to direct skin
+                contact with an allergen), urticaria (hives), and angioedema (swelling of deeper
+                skin layers). Each type has distinct characteristics and requires a tailored
+                approach to diagnosis and treatment.
               </p>
               <p>
-                Acne is not just a teenage problem. Many adults, particularly women, experience acne
-                well into their 30s, 40s, and beyond. Hormonal fluctuations, stress, diet, and
-                certain medications can all trigger or worsen breakouts at any age. Effective
-                treatment begins with understanding what is driving your acne.
+                Unlike infections, skin allergies are not contagious. They are the body's way of
+                defending itself against perceived threats. The key to effective management lies in
+                identifying the specific trigger and developing a personalised treatment and
+                avoidance plan.
               </p>
               <p>
-                A common misconception is that acne is caused by poor hygiene or eating greasy food.
-                While diet can play a role in some individuals, acne is primarily a medical
-                condition driven by hormones, genetics, and bacterial activity. Even people with
-                meticulous skincare routines can experience acne. A dermatologist's evaluation is
-                essential for effective treatment.
+                At {CLINIC_NAME}, we take a comprehensive approach to skin allergies. We combine
+                detailed clinical evaluation with patient education to help you understand your
+                condition, avoid triggers, and find lasting relief from uncomfortable symptoms.
               </p>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Acne skin condition */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <AlertCircle className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Condition
+                  Skin Allergy Condition
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing acne-affected facial skin
+                  Replace with an image showing allergic skin reaction
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing acne breakouts on facial skin including whiteheads,
-                  blackheads, and inflamed pimples
+                  Alt: Illustration showing red, itchy rash from a skin allergy
                 </p>
               </div>
             </div>
@@ -426,36 +392,32 @@ function WhatIsSection() {
 function SymptomsSection() {
   const symptoms = [
     {
-      title: "Whiteheads",
-      desc: "Small, flesh-coloured or white bumps that form when pores are completely blocked with oil and dead skin. They remain closed at the surface and appear as tiny white spots on the skin.",
+      title: "Red, Itchy Rash",
+      desc: "The most common symptom of a skin allergy. Red, inflamed patches appear on the skin accompanied by persistent itching that can range from mild to severe.",
     },
     {
-      title: "Blackheads",
-      desc: "Open clogged pores that turn dark due to oxidation of the trapped oil and skin cells on exposure to air. Blackheads are not dirt and can be effectively treated with topical retinoids.",
+      title: "Hives (Urticaria)",
+      desc: "Raised, red or skin-coloured welts that appear suddenly. They vary in size and shape, can join together to form larger patches, and are intensely itchy.",
     },
     {
-      title: "Papules",
-      desc: "Small, red, tender bumps that indicate inflammation in the hair follicle. Papules are a sign of active infection and should not be picked or squeezed as they can worsen inflammation.",
+      title: "Swelling (Angioedema)",
+      desc: "Deep swelling of the skin, often around the eyes, lips, face, hands, or genitals. This can feel like a burning, tingling, or stretching sensation beneath the skin.",
     },
     {
-      title: "Pustules",
-      desc: "Red bumps with a white or yellow pus-filled centre. These are commonly called pimples or zits and are caused by bacterial activity and inflammation within the blocked pore.",
+      title: "Burning or Stinging",
+      desc: "Many patients experience a burning or stinging sensation on the affected skin, especially in contact dermatitis where the skin feels irritated and sensitive to touch.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, painful lumps beneath the skin surface. Nodular acne is a severe form that requires professional medical treatment and does not respond to over-the-counter products.",
+      title: "Dry, Cracked Skin",
+      desc: "Allergic reactions can cause the skin to become excessively dry, flaky, and cracked. This is particularly common in chronic allergic contact dermatitis.",
     },
     {
-      title: "Cysts",
-      desc: "Deep, pus-filled, painful lesions that can cause scarring. Cystic acne is the most severe form and requires prompt dermatological intervention including oral medications and drainage.",
+      title: "Blisters or Oozing",
+      desc: "In severe contact dermatitis, small fluid-filled blisters may develop. These can burst and ooze, leading to crusting and secondary infection if not treated properly.",
     },
     {
-      title: "Acne Scars",
-      desc: "Permanent textural changes in the skin that result from severe or poorly treated acne. Scars can be atrophic (depressed) or hypertrophic (raised) and require specialised treatments.",
-    },
-    {
-      title: "Post-Acne Pigmentation",
-      desc: "Dark spots or red marks that remain after acne lesions heal. This pigmentation can persist for months but responds well to treatments like chemical peels and topical brightening agents.",
+      title: "Chronic Itching",
+      desc: "Some skin allergies present with persistent itching without a visible rash. This can be particularly frustrating and disruptive to sleep and daily activities.",
     },
   ];
 
@@ -467,11 +429,11 @@ function SymptomsSection() {
             Recognising the Signs
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Common Symptoms of Acne
+            Common Symptoms of Skin Allergies
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne symptoms range from mild non-inflammatory comedones to severe painful cysts.
-            Recognising the type and severity helps in choosing the right treatment.
+            Skin allergy symptoms can vary depending on the type of allergen and the individual's
+            sensitivity. Recognising them early helps in seeking timely treatment.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -485,26 +447,6 @@ function SymptomsSection() {
             </div>
           ))}
         </div>
-        <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne symptoms illustration */}
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <AlertCircle className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Symptoms Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common acne symptoms and lesion types
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing different types of acne lesions from whiteheads to cystic
-                acne on facial skin
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -513,40 +455,40 @@ function SymptomsSection() {
 function CausesSection() {
   const causes = [
     {
-      title: "Excess Oil Production",
-      desc: "Overactive sebaceous glands produce excessive sebum, the natural oil that moisturises the skin. When too much oil is produced, it can combine with dead skin cells to clog hair follicles and trigger acne.",
+      title: "Contact Allergens",
+      desc: "Direct contact with substances like nickel, latex, fragrances, cosmetics, hair dyes, and certain fabrics can trigger allergic contact dermatitis at the site of exposure.",
     },
     {
-      title: "Clogged Hair Follicles",
-      desc: "Dead skin cells that are not shed properly can accumulate in hair follicles and mix with sebum to form a plug. This creates an ideal environment for bacteria to multiply and cause inflammation.",
+      title: "Food Allergies",
+      desc: "Certain foods such as nuts, shellfish, eggs, milk, soy, and wheat can trigger skin reactions including hives, rashes, and swelling. Reactions can occur within minutes to hours after consumption.",
     },
     {
-      title: "Bacterial Overgrowth",
-      desc: "Cutibacterium acnes (C. acnes) bacteria naturally live on the skin. When follicles become blocked, these bacteria multiply rapidly, triggering inflammation and the formation of red, pus-filled pimples.",
+      title: "Medication Reactions",
+      desc: "Many medications, including antibiotics (especially penicillin), NSAIDs, and certain painkillers, can cause skin allergic reactions ranging from mild rashes to severe conditions like Stevens-Johnson syndrome.",
     },
     {
-      title: "Hormonal Fluctuations",
-      desc: "Androgens, hormones that increase during puberty, menstrual cycles, pregnancy, and conditions like PCOS, stimulate sebaceous glands to produce more oil. This is why hormonal acne is common in teenagers and women.",
+      title: "Insect Bites & Stings",
+      desc: "Insect bites from mosquitoes, bees, wasps, and ants can cause localised allergic reactions. Some individuals may experience exaggerated responses with extensive swelling and itching.",
     },
     {
-      title: "Genetics",
-      desc: "A family history of acne increases your likelihood of developing the condition. Genetic factors influence how your sebaceous glands function, how your skin sheds cells, and how your body responds to inflammation.",
-    },
-    {
-      title: "Dietary Triggers",
-      desc: "High-glycemic foods such as refined sugars, white bread, and sugary drinks can spike insulin levels, leading to increased oil production. Dairy products may also trigger breakouts in some individuals.",
+      title: "Seasonal Allergens",
+      desc: "Pollen, mould spores, dust mites, and pet dander can trigger skin allergies in susceptible individuals. These airborne allergens can cause both respiratory and skin symptoms.",
     },
     {
       title: "Stress",
-      desc: "Stress triggers the release of cortisol and other hormones that increase sebum production and inflammation. Stress can also slow wound healing, making acne lesions take longer to resolve.",
+      desc: "Emotional stress can trigger or worsen skin allergies by releasing histamine and other chemicals in the body. Stress-induced hives are a common presentation in clinical practice.",
     },
     {
-      title: "Certain Medications",
-      desc: "Some medications can cause or worsen acne, including corticosteroids, lithium, certain anticonvulsants, and hormone-containing medications. Always inform your dermatologist about all medications you are taking.",
+      title: "Physical Factors",
+      desc: "Heat, cold, sunlight, pressure, and even water can trigger physical urticaria in some individuals. These are known as physical allergies and require specific management approaches.",
     },
     {
-      title: "Skincare & Cosmetic Products",
-      desc: "Oil-based, heavy, or comedogenic skincare and makeup products can clog pores and contribute to acne breakouts. Using non-comedogenic, oil-free products is recommended for acne-prone skin.",
+      title: "Genetics",
+      desc: "A family history of allergies, asthma, or eczema increases the likelihood of developing skin allergies. Genetic factors influence how your immune system responds to potential allergens.",
+    },
+    {
+      title: "Occupational Exposures",
+      desc: "Certain professions involving chemicals, hairdressing, healthcare, cleaning, or construction can expose individuals to allergens that cause occupational contact dermatitis.",
     },
   ];
 
@@ -558,11 +500,11 @@ function CausesSection() {
             Causes and Triggers
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            What Causes Acne?
+            What Causes Skin Allergies?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne is caused by a combination of factors. Understanding the underlying cause is key to
-            effective treatment and prevention.
+            Skin allergies can be triggered by a wide range of substances and factors. Identifying
+            your specific triggers is the first step towards effective management.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -584,36 +526,28 @@ function CausesSection() {
 function TypesSection() {
   const types = [
     {
-      title: "Whiteheads (Closed Comedones)",
-      desc: "Small, flesh-coloured or white bumps that form when a pore is completely blocked by oil and dead skin. The surface remains closed, giving them a white appearance. They are non-inflammatory but can develop into inflamed acne.",
+      title: "Allergic Contact Dermatitis",
+      desc: "A delayed allergic reaction that occurs when the skin comes into contact with a substance to which it has developed an allergy. Common triggers include nickel, fragrances, and poison ivy.",
     },
     {
-      title: "Blackheads (Open Comedones)",
-      desc: "Open clogged pores where the trapped oil and skin cells are exposed to air and oxidise, turning dark. Blackheads are not dirt and can be effectively treated with topical retinoids and gentle exfoliation.",
+      title: "Urticaria (Hives)",
+      desc: "Raised, itchy welts that appear suddenly on the skin. They can be acute (lasting less than 6 weeks) or chronic (persisting longer). Hives are caused by histamine release in the skin.",
     },
     {
-      title: "Papules",
-      desc: "Small, red, inflamed bumps that are tender to the touch. Papules indicate that the follicle wall has ruptured, causing inflammation. They do not contain pus and should not be squeezed.",
+      title: "Angioedema",
+      desc: "Deep swelling beneath the skin, often around the eyes, lips, throat, and genitals. It can occur alone or alongside urticaria and requires prompt medical attention if the throat is involved.",
     },
     {
-      title: "Pustules",
-      desc: "Red, inflamed bumps with a visible white or yellow pus-filled centre. Pustules are the classic pimple and are caused by the immune system fighting bacterial overgrowth in the blocked follicle.",
+      title: "Atopic Dermatitis",
+      desc: "A chronic inflammatory skin condition often associated with allergies. While primarily a skin barrier disorder, it is frequently triggered or worsened by allergens and is linked to asthma and hay fever.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, firm, and painful lumps beneath the skin surface. Nodular acne does not have a visible head and can persist for weeks. It carries a high risk of scarring and requires oral medications.",
+      title: "Irritant Contact Dermatitis",
+      desc: "A non-allergic skin reaction caused by direct damage from irritating substances like acids, detergents, solvents, or prolonged exposure to water. It is the most common form of contact dermatitis.",
     },
     {
-      title: "Cystic Acne",
-      desc: "The most severe form of acne, characterised by deep, soft, pus-filled lesions that are extremely painful. Cystic acne often leads to significant scarring and requires aggressive treatment including isotretinoin.",
-    },
-    {
-      title: "Hormonal Acne",
-      desc: "Acne triggered by hormonal fluctuations, typically appearing along the jawline, chin, and lower cheeks. It is common in adult women and often presents as deep, tender cysts that appear cyclically.",
-    },
-    {
-      title: "Acne Conglobata",
-      desc: "A rare but severe form of inflammatory acne characterised by large, interconnected nodules and abscesses that can cause extensive scarring. It requires immediate and intensive dermatological treatment.",
+      title: "Photosensitivity",
+      desc: "An allergic or irritant reaction triggered by sunlight or UV light. Certain medications, fragrances, and skin products can make the skin more sensitive to the sun, causing rashes on sun-exposed areas.",
     },
   ];
 
@@ -622,14 +556,14 @@ function TypesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Types of Acne
+            Types of Skin Allergies
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Different Types of Acne
+            Different Types of Skin Allergies
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne can present in various forms. Identifying the specific type helps guide treatment
-            decisions and improves outcomes.
+            Skin allergies can present in several distinct forms. Identifying the specific type is
+            essential for effective treatment.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -658,40 +592,40 @@ function DiagnosisSection() {
               Diagnosis
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              How We Diagnose Acne
+              How We Diagnose Skin Allergies
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                At {CLINIC_NAME}, we diagnose acne through a thorough clinical examination of your
-                skin. The appearance, type, and distribution of acne lesions are usually sufficient
-                to determine the type and severity of your condition.
+                At {CLINIC_NAME}, we use a systematic approach to diagnose skin allergies. We begin
+                with a detailed clinical history, including when the symptoms started, what
+                substances you may have been exposed to, your occupation, and any family history of
+                allergies.
               </p>
               <p>
-                We begin by reviewing your medical history, including any history of hormonal
-                disorders like PCOS, medications you are taking, your skincare routine, dietary
-                habits, and any previous acne treatments you may have tried. This comprehensive
-                history helps us identify contributing factors.
+                A thorough skin examination allows us to assess the pattern, distribution, and
+                appearance of the rash. The location of the reaction often provides important clues
+                about the causative allergen — for example, ear lobe dermatitis suggests nickel
+                allergy from earrings.
               </p>
               <p>
-                A detailed skin examination allows us to grade the severity of acne, identify the
-                types of lesions present (comedones, papules, pustules, nodules, cysts), and assess
-                for scarring and pigmentation. We also evaluate your skin type and oil production
-                levels to tailor treatment appropriately.
+                For suspected allergic contact dermatitis, patch testing is the gold standard
+                diagnostic tool. Small patches containing common allergens are placed on your back
+                and read after 48 and 96 hours to identify which substances trigger a reaction. This
+                simple, painless test can be performed in our clinic.
               </p>
               <p>
-                In cases where hormonal acne is suspected, we may recommend blood tests to evaluate
-                hormone levels, including androgens. This helps us determine whether hormonal
-                therapy would be beneficial. We also assess for conditions like PCOS that may
-                underlie persistent acne.
+                In some cases, we may recommend blood tests to check for specific IgE antibodies
+                against common allergens. These tests help identify triggers for urticaria and other
+                immediate-type allergic reactions.
               </p>
             </div>
             <div className="mt-8 space-y-3">
               {[
-                "Comprehensive medical and skincare history review",
-                "Detailed skin examination and acne severity grading",
-                "Identification of acne type and lesion classification",
-                "Assessment of scarring, pigmentation, and skin type",
-                "Hormonal evaluation when indicated",
+                "Comprehensive medical and exposure history review",
+                "Detailed skin examination to identify reaction patterns",
+                "Patch testing for suspected contact allergens",
+                "Blood tests for specific allergy markers when indicated",
+                "Accurate diagnosis to guide effective treatment",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -701,21 +635,17 @@ function DiagnosisSection() {
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Dermatologist acne consultation */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <Stethoscope className="h-8 w-8" />
                 </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Consultation
+                <p className="mt-4 text-sm font-medium text-muted-foreground">Allergy Evaluation</p>
+                <p className="mt-1 text-xs text-muted-foreground/60">
+                  Replace with a photo of patch testing or allergy consultation
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's facial skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist examining a patient's facial skin for acne at Armoor Skin &
-                  Hair Clinic
+                  Alt: Dermatologist performing allergy patch test at Armoor Skin & Hair Clinic
                 </p>
               </div>
             </div>
@@ -735,67 +665,67 @@ function TreatmentsSection() {
             Our Treatments
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Acne Treatments Available in Armoor
+            Skin Allergy Treatments Available in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We offer a comprehensive range of evidence-based treatments for all types of acne — from
-            mild comedones to severe cystic acne.
+            We offer a comprehensive range of evidence-based treatments to relieve skin allergies
+            and prevent future reactions.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {[
             {
-              title: "Topical Retinoids & Medications",
+              title: "Antihistamines",
               items: [
-                "Tretinoin, adapalene, and tazarotene for comedonal acne",
-                "Benzoyl peroxide to reduce bacteria and inflammation",
-                "Topical antibiotics like clindamycin for active breakouts",
-                "Topical dapsone for inflammatory acne in adults",
+                "Oral antihistamines to block histamine and reduce itching",
+                "Non-sedating options for daytime use",
+                "Short-course sedating antihistamines for severe night-time itching",
+                "Topical antihistamine creams for localised reactions",
               ],
             },
             {
-              title: "Oral Medications",
+              title: "Topical Corticosteroids",
               items: [
-                "Oral antibiotics for moderate to severe inflammatory acne",
-                "Isotretinoin for severe cystic and resistant acne",
-                "Hormonal therapy including oral contraceptives and spironolactone",
-                "Low-dose antibiotics for maintenance therapy",
+                "Prescription-strength steroid creams for inflamed skin",
+                "Appropriate potency selection based on area and severity",
+                "Short-term use to control flare-ups effectively",
+                "Guidance on safe application to minimise side effects",
               ],
             },
             {
-              title: "Chemical Peels",
+              title: "Allergen Avoidance",
               items: [
-                "Salicylic acid peels for active acne and oil control",
-                "Glycolic acid peels for exfoliation and pigmentation",
-                "Lactic acid peels for sensitive skin types",
-                "Jessner's peel for stubborn comedonal acne",
+                "Identification of specific triggers through testing",
+                "Practical strategies to avoid contact allergens",
+                "Dietary guidance for food-related allergies",
+                "Workplace modifications for occupational allergies",
               ],
             },
             {
-              title: "Microneedling for Scars",
+              title: "Emergency Management",
               items: [
-                "Microneedling with derma roller or pen device",
-                "Platelet-rich plasma (PRP) combined with microneedling",
-                "Radiofrequency microneedling for deep scars",
-                "Multiple sessions for optimal scar reduction",
+                "Emergency action plans for severe allergic reactions",
+                "Prescription of emergency medications when needed",
+                "Patient and family education on recognising warning signs",
+                "Referral coordination for anaphylaxis management",
               ],
             },
             {
-              title: "Laser & Light Therapies",
+              title: "Chronic Urticaria Management",
               items: [
-                "Fractional CO2 laser for acne scar resurfacing",
-                "ND:YAG laser for active acne and inflammation",
-                "Blue light therapy for bacterial reduction",
-                "IPL for post-acne pigmentation and redness",
+                "Stepwise treatment approach for chronic hives",
+                "Combination therapy for resistant cases",
+                "Monitoring and adjustment of treatment over time",
+                "Identification and management of underlying causes",
               ],
             },
             {
-              title: "Long-Term Skin Health Maintenance",
+              title: "Patient Education",
               items: [
-                "Personalised maintenance treatment plans",
-                "Regular follow-up to monitor progress",
-                "Adjustment of treatment based on skin response",
-                "Preventive strategies to reduce recurrence",
+                "Understanding your allergy and its triggers",
+                "Proper skincare during and after allergic reactions",
+                "When to seek immediate medical attention",
+                "Long-term prevention and lifestyle modifications",
               ],
             },
           ].map((treatment, i) => (
@@ -828,22 +758,22 @@ function WhyChooseSection() {
     {
       icon: Stethoscope,
       title: `Expert Dermatologist`,
-      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of acne — from mild comedonal acne to severe cystic and hormonal acne.`,
+      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and managing all types of skin allergies — from contact dermatitis to chronic urticaria.`,
     },
     {
       icon: Microscope,
       title: "Accurate Diagnosis",
-      desc: "We identify the root cause of your acne — whether it is hormonal imbalance, bacterial overgrowth, clogged pores, or dietary triggers — for targeted and effective treatment.",
+      desc: "We use systematic evaluation and patch testing to identify the exact cause of your allergy. Accurate diagnosis is the foundation of effective treatment and prevention.",
     },
     {
       icon: ShieldCheck,
-      title: "Advanced Treatment Options",
-      desc: "We offer prescription-grade medications, medical-grade chemical peels, microneedling, laser therapy, and isotretinoin — all under expert supervision for safe results.",
+      title: "Personalised Treatment",
+      desc: "Every skin allergy is unique. Your treatment plan is customised to your specific triggers, symptoms, severity, and lifestyle for the best possible outcomes.",
     },
     {
       icon: Sparkles,
-      title: "Long-Term Skin Health",
-      desc: "Beyond treating active acne, we guide you on maintaining clear skin with personalised advice on skincare routines, products, diet, and lifestyle adjustments.",
+      title: "Compassionate Care",
+      desc: "We understand how uncomfortable and distressing skin allergies can be. Our team provides gentle, supportive care with a focus on your comfort and well-being.",
     },
   ];
 
@@ -855,10 +785,11 @@ function WhyChooseSection() {
             Why Choose Us
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Why {CLINIC_NAME} for Acne Treatment?
+            Why {CLINIC_NAME} for Skin Allergy Treatment?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We combine medical expertise with genuine care to help you achieve clear, healthy skin.
+            We combine medical expertise with compassionate care to help you find relief from skin
+            allergies.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -889,18 +820,18 @@ function ProcessSection() {
     },
     {
       step: "02",
-      title: "Skin Assessment",
-      desc: `${DOCTOR_NAME} examines your skin, discusses your acne history and skincare routine, and identifies the underlying cause of your breakouts.`,
+      title: "Allergy Assessment",
+      desc: `${DOCTOR_NAME} examines your skin, discusses your symptoms and exposure history, and identifies potential triggers through clinical evaluation.`,
     },
     {
       step: "03",
-      title: "Personalised Treatment Plan",
-      desc: "A customised treatment plan is created based on your acne type and severity — combining medications, in-clinic procedures, and skincare guidance.",
+      title: "Diagnostic Testing",
+      desc: "If needed, patch testing or blood tests are performed to pinpoint the exact allergen. This step is crucial for targeted treatment and effective avoidance.",
     },
     {
       step: "04",
-      title: "Follow-up & Maintenance",
-      desc: "Regular follow-up visits to assess response, adjust treatment as needed, and establish a long-term skincare routine to prevent recurrence.",
+      title: "Treatment & Follow-up",
+      desc: "A personalised treatment plan is created, combining medications, avoidance strategies, and lifestyle guidance. Regular follow-up ensures optimal results.",
     },
   ];
 
@@ -915,7 +846,7 @@ function ProcessSection() {
             Our Treatment Process
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            From your first visit to long-term skin health — here is what you can expect.
+            From your first visit to long-term management — here is what you can expect.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -937,34 +868,28 @@ function ProcessSection() {
 function TipsSection() {
   const tips = [
     {
-      icon: Droplets,
-      title: "Cleanse Gently Twice Daily",
-      desc: "Wash your face with a gentle, non-comedogenic cleanser in the morning and evening. Avoid harsh scrubs that can irritate the skin and worsen inflammation.",
+      title: "Moisturize Regularly",
+      desc: "Apply a gentle, fragrance-free moisturizer daily to strengthen the skin barrier. Well-moisturized skin is less prone to irritation and allergic reactions.",
     },
     {
-      icon: Wind,
-      title: "Follow a Consistent Skincare Routine",
-      desc: "Use a routine that suits your skin type: cleanse, treat (with prescribed medication), moisturise, and protect with sunscreen. Consistency is key to seeing results.",
+      title: "Avoid Known Triggers",
+      desc: "Once you have identified your allergens, take active steps to avoid them. Read product labels carefully, choose hypoallergenic products, and make necessary changes at home and work.",
     },
     {
-      icon: Sun,
-      title: "Protect Your Skin from the Sun",
-      desc: "Sun exposure can darken acne spots and cause pigmentation. Use an oil-free, non-comedogenic sunscreen with SPF 30+ daily, even on cloudy days.",
+      title: "Use Gentle Skin Care",
+      desc: "Use lukewarm water for bathing, avoid harsh soaps and scrubs, and pat your skin dry gently. Choose products labelled 'fragrance-free' and 'for sensitive skin'.",
     },
     {
-      icon: Sparkles,
-      title: "Manage Stress Levels",
-      desc: "Stress can trigger hormonal changes that worsen acne. Incorporate relaxation techniques like meditation, yoga, or deep breathing into your daily routine.",
+      title: "Manage Stress",
+      desc: "Stress can trigger or worsen skin allergies. Incorporate relaxation techniques such as deep breathing, meditation, yoga, or regular exercise into your daily routine.",
     },
     {
-      icon: Scissors,
-      title: "Avoid Picking or Popping Pimples",
-      desc: "Picking at acne lesions pushes bacteria deeper, increases inflammation, delays healing, and causes permanent scarring. Leave extractions to your dermatologist.",
+      title: "Wear Protective Clothing",
+      desc: "When exposed to potential irritants or allergens at work or home, wear appropriate protective gear such as gloves, long sleeves, and masks to minimise skin contact.",
     },
     {
-      icon: ShieldCheck,
-      title: "Moisturise Daily",
-      desc: "Even oily, acne-prone skin needs moisturiser. Use a lightweight, oil-free, non-comedogenic moisturiser to keep the skin barrier healthy and prevent irritation from medications.",
+      title: "Keep a Symptom Diary",
+      desc: "Track your symptoms, what you ate, what products you used, and any environmental exposures. This can help identify patterns and hidden triggers.",
     },
   ];
   return (
@@ -972,14 +897,14 @@ function TipsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Skincare Tips
+            Living with Skin Allergies
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Tips for Managing Acne
+            Tips for Managing Skin Allergies
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Small changes in your skincare routine can make a significant difference in controlling
-            acne and keeping your skin clear.
+            Small changes in your daily routine can make a significant difference in preventing and
+            managing allergic skin reactions.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -988,29 +913,25 @@ function TipsSection() {
               key={tip.title}
               className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/5 text-primary">
-                <tip.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 font-display text-base font-bold text-foreground">{tip.title}</h3>
+              <h3 className="font-display text-base font-bold text-foreground">{tip.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{tip.desc}</p>
             </div>
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne skincare routine illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <Sparkles className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Skincare Routine
+                Allergy Prevention Tips
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing a skincare routine for acne-prone skin
+                Replace with an infographic showing skin allergy prevention tips
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of daily skincare routine for managing acne-prone skin
+                Alt: Illustration of tips for preventing skin allergic reactions
               </p>
             </div>
           </div>
@@ -1023,52 +944,40 @@ function TipsSection() {
 function FAQSection() {
   const faqs = [
     {
-      q: "Can acne be cured permanently?",
-      a: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+      q: "How are skin allergies diagnosed?",
+      a: "Skin allergies are diagnosed through clinical examination and detailed history. Patch testing may be recommended for contact dermatitis to identify specific allergens causing the reaction.",
     },
     {
-      q: "How long does acne treatment take to show results?",
-      a: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+      q: "Can skin allergies be cured?",
+      a: "Many skin allergies can be effectively managed by identifying and avoiding triggers, with medications to control symptoms during flare-ups. While some allergies may resolve over time, others require ongoing management.",
     },
     {
-      q: "Can acne scars be removed completely?",
-      a: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+      q: "How quickly do allergy treatments work?",
+      a: "Antihistamines provide relief within 30–60 minutes. Topical corticosteroids for contact dermatitis show improvement within a few days. Chronic conditions like urticaria may take longer to control.",
     },
     {
-      q: "Is acne treatment painful?",
-      a: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort.",
+      q: "Is skin allergy contagious?",
+      a: "No, skin allergies are not contagious. They cannot be transmitted from one person to another. Allergic reactions are the body's immune response to a specific trigger.",
     },
     {
-      q: "What is the best treatment for cystic acne?",
-      a: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach.",
+      q: "Can stress cause skin allergies?",
+      a: "Yes, stress can trigger or worsen skin allergies. Stress releases chemicals in the body that can activate allergic reactions and histamine release, leading to hives and worsening of existing conditions.",
     },
     {
-      q: "Is acne caused by diet?",
-      a: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+      q: "What is the difference between skin allergy and eczema?",
+      a: "Skin allergy is an immune reaction to a specific allergen, while eczema (atopic dermatitis) is a chronic condition involving skin barrier dysfunction. However, people with eczema are more prone to skin allergies.",
     },
     {
-      q: "How much does acne treatment cost in Armoor?",
-      a: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+      q: "Can food allergies cause skin rashes?",
+      a: "Yes, food allergies commonly cause skin reactions including hives, redness, and swelling. Common triggers include nuts, shellfish, eggs, milk, and certain food additives.",
     },
     {
-      q: "Can hormonal acne be treated?",
-      a: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+      q: "When should I see a doctor for a skin allergy?",
+      a: "You should see a doctor if the rash is severe, spreading, painful, or does not improve with over-the-counter treatments. Immediate attention is needed if there is swelling of the face or lips.",
     },
     {
-      q: "Does popping pimples make acne worse?",
-      a: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
-    },
-    {
-      q: "What should I avoid during acne treatment?",
-      a: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance.",
-    },
-    {
-      q: "Can adults get acne?",
-      a: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-    },
-    {
-      q: "Is isotretinoin safe for acne treatment?",
-      a: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+      q: "How much does skin allergy treatment cost in Armoor?",
+      a: `The cost of skin allergy treatment at ${CLINIC_NAME} depends on the severity, type of allergic reaction, and treatment approach required. We offer affordable and transparent pricing. Please book a consultation for a personalised plan and cost estimate.`,
     },
   ];
 
@@ -1080,7 +989,7 @@ function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-center text-[15px] text-muted-foreground">
-            Common questions about acne treatment at our clinic in Armoor.
+            Common questions about skin allergy treatment at our clinic in Armoor.
           </p>
           <div className="mt-8 space-y-4">
             {faqs.map((faq, i) => (
@@ -1114,27 +1023,27 @@ function FAQSection() {
 function ReviewsSection() {
   const reviews = [
     {
-      name: "Reshma",
+      name: "Kavitha",
       location: "Armoor",
-      text: "I struggled with acne for over 5 years and tried every product on the market. Dr. Raghavendhra diagnosed my condition as hormonal acne and put me on a combination of topical treatment and oral medication. Within 3 months, my skin cleared up significantly. I am so thankful for the personalised care I received.",
+      text: "I had a severe allergic reaction to a new moisturizer that left my face red, swollen, and itchy. Dr. Raghavendhra diagnosed it as allergic contact dermatitis and prescribed the right medication. Within a week, my skin was back to normal. Very grateful.",
       rating: 5,
     },
     {
-      name: "Sandeep",
+      name: "Srinivas",
       location: "Nizamabad",
-      text: "I had severe cystic acne that left me with deep scars. The doctor recommended microneedling sessions along with medical treatment. After 4 sessions, my scars have faded remarkably and my active acne is under control. The clinic is very professional and the doctor explains everything in detail.",
+      text: "I have been suffering from chronic hives for months with no idea what was causing them. The doctor took a detailed history and ran some tests. Turns out it was a combination of stress and certain foods. The treatment plan has helped me stay symptom-free.",
       rating: 5,
     },
     {
-      name: "Anjali",
+      name: "Laxmi",
       location: "Balkonda",
-      text: "My daughter's acne was getting worse and she was losing confidence. Dr. Raghavendhra was very gentle with her and designed a treatment plan that suited her sensitive skin. The chemical peels and topical medications made a huge difference. Her skin is now clear and glowing.",
+      text: "My daughter developed an itchy rash on her hands that would not go away. Dr. Raghavendhra performed patch testing and found she was allergic to nickel. With the right treatment and avoidance advice, her skin has completely cleared.",
       rating: 5,
     },
     {
-      name: "Mahesh",
+      name: "Ravi",
       location: "Mortad",
-      text: "I came to the clinic with persistent back acne that I had for years. The doctor prescribed a combination of medicated cleansers, topical treatments, and oral medication. The results have been excellent — my back is almost completely clear now. Highly recommend this clinic for acne treatment.",
+      text: "I get a severe rash whenever I wear certain rings or watch straps. The doctor explained it is a nickel allergy and advised me on alternatives. The prescribed cream cleared the rash quickly. Very happy with the care.",
       rating: 5,
     },
   ];
@@ -1150,7 +1059,7 @@ function ReviewsSection() {
             What Our Patients Say
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Real experiences from patients who have undergone acne treatment at our clinic.
+            Real experiences from patients who have undergone skin allergy treatment at our clinic.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -1192,12 +1101,13 @@ function AreasWeServeSection() {
   const areas = [
     { name: "Armoor", isLocal: true },
     { name: "Balkonda" },
-    { name: "Nizamabad" },
     { name: "Mortad" },
-    { name: "Bodhan" },
-    { name: "Kamareddy" },
-    { name: "Yellareddy" },
-    { name: "Sadasivanagar" },
+    { name: "Mupkal" },
+    { name: "Velpur" },
+    { name: "Kammarpally" },
+    { name: "Nandipet" },
+    { name: "Navipet" },
+    { name: "Nizamabad" },
   ];
 
   return (
@@ -1211,9 +1121,9 @@ function AreasWeServeSection() {
             Conveniently Located in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert acne
-            treatment. Our clinic is easily accessible and welcomes patients from all nearby towns
-            and villages.
+            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert skin
+            allergy treatment. Our clinic is easily accessible and welcomes patients from all nearby
+            towns and villages.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -1248,30 +1158,18 @@ function AreasWeServeSection() {
 
 function RelatedTreatmentsSection() {
   const related: { name: string; to: string; params?: Record<string, string> }[] = [
+    { name: "Acne Treatment", to: "/treatments/acne-treatment-armoor" },
     { name: "Hair Loss Treatment", to: "/treatments/hair-loss-treatment-armoor" },
     { name: "Psoriasis Treatment", to: "/treatments/psoriasis-treatment-armoor" },
     { name: "Eczema Treatment", to: "/treatments/eczema-treatment-armoor" },
-    {
-      name: "Fungal Infection Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "fungal-infection-treatment" },
-    },
+    { name: "Fungal Infection Treatment", to: "/treatments/fungal-infection-treatment-armoor" },
     { name: "Dandruff Treatment", to: "/treatments/dandruff-treatment-armoor" },
-    { name: "Vitiligo Treatment", to: "/treatments/$slug", params: { slug: "vitiligo-treatment" } },
-    {
-      name: "Pigmentation Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "pigmentation-treatment" },
-    },
-    {
-      name: "Skin Allergy Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "skin-allergy-treatment" },
-    },
-    { name: "Nail Disorders", to: "/treatments/$slug", params: { slug: "nail-disorders" } },
-    { name: "Wart Removal", to: "/treatments/$slug", params: { slug: "wart-removal" } },
-    { name: "Mole Removal", to: "/treatments/$slug", params: { slug: "mole-removal" } },
-  ].filter((r) => r.name !== "Acne Treatment");
+    { name: "Vitiligo Treatment", to: "/treatments/vitiligo-treatment-armoor" },
+    { name: "Pigmentation Treatment", to: "/treatments/pigmentation-treatment-armoor" },
+    { name: "Nail Disorders", to: "/treatments/nail-disorders-armoor" },
+    { name: "Wart Removal", to: "/treatments/wart-removal-armoor" },
+    { name: "Mole Removal", to: "/treatments/mole-removal-armoor" },
+  ];
 
   return (
     <section className="py-20 sm:py-24">
@@ -1288,7 +1186,7 @@ function RelatedTreatmentsSection() {
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {related.slice(0, 6).map((treatment) => (
+          {related.map((treatment) => (
             <Link
               key={treatment.name}
               to={treatment.to}
@@ -1309,11 +1207,11 @@ function BookingCTA() {
     <section className="py-20" style={{ background: "var(--gradient-navy)" }}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          Ready to Get Clear Skin?
+          Ready to Find Relief from Your Skin Allergy?
         </h2>
         <p className="mt-4 text-lg text-white/80">
           Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Take
-          the first step towards healthy, glowing skin.
+          the first step towards healthier, more comfortable skin.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link

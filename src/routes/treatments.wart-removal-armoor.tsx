@@ -13,10 +13,6 @@ import {
   Quote,
   AlertCircle,
   Users,
-  Wind,
-  Droplets,
-  Scissors,
-  Sun,
 } from "lucide-react";
 import {
   CLINIC_NAME,
@@ -31,37 +27,37 @@ import {
   MAP_LINK,
 } from "../lib/clinic-data";
 
-export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
+export const Route = createFileRoute("/treatments/wart-removal-armoor")({
   head: () => ({
     meta: [
       {
-        title: `Acne Treatment in Armoor | Pimple & Scar Removal | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        title: `Wart Removal in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         name: "description",
-        content: `Expert acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced solutions for pimples, cystic acne, acne scars, and hormonal breakouts at ${CLINIC_NAME}. Book your consultation today.`,
+        content: `Expert wart removal in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Safe cryotherapy, laser, and surgical wart removal for all types of warts at ${CLINIC_NAME}. Book your consultation.`,
       },
       { name: "robots", content: "index, follow" },
       {
         property: "og:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        content: `Wart Removal in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         property: "og:description",
-        content: `Effective acne and pimple treatment in Armoor by Dr. Raghavendhra MD, DVL. Advanced therapies for acne scars, cystic acne, and hormonal breakouts at Armoor Skin & Hair Clinic.`,
+        content: `Safe and effective wart removal in Armoor by Dr. Raghavendhra MD, DVL. Treatment for common warts, plantar warts, flat warts, and genital warts at Armoor Skin & Hair Clinic.`,
       },
-      { property: "og:url", content: `${SITE_URL}/treatments/acne-treatment-armoor` },
+      { property: "og:url", content: `${SITE_URL}/treatments/wart-removal-armoor` },
       { property: "og:type", content: "website" },
       {
         name: "twitter:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME}`,
+        content: `Wart Removal in Armoor | ${CLINIC_NAME}`,
       },
       {
         name: "twitter:description",
-        content: `Expert acne treatment in Armoor by Dr. Raghavendhra — personalised care for clear, healthy skin.`,
+        content: `Expert wart removal in Armoor by Dr. Raghavendhra — safe, quick, and effective treatment for all wart types.`,
       },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/acne-treatment-armoor` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/wart-removal-armoor` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -70,9 +66,9 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
           "@graph": [
             {
               "@type": "MedicalClinic",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#clinic`,
+              "@id": `${SITE_URL}/treatments/wart-removal-armoor#clinic`,
               name: CLINIC_NAME,
-              description: `Acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
+              description: `Wart removal in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
               url: SITE_URL,
               telephone: PHONE_TEL,
               address: {
@@ -98,7 +94,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "LocalBusiness",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#business`,
+              "@id": `${SITE_URL}/treatments/wart-removal-armoor#business`,
               name: CLINIC_NAME,
               image: `${SITE_URL}/og-image.jpg`,
               telephone: PHONE_TEL,
@@ -114,7 +110,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "BreadcrumbList",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#breadcrumbs`,
+              "@id": `${SITE_URL}/treatments/wart-removal-armoor#breadcrumbs`,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -125,118 +121,102 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "Acne Treatment in Armoor",
-                  item: `${SITE_URL}/treatments/acne-treatment-armoor`,
+                  name: "Wart Removal in Armoor",
+                  item: `${SITE_URL}/treatments/wart-removal-armoor`,
                 },
               ],
             },
             {
               "@type": "FAQPage",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#faq`,
+              "@id": `${SITE_URL}/treatments/wart-removal-armoor#faq`,
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Can acne be cured permanently?",
+                  name: "Is wart removal painful?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+                    text: "Cryotherapy and cautery may cause mild discomfort during the procedure, but it is brief and well-tolerated by most patients. Local anaesthesia can be used when needed for larger or sensitive warts.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How long does acne treatment take to show results?",
+                  name: "Do warts come back after removal?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+                    text: "There is a small chance of recurrence as warts are caused by a virus (HPV). Multiple sessions may be needed for complete clearance. We also provide preventive advice to reduce spread and recurrence.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can acne scars be removed completely?",
+                  name: "How many sessions are needed for wart removal?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+                    text: "Most warts resolve in 1–3 sessions. Plantar warts and large warts may require additional treatments. Your dermatologist will recommend a treatment plan based on the type, size, and number of warts.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne treatment painful?",
+                  name: "Are warts contagious?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort. Your dermatologist will ensure you are comfortable throughout the process.",
+                    text: "Yes, warts are contagious. HPV can spread through direct skin-to-skin contact or contact with contaminated surfaces. Avoid picking at warts and wash your hands thoroughly after touching them.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What is the best treatment for cystic acne?",
+                  name: "Can warts go away on their own?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach based on your condition.",
+                    text: "Some warts may resolve on their own over months or years, but this is unpredictable. Treatment is recommended to speed up clearance, prevent spread to other areas, and reduce discomfort.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne caused by diet?",
+                  name: "What is the best treatment for warts?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+                    text: "The best treatment depends on the type, location, and number of warts. Cryotherapy, laser removal, electrocautery, and topical medications are all effective options. Your dermatologist will recommend the most suitable treatment for you.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How much does acne treatment cost in Armoor?",
+                  name: "Can warts spread to other parts of the body?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+                    text: "Yes, warts can spread to other parts of your body through direct contact. Picking or scratching a wart can transfer the virus to other areas. Treatment and good hygiene help prevent spread.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can hormonal acne be treated?",
+                  name: "Are there home remedies for wart removal?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+                    text: "Over-the-counter treatments like salicylic acid are available, but professional removal is safer and more effective. Home remedies can cause scarring or incomplete removal. We recommend consulting a dermatologist for proper treatment.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Does popping pimples make acne worse?",
+                  name: "Can I remove a wart at home?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+                    text: "We do not recommend removing warts at home as it can lead to infection, scarring, and incomplete removal. Professional treatment ensures safe, complete removal with minimal discomfort and lower risk of recurrence.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What should I avoid during acne treatment?",
+                  name: "How much does wart removal cost in Armoor?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance for your specific treatment plan.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can adults get acne?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is isotretinoin safe for acne treatment?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+                    text: `The cost of wart removal at ${CLINIC_NAME} depends on the type, size, number of warts, and treatment method. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
                   },
                 },
               ],
             },
             {
               "@type": "MedicalProcedure",
-              name: "Acne Treatment in Armoor",
+              name: "Wart Removal in Armoor",
               description:
-                "Comprehensive acne treatment services including topical and oral medications, chemical peels, microneedling, laser therapy, and personalised skincare plans.",
+                "Comprehensive wart removal services including cryotherapy, electrocautery, laser treatment, chemical cautery, and topical medications.",
               provider: {
                 "@type": "MedicalClinic",
                 name: CLINIC_NAME,
@@ -256,10 +236,10 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
       },
     ],
   }),
-  component: AcneTreatmentArmoorPage,
+  component: WartRemovalArmoorPage,
 });
 
-function AcneTreatmentArmoorPage() {
+function WartRemovalArmoorPage() {
   return (
     <>
       <HeroSection />
@@ -297,22 +277,21 @@ function HeroSection() {
             Treatments
           </Link>
           <span>/</span>
-          <span className="text-white/90">Acne Treatment in Armoor</span>
+          <span className="text-white/90">Wart Removal in Armoor</span>
         </nav>
-        {/* IMAGE PLACEHOLDER: Hero image for acne treatment page */}
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
               <Star className="h-3.5 w-3.5 text-gold" />
-              Expert Acne Care in Armoor
+              Expert Wart Removal in Armoor
             </div>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              Acne Treatment in Armoor
+              Wart Removal in Armoor
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
-              Effective acne and pimple treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
-              {QUALIFICATION} — Armoor's trusted dermatologist for personalised acne care, scar
-              treatment, and lasting skin clarity.
+              Safe and effective wart removal at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
+              {QUALIFICATION} — Armoor's trusted dermatologist for treating all types of warts with
+              modern, minimally invasive techniques.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -337,9 +316,9 @@ function HeroSection() {
               <ul className="mt-4 space-y-3">
                 {[
                   `Expert dermatologist ${DOCTOR_NAME} ${QUALIFICATION}`,
-                  "Customised treatment for all skin types",
-                  "Chemical peels, microneedling & laser therapy",
-                  "Affordable consultation in Armoor",
+                  "Treatment for all types of warts",
+                  "Cryotherapy, laser & cautery available",
+                  "Minimal discomfort, quick procedure",
                   `${HOURS.weekdayDays}, ${HOURS.weekday}`,
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-white/70">
@@ -363,56 +342,48 @@ function WhatIsSection() {
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-start">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-              Understanding Acne
+              Understanding Warts
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              What is Acne?
+              What are Warts?
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                Acne is a common skin condition that occurs when hair follicles become clogged with
-                oil (sebum) and dead skin cells. It manifests as pimples, blackheads, whiteheads,
-                and deeper lumps like nodules and cysts. At {CLINIC_NAME}, we treat the root causes
-                of acne — excess oil production, bacteria, inflammation, and clogged pores — for
-                lasting skin clarity.
+                Warts are small, benign skin growths caused by the human papillomavirus (HPV). They
+                can appear anywhere on the body and vary in appearance depending on the type of HPV
+                strain and the location of the growth. Warts are non-cancerous but can be
+                uncomfortable, unsightly, and contagious.
               </p>
               <p>
-                Acne develops when sebaceous glands produce excess sebum, which mixes with dead skin
-                cells and blocks the follicle opening. The bacterium Cutibacterium acnes (C. acnes)
-                thrives in this environment, triggering inflammation and the formation of red,
-                swollen pimples. Acne most commonly affects the face, chest, back, and shoulders.
+                HPV infects the top layer of skin through tiny cuts or breaks. The virus triggers
+                rapid growth of skin cells, resulting in a raised, rough bump. Warts are most common
+                in children and young adults but can affect people of all ages.
               </p>
               <p>
-                Acne is not just a teenage problem. Many adults, particularly women, experience acne
-                well into their 30s, 40s, and beyond. Hormonal fluctuations, stress, diet, and
-                certain medications can all trigger or worsen breakouts at any age. Effective
-                treatment begins with understanding what is driving your acne.
+                There are several types of warts, each caused by different strains of HPV. Common
+                warts, plantar warts, flat warts, filiform warts, and genital warts all require
+                specific treatment approaches. A proper diagnosis by a dermatologist is essential
+                for effective treatment.
               </p>
               <p>
-                A common misconception is that acne is caused by poor hygiene or eating greasy food.
-                While diet can play a role in some individuals, acne is primarily a medical
-                condition driven by hormones, genetics, and bacterial activity. Even people with
-                meticulous skincare routines can experience acne. A dermatologist's evaluation is
-                essential for effective treatment.
+                Warts are often mistaken for other skin growths like moles, skin tags, or corns.
+                While some warts may resolve on their own over months or years, treatment is
+                recommended to reduce discomfort, prevent spread, and avoid transmission to others.
               </p>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Acne skin condition */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <AlertCircle className="h-8 w-8" />
                 </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Condition
+                <p className="mt-4 text-sm font-medium text-muted-foreground">Wart on Skin</p>
+                <p className="mt-1 text-xs text-muted-foreground/60">
+                  Replace with an image showing wart-affected skin
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing acne-affected facial skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing acne breakouts on facial skin including whiteheads,
-                  blackheads, and inflamed pimples
+                  Alt: Illustration showing raised, rough wart growths on skin
                 </p>
               </div>
             </div>
@@ -426,36 +397,36 @@ function WhatIsSection() {
 function SymptomsSection() {
   const symptoms = [
     {
-      title: "Whiteheads",
-      desc: "Small, flesh-coloured or white bumps that form when pores are completely blocked with oil and dead skin. They remain closed at the surface and appear as tiny white spots on the skin.",
+      title: "Small Rough Bumps",
+      desc: "Flesh-coloured, grey, or brown raised bumps with a rough, cauliflower-like surface are the hallmark of common warts. They typically appear on fingers, hands, and knees.",
     },
     {
-      title: "Blackheads",
-      desc: "Open clogged pores that turn dark due to oxidation of the trapped oil and skin cells on exposure to air. Blackheads are not dirt and can be effectively treated with topical retinoids.",
+      title: "Plantar Wart Pain",
+      desc: "Plantar warts on the soles of the feet can be painful when walking or standing, as the pressure pushes the wart inward. They often have a hard, thick callus over them.",
     },
     {
-      title: "Papules",
-      desc: "Small, red, tender bumps that indicate inflammation in the hair follicle. Papules are a sign of active infection and should not be picked or squeezed as they can worsen inflammation.",
+      title: "Flat Warts",
+      desc: "Smooth, flat-topped, flesh-coloured bumps that appear in clusters on the face, hands, or legs. They are smaller than other warts and may be mistaken for acne.",
     },
     {
-      title: "Pustules",
-      desc: "Red bumps with a white or yellow pus-filled centre. These are commonly called pimples or zits and are caused by bacterial activity and inflammation within the blocked pore.",
+      title: "Filiform Warts",
+      desc: "Long, narrow, thread-like growths that often appear on the face, especially around the eyes, nose, and mouth. They grow quickly and can be bothersome.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, painful lumps beneath the skin surface. Nodular acne is a severe form that requires professional medical treatment and does not respond to over-the-counter products.",
+      title: "Clusters",
+      desc: "Warts often appear in groups and can multiply quickly if left untreated. Mosaic warts are clusters of plantar warts that form a larger patch on the foot.",
     },
     {
-      title: "Cysts",
-      desc: "Deep, pus-filled, painful lesions that can cause scarring. Cystic acne is the most severe form and requires prompt dermatological intervention including oral medications and drainage.",
+      title: "Black Dots",
+      desc: "Tiny black dots (clotted blood vessels) inside the wart are common, especially with common and plantar warts. These are often called wart seeds.",
     },
     {
-      title: "Acne Scars",
-      desc: "Permanent textural changes in the skin that result from severe or poorly treated acne. Scars can be atrophic (depressed) or hypertrophic (raised) and require specialised treatments.",
+      title: "Rough Texture",
+      desc: "The surface of a wart is typically rough and scaly to the touch, unlike smooth moles or skin tags. This rough texture helps distinguish warts from other growths.",
     },
     {
-      title: "Post-Acne Pigmentation",
-      desc: "Dark spots or red marks that remain after acne lesions heal. This pigmentation can persist for months but responds well to treatments like chemical peels and topical brightening agents.",
+      title: "Rapid Growth",
+      desc: "Warts can grow quickly, especially in children and people with weakened immune systems. New warts may appear near existing ones through autoinoculation.",
     },
   ];
 
@@ -467,14 +438,14 @@ function SymptomsSection() {
             Recognising the Signs
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Common Symptoms of Acne
+            Common Symptoms of Warts
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne symptoms range from mild non-inflammatory comedones to severe painful cysts.
-            Recognising the type and severity helps in choosing the right treatment.
+            Warts can vary in appearance depending on the type. Recognising the symptoms early helps
+            in seeking timely treatment.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {symptoms.map((s) => (
             <div
               key={s.title}
@@ -486,21 +457,19 @@ function SymptomsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne symptoms illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <AlertCircle className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Symptoms Illustration
+                Wart Symptoms Illustration
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common acne symptoms and lesion types
+                Replace with an infographic showing common wart symptoms
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing different types of acne lesions from whiteheads to cystic
-                acne on facial skin
+                Alt: Illustration showing different types of wart growths on skin
               </p>
             </div>
           </div>
@@ -513,40 +482,36 @@ function SymptomsSection() {
 function CausesSection() {
   const causes = [
     {
-      title: "Excess Oil Production",
-      desc: "Overactive sebaceous glands produce excessive sebum, the natural oil that moisturises the skin. When too much oil is produced, it can combine with dead skin cells to clog hair follicles and trigger acne.",
+      title: "HPV Infection",
+      desc: "Warts are caused by the human papillomavirus (HPV). Over 100 strains of HPV exist, and different strains cause different types of warts on various parts of the body.",
     },
     {
-      title: "Clogged Hair Follicles",
-      desc: "Dead skin cells that are not shed properly can accumulate in hair follicles and mix with sebum to form a plug. This creates an ideal environment for bacteria to multiply and cause inflammation.",
+      title: "Direct Contact",
+      desc: "The virus spreads through direct skin-to-skin contact with an infected person. This is the most common mode of transmission for all types of warts.",
     },
     {
-      title: "Bacterial Overgrowth",
-      desc: "Cutibacterium acnes (C. acnes) bacteria naturally live on the skin. When follicles become blocked, these bacteria multiply rapidly, triggering inflammation and the formation of red, pus-filled pimples.",
+      title: "Contaminated Surfaces",
+      desc: "HPV can survive on surfaces like public pool floors, gym showers, and changing rooms. Walking barefoot in these areas increases the risk of developing plantar warts.",
     },
     {
-      title: "Hormonal Fluctuations",
-      desc: "Androgens, hormones that increase during puberty, menstrual cycles, pregnancy, and conditions like PCOS, stimulate sebaceous glands to produce more oil. This is why hormonal acne is common in teenagers and women.",
+      title: "Skin Breaks",
+      desc: "Minor cuts, scrapes, or breaks in the skin provide an entry point for the HPV virus. Damaged skin is more susceptible to infection than healthy, intact skin.",
     },
     {
-      title: "Genetics",
-      desc: "A family history of acne increases your likelihood of developing the condition. Genetic factors influence how your sebaceous glands function, how your skin sheds cells, and how your body responds to inflammation.",
+      title: "Weakened Immunity",
+      desc: "People with weakened immune systems are more susceptible to HPV infection and may develop more warts that are harder to treat. This includes those on immunosuppressive medications.",
     },
     {
-      title: "Dietary Triggers",
-      desc: "High-glycemic foods such as refined sugars, white bread, and sugary drinks can spike insulin levels, leading to increased oil production. Dairy products may also trigger breakouts in some individuals.",
+      title: "Nail Biting",
+      desc: "Biting nails or picking at hangnails can create small breaks in the skin around the fingers, making it easier for HPV to enter and cause warts around the nails.",
     },
     {
-      title: "Stress",
-      desc: "Stress triggers the release of cortisol and other hormones that increase sebum production and inflammation. Stress can also slow wound healing, making acne lesions take longer to resolve.",
+      title: "Sharing Personal Items",
+      desc: "Sharing towels, razors, shoes, or socks with an infected person can spread the virus. Avoid sharing personal items to reduce the risk of infection.",
     },
     {
-      title: "Certain Medications",
-      desc: "Some medications can cause or worsen acne, including corticosteroids, lithium, certain anticonvulsants, and hormone-containing medications. Always inform your dermatologist about all medications you are taking.",
-    },
-    {
-      title: "Skincare & Cosmetic Products",
-      desc: "Oil-based, heavy, or comedogenic skincare and makeup products can clog pores and contribute to acne breakouts. Using non-comedogenic, oil-free products is recommended for acne-prone skin.",
+      title: "Age",
+      desc: "Children and young adults are more prone to warts because their immune systems are still developing and may not fully recognise and fight the virus.",
     },
   ];
 
@@ -555,14 +520,14 @@ function CausesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Causes and Triggers
+            Causes and Risk Factors
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            What Causes Acne?
+            What Causes Warts?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne is caused by a combination of factors. Understanding the underlying cause is key to
-            effective treatment and prevention.
+            Warts are caused by the HPV virus and can be triggered by various environmental and
+            personal factors.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -584,36 +549,24 @@ function CausesSection() {
 function TypesSection() {
   const types = [
     {
-      title: "Whiteheads (Closed Comedones)",
-      desc: "Small, flesh-coloured or white bumps that form when a pore is completely blocked by oil and dead skin. The surface remains closed, giving them a white appearance. They are non-inflammatory but can develop into inflamed acne.",
+      title: "Common Warts",
+      desc: "Small, rough, flesh-coloured or grey bumps that typically appear on the fingers, hands, elbows, and knees. They have a cauliflower-like surface and may contain tiny black dots (clotted blood vessels).",
     },
     {
-      title: "Blackheads (Open Comedones)",
-      desc: "Open clogged pores where the trapped oil and skin cells are exposed to air and oxidise, turning dark. Blackheads are not dirt and can be effectively treated with topical retinoids and gentle exfoliation.",
+      title: "Plantar Warts",
+      desc: "Hard, grainy growths on the soles of the feet. They grow inward due to walking pressure and can be painful. Plantar warts often have a small black dot in the centre and may form clusters (mosaic warts).",
     },
     {
-      title: "Papules",
-      desc: "Small, red, inflamed bumps that are tender to the touch. Papules indicate that the follicle wall has ruptured, causing inflammation. They do not contain pus and should not be squeezed.",
+      title: "Flat Warts",
+      desc: "Small, smooth, flat-topped, flesh-coloured bumps that appear in clusters on the face, neck, hands, or legs. They are much smaller and smoother than common warts and can spread quickly through shaving.",
     },
     {
-      title: "Pustules",
-      desc: "Red, inflamed bumps with a visible white or yellow pus-filled centre. Pustules are the classic pimple and are caused by the immune system fighting bacterial overgrowth in the blocked follicle.",
+      title: "Filiform Warts",
+      desc: "Long, narrow, thread-like growths that often appear on the face, particularly around the eyes, nose, and mouth. They grow rapidly and have a distinctive finger-like projection appearance.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, firm, and painful lumps beneath the skin surface. Nodular acne does not have a visible head and can persist for weeks. It carries a high risk of scarring and requires oral medications.",
-    },
-    {
-      title: "Cystic Acne",
-      desc: "The most severe form of acne, characterised by deep, soft, pus-filled lesions that are extremely painful. Cystic acne often leads to significant scarring and requires aggressive treatment including isotretinoin.",
-    },
-    {
-      title: "Hormonal Acne",
-      desc: "Acne triggered by hormonal fluctuations, typically appearing along the jawline, chin, and lower cheeks. It is common in adult women and often presents as deep, tender cysts that appear cyclically.",
-    },
-    {
-      title: "Acne Conglobata",
-      desc: "A rare but severe form of inflammatory acne characterised by large, interconnected nodules and abscesses that can cause extensive scarring. It requires immediate and intensive dermatological treatment.",
+      title: "Genital Warts",
+      desc: "Flesh-coloured or grey growths that appear in the genital and anal area. They are sexually transmitted and require specialised treatment. Genital warts should always be evaluated by a healthcare professional.",
     },
   ];
 
@@ -622,14 +575,14 @@ function TypesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Types of Acne
+            Types of Warts
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Different Types of Acne
+            Different Types of Warts
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne can present in various forms. Identifying the specific type helps guide treatment
-            decisions and improves outcomes.
+            There are several types of warts, each caused by different strains of HPV and affecting
+            different areas of the body.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -658,40 +611,38 @@ function DiagnosisSection() {
               Diagnosis
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              How We Diagnose Acne
+              How We Diagnose Warts
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                At {CLINIC_NAME}, we diagnose acne through a thorough clinical examination of your
-                skin. The appearance, type, and distribution of acne lesions are usually sufficient
-                to determine the type and severity of your condition.
+                At {CLINIC_NAME}, diagnosing warts is typically straightforward. Most warts can be
+                identified by their characteristic appearance during a visual examination alone. Our
+                dermatologist will assess the size, shape, texture, and location of the growth.
               </p>
               <p>
-                We begin by reviewing your medical history, including any history of hormonal
-                disorders like PCOS, medications you are taking, your skincare routine, dietary
-                habits, and any previous acne treatments you may have tried. This comprehensive
-                history helps us identify contributing factors.
+                We begin by reviewing your medical history and discussing when the wart first
+                appeared, whether it has changed or grown, and if you have a history of warts. We
+                also check for signs of spread or autoinoculation to nearby skin areas.
               </p>
               <p>
-                A detailed skin examination allows us to grade the severity of acne, identify the
-                types of lesions present (comedones, papules, pustules, nodules, cysts), and assess
-                for scarring and pigmentation. We also evaluate your skin type and oil production
-                levels to tailor treatment appropriately.
+                In most cases, a dermatoscope — a specialised magnifying tool — is used to examine
+                the wart in detail. This helps distinguish warts from other skin growths like moles,
+                skin tags, corns, or calluses, which can sometimes look similar.
               </p>
               <p>
-                In cases where hormonal acne is suspected, we may recommend blood tests to evaluate
-                hormone levels, including androgens. This helps us determine whether hormonal
-                therapy would be beneficial. We also assess for conditions like PCOS that may
-                underlie persistent acne.
+                In rare cases where the diagnosis is uncertain, a skin biopsy may be performed. This
+                involves taking a small sample of the growth for laboratory analysis. The procedure
+                is quick, safe, and provides a definitive diagnosis, especially when ruling out
+                other skin conditions.
               </p>
             </div>
             <div className="mt-8 space-y-3">
               {[
-                "Comprehensive medical and skincare history review",
-                "Detailed skin examination and acne severity grading",
-                "Identification of acne type and lesion classification",
-                "Assessment of scarring, pigmentation, and skin type",
-                "Hormonal evaluation when indicated",
+                "Detailed visual examination of the growth",
+                "Dermatoscopic evaluation for accurate diagnosis",
+                "Assessment of wart type, size, and depth",
+                "Skin biopsy only when necessary",
+                "Differentiation from moles, skin tags, and corns",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -701,21 +652,19 @@ function DiagnosisSection() {
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Dermatologist acne consultation */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <Stethoscope className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Consultation
+                  Dermatologist Consultation
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's facial skin
+                  Replace with a photo of a dermatologist examining a patient's wart
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist examining a patient's facial skin for acne at Armoor Skin &
-                  Hair Clinic
+                  Alt: Dermatologist examining a wart at Armoor Skin & Hair Clinic
                 </p>
               </div>
             </div>
@@ -735,67 +684,67 @@ function TreatmentsSection() {
             Our Treatments
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Acne Treatments Available in Armoor
+            Wart Removal Treatments Available in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We offer a comprehensive range of evidence-based treatments for all types of acne — from
-            mild comedones to severe cystic acne.
+            We offer a range of safe and effective wart removal treatments tailored to the type,
+            size, and location of your warts.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {[
             {
-              title: "Topical Retinoids & Medications",
+              title: "Cryotherapy",
               items: [
-                "Tretinoin, adapalene, and tazarotene for comedonal acne",
-                "Benzoyl peroxide to reduce bacteria and inflammation",
-                "Topical antibiotics like clindamycin for active breakouts",
-                "Topical dapsone for inflammatory acne in adults",
+                "Freezing the wart with liquid nitrogen at extreme temperatures",
+                "The wart tissue dies and falls off within days to weeks",
+                "Quick procedure with minimal discomfort",
+                "Effective for common warts, plantar warts, and flat warts",
               ],
             },
             {
-              title: "Oral Medications",
+              title: "Laser Treatment",
               items: [
-                "Oral antibiotics for moderate to severe inflammatory acne",
-                "Isotretinoin for severe cystic and resistant acne",
-                "Hormonal therapy including oral contraceptives and spironolactone",
-                "Low-dose antibiotics for maintenance therapy",
+                "Pulsed dye laser (PDL) targets blood vessels feeding the wart",
+                "CO2 laser vaporises wart tissue for stubborn or resistant warts",
+                "Precise and effective for difficult-to-treat warts",
+                "Minimal damage to surrounding healthy skin",
               ],
             },
             {
-              title: "Chemical Peels",
+              title: "Topical Medications",
               items: [
-                "Salicylic acid peels for active acne and oil control",
-                "Glycolic acid peels for exfoliation and pigmentation",
-                "Lactic acid peels for sensitive skin types",
-                "Jessner's peel for stubborn comedonal acne",
+                "Salicylic acid preparations for gradual wart removal",
+                "Imiquimod cream stimulates immune response against HPV",
+                "Trichloroacetic acid (TCA) chemical cautery for controlled removal",
+                "Suitable for multiple or clustered warts",
               ],
             },
             {
-              title: "Microneedling for Scars",
+              title: "Surgical Removal",
               items: [
-                "Microneedling with derma roller or pen device",
-                "Platelet-rich plasma (PRP) combined with microneedling",
-                "Radiofrequency microneedling for deep scars",
-                "Multiple sessions for optimal scar reduction",
+                "Electrocautery and curettage for quick, effective removal",
+                "Surgical excision under local anaesthesia for large warts",
+                "Minimally invasive with same-day discharge",
+                "Minimal scarring with proper post-procedure care",
               ],
             },
             {
-              title: "Laser & Light Therapies",
+              title: "Home Care & Prevention",
               items: [
-                "Fractional CO2 laser for acne scar resurfacing",
-                "ND:YAG laser for active acne and inflammation",
-                "Blue light therapy for bacterial reduction",
-                "IPL for post-acne pigmentation and redness",
+                "Proper hygiene to prevent spread to other areas",
+                "Avoiding picking or scratching warts",
+                "Keeping feet clean and dry to prevent plantar warts",
+                "Protective footwear in public pools and gym areas",
               ],
             },
             {
-              title: "Long-Term Skin Health Maintenance",
+              title: "Immunotherapy",
               items: [
-                "Personalised maintenance treatment plans",
-                "Regular follow-up to monitor progress",
-                "Adjustment of treatment based on skin response",
-                "Preventive strategies to reduce recurrence",
+                "Topical immunotherapy for multiple or resistant warts",
+                "DPCP application to stimulate local immune response",
+                "Intralesional immunotherapy for stubborn warts",
+                "Effective for patients with weakened immune systems",
               ],
             },
           ].map((treatment, i) => (
@@ -828,22 +777,22 @@ function WhyChooseSection() {
     {
       icon: Stethoscope,
       title: `Expert Dermatologist`,
-      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of acne — from mild comedonal acne to severe cystic and hormonal acne.`,
+      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of warts using modern, evidence-based techniques.`,
     },
     {
       icon: Microscope,
-      title: "Accurate Diagnosis",
-      desc: "We identify the root cause of your acne — whether it is hormonal imbalance, bacterial overgrowth, clogged pores, or dietary triggers — for targeted and effective treatment.",
+      title: "Advanced Technology",
+      desc: "We use cryotherapy, laser, electrocautery, and other advanced equipment for precise, effective wart removal with minimal discomfort and quick recovery.",
     },
     {
       icon: ShieldCheck,
-      title: "Advanced Treatment Options",
-      desc: "We offer prescription-grade medications, medical-grade chemical peels, microneedling, laser therapy, and isotretinoin — all under expert supervision for safe results.",
+      title: "Safe & Hygienic",
+      desc: "All procedures are performed in a sterilised clinical environment following strict infection control protocols. Your safety is our top priority.",
     },
     {
       icon: Sparkles,
-      title: "Long-Term Skin Health",
-      desc: "Beyond treating active acne, we guide you on maintaining clear skin with personalised advice on skincare routines, products, diet, and lifestyle adjustments.",
+      title: "Comprehensive Care",
+      desc: "From diagnosis to treatment and follow-up, we provide end-to-end care. We also offer preventive advice to reduce recurrence and spread.",
     },
   ];
 
@@ -855,10 +804,11 @@ function WhyChooseSection() {
             Why Choose Us
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Why {CLINIC_NAME} for Acne Treatment?
+            Why {CLINIC_NAME} for Wart Removal?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We combine medical expertise with genuine care to help you achieve clear, healthy skin.
+            We combine medical expertise with modern technology to provide safe and effective wart
+            removal.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -889,18 +839,18 @@ function ProcessSection() {
     },
     {
       step: "02",
-      title: "Skin Assessment",
-      desc: `${DOCTOR_NAME} examines your skin, discusses your acne history and skincare routine, and identifies the underlying cause of your breakouts.`,
+      title: "Wart Assessment",
+      desc: `${DOCTOR_NAME} examines your wart, determines its type and extent, and discusses the most suitable treatment options based on your needs.`,
     },
     {
       step: "03",
-      title: "Personalised Treatment Plan",
-      desc: "A customised treatment plan is created based on your acne type and severity — combining medications, in-clinic procedures, and skincare guidance.",
+      title: "Treatment Procedure",
+      desc: "The chosen treatment — cryotherapy, laser, cautery, or topical — is performed in the clinic. Most procedures are quick and completed in a single session.",
     },
     {
       step: "04",
-      title: "Follow-up & Maintenance",
-      desc: "Regular follow-up visits to assess response, adjust treatment as needed, and establish a long-term skincare routine to prevent recurrence.",
+      title: "Follow-up & Prevention",
+      desc: "We schedule follow-up visits to assess healing, check for recurrence, and provide guidance on preventing spread to other areas or to others.",
     },
   ];
 
@@ -915,7 +865,7 @@ function ProcessSection() {
             Our Treatment Process
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            From your first visit to long-term skin health — here is what you can expect.
+            From your first visit to complete wart clearance — here is what you can expect.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -937,49 +887,44 @@ function ProcessSection() {
 function TipsSection() {
   const tips = [
     {
-      icon: Droplets,
-      title: "Cleanse Gently Twice Daily",
-      desc: "Wash your face with a gentle, non-comedogenic cleanser in the morning and evening. Avoid harsh scrubs that can irritate the skin and worsen inflammation.",
+      title: "Don't Pick or Scratch",
+      desc: "Avoid picking, scratching, or biting warts. This can spread the virus to other parts of your body and increase the risk of infection and scarring.",
     },
     {
-      icon: Wind,
-      title: "Follow a Consistent Skincare Routine",
-      desc: "Use a routine that suits your skin type: cleanse, treat (with prescribed medication), moisturise, and protect with sunscreen. Consistency is key to seeing results.",
+      title: "Keep Hands Clean",
+      desc: "Wash your hands thoroughly after touching a wart. This reduces the risk of spreading the virus to other areas of your body or to other people.",
     },
     {
-      icon: Sun,
-      title: "Protect Your Skin from the Sun",
-      desc: "Sun exposure can darken acne spots and cause pigmentation. Use an oil-free, non-comedogenic sunscreen with SPF 30+ daily, even on cloudy days.",
+      title: "Cover Warts",
+      desc: "Cover warts with a waterproof bandage or tape to prevent contact with others. This is especially important for children to prevent spread at school or during play.",
     },
     {
-      icon: Sparkles,
-      title: "Manage Stress Levels",
-      desc: "Stress can trigger hormonal changes that worsen acne. Incorporate relaxation techniques like meditation, yoga, or deep breathing into your daily routine.",
+      title: "Wear Footwear in Public Areas",
+      desc: "Always wear flip-flops or water shoes in public pools, gym showers, locker rooms, and changing areas to protect against plantar warts.",
     },
     {
-      icon: Scissors,
-      title: "Avoid Picking or Popping Pimples",
-      desc: "Picking at acne lesions pushes bacteria deeper, increases inflammation, delays healing, and causes permanent scarring. Leave extractions to your dermatologist.",
+      title: "Don't Share Personal Items",
+      desc: "Avoid sharing towels, razors, socks, shoes, nail clippers, or other personal items with others. HPV can survive on surfaces and spread through contaminated items.",
     },
     {
-      icon: ShieldCheck,
-      title: "Moisturise Daily",
-      desc: "Even oily, acne-prone skin needs moisturiser. Use a lightweight, oil-free, non-comedogenic moisturiser to keep the skin barrier healthy and prevent irritation from medications.",
+      title: "Keep Feet Dry",
+      desc: "Change socks daily and keep feet clean and dry. Moisture creates an environment where the HPV virus can thrive and increase the risk of developing warts.",
     },
   ];
+
   return (
     <section className="py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Skincare Tips
+            Prevention Tips
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Tips for Managing Acne
+            Tips for Preventing Warts
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Small changes in your skincare routine can make a significant difference in controlling
-            acne and keeping your skin clear.
+            Small changes in your daily habits can help prevent wart infection and reduce the risk
+            of spreading existing warts.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -988,29 +933,25 @@ function TipsSection() {
               key={tip.title}
               className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/5 text-primary">
-                <tip.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 font-display text-base font-bold text-foreground">{tip.title}</h3>
+              <h3 className="font-display text-base font-bold text-foreground">{tip.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{tip.desc}</p>
             </div>
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne skincare routine illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <Sparkles className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Skincare Routine
+                Prevention Tips Illustration
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing a skincare routine for acne-prone skin
+                Replace with an image showing hygiene and prevention tips
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of daily skincare routine for managing acne-prone skin
+                Alt: Illustration showing wart prevention practices
               </p>
             </div>
           </div>
@@ -1023,52 +964,44 @@ function TipsSection() {
 function FAQSection() {
   const faqs = [
     {
-      q: "Can acne be cured permanently?",
-      a: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+      q: "Is wart removal painful?",
+      a: "Cryotherapy and cautery may cause mild discomfort during the procedure, but it is brief and well-tolerated by most patients. Local anaesthesia can be used when needed for larger or more sensitive warts.",
     },
     {
-      q: "How long does acne treatment take to show results?",
-      a: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+      q: "Do warts come back after removal?",
+      a: "There is a small chance of recurrence as warts are caused by a virus (HPV). Multiple sessions may be needed for complete clearance. We provide preventive advice to reduce recurrence and spread.",
     },
     {
-      q: "Can acne scars be removed completely?",
-      a: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+      q: "How many sessions are needed for wart removal?",
+      a: "Most warts resolve in 1–3 sessions. Plantar warts and large warts may require additional treatments. Your dermatologist will recommend a treatment plan based on the type, size, and number of warts.",
     },
     {
-      q: "Is acne treatment painful?",
-      a: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort.",
+      q: "Are warts contagious?",
+      a: "Yes, warts are contagious. HPV can spread through direct skin-to-skin contact or contact with contaminated surfaces. Avoid picking at warts and wash your hands after touching them.",
     },
     {
-      q: "What is the best treatment for cystic acne?",
-      a: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach.",
+      q: "Can warts go away on their own?",
+      a: "Some warts may resolve on their own over months or years, but this is unpredictable. Treatment is recommended to speed up clearance, prevent spread to other areas, and reduce discomfort.",
     },
     {
-      q: "Is acne caused by diet?",
-      a: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+      q: "What is the best treatment for warts?",
+      a: "The best treatment depends on the type, location, and number of warts. Cryotherapy, laser, electrocautery, and topical medications are all effective. Your dermatologist will recommend the most suitable option.",
     },
     {
-      q: "How much does acne treatment cost in Armoor?",
-      a: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+      q: "Can warts spread to other parts of the body?",
+      a: "Yes, warts can spread through direct contact. Picking or scratching a wart can transfer the virus to other areas. Treatment and good hygiene help prevent spread.",
     },
     {
-      q: "Can hormonal acne be treated?",
-      a: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+      q: "Are there home remedies for wart removal?",
+      a: "Over-the-counter treatments like salicylic acid are available, but professional removal is safer and more effective. Home remedies can cause scarring or incomplete removal. We recommend consulting a dermatologist.",
     },
     {
-      q: "Does popping pimples make acne worse?",
-      a: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+      q: "Can I remove a wart at home?",
+      a: "We do not recommend removing warts at home as it can lead to infection, scarring, and incomplete removal. Professional treatment ensures safe, complete removal with minimal discomfort.",
     },
     {
-      q: "What should I avoid during acne treatment?",
-      a: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance.",
-    },
-    {
-      q: "Can adults get acne?",
-      a: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-    },
-    {
-      q: "Is isotretinoin safe for acne treatment?",
-      a: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+      q: "How much does wart removal cost in Armoor?",
+      a: `The cost of wart removal at ${CLINIC_NAME} depends on the type, size, number of warts, and treatment method chosen. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
     },
   ];
 
@@ -1080,7 +1013,7 @@ function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-center text-[15px] text-muted-foreground">
-            Common questions about acne treatment at our clinic in Armoor.
+            Common questions about wart removal treatment at our clinic in Armoor.
           </p>
           <div className="mt-8 space-y-4">
             {faqs.map((faq, i) => (
@@ -1114,27 +1047,27 @@ function FAQSection() {
 function ReviewsSection() {
   const reviews = [
     {
-      name: "Reshma",
+      name: "Srinivas",
       location: "Armoor",
-      text: "I struggled with acne for over 5 years and tried every product on the market. Dr. Raghavendhra diagnosed my condition as hormonal acne and put me on a combination of topical treatment and oral medication. Within 3 months, my skin cleared up significantly. I am so thankful for the personalised care I received.",
+      text: "I had a large wart on my finger that I had for over a year. Dr. Raghavendhra recommended cryotherapy and it was over in minutes. The wart fell off within a week and there is no scar. Very happy with the result.",
       rating: 5,
     },
     {
-      name: "Sandeep",
+      name: "Laxmi",
       location: "Nizamabad",
-      text: "I had severe cystic acne that left me with deep scars. The doctor recommended microneedling sessions along with medical treatment. After 4 sessions, my scars have faded remarkably and my active acne is under control. The clinic is very professional and the doctor explains everything in detail.",
+      text: "My daughter had multiple flat warts on her face. The doctor prescribed a topical cream and after a few weeks the warts cleared completely. She is so much more confident now. Thank you for the gentle care.",
       rating: 5,
     },
     {
-      name: "Anjali",
+      name: "Venkatesh",
       location: "Balkonda",
-      text: "My daughter's acne was getting worse and she was losing confidence. Dr. Raghavendhra was very gentle with her and designed a treatment plan that suited her sensitive skin. The chemical peels and topical medications made a huge difference. Her skin is now clear and glowing.",
+      text: "I had painful plantar warts on my feet that made walking difficult. Dr. Raghavendhra treated them with laser and now I can walk without pain. The procedure was comfortable and the recovery was quick.",
       rating: 5,
     },
     {
-      name: "Mahesh",
+      name: "Rajeshwari",
       location: "Mortad",
-      text: "I came to the clinic with persistent back acne that I had for years. The doctor prescribed a combination of medicated cleansers, topical treatments, and oral medication. The results have been excellent — my back is almost completely clear now. Highly recommend this clinic for acne treatment.",
+      text: "I developed several warts on my hands that kept spreading. The doctor used electrocautery to remove them all in one session. The healing was smooth and there has been no recurrence. Excellent care.",
       rating: 5,
     },
   ];
@@ -1150,7 +1083,7 @@ function ReviewsSection() {
             What Our Patients Say
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Real experiences from patients who have undergone acne treatment at our clinic.
+            Real experiences from patients who have undergone wart removal treatment at our clinic.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -1192,12 +1125,13 @@ function AreasWeServeSection() {
   const areas = [
     { name: "Armoor", isLocal: true },
     { name: "Balkonda" },
-    { name: "Nizamabad" },
     { name: "Mortad" },
-    { name: "Bodhan" },
-    { name: "Kamareddy" },
-    { name: "Yellareddy" },
-    { name: "Sadasivanagar" },
+    { name: "Mupkal" },
+    { name: "Velpur" },
+    { name: "Kammarpally" },
+    { name: "Nandipet" },
+    { name: "Navipet" },
+    { name: "Nizamabad" },
   ];
 
   return (
@@ -1211,9 +1145,9 @@ function AreasWeServeSection() {
             Conveniently Located in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert acne
-            treatment. Our clinic is easily accessible and welcomes patients from all nearby towns
-            and villages.
+            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert wart
+            removal treatment. Our clinic is easily accessible and welcomes patients from all nearby
+            towns and villages.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -1248,15 +1182,12 @@ function AreasWeServeSection() {
 
 function RelatedTreatmentsSection() {
   const related: { name: string; to: string; params?: Record<string, string> }[] = [
+    { name: "Acne Treatment", to: "/treatments/acne-treatment-armoor" },
     { name: "Hair Loss Treatment", to: "/treatments/hair-loss-treatment-armoor" },
     { name: "Psoriasis Treatment", to: "/treatments/psoriasis-treatment-armoor" },
     { name: "Eczema Treatment", to: "/treatments/eczema-treatment-armoor" },
-    {
-      name: "Fungal Infection Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "fungal-infection-treatment" },
-    },
-    { name: "Dandruff Treatment", to: "/treatments/dandruff-treatment-armoor" },
+    { name: "Fungal Infection Treatment", to: "/treatments/fungal-infection-treatment-armoor" },
+    { name: "Dandruff Treatment", to: "/treatments/$slug", params: { slug: "dandruff-treatment" } },
     { name: "Vitiligo Treatment", to: "/treatments/$slug", params: { slug: "vitiligo-treatment" } },
     {
       name: "Pigmentation Treatment",
@@ -1269,9 +1200,8 @@ function RelatedTreatmentsSection() {
       params: { slug: "skin-allergy-treatment" },
     },
     { name: "Nail Disorders", to: "/treatments/$slug", params: { slug: "nail-disorders" } },
-    { name: "Wart Removal", to: "/treatments/$slug", params: { slug: "wart-removal" } },
     { name: "Mole Removal", to: "/treatments/$slug", params: { slug: "mole-removal" } },
-  ].filter((r) => r.name !== "Acne Treatment");
+  ];
 
   return (
     <section className="py-20 sm:py-24">
@@ -1288,7 +1218,7 @@ function RelatedTreatmentsSection() {
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {related.slice(0, 6).map((treatment) => (
+          {related.map((treatment) => (
             <Link
               key={treatment.name}
               to={treatment.to}
@@ -1309,11 +1239,11 @@ function BookingCTA() {
     <section className="py-20" style={{ background: "var(--gradient-navy)" }}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          Ready to Get Clear Skin?
+          Ready to Remove Your Warts?
         </h2>
         <p className="mt-4 text-lg text-white/80">
-          Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Take
-          the first step towards healthy, glowing skin.
+          Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Say
+          goodbye to warts with safe, effective treatment.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link

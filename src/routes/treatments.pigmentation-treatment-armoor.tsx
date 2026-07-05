@@ -13,10 +13,6 @@ import {
   Quote,
   AlertCircle,
   Users,
-  Wind,
-  Droplets,
-  Scissors,
-  Sun,
 } from "lucide-react";
 import {
   CLINIC_NAME,
@@ -31,37 +27,37 @@ import {
   MAP_LINK,
 } from "../lib/clinic-data";
 
-export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
+export const Route = createFileRoute("/treatments/pigmentation-treatment-armoor")({
   head: () => ({
     meta: [
       {
-        title: `Acne Treatment in Armoor | Pimple & Scar Removal | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        title: `Pigmentation Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         name: "description",
-        content: `Expert acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced solutions for pimples, cystic acne, acne scars, and hormonal breakouts at ${CLINIC_NAME}. Book your consultation today.`,
+        content: `Expert pigmentation treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced care for melasma, dark spots, uneven skin tone at ${CLINIC_NAME}. Book your consultation.`,
       },
       { name: "robots", content: "index, follow" },
       {
         property: "og:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        content: `Pigmentation Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         property: "og:description",
-        content: `Effective acne and pimple treatment in Armoor by Dr. Raghavendhra MD, DVL. Advanced therapies for acne scars, cystic acne, and hormonal breakouts at Armoor Skin & Hair Clinic.`,
+        content: `Advanced pigmentation treatment in Armoor by Dr. Raghavendhra MD, DVL. Personalised care for melasma, dark spots, and uneven skin tone at Armoor Skin & Hair Clinic.`,
       },
-      { property: "og:url", content: `${SITE_URL}/treatments/acne-treatment-armoor` },
+      { property: "og:url", content: `${SITE_URL}/treatments/pigmentation-treatment-armoor` },
       { property: "og:type", content: "website" },
       {
         name: "twitter:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME}`,
+        content: `Pigmentation Treatment in Armoor | ${CLINIC_NAME}`,
       },
       {
         name: "twitter:description",
-        content: `Expert acne treatment in Armoor by Dr. Raghavendhra — personalised care for clear, healthy skin.`,
+        content: `Expert pigmentation treatment in Armoor by Dr. Raghavendhra — personalised care for clear, even-toned skin.`,
       },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/acne-treatment-armoor` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/pigmentation-treatment-armoor` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -70,9 +66,9 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
           "@graph": [
             {
               "@type": "MedicalClinic",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#clinic`,
+              "@id": `${SITE_URL}/treatments/pigmentation-treatment-armoor#clinic`,
               name: CLINIC_NAME,
-              description: `Acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
+              description: `Pigmentation treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
               url: SITE_URL,
               telephone: PHONE_TEL,
               address: {
@@ -98,7 +94,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "LocalBusiness",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#business`,
+              "@id": `${SITE_URL}/treatments/pigmentation-treatment-armoor#business`,
               name: CLINIC_NAME,
               image: `${SITE_URL}/og-image.jpg`,
               telephone: PHONE_TEL,
@@ -114,7 +110,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "BreadcrumbList",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#breadcrumbs`,
+              "@id": `${SITE_URL}/treatments/pigmentation-treatment-armoor#breadcrumbs`,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -125,118 +121,102 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "Acne Treatment in Armoor",
-                  item: `${SITE_URL}/treatments/acne-treatment-armoor`,
+                  name: "Pigmentation Treatment in Armoor",
+                  item: `${SITE_URL}/treatments/pigmentation-treatment-armoor`,
                 },
               ],
             },
             {
               "@type": "FAQPage",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#faq`,
+              "@id": `${SITE_URL}/treatments/pigmentation-treatment-armoor#faq`,
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Can acne be cured permanently?",
+                  name: "How many sessions are needed for pigmentation treatment?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+                    text: "Most patients require 4–6 sessions of chemical peels or laser therapy spaced 3–4 weeks apart. Topical treatments show results in 8–12 weeks. The exact number depends on the type and severity of pigmentation.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How long does acne treatment take to show results?",
+                  name: "Is pigmentation treatment permanent?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+                    text: "Results are long-lasting with proper maintenance including sun protection and a consistent skincare routine. Some conditions like melasma may require periodic touch-up sessions to maintain results.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can acne scars be removed completely?",
+                  name: "Can chemical peels treat melasma?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+                    text: "Yes, chemical peels are very effective for melasma when performed by an experienced dermatologist as part of a comprehensive treatment plan. They help reduce excess melanin and improve skin texture.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne treatment painful?",
+                  name: "What causes dark spots on the face?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort. Your dermatologist will ensure you are comfortable throughout the process.",
+                    text: "Dark spots on the face can be caused by sun exposure (sun spots), hormonal changes (melasma), post-inflammatory hyperpigmentation after acne or injury, and certain medications. A dermatologist can identify the specific cause.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What is the best treatment for cystic acne?",
+                  name: "Is laser treatment safe for pigmentation?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach based on your condition.",
+                    text: "Yes, laser treatment is safe and effective for many types of pigmentation when performed by a qualified dermatologist. Different lasers target different pigment types, and your doctor will choose the most suitable one for your skin.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne caused by diet?",
+                  name: "Can pigmentation be treated naturally?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+                    text: "While some home remedies may provide mild improvement, most pigmentation conditions require professional medical treatment for significant and lasting results. Medical-grade peels, topical agents, and lasers are far more effective than natural remedies.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How much does acne treatment cost in Armoor?",
+                  name: "Will pigmentation come back after stopping treatment?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+                    text: "Without maintenance and sun protection, pigmentation can return. Following your dermatologist's advice on sun protection, skincare routine, and periodic touch-ups is essential for maintaining results.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can hormonal acne be treated?",
+                  name: "How much does pigmentation treatment cost in Armoor?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+                    text: `The cost of pigmentation treatment at ${CLINIC_NAME} depends on the type of pigmentation, severity, and treatment modalities required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Does popping pimples make acne worse?",
+                  name: "Are there any side effects of chemical peels for pigmentation?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+                    text: "Chemical peels are generally safe when performed by a trained dermatologist. Mild redness, peeling, and sensitivity may occur for a few days after treatment. Your dermatologist will recommend appropriate post-peel care to minimise any side effects.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What should I avoid during acne treatment?",
+                  name: "Can men get pigmentation treatment?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance for your specific treatment plan.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can adults get acne?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is isotretinoin safe for acne treatment?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+                    text: "Yes, pigmentation treatment is equally effective for men. Many men seek treatment for sun spots, post-inflammatory hyperpigmentation from shaving, and uneven skin tone. Treatments are customised to individual skin types and concerns.",
                   },
                 },
               ],
             },
             {
               "@type": "MedicalProcedure",
-              name: "Acne Treatment in Armoor",
+              name: "Pigmentation Treatment in Armoor",
               description:
-                "Comprehensive acne treatment services including topical and oral medications, chemical peels, microneedling, laser therapy, and personalised skincare plans.",
+                "Comprehensive pigmentation treatment services including chemical peels, topical depigmenting agents, laser therapy, and personalised care plans.",
               provider: {
                 "@type": "MedicalClinic",
                 name: CLINIC_NAME,
@@ -256,10 +236,10 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
       },
     ],
   }),
-  component: AcneTreatmentArmoorPage,
+  component: PigmentationTreatmentArmoorPage,
 });
 
-function AcneTreatmentArmoorPage() {
+function PigmentationTreatmentArmoorPage() {
   return (
     <>
       <HeroSection />
@@ -297,22 +277,21 @@ function HeroSection() {
             Treatments
           </Link>
           <span>/</span>
-          <span className="text-white/90">Acne Treatment in Armoor</span>
+          <span className="text-white/90">Pigmentation Treatment in Armoor</span>
         </nav>
-        {/* IMAGE PLACEHOLDER: Hero image for acne treatment page */}
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
               <Star className="h-3.5 w-3.5 text-gold" />
-              Expert Acne Care in Armoor
+              Expert Pigmentation Care in Armoor
             </div>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              Acne Treatment in Armoor
+              Pigmentation Treatment in Armoor
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
-              Effective acne and pimple treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
-              {QUALIFICATION} — Armoor's trusted dermatologist for personalised acne care, scar
-              treatment, and lasting skin clarity.
+              Effective pigmentation treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
+              {QUALIFICATION} — Armoor's trusted dermatologist for personalised melasma, dark spots,
+              and uneven skin tone care.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -338,7 +317,7 @@ function HeroSection() {
                 {[
                   `Expert dermatologist ${DOCTOR_NAME} ${QUALIFICATION}`,
                   "Customised treatment for all skin types",
-                  "Chemical peels, microneedling & laser therapy",
+                  "Evidence-based pigmentation therapies",
                   "Affordable consultation in Armoor",
                   `${HOURS.weekdayDays}, ${HOURS.weekday}`,
                 ].map((item) => (
@@ -363,56 +342,51 @@ function WhatIsSection() {
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-start">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-              Understanding Acne
+              Understanding Pigmentation
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              What is Acne?
+              What is Pigmentation?
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                Acne is a common skin condition that occurs when hair follicles become clogged with
-                oil (sebum) and dead skin cells. It manifests as pimples, blackheads, whiteheads,
-                and deeper lumps like nodules and cysts. At {CLINIC_NAME}, we treat the root causes
-                of acne — excess oil production, bacteria, inflammation, and clogged pores — for
-                lasting skin clarity.
+                Skin pigmentation refers to the colour of your skin, which is determined by melanin
+                — a pigment produced by specialised cells called melanocytes. When these cells
+                produce too much melanin in certain areas, it leads to dark patches or spots, a
+                condition known as hyperpigmentation.
               </p>
               <p>
-                Acne develops when sebaceous glands produce excess sebum, which mixes with dead skin
-                cells and blocks the follicle opening. The bacterium Cutibacterium acnes (C. acnes)
-                thrives in this environment, triggering inflammation and the formation of red,
-                swollen pimples. Acne most commonly affects the face, chest, back, and shoulders.
+                Hyperpigmentation can appear as small spots (age spots, sun spots), large patches
+                (melasma), or areas of darkened skin following inflammation (post-inflammatory
+                hyperpigmentation). While usually harmless, these dark patches can affect your
+                appearance and self-confidence.
               </p>
               <p>
-                Acne is not just a teenage problem. Many adults, particularly women, experience acne
-                well into their 30s, 40s, and beyond. Hormonal fluctuations, stress, diet, and
-                certain medications can all trigger or worsen breakouts at any age. Effective
-                treatment begins with understanding what is driving your acne.
+                Pigmentation disorders are among the most common dermatological concerns in India,
+                given the tropical climate and high sun exposure. Conditions like melasma, known
+                locally as "masks of pregnancy," affect a significant number of people, especially
+                women, in our region.
               </p>
               <p>
-                A common misconception is that acne is caused by poor hygiene or eating greasy food.
-                While diet can play a role in some individuals, acne is primarily a medical
-                condition driven by hormones, genetics, and bacterial activity. Even people with
-                meticulous skincare routines can experience acne. A dermatologist's evaluation is
-                essential for effective treatment.
+                The good news is that most pigmentation conditions are treatable. With the right
+                combination of professional treatments, sun protection, and skincare, significant
+                improvement can be achieved. Early treatment yields the best results.
               </p>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Acne skin condition */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <AlertCircle className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Condition
+                  Pigmentation Skin Condition
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing acne-affected facial skin
+                  Replace with an image showing pigmentation-affected skin
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing acne breakouts on facial skin including whiteheads,
-                  blackheads, and inflamed pimples
+                  Alt: Illustration showing dark patches and uneven skin tone from hyperpigmentation
                 </p>
               </div>
             </div>
@@ -426,36 +400,36 @@ function WhatIsSection() {
 function SymptomsSection() {
   const symptoms = [
     {
-      title: "Whiteheads",
-      desc: "Small, flesh-coloured or white bumps that form when pores are completely blocked with oil and dead skin. They remain closed at the surface and appear as tiny white spots on the skin.",
+      title: "Dark Patches on Face",
+      desc: "Dark, irregular patches on the cheeks, forehead, bridge of the nose, and upper lip are classic signs of melasma, a common pigmentation disorder.",
     },
     {
-      title: "Blackheads",
-      desc: "Open clogged pores that turn dark due to oxidation of the trapped oil and skin cells on exposure to air. Blackheads are not dirt and can be effectively treated with topical retinoids.",
+      title: "Sun Spots",
+      desc: "Also called solar lentigines or age spots, these are flat, brown spots on sun-exposed areas like the face, hands, shoulders, and arms.",
     },
     {
-      title: "Papules",
-      desc: "Small, red, tender bumps that indicate inflammation in the hair follicle. Papules are a sign of active infection and should not be picked or squeezed as they can worsen inflammation.",
+      title: "Post-Inflammatory Hyperpigmentation",
+      desc: "Dark marks that remain after acne, eczema, insect bites, or minor injuries. These are especially common in darker skin types and can persist for months.",
     },
     {
-      title: "Pustules",
-      desc: "Red bumps with a white or yellow pus-filled centre. These are commonly called pimples or zits and are caused by bacterial activity and inflammation within the blocked pore.",
+      title: "Uneven Skin Tone",
+      desc: "A generalised unevenness in skin colour where some areas appear darker than others, giving the complexion a patchy or blotchy appearance.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, painful lumps beneath the skin surface. Nodular acne is a severe form that requires professional medical treatment and does not respond to over-the-counter products.",
+      title: "Dark Circles",
+      desc: "Periorbital hyperpigmentation presents as dark circles under the eyes. It can be caused by genetics, lack of sleep, allergies, or sun exposure.",
     },
     {
-      title: "Cysts",
-      desc: "Deep, pus-filled, painful lesions that can cause scarring. Cystic acne is the most severe form and requires prompt dermatological intervention including oral medications and drainage.",
+      title: "Freckles",
+      desc: "Small, flat, tan or light-brown spots that appear on sun-exposed skin. While often genetic, they can darken and multiply with sun exposure.",
     },
     {
-      title: "Acne Scars",
-      desc: "Permanent textural changes in the skin that result from severe or poorly treated acne. Scars can be atrophic (depressed) or hypertrophic (raised) and require specialised treatments.",
+      title: "Melasma Patches",
+      desc: "Symmetrical, brown or grey-brown patches on both sides of the face, often triggered by hormonal changes during pregnancy or with oral contraceptive use.",
     },
     {
-      title: "Post-Acne Pigmentation",
-      desc: "Dark spots or red marks that remain after acne lesions heal. This pigmentation can persist for months but responds well to treatments like chemical peels and topical brightening agents.",
+      title: "Dark Knuckles & Elbows",
+      desc: "Localised hyperpigmentation on the knuckles, elbows, and knees can be a normal variant or associated with conditions like insulin resistance.",
     },
   ];
 
@@ -467,14 +441,14 @@ function SymptomsSection() {
             Recognising the Signs
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Common Symptoms of Acne
+            Common Symptoms of Pigmentation
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne symptoms range from mild non-inflammatory comedones to severe painful cysts.
-            Recognising the type and severity helps in choosing the right treatment.
+            Pigmentation disorders can present in various forms. Recognising the type helps in
+            choosing the right treatment approach.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {symptoms.map((s) => (
             <div
               key={s.title}
@@ -486,21 +460,20 @@ function SymptomsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne symptoms illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <AlertCircle className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Symptoms Illustration
+                Pigmentation Symptoms Illustration
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common acne symptoms and lesion types
+                Replace with an infographic showing common pigmentation symptoms
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing different types of acne lesions from whiteheads to cystic
-                acne on facial skin
+                Alt: Illustration showing melasma, sun spots, and uneven skin tone caused by
+                hyperpigmentation
               </p>
             </div>
           </div>
@@ -513,40 +486,40 @@ function SymptomsSection() {
 function CausesSection() {
   const causes = [
     {
-      title: "Excess Oil Production",
-      desc: "Overactive sebaceous glands produce excessive sebum, the natural oil that moisturises the skin. When too much oil is produced, it can combine with dead skin cells to clog hair follicles and trigger acne.",
+      title: "Sun Exposure",
+      desc: "Ultraviolet radiation from the sun is the single most common cause of pigmentation. UV rays stimulate melanocytes to produce excess melanin, leading to sun spots and worsening existing pigmentation.",
     },
     {
-      title: "Clogged Hair Follicles",
-      desc: "Dead skin cells that are not shed properly can accumulate in hair follicles and mix with sebum to form a plug. This creates an ideal environment for bacteria to multiply and cause inflammation.",
+      title: "Hormonal Changes",
+      desc: "Fluctuations in hormones during pregnancy, while using oral contraceptives, or during menopause can trigger melasma. This is why melasma is more common in women.",
     },
     {
-      title: "Bacterial Overgrowth",
-      desc: "Cutibacterium acnes (C. acnes) bacteria naturally live on the skin. When follicles become blocked, these bacteria multiply rapidly, triggering inflammation and the formation of red, pus-filled pimples.",
-    },
-    {
-      title: "Hormonal Fluctuations",
-      desc: "Androgens, hormones that increase during puberty, menstrual cycles, pregnancy, and conditions like PCOS, stimulate sebaceous glands to produce more oil. This is why hormonal acne is common in teenagers and women.",
+      title: "Post-Inflammatory Response",
+      desc: "Any inflammation of the skin — from acne, eczema, insect bites, or injuries — can leave behind dark marks. This is especially common in darker skin tones.",
     },
     {
       title: "Genetics",
-      desc: "A family history of acne increases your likelihood of developing the condition. Genetic factors influence how your sebaceous glands function, how your skin sheds cells, and how your body responds to inflammation.",
-    },
-    {
-      title: "Dietary Triggers",
-      desc: "High-glycemic foods such as refined sugars, white bread, and sugary drinks can spike insulin levels, leading to increased oil production. Dairy products may also trigger breakouts in some individuals.",
-    },
-    {
-      title: "Stress",
-      desc: "Stress triggers the release of cortisol and other hormones that increase sebum production and inflammation. Stress can also slow wound healing, making acne lesions take longer to resolve.",
+      desc: "A family history of pigmentation disorders increases your likelihood of developing them. Some people are genetically predisposed to produce more melanin in response to triggers.",
     },
     {
       title: "Certain Medications",
-      desc: "Some medications can cause or worsen acne, including corticosteroids, lithium, certain anticonvulsants, and hormone-containing medications. Always inform your dermatologist about all medications you are taking.",
+      desc: "Some medications, including certain antibiotics, antimalarials, chemotherapy drugs, and hormone treatments, can cause hyperpigmentation as a side effect.",
     },
     {
-      title: "Skincare & Cosmetic Products",
-      desc: "Oil-based, heavy, or comedogenic skincare and makeup products can clog pores and contribute to acne breakouts. Using non-comedogenic, oil-free products is recommended for acne-prone skin.",
+      title: "Cosmetic Products",
+      desc: "Some cosmetic ingredients, particularly fragrances and essential oils, can cause photosensitivity and lead to pigmentation. Harsh products can also damage the skin barrier.",
+    },
+    {
+      title: "Medical Conditions",
+      desc: "Certain health conditions like Addison's disease, thyroid disorders, and insulin resistance can cause generalised or localised hyperpigmentation.",
+    },
+    {
+      title: "Ageing",
+      desc: "As the skin ages, cumulative sun exposure and natural cellular changes lead to the formation of age spots and uneven pigmentation, especially on frequently exposed areas.",
+    },
+    {
+      title: "Friction & Pressure",
+      desc: "Repeated friction, pressure, or rubbing of the skin can cause post-inflammatory hyperpigmentation, especially in areas like the inner thighs, underarms, and neck.",
     },
   ];
 
@@ -558,11 +531,11 @@ function CausesSection() {
             Causes and Triggers
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            What Causes Acne?
+            What Causes Pigmentation?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne is caused by a combination of factors. Understanding the underlying cause is key to
-            effective treatment and prevention.
+            Pigmentation can result from a combination of internal and external factors. Identifying
+            the underlying cause is key to effective treatment.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -584,36 +557,32 @@ function CausesSection() {
 function TypesSection() {
   const types = [
     {
-      title: "Whiteheads (Closed Comedones)",
-      desc: "Small, flesh-coloured or white bumps that form when a pore is completely blocked by oil and dead skin. The surface remains closed, giving them a white appearance. They are non-inflammatory but can develop into inflamed acne.",
+      title: "Melasma",
+      desc: "A common condition characterised by symmetrical, brown or grey-brown patches on the face — typically on the cheeks, forehead, nose bridge, and upper lip. It is often triggered by hormonal changes and sun exposure.",
     },
     {
-      title: "Blackheads (Open Comedones)",
-      desc: "Open clogged pores where the trapped oil and skin cells are exposed to air and oxidise, turning dark. Blackheads are not dirt and can be effectively treated with topical retinoids and gentle exfoliation.",
+      title: "Solar Lentigines",
+      desc: "Also known as sun spots, age spots, or liver spots. These are flat, well-defined brown spots that appear on sun-exposed areas like the face, hands, chest, and shoulders after years of cumulative sun exposure.",
     },
     {
-      title: "Papules",
-      desc: "Small, red, inflamed bumps that are tender to the touch. Papules indicate that the follicle wall has ruptured, causing inflammation. They do not contain pus and should not be squeezed.",
+      title: "Post-Inflammatory Hyperpigmentation",
+      desc: "Dark marks or spots that develop after skin inflammation or injury. Common causes include acne, eczema, psoriasis, burns, insect bites, and cosmetic procedures. More common in darker skin types.",
     },
     {
-      title: "Pustules",
-      desc: "Red, inflamed bumps with a visible white or yellow pus-filled centre. Pustules are the classic pimple and are caused by the immune system fighting bacterial overgrowth in the blocked follicle.",
+      title: "Freckles",
+      desc: "Small, flat, tan or light-brown spots that are usually genetic. They darken with sun exposure and fade in the absence of UV light. Freckles are more common in people with fair skin.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, firm, and painful lumps beneath the skin surface. Nodular acne does not have a visible head and can persist for weeks. It carries a high risk of scarring and requires oral medications.",
+      title: "Periorbital Hyperpigmentation",
+      desc: "Dark circles under the eyes caused by various factors including genetics, lack of sleep, allergies, sun exposure, and thinning skin revealing underlying blood vessels.",
     },
     {
-      title: "Cystic Acne",
-      desc: "The most severe form of acne, characterised by deep, soft, pus-filled lesions that are extremely painful. Cystic acne often leads to significant scarring and requires aggressive treatment including isotretinoin.",
+      title: "Drug-Induced Hyperpigmentation",
+      desc: "Pigmentation caused by certain medications such as antimalarials, chemotherapy drugs, tetracycline antibiotics, and some hormone therapies. It may appear as grey, blue, or brown patches.",
     },
     {
-      title: "Hormonal Acne",
-      desc: "Acne triggered by hormonal fluctuations, typically appearing along the jawline, chin, and lower cheeks. It is common in adult women and often presents as deep, tender cysts that appear cyclically.",
-    },
-    {
-      title: "Acne Conglobata",
-      desc: "A rare but severe form of inflammatory acne characterised by large, interconnected nodules and abscesses that can cause extensive scarring. It requires immediate and intensive dermatological treatment.",
+      title: "Linea Alba / Nigra",
+      desc: "A dark vertical line that appears on the abdomen during pregnancy, caused by hormonal changes. It usually fades after childbirth without specific treatment.",
     },
   ];
 
@@ -622,14 +591,14 @@ function TypesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Types of Acne
+            Types of Pigmentation
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Different Types of Acne
+            Different Types of Pigmentation Disorders
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne can present in various forms. Identifying the specific type helps guide treatment
-            decisions and improves outcomes.
+            Pigmentation disorders vary in appearance, cause, and treatment approach. Identifying
+            the specific type is essential for effective management.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -658,40 +627,39 @@ function DiagnosisSection() {
               Diagnosis
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              How We Diagnose Acne
+              How We Diagnose Pigmentation
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                At {CLINIC_NAME}, we diagnose acne through a thorough clinical examination of your
-                skin. The appearance, type, and distribution of acne lesions are usually sufficient
-                to determine the type and severity of your condition.
+                At {CLINIC_NAME}, we diagnose pigmentation disorders through a comprehensive
+                evaluation. Our goal is to identify the type, cause, and depth of pigmentation to
+                determine the most effective treatment approach.
               </p>
               <p>
-                We begin by reviewing your medical history, including any history of hormonal
-                disorders like PCOS, medications you are taking, your skincare routine, dietary
-                habits, and any previous acne treatments you may have tried. This comprehensive
-                history helps us identify contributing factors.
+                We begin with a detailed consultation reviewing your medical history, including any
+                hormonal changes, medication use, sun exposure habits, skincare routine, and family
+                history of pigmentation. This helps us identify potential triggers and contributing
+                factors.
               </p>
               <p>
-                A detailed skin examination allows us to grade the severity of acne, identify the
-                types of lesions present (comedones, papules, pustules, nodules, cysts), and assess
-                for scarring and pigmentation. We also evaluate your skin type and oil production
-                levels to tailor treatment appropriately.
+                A thorough skin examination under good lighting allows us to assess the colour,
+                pattern, and distribution of pigmentation. We use a Wood's lamp examination in some
+                cases to determine whether the pigmentation is in the epidermis (surface) or dermis
+                (deeper layer), as this affects treatment selection.
               </p>
               <p>
-                In cases where hormonal acne is suspected, we may recommend blood tests to evaluate
-                hormone levels, including androgens. This helps us determine whether hormonal
-                therapy would be beneficial. We also assess for conditions like PCOS that may
-                underlie persistent acne.
+                In some cases, we may recommend a skin biopsy or dermoscopy to rule out other
+                conditions. This ensures an accurate diagnosis and a targeted treatment plan that
+                delivers the best possible results.
               </p>
             </div>
             <div className="mt-8 space-y-3">
               {[
-                "Comprehensive medical and skincare history review",
-                "Detailed skin examination and acne severity grading",
-                "Identification of acne type and lesion classification",
-                "Assessment of scarring, pigmentation, and skin type",
-                "Hormonal evaluation when indicated",
+                "Comprehensive medical and lifestyle history review",
+                "Detailed skin examination with Wood's lamp analysis",
+                "Identification of pigmentation type and depth",
+                "Dermoscopy or biopsy when needed for confirmation",
+                "Personalised treatment plan based on diagnosis",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -701,21 +669,19 @@ function DiagnosisSection() {
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Dermatologist acne consultation */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <Stethoscope className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Consultation
+                  Dermatologist Consultation
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's facial skin
+                  Replace with a photo of a dermatologist consulting a patient
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist examining a patient's facial skin for acne at Armoor Skin &
-                  Hair Clinic
+                  Alt: Dermatologist examining a patient's skin at Armoor Skin & Hair Clinic
                 </p>
               </div>
             </div>
@@ -735,67 +701,67 @@ function TreatmentsSection() {
             Our Treatments
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Acne Treatments Available in Armoor
+            Pigmentation Treatments Available in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We offer a comprehensive range of evidence-based treatments for all types of acne — from
-            mild comedones to severe cystic acne.
+            We offer a comprehensive range of evidence-based treatments to reduce pigmentation and
+            restore your natural, even complexion.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {[
             {
-              title: "Topical Retinoids & Medications",
+              title: "Medical-Grade Chemical Peels",
               items: [
-                "Tretinoin, adapalene, and tazarotene for comedonal acne",
-                "Benzoyl peroxide to reduce bacteria and inflammation",
-                "Topical antibiotics like clindamycin for active breakouts",
-                "Topical dapsone for inflammatory acne in adults",
+                "Glycolic acid peels for surface pigmentation and skin brightening",
+                "Salicylic acid peels for pigmentation associated with acne",
+                "Kojic acid and mandelic acid peels for melasma",
+                "TCA peels for deeper pigmentation and sun spots",
               ],
             },
             {
-              title: "Oral Medications",
+              title: "Topical Depigmenting Agents",
               items: [
-                "Oral antibiotics for moderate to severe inflammatory acne",
-                "Isotretinoin for severe cystic and resistant acne",
-                "Hormonal therapy including oral contraceptives and spironolactone",
-                "Low-dose antibiotics for maintenance therapy",
+                "Hydroquinone-based creams for targeted pigmentation reduction",
+                "Kojic acid and arbutin formulations for gentle lightening",
+                "Vitamin C serums for antioxidant protection and brightening",
+                "Retinoid creams to accelerate cell turnover and fade dark spots",
               ],
             },
             {
-              title: "Chemical Peels",
+              title: "Laser Therapy",
               items: [
-                "Salicylic acid peels for active acne and oil control",
-                "Glycolic acid peels for exfoliation and pigmentation",
-                "Lactic acid peels for sensitive skin types",
-                "Jessner's peel for stubborn comedonal acne",
+                "Q-switched Nd:YAG laser for deep pigmentation and melasma",
+                "Fractional laser for resurfacing and even skin tone",
+                "IPL (Intense Pulsed Light) for sun spots and freckles",
+                "Low-fluence laser protocols for safe melasma treatment",
               ],
             },
             {
-              title: "Microneedling for Scars",
+              title: "Oral Antioxidants & Supplements",
               items: [
-                "Microneedling with derma roller or pen device",
-                "Platelet-rich plasma (PRP) combined with microneedling",
-                "Radiofrequency microneedling for deep scars",
-                "Multiple sessions for optimal scar reduction",
+                "Oral tranexamic acid for resistant melasma",
+                "Vitamin C and E supplements for antioxidant support",
+                "Glutathione for skin brightening and melanin regulation",
+                "Polypodium leucotomos for sun protection from within",
               ],
             },
             {
-              title: "Laser & Light Therapies",
+              title: "Sun Protection & Prevention",
               items: [
-                "Fractional CO2 laser for acne scar resurfacing",
-                "ND:YAG laser for active acne and inflammation",
-                "Blue light therapy for bacterial reduction",
-                "IPL for post-acne pigmentation and redness",
+                "Medical-grade sunscreen recommendations for your skin type",
+                "Guidance on physical vs chemical sunscreens",
+                "Sun avoidance and protective clothing advice",
+                "Long-term prevention strategies to prevent recurrence",
               ],
             },
             {
-              title: "Long-Term Skin Health Maintenance",
+              title: "Maintenance & Long-Term Care",
               items: [
-                "Personalised maintenance treatment plans",
+                "Periodic touch-up peels and laser sessions",
+                "Customised home skincare regimen",
                 "Regular follow-up to monitor progress",
-                "Adjustment of treatment based on skin response",
-                "Preventive strategies to reduce recurrence",
+                "Lifestyle adjustments to minimise triggers",
               ],
             },
           ].map((treatment, i) => (
@@ -828,22 +794,22 @@ function WhyChooseSection() {
     {
       icon: Stethoscope,
       title: `Expert Dermatologist`,
-      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of acne — from mild comedonal acne to severe cystic and hormonal acne.`,
+      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of pigmentation disorders — from melasma to post-inflammatory hyperpigmentation.`,
     },
     {
       icon: Microscope,
-      title: "Accurate Diagnosis",
-      desc: "We identify the root cause of your acne — whether it is hormonal imbalance, bacterial overgrowth, clogged pores, or dietary triggers — for targeted and effective treatment.",
+      title: "Advanced Technology",
+      desc: "We have access to modern diagnostic tools like Wood's lamp and dermoscopy, as well as advanced treatment modalities including medical-grade peels and laser therapy for optimal results.",
     },
     {
       icon: ShieldCheck,
-      title: "Advanced Treatment Options",
-      desc: "We offer prescription-grade medications, medical-grade chemical peels, microneedling, laser therapy, and isotretinoin — all under expert supervision for safe results.",
+      title: "Customised Treatment Plans",
+      desc: "Every pigmentation case is unique. Your treatment plan is tailored to your pigmentation type, skin type, severity, and lifestyle for the safest and most effective outcomes.",
     },
     {
       icon: Sparkles,
-      title: "Long-Term Skin Health",
-      desc: "Beyond treating active acne, we guide you on maintaining clear skin with personalised advice on skincare routines, products, diet, and lifestyle adjustments.",
+      title: "Focus on Prevention",
+      desc: "We believe in treating pigmentation and preventing its return. Our comprehensive approach includes sun protection counselling, maintenance plans, and long-term skincare guidance.",
     },
   ];
 
@@ -855,10 +821,11 @@ function WhyChooseSection() {
             Why Choose Us
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Why {CLINIC_NAME} for Acne Treatment?
+            Why {CLINIC_NAME} for Pigmentation Treatment?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We combine medical expertise with genuine care to help you achieve clear, healthy skin.
+            We combine medical expertise with modern technology to help you achieve a clear, even
+            complexion.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -889,18 +856,18 @@ function ProcessSection() {
     },
     {
       step: "02",
-      title: "Skin Assessment",
-      desc: `${DOCTOR_NAME} examines your skin, discusses your acne history and skincare routine, and identifies the underlying cause of your breakouts.`,
+      title: "Pigmentation Assessment",
+      desc: `${DOCTOR_NAME} examines your skin, uses Wood's lamp analysis to determine pigmentation depth, and discusses your concerns, triggers, and skincare routine.`,
     },
     {
       step: "03",
       title: "Personalised Treatment Plan",
-      desc: "A customised treatment plan is created based on your acne type and severity — combining medications, in-clinic procedures, and skincare guidance.",
+      desc: "A customised treatment plan is created based on your pigmentation type, skin type, and goals — combining in-clinic procedures, topical agents, and sun protection.",
     },
     {
       step: "04",
       title: "Follow-up & Maintenance",
-      desc: "Regular follow-up visits to assess response, adjust treatment as needed, and establish a long-term skincare routine to prevent recurrence.",
+      desc: "Regular follow-up visits to assess progress, adjust treatment as needed, and ensure long-lasting results with a sustainable maintenance plan.",
     },
   ];
 
@@ -915,7 +882,7 @@ function ProcessSection() {
             Our Treatment Process
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            From your first visit to long-term skin health — here is what you can expect.
+            From your first visit to long-term skin maintenance — here is what you can expect.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -937,34 +904,28 @@ function ProcessSection() {
 function TipsSection() {
   const tips = [
     {
-      icon: Droplets,
-      title: "Cleanse Gently Twice Daily",
-      desc: "Wash your face with a gentle, non-comedogenic cleanser in the morning and evening. Avoid harsh scrubs that can irritate the skin and worsen inflammation.",
+      title: "Wear Sunscreen Daily",
+      desc: "Apply a broad-spectrum sunscreen with SPF 30 or higher every day, even when indoors or during cloudy weather. Reapply every 3-4 hours for adequate protection.",
     },
     {
-      icon: Wind,
-      title: "Follow a Consistent Skincare Routine",
-      desc: "Use a routine that suits your skin type: cleanse, treat (with prescribed medication), moisturise, and protect with sunscreen. Consistency is key to seeing results.",
+      title: "Protect Yourself from the Sun",
+      desc: "Wear a wide-brimmed hat, sunglasses, and protective clothing when outdoors. Avoid direct sun exposure between 10 AM and 4 PM when UV rays are strongest.",
     },
     {
-      icon: Sun,
-      title: "Protect Your Skin from the Sun",
-      desc: "Sun exposure can darken acne spots and cause pigmentation. Use an oil-free, non-comedogenic sunscreen with SPF 30+ daily, even on cloudy days.",
+      title: "Use Gentle Skincare Products",
+      desc: "Avoid harsh scrubs, strong exfoliants, and products with irritating fragrances. Gentle cleansing and moisturising help maintain a healthy skin barrier.",
     },
     {
-      icon: Sparkles,
-      title: "Manage Stress Levels",
-      desc: "Stress can trigger hormonal changes that worsen acne. Incorporate relaxation techniques like meditation, yoga, or deep breathing into your daily routine.",
+      title: "Avoid Picking at Your Skin",
+      desc: "Picking at acne, scabs, or bumps can trigger post-inflammatory hyperpigmentation. Let any blemishes heal naturally and seek professional treatment for acne.",
     },
     {
-      icon: Scissors,
-      title: "Avoid Picking or Popping Pimples",
-      desc: "Picking at acne lesions pushes bacteria deeper, increases inflammation, delays healing, and causes permanent scarring. Leave extractions to your dermatologist.",
+      title: "Follow a Consistent Routine",
+      desc: "Consistency is key in pigmentation treatment. Follow your dermatologist's recommended skincare routine and attend all scheduled follow-up appointments.",
     },
     {
-      icon: ShieldCheck,
-      title: "Moisturise Daily",
-      desc: "Even oily, acne-prone skin needs moisturiser. Use a lightweight, oil-free, non-comedogenic moisturiser to keep the skin barrier healthy and prevent irritation from medications.",
+      title: "Stay Hydrated and Eat Well",
+      desc: "A balanced diet rich in antioxidants (berries, leafy greens, nuts) and adequate water intake support skin health and can help in managing pigmentation.",
     },
   ];
   return (
@@ -972,14 +933,14 @@ function TipsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Skincare Tips
+            Skin Care Tips
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Tips for Managing Acne
+            Tips for Managing Pigmentation
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Small changes in your skincare routine can make a significant difference in controlling
-            acne and keeping your skin clear.
+            Incorporating these habits into your daily routine can help manage pigmentation and
+            prevent new dark spots from forming.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -988,29 +949,25 @@ function TipsSection() {
               key={tip.title}
               className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/5 text-primary">
-                <tip.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 font-display text-base font-bold text-foreground">{tip.title}</h3>
+              <h3 className="font-display text-base font-bold text-foreground">{tip.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{tip.desc}</p>
             </div>
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne skincare routine illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <Sparkles className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Skincare Routine
+                Skin Care Illustration
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing a skincare routine for acne-prone skin
+                Replace with an image showing healthy skincare routine for pigmentation
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of daily skincare routine for managing acne-prone skin
+                Alt: Illustration of daily skincare routine for managing pigmentation
               </p>
             </div>
           </div>
@@ -1023,52 +980,44 @@ function TipsSection() {
 function FAQSection() {
   const faqs = [
     {
-      q: "Can acne be cured permanently?",
-      a: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+      q: "How many sessions are needed for pigmentation treatment?",
+      a: "Most patients require 4–6 sessions of chemical peels or laser therapy spaced 3–4 weeks apart. Topical treatments show visible results in 8–12 weeks. The exact number depends on the type and severity of your pigmentation.",
     },
     {
-      q: "How long does acne treatment take to show results?",
-      a: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+      q: "Is pigmentation treatment permanent?",
+      a: "Results are long-lasting with proper maintenance including sun protection and a consistent skincare routine. Some conditions like melasma may require periodic touch-up sessions to maintain optimal results.",
     },
     {
-      q: "Can acne scars be removed completely?",
-      a: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+      q: "Can chemical peels treat melasma?",
+      a: "Yes, chemical peels are very effective for melasma when performed by an experienced dermatologist as part of a comprehensive treatment plan. They help reduce excess melanin and improve overall skin texture and tone.",
     },
     {
-      q: "Is acne treatment painful?",
-      a: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort.",
+      q: "What causes dark spots on the face?",
+      a: "Dark spots on the face can be caused by sun exposure (sun spots), hormonal changes (melasma), post-inflammatory hyperpigmentation after acne or skin injury, certain medications, and genetic predisposition. A dermatologist can identify the specific cause.",
     },
     {
-      q: "What is the best treatment for cystic acne?",
-      a: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach.",
+      q: "Is laser treatment safe for pigmentation?",
+      a: "Yes, laser treatment is safe and effective for many types of pigmentation when performed by a qualified dermatologist. Different lasers target different pigment types and depths. Your doctor will choose the safest and most suitable option for your skin.",
     },
     {
-      q: "Is acne caused by diet?",
-      a: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+      q: "Can pigmentation be treated naturally?",
+      a: "While some home remedies may provide mild improvement, most pigmentation conditions require professional medical treatment for significant and lasting results. Medical-grade peels, prescription topical agents, and laser therapy are far more effective than natural remedies alone.",
     },
     {
-      q: "How much does acne treatment cost in Armoor?",
-      a: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+      q: "Will pigmentation come back after stopping treatment?",
+      a: "Without proper maintenance and sun protection, pigmentation can return. Following your dermatologist's advice on sun protection, a consistent skincare routine, and periodic touch-up treatments is essential for maintaining results long-term.",
     },
     {
-      q: "Can hormonal acne be treated?",
-      a: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+      q: "Are there any side effects of chemical peels for pigmentation?",
+      a: "Chemical peels are generally safe when performed by a trained dermatologist. Mild redness, peeling, and sensitivity may occur for a few days after treatment. Your dermatologist will recommend appropriate post-peel care to minimise any side effects.",
     },
     {
-      q: "Does popping pimples make acne worse?",
-      a: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+      q: "Can men get pigmentation treatment?",
+      a: "Yes, pigmentation treatment is equally effective for men. Many men seek treatment for sun spots, post-inflammatory hyperpigmentation from shaving, and uneven skin tone. Treatments are customised to individual skin types and concerns.",
     },
     {
-      q: "What should I avoid during acne treatment?",
-      a: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance.",
-    },
-    {
-      q: "Can adults get acne?",
-      a: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-    },
-    {
-      q: "Is isotretinoin safe for acne treatment?",
-      a: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+      q: "How much does pigmentation treatment cost in Armoor?",
+      a: `The cost of pigmentation treatment at ${CLINIC_NAME} depends on the type of pigmentation, severity, and treatment modalities required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
     },
   ];
 
@@ -1080,7 +1029,7 @@ function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-center text-[15px] text-muted-foreground">
-            Common questions about acne treatment at our clinic in Armoor.
+            Common questions about pigmentation treatment at our clinic in Armoor.
           </p>
           <div className="mt-8 space-y-4">
             {faqs.map((faq, i) => (
@@ -1114,27 +1063,27 @@ function FAQSection() {
 function ReviewsSection() {
   const reviews = [
     {
-      name: "Reshma",
+      name: "Priya",
       location: "Armoor",
-      text: "I struggled with acne for over 5 years and tried every product on the market. Dr. Raghavendhra diagnosed my condition as hormonal acne and put me on a combination of topical treatment and oral medication. Within 3 months, my skin cleared up significantly. I am so thankful for the personalised care I received.",
+      text: "I had melasma on my cheeks for years and had tried many creams without success. Dr. Raghavendhra recommended a combination of chemical peels and a topical cream. After 4 sessions, my skin looks so much clearer. I am very happy with the results.",
       rating: 5,
     },
     {
-      name: "Sandeep",
+      name: "Srinivas",
       location: "Nizamabad",
-      text: "I had severe cystic acne that left me with deep scars. The doctor recommended microneedling sessions along with medical treatment. After 4 sessions, my scars have faded remarkably and my active acne is under control. The clinic is very professional and the doctor explains everything in detail.",
+      text: "Sun spots on my hands and face were making me look older than I felt. The laser treatment at the clinic was painless and effective. The spots have faded significantly. Highly recommend the pigmentation treatment here.",
       rating: 5,
     },
     {
       name: "Anjali",
       location: "Balkonda",
-      text: "My daughter's acne was getting worse and she was losing confidence. Dr. Raghavendhra was very gentle with her and designed a treatment plan that suited her sensitive skin. The chemical peels and topical medications made a huge difference. Her skin is now clear and glowing.",
+      text: "After my pregnancy, I developed dark patches on my face that made me very self-conscious. The doctor explained everything clearly and started me on a gentle treatment plan. My skin is looking much more even now. Thank you so much.",
       rating: 5,
     },
     {
-      name: "Mahesh",
+      name: "Venkat",
       location: "Mortad",
-      text: "I came to the clinic with persistent back acne that I had for years. The doctor prescribed a combination of medicated cleansers, topical treatments, and oral medication. The results have been excellent — my back is almost completely clear now. Highly recommend this clinic for acne treatment.",
+      text: "I had dark marks left behind from acne that would not go away. The doctor prescribed a combination of peels and a vitamin C serum. Within a few months, the marks faded dramatically. Great care and very professional.",
       rating: 5,
     },
   ];
@@ -1150,7 +1099,7 @@ function ReviewsSection() {
             What Our Patients Say
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Real experiences from patients who have undergone acne treatment at our clinic.
+            Real experiences from patients who have undergone pigmentation treatment at our clinic.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -1192,12 +1141,13 @@ function AreasWeServeSection() {
   const areas = [
     { name: "Armoor", isLocal: true },
     { name: "Balkonda" },
-    { name: "Nizamabad" },
     { name: "Mortad" },
-    { name: "Bodhan" },
-    { name: "Kamareddy" },
-    { name: "Yellareddy" },
-    { name: "Sadasivanagar" },
+    { name: "Mupkal" },
+    { name: "Velpur" },
+    { name: "Kammarpally" },
+    { name: "Nandipet" },
+    { name: "Navipet" },
+    { name: "Nizamabad" },
   ];
 
   return (
@@ -1211,9 +1161,9 @@ function AreasWeServeSection() {
             Conveniently Located in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert acne
-            treatment. Our clinic is easily accessible and welcomes patients from all nearby towns
-            and villages.
+            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert
+            pigmentation treatment. Our clinic is easily accessible and welcomes patients from all
+            nearby towns and villages.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -1248,30 +1198,28 @@ function AreasWeServeSection() {
 
 function RelatedTreatmentsSection() {
   const related: { name: string; to: string; params?: Record<string, string> }[] = [
+    { name: "Acne Treatment", to: "/treatments/acne-treatment-armoor" },
     { name: "Hair Loss Treatment", to: "/treatments/hair-loss-treatment-armoor" },
-    { name: "Psoriasis Treatment", to: "/treatments/psoriasis-treatment-armoor" },
     { name: "Eczema Treatment", to: "/treatments/eczema-treatment-armoor" },
-    {
-      name: "Fungal Infection Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "fungal-infection-treatment" },
-    },
-    { name: "Dandruff Treatment", to: "/treatments/dandruff-treatment-armoor" },
-    { name: "Vitiligo Treatment", to: "/treatments/$slug", params: { slug: "vitiligo-treatment" } },
-    {
-      name: "Pigmentation Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "pigmentation-treatment" },
-    },
+    { name: "Psoriasis Treatment", to: "/treatments/psoriasis-treatment-armoor" },
+    { name: "Fungal Infection Treatment", to: "/treatments/fungal-infection-treatment-armoor" },
     {
       name: "Skin Allergy Treatment",
       to: "/treatments/$slug",
       params: { slug: "skin-allergy-treatment" },
     },
-    { name: "Nail Disorders", to: "/treatments/$slug", params: { slug: "nail-disorders" } },
-    { name: "Wart Removal", to: "/treatments/$slug", params: { slug: "wart-removal" } },
-    { name: "Mole Removal", to: "/treatments/$slug", params: { slug: "mole-removal" } },
-  ].filter((r) => r.name !== "Acne Treatment");
+    { name: "Vitiligo Treatment", to: "/treatments/$slug", params: { slug: "vitiligo-treatment" } },
+    {
+      name: "Warts Treatment",
+      to: "/treatments/$slug",
+      params: { slug: "warts-treatment" },
+    },
+    {
+      name: "Dandruff Treatment",
+      to: "/treatments/$slug",
+      params: { slug: "dandruff-treatment" },
+    },
+  ];
 
   return (
     <section className="py-20 sm:py-24">
@@ -1288,7 +1236,7 @@ function RelatedTreatmentsSection() {
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {related.slice(0, 6).map((treatment) => (
+          {related.map((treatment) => (
             <Link
               key={treatment.name}
               to={treatment.to}
@@ -1309,11 +1257,11 @@ function BookingCTA() {
     <section className="py-20" style={{ background: "var(--gradient-navy)" }}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          Ready to Get Clear Skin?
+          Ready to Achieve Clear, Even Skin?
         </h2>
         <p className="mt-4 text-lg text-white/80">
           Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Take
-          the first step towards healthy, glowing skin.
+          the first step towards a brighter, more even complexion.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link

@@ -11,12 +11,9 @@ import {
   Star,
   MapPin,
   Quote,
+  Clock,
   AlertCircle,
   Users,
-  Wind,
-  Droplets,
-  Scissors,
-  Sun,
 } from "lucide-react";
 import {
   CLINIC_NAME,
@@ -31,37 +28,37 @@ import {
   MAP_LINK,
 } from "../lib/clinic-data";
 
-export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
+export const Route = createFileRoute("/treatments/hair-loss-treatment-armoor")({
   head: () => ({
     meta: [
       {
-        title: `Acne Treatment in Armoor | Pimple & Scar Removal | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        title: `Hair Loss Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         name: "description",
-        content: `Expert acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced solutions for pimples, cystic acne, acne scars, and hormonal breakouts at ${CLINIC_NAME}. Book your consultation today.`,
+        content: `Expert hair loss treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced solutions for hair loss, thinning, and baldness at ${CLINIC_NAME}. Book your consultation today.`,
       },
       { name: "robots", content: "index, follow" },
       {
         property: "og:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        content: `Hair Loss Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         property: "og:description",
-        content: `Effective acne and pimple treatment in Armoor by Dr. Raghavendhra MD, DVL. Advanced therapies for acne scars, cystic acne, and hormonal breakouts at Armoor Skin & Hair Clinic.`,
+        content: `Effective hair loss treatment in Armoor by Dr. Raghavendhra MD, DVL. Personalised therapies for healthier, fuller hair at Armoor Skin & Hair Clinic.`,
       },
-      { property: "og:url", content: `${SITE_URL}/treatments/acne-treatment-armoor` },
+      { property: "og:url", content: `${SITE_URL}/treatments/hair-loss-treatment-armoor` },
       { property: "og:type", content: "website" },
       {
         name: "twitter:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME}`,
+        content: `Hair Loss Treatment in Armoor | ${CLINIC_NAME}`,
       },
       {
         name: "twitter:description",
-        content: `Expert acne treatment in Armoor by Dr. Raghavendhra — personalised care for clear, healthy skin.`,
+        content: `Expert hair loss treatment in Armoor by Dr. Raghavendhra — personalised care for healthier, fuller hair.`,
       },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/acne-treatment-armoor` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/hair-loss-treatment-armoor` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -70,9 +67,9 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
           "@graph": [
             {
               "@type": "MedicalClinic",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#clinic`,
+              "@id": `${SITE_URL}/treatments/hair-loss-treatment-armoor#clinic`,
               name: CLINIC_NAME,
-              description: `Acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
+              description: `Hair fall and hair loss treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
               url: SITE_URL,
               telephone: PHONE_TEL,
               address: {
@@ -98,7 +95,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "LocalBusiness",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#business`,
+              "@id": `${SITE_URL}/treatments/hair-loss-treatment-armoor#business`,
               name: CLINIC_NAME,
               image: `${SITE_URL}/og-image.jpg`,
               telephone: PHONE_TEL,
@@ -114,7 +111,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "BreadcrumbList",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#breadcrumbs`,
+              "@id": `${SITE_URL}/treatments/hair-loss-treatment-armoor#breadcrumbs`,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -125,118 +122,102 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "Acne Treatment in Armoor",
-                  item: `${SITE_URL}/treatments/acne-treatment-armoor`,
+                  name: "Hair Loss Treatment in Armoor",
+                  item: `${SITE_URL}/treatments/hair-loss-treatment-armoor`,
                 },
               ],
             },
             {
               "@type": "FAQPage",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#faq`,
+              "@id": `${SITE_URL}/treatments/hair-loss-treatment-armoor#faq`,
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Can acne be cured permanently?",
+                  name: "What causes hair loss?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+                    text: "Hair fall can be caused by genetics, hormonal changes, nutritional deficiencies, stress, thyroid disorders, scalp infections, dandruff, certain medications, and lifestyle factors. A thorough evaluation by a dermatologist can help identify the specific cause.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How long does acne treatment take to show results?",
+                  name: "Is hair loss permanent?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+                    text: "Not all hair loss is permanent. Temporary hair shedding caused by stress, nutritional deficiencies, or illness often reverses with proper treatment. However, genetic hair loss (androgenetic alopecia) is progressive and requires ongoing management to slow its progression.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can acne scars be removed completely?",
+                  name: "Can hair grow back after falling out?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+                    text: "In many cases, yes. If the hair follicle is still alive and has not been scarred, hair can regrow with appropriate treatment. Early intervention significantly improves the chances of regrowth.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne treatment painful?",
+                  name: "How long does hair loss treatment take to show results?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort. Your dermatologist will ensure you are comfortable throughout the process.",
+                    text: "Hair growth is a slow process. Most patients notice a reduction in hair loss within 4–8 weeks of starting treatment. Visible new hair growth typically takes 3–6 months, and optimal results may require 6–12 months of consistent treatment.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What is the best treatment for cystic acne?",
+                  name: "Which vitamin deficiency causes hair loss?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach based on your condition.",
+                    text: "Common vitamin deficiencies linked to hair loss include iron (ferritin), vitamin D, vitamin B12, zinc, and biotin. A blood test can identify deficiencies, and correction through diet or supplements can help reduce hair loss.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne caused by diet?",
+                  name: "Does dandruff cause hair loss?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+                    text: "Yes, severe dandruff and scalp inflammation can contribute to hair loss. Itching and scratching can damage hair follicles, and the inflammation can disrupt the normal hair growth cycle. Treating dandruff often helps reduce associated hair loss.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How much does acne treatment cost in Armoor?",
+                  name: "Can stress increase hair loss?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+                    text: "Yes, stress is a well-known trigger for hair loss. Conditions like telogen effluvium (temporary shedding) and trichotillomania (hair pulling) are directly linked to stress. Managing stress through lifestyle changes can help reduce its impact on hair health.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can hormonal acne be treated?",
+                  name: "When should I see a dermatologist for hair loss?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+                    text: "You should consult a dermatologist if you notice sudden or excessive hair shedding, visible thinning, bald patches, receding hairline, or if hair loss is affecting your confidence. Early diagnosis leads to better treatment outcomes.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Does popping pimples make acne worse?",
+                  name: "How much does hair loss treatment cost in Armoor?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+                    text: `The cost of hair loss treatment at ${CLINIC_NAME} varies depending on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What should I avoid during acne treatment?",
+                  name: "Is PRP treatment effective for hair loss?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance for your specific treatment plan.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can adults get acne?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is isotretinoin safe for acne treatment?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+                    text: "PRP (Platelet-Rich Plasma) therapy has shown promising results for certain types of hair loss, particularly androgenetic alopecia. It involves injecting concentrated platelets from your own blood into the scalp to stimulate hair follicles. Our dermatologist can assess if you are a suitable candidate.",
                   },
                 },
               ],
             },
             {
               "@type": "MedicalProcedure",
-              name: "Acne Treatment in Armoor",
+              name: "Hair Loss Treatment in Armoor",
               description:
-                "Comprehensive acne treatment services including topical and oral medications, chemical peels, microneedling, laser therapy, and personalised skincare plans.",
+                "Comprehensive hair loss treatment services including diagnosis, medications, PRP therapy, mesotherapy, and personalised care plans.",
               provider: {
                 "@type": "MedicalClinic",
                 name: CLINIC_NAME,
@@ -256,17 +237,17 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
       },
     ],
   }),
-  component: AcneTreatmentArmoorPage,
+  component: HairLossTreatmentArmoorPage,
 });
 
-function AcneTreatmentArmoorPage() {
+function HairLossTreatmentArmoorPage() {
   return (
     <>
       <HeroSection />
       <WhatIsSection />
-      <SymptomsSection />
+      <SignsSymptomsSection />
       <CausesSection />
-      <TypesSection />
+      <WhoCanExperienceSection />
       <DiagnosisSection />
       <TreatmentsSection />
       <WhyChooseSection />
@@ -297,22 +278,21 @@ function HeroSection() {
             Treatments
           </Link>
           <span>/</span>
-          <span className="text-white/90">Acne Treatment in Armoor</span>
+          <span className="text-white/90">Hair Loss Treatment in Armoor</span>
         </nav>
-        {/* IMAGE PLACEHOLDER: Hero image for acne treatment page */}
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
               <Star className="h-3.5 w-3.5 text-gold" />
-              Expert Acne Care in Armoor
+              Trusted Hair Care in Armoor
             </div>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              Acne Treatment in Armoor
+              Hair Loss Treatment in Armoor
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
-              Effective acne and pimple treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
-              {QUALIFICATION} — Armoor's trusted dermatologist for personalised acne care, scar
-              treatment, and lasting skin clarity.
+              Effective hair loss and hair loss treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
+              {QUALIFICATION} — Armoor's trusted dermatologist for personalised hair care and
+              restoration.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -337,8 +317,8 @@ function HeroSection() {
               <ul className="mt-4 space-y-3">
                 {[
                   `Expert dermatologist ${DOCTOR_NAME} ${QUALIFICATION}`,
-                  "Customised treatment for all skin types",
-                  "Chemical peels, microneedling & laser therapy",
+                  "Personalised treatment for all hair types",
+                  "PRP therapy & advanced hair care",
                   "Affordable consultation in Armoor",
                   `${HOURS.weekdayDays}, ${HOURS.weekday}`,
                 ].map((item) => (
@@ -363,56 +343,52 @@ function WhatIsSection() {
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-start">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-              Understanding Acne
+              Understanding Hair Loss
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              What is Acne?
+              What is Hair Loss?
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                Acne is a common skin condition that occurs when hair follicles become clogged with
-                oil (sebum) and dead skin cells. It manifests as pimples, blackheads, whiteheads,
-                and deeper lumps like nodules and cysts. At {CLINIC_NAME}, we treat the root causes
-                of acne — excess oil production, bacteria, inflammation, and clogged pores — for
-                lasting skin clarity.
+                It is normal to lose 50 to 100 hairs every day as part of the natural hair growth
+                cycle. This is called hair shedding — old hairs fall out to make room for new ones.
+                Most people do not notice this level of shedding.
               </p>
               <p>
-                Acne develops when sebaceous glands produce excess sebum, which mixes with dead skin
-                cells and blocks the follicle opening. The bacterium Cutibacterium acnes (C. acnes)
-                thrives in this environment, triggering inflammation and the formation of red,
-                swollen pimples. Acne most commonly affects the face, chest, back, and shoulders.
+                Hair fall becomes a concern when you begin losing more hair than usual, or when hair
+                does not grow back at the same rate. Excessive hair loss can lead to visible
+                thinning, receding hairlines, and bald patches over time.
               </p>
               <p>
-                Acne is not just a teenage problem. Many adults, particularly women, experience acne
-                well into their 30s, 40s, and beyond. Hormonal fluctuations, stress, diet, and
-                certain medications can all trigger or worsen breakouts at any age. Effective
-                treatment begins with understanding what is driving your acne.
+                <strong>Hair thinning</strong> refers to a gradual reduction in hair density across
+                the scalp, while <strong>hair loss</strong> involves actual shedding where the
+                follicle stops producing hair. It is important to understand the difference between
+                temporary shedding (telogen effluvium) and progressive hair loss (androgenetic
+                alopecia), as the treatment approach differs for each.
               </p>
               <p>
-                A common misconception is that acne is caused by poor hygiene or eating greasy food.
-                While diet can play a role in some individuals, acne is primarily a medical
-                condition driven by hormones, genetics, and bacterial activity. Even people with
-                meticulous skincare routines can experience acne. A dermatologist's evaluation is
-                essential for effective treatment.
+                Temporary hair loss often resolves once the underlying trigger is addressed.
+                Permanent or genetic hair loss requires ongoing management to slow progression and
+                stimulate regrowth. Early evaluation by a dermatologist is the best way to determine
+                which type you are experiencing.
               </p>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Acne skin condition */}
+            {/* IMAGE PLACEHOLDER: Hair thinning illustration */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <AlertCircle className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Condition
+                  Hair Growth Cycle Illustration
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing acne-affected facial skin
+                  Replace with an image showing normal vs. thinning hair
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing acne breakouts on facial skin including whiteheads,
-                  blackheads, and inflamed pimples
+                  Alt: Illustration comparing healthy hair density to thinning hair
                 </p>
               </div>
             </div>
@@ -423,39 +399,35 @@ function WhatIsSection() {
   );
 }
 
-function SymptomsSection() {
-  const symptoms = [
+function SignsSymptomsSection() {
+  const signs = [
     {
-      title: "Whiteheads",
-      desc: "Small, flesh-coloured or white bumps that form when pores are completely blocked with oil and dead skin. They remain closed at the surface and appear as tiny white spots on the skin.",
+      title: "Excessive Hair Shedding",
+      desc: "Finding large amounts of hair on your pillow, in the shower drain, or on your hairbrush. Losing more than 100–150 hairs per day is considered excessive.",
     },
     {
-      title: "Blackheads",
-      desc: "Open clogged pores that turn dark due to oxidation of the trapped oil and skin cells on exposure to air. Blackheads are not dirt and can be effectively treated with topical retinoids.",
+      title: "Thinning Hair",
+      desc: "Gradual reduction in hair volume, especially on the crown or top of the scalp. The hair may feel less dense and the scalp may become more visible.",
     },
     {
-      title: "Papules",
-      desc: "Small, red, tender bumps that indicate inflammation in the hair follicle. Papules are a sign of active infection and should not be picked or squeezed as they can worsen inflammation.",
+      title: "Receding Hairline",
+      desc: "The hairline moves backward, typically starting at the temples. This is a common early sign of genetic hair loss in both men and women.",
     },
     {
-      title: "Pustules",
-      desc: "Red bumps with a white or yellow pus-filled centre. These are commonly called pimples or zits and are caused by bacterial activity and inflammation within the blocked pore.",
+      title: "Bald Patches",
+      desc: "Circular or patchy areas of complete hair loss on the scalp. This may indicate alopecia areata or other medical conditions requiring prompt evaluation.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, painful lumps beneath the skin surface. Nodular acne is a severe form that requires professional medical treatment and does not respond to over-the-counter products.",
+      title: "Hair Breakage",
+      desc: "Hair becomes brittle and breaks off easily, often due to damage, nutritional deficiencies, or underlying scalp conditions.",
     },
     {
-      title: "Cysts",
-      desc: "Deep, pus-filled, painful lesions that can cause scarring. Cystic acne is the most severe form and requires prompt dermatological intervention including oral medications and drainage.",
+      title: "Widening Part Line",
+      desc: "The part line on your scalp becomes noticeably wider over time. This is often one of the earliest signs of female pattern hair loss.",
     },
     {
-      title: "Acne Scars",
-      desc: "Permanent textural changes in the skin that result from severe or poorly treated acne. Scars can be atrophic (depressed) or hypertrophic (raised) and require specialised treatments.",
-    },
-    {
-      title: "Post-Acne Pigmentation",
-      desc: "Dark spots or red marks that remain after acne lesions heal. This pigmentation can persist for months but responds well to treatments like chemical peels and topical brightening agents.",
+      title: "Reduced Hair Density",
+      desc: "The overall fullness and thickness of your hair decreases. Ponytails may feel thinner, and the scalp may be more visible under bright light.",
     },
   ];
 
@@ -467,40 +439,39 @@ function SymptomsSection() {
             Recognising the Signs
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Common Symptoms of Acne
+            Common Signs and Symptoms
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne symptoms range from mild non-inflammatory comedones to severe painful cysts.
-            Recognising the type and severity helps in choosing the right treatment.
+            Hair fall can present in different ways. Recognising these signs early can help you seek
+            treatment at the right time.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {symptoms.map((s) => (
+          {signs.map((sign) => (
             <div
-              key={s.title}
+              key={sign.title}
               className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <h3 className="font-display text-base font-bold text-foreground">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+              <h3 className="font-display text-base font-bold text-foreground">{sign.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{sign.desc}</p>
             </div>
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne symptoms illustration */}
+          {/* IMAGE PLACEHOLDER: Signs of hair loss illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <AlertCircle className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Symptoms Illustration
+                Hair Loss Symptoms Illustration
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common acne symptoms and lesion types
+                Replace with an infographic showing common signs of hair loss
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing different types of acne lesions from whiteheads to cystic
-                acne on facial skin
+                Alt: Illustration showing receding hairline, thinning crown, and widening part line
               </p>
             </div>
           </div>
@@ -513,40 +484,44 @@ function SymptomsSection() {
 function CausesSection() {
   const causes = [
     {
-      title: "Excess Oil Production",
-      desc: "Overactive sebaceous glands produce excessive sebum, the natural oil that moisturises the skin. When too much oil is produced, it can combine with dead skin cells to clog hair follicles and trigger acne.",
-    },
-    {
-      title: "Clogged Hair Follicles",
-      desc: "Dead skin cells that are not shed properly can accumulate in hair follicles and mix with sebum to form a plug. This creates an ideal environment for bacteria to multiply and cause inflammation.",
-    },
-    {
-      title: "Bacterial Overgrowth",
-      desc: "Cutibacterium acnes (C. acnes) bacteria naturally live on the skin. When follicles become blocked, these bacteria multiply rapidly, triggering inflammation and the formation of red, pus-filled pimples.",
-    },
-    {
-      title: "Hormonal Fluctuations",
-      desc: "Androgens, hormones that increase during puberty, menstrual cycles, pregnancy, and conditions like PCOS, stimulate sebaceous glands to produce more oil. This is why hormonal acne is common in teenagers and women.",
-    },
-    {
       title: "Genetics",
-      desc: "A family history of acne increases your likelihood of developing the condition. Genetic factors influence how your sebaceous glands function, how your skin sheds cells, and how your body responds to inflammation.",
+      desc: "Family history is the most common cause of hair loss. Androgenetic alopecia (male or female pattern baldness) is hereditary and progressive.",
     },
     {
-      title: "Dietary Triggers",
-      desc: "High-glycemic foods such as refined sugars, white bread, and sugary drinks can spike insulin levels, leading to increased oil production. Dairy products may also trigger breakouts in some individuals.",
+      title: "Hormonal Imbalance",
+      desc: "Changes in hormone levels — including pregnancy, menopause, and thyroid disorders — can trigger temporary or persistent hair loss.",
+    },
+    {
+      title: "Nutritional Deficiencies",
+      desc: "Low levels of iron, vitamin D, vitamin B12, zinc, and biotin are strongly linked to hair thinning and increased shedding.",
     },
     {
       title: "Stress",
-      desc: "Stress triggers the release of cortisol and other hormones that increase sebum production and inflammation. Stress can also slow wound healing, making acne lesions take longer to resolve.",
+      desc: "Physical or emotional stress can push hair follicles into a resting phase, causing noticeable shedding 2–3 months after the stressful event.",
+    },
+    {
+      title: "Thyroid Disorders",
+      desc: "Both hyperthyroidism and hypothyroidism can disrupt the hair growth cycle. Treating the underlying thyroid condition often improves hair health.",
+    },
+    {
+      title: "PCOS",
+      desc: "Polycystic Ovary Syndrome causes hormonal imbalances that can lead to thinning hair on the scalp along with excess facial or body hair.",
+    },
+    {
+      title: "Scalp Infections",
+      desc: "Fungal or bacterial infections of the scalp, such as ringworm, can cause patchy hair loss and scaling. These are treatable with medications.",
+    },
+    {
+      title: "Dandruff & Scalp Inflammation",
+      desc: "Chronic dandruff and seborrheic dermatitis create an unhealthy scalp environment that weakens hair follicles and increases shedding.",
     },
     {
       title: "Certain Medications",
-      desc: "Some medications can cause or worsen acne, including corticosteroids, lithium, certain anticonvulsants, and hormone-containing medications. Always inform your dermatologist about all medications you are taking.",
+      desc: "Some drugs — including blood thinners, antidepressants, chemotherapy drugs, and high-dose vitamin A — can cause temporary hair loss.",
     },
     {
-      title: "Skincare & Cosmetic Products",
-      desc: "Oil-based, heavy, or comedogenic skincare and makeup products can clog pores and contribute to acne breakouts. Using non-comedogenic, oil-free products is recommended for acne-prone skin.",
+      title: "Lifestyle Factors",
+      desc: "Poor diet, smoking, excessive alcohol consumption, lack of sleep, and crash dieting can all contribute to hair loss by affecting overall health.",
     },
   ];
 
@@ -555,14 +530,14 @@ function CausesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Causes and Triggers
+            Why It Happens
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            What Causes Acne?
+            Causes of Hair Loss
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne is caused by a combination of factors. Understanding the underlying cause is key to
-            effective treatment and prevention.
+            Hair fall can result from a combination of factors. Identifying the root cause is the
+            first step toward effective treatment.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -581,65 +556,56 @@ function CausesSection() {
   );
 }
 
-function TypesSection() {
-  const types = [
-    {
-      title: "Whiteheads (Closed Comedones)",
-      desc: "Small, flesh-coloured or white bumps that form when a pore is completely blocked by oil and dead skin. The surface remains closed, giving them a white appearance. They are non-inflammatory but can develop into inflamed acne.",
-    },
-    {
-      title: "Blackheads (Open Comedones)",
-      desc: "Open clogged pores where the trapped oil and skin cells are exposed to air and oxidise, turning dark. Blackheads are not dirt and can be effectively treated with topical retinoids and gentle exfoliation.",
-    },
-    {
-      title: "Papules",
-      desc: "Small, red, inflamed bumps that are tender to the touch. Papules indicate that the follicle wall has ruptured, causing inflammation. They do not contain pus and should not be squeezed.",
-    },
-    {
-      title: "Pustules",
-      desc: "Red, inflamed bumps with a visible white or yellow pus-filled centre. Pustules are the classic pimple and are caused by the immune system fighting bacterial overgrowth in the blocked follicle.",
-    },
-    {
-      title: "Nodules",
-      desc: "Large, deep, firm, and painful lumps beneath the skin surface. Nodular acne does not have a visible head and can persist for weeks. It carries a high risk of scarring and requires oral medications.",
-    },
-    {
-      title: "Cystic Acne",
-      desc: "The most severe form of acne, characterised by deep, soft, pus-filled lesions that are extremely painful. Cystic acne often leads to significant scarring and requires aggressive treatment including isotretinoin.",
-    },
-    {
-      title: "Hormonal Acne",
-      desc: "Acne triggered by hormonal fluctuations, typically appearing along the jawline, chin, and lower cheeks. It is common in adult women and often presents as deep, tender cysts that appear cyclically.",
-    },
-    {
-      title: "Acne Conglobata",
-      desc: "A rare but severe form of inflammatory acne characterised by large, interconnected nodules and abscesses that can cause extensive scarring. It requires immediate and intensive dermatological treatment.",
-    },
-  ];
-
+function WhoCanExperienceSection() {
   return (
     <section className="bg-secondary/40 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Types of Acne
+            Who Is Affected
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Different Types of Acne
+            Who Can Experience Hair Loss?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne can present in various forms. Identifying the specific type helps guide treatment
-            decisions and improves outcomes.
+            Hair fall does not discriminate. It can affect anyone, though the underlying causes may
+            vary from person to person.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {types.map((type) => (
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              icon: Users,
+              title: "Men",
+              desc: "Male pattern baldness is the most common type of hair loss in men, often starting with a receding hairline and thinning crown. It can begin as early as the late teens or early twenties.",
+            },
+            {
+              icon: Users,
+              title: "Women",
+              desc: "Female pattern hair loss typically presents as diffuse thinning over the top of the scalp. Hormonal changes during pregnancy, postpartum, and menopause are common triggers.",
+            },
+            {
+              icon: Users,
+              title: "Teenagers",
+              desc: "Hair fall in teenagers is often linked to nutritional deficiencies, stress, hormonal changes during puberty, or conditions like PCOS. Early treatment yields good results.",
+            },
+            {
+              icon: Users,
+              title: "Older Adults",
+              desc: "Age-related hair thinning is natural, but underlying medical conditions, medications, and reduced nutrient absorption can worsen hair loss in older adults.",
+            },
+          ].map((group) => (
             <div
-              key={type.title}
-              className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
+              key={group.title}
+              className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <h3 className="font-display text-base font-bold text-foreground">{type.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{type.desc}</p>
+              <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/5 text-primary">
+                <group.icon className="h-6 w-6" />
+              </div>
+              <h3 className="mt-5 font-display text-base font-bold text-foreground">
+                {group.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{group.desc}</p>
             </div>
           ))}
         </div>
@@ -658,40 +624,37 @@ function DiagnosisSection() {
               Diagnosis
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              How We Diagnose Acne
+              How We Diagnose Hair Loss
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                At {CLINIC_NAME}, we diagnose acne through a thorough clinical examination of your
-                skin. The appearance, type, and distribution of acne lesions are usually sufficient
-                to determine the type and severity of your condition.
+                At {CLINIC_NAME}, we take a thorough and systematic approach to diagnosing hair
+                fall. Every patient receives a detailed evaluation to identify the root cause before
+                any treatment begins.
               </p>
               <p>
-                We begin by reviewing your medical history, including any history of hormonal
-                disorders like PCOS, medications you are taking, your skincare routine, dietary
-                habits, and any previous acne treatments you may have tried. This comprehensive
-                history helps us identify contributing factors.
+                Your consultation will include a review of your medical history, lifestyle, diet,
+                and any medications you are taking. This helps us understand factors that may be
+                contributing to your hair loss.
               </p>
               <p>
-                A detailed skin examination allows us to grade the severity of acne, identify the
-                types of lesions present (comedones, papules, pustules, nodules, cysts), and assess
-                for scarring and pigmentation. We also evaluate your skin type and oil production
-                levels to tailor treatment appropriately.
+                We perform a careful scalp examination using good lighting and, when necessary, a
+                dermatoscope to assess your scalp and hair follicle health. The hair pull test helps
+                determine the severity of active shedding.
               </p>
               <p>
-                In cases where hormonal acne is suspected, we may recommend blood tests to evaluate
-                hormone levels, including androgens. This helps us determine whether hormonal
-                therapy would be beneficial. We also assess for conditions like PCOS that may
-                underlie persistent acne.
+                If indicated, we may recommend blood tests to check for nutritional deficiencies
+                (iron, vitamin D, zinc, B12), thyroid function, and hormonal imbalances. Based on
+                the findings, a personalised treatment plan is created specifically for you.
               </p>
             </div>
             <div className="mt-8 space-y-3">
               {[
-                "Comprehensive medical and skincare history review",
-                "Detailed skin examination and acne severity grading",
-                "Identification of acne type and lesion classification",
-                "Assessment of scarring, pigmentation, and skin type",
-                "Hormonal evaluation when indicated",
+                "Detailed medical history review",
+                "Scalp and hair follicle examination",
+                "Hair pull test for shedding assessment",
+                "Blood tests when necessary (iron, vitamins, thyroid, hormones)",
+                "Personalised diagnosis and treatment plan",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -701,21 +664,18 @@ function DiagnosisSection() {
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Dermatologist acne consultation */}
+            {/* IMAGE PLACEHOLDER: Scalp examination */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <Stethoscope className="h-8 w-8" />
                 </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Consultation
+                <p className="mt-4 text-sm font-medium text-muted-foreground">Scalp Examination</p>
+                <p className="mt-1 text-xs text-muted-foreground/60">
+                  Replace with a photo of a dermatologist examining a patient's scalp
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's facial skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist examining a patient's facial skin for acne at Armoor Skin &
-                  Hair Clinic
+                  Alt: Dermatologist performing scalp examination at Armoor Skin & Hair Clinic
                 </p>
               </div>
             </div>
@@ -735,67 +695,67 @@ function TreatmentsSection() {
             Our Treatments
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Acne Treatments Available in Armoor
+            Hair Loss Treatments Available in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We offer a comprehensive range of evidence-based treatments for all types of acne — from
-            mild comedones to severe cystic acne.
+            We offer a range of evidence-based treatments tailored to your specific type and cause
+            of hair loss.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {[
             {
-              title: "Topical Retinoids & Medications",
+              title: "Medications",
               items: [
-                "Tretinoin, adapalene, and tazarotene for comedonal acne",
-                "Benzoyl peroxide to reduce bacteria and inflammation",
-                "Topical antibiotics like clindamycin for active breakouts",
-                "Topical dapsone for inflammatory acne in adults",
+                "Topical minoxidil to stimulate hair growth",
+                "Oral finasteride for male pattern hair loss (under medical supervision)",
+                "Anti-androgen therapy for hormonally related hair loss in women",
+                "Vitamin and mineral supplements to correct deficiencies",
               ],
             },
             {
-              title: "Oral Medications",
+              title: "Nutritional Correction",
               items: [
-                "Oral antibiotics for moderate to severe inflammatory acne",
-                "Isotretinoin for severe cystic and resistant acne",
-                "Hormonal therapy including oral contraceptives and spironolactone",
-                "Low-dose antibiotics for maintenance therapy",
+                "Personalised dietary guidance for hair health",
+                "Iron, vitamin D, zinc, and biotin supplementation",
+                "Protein intake optimisation",
+                "Addressing deficiencies identified through blood tests",
               ],
             },
             {
-              title: "Chemical Peels",
+              title: "PRP Therapy",
               items: [
-                "Salicylic acid peels for active acne and oil control",
-                "Glycolic acid peels for exfoliation and pigmentation",
-                "Lactic acid peels for sensitive skin types",
-                "Jessner's peel for stubborn comedonal acne",
+                "Platelet-Rich Plasma injections to stimulate hair follicles",
+                "Uses your own blood components for natural regeneration",
+                "Recommended for androgenetic alopecia and thinning hair",
+                "Series of sessions for optimal results",
               ],
             },
             {
-              title: "Microneedling for Scars",
+              title: "Scalp Care & Dandruff Management",
               items: [
-                "Microneedling with derma roller or pen device",
-                "Platelet-rich plasma (PRP) combined with microneedling",
-                "Radiofrequency microneedling for deep scars",
-                "Multiple sessions for optimal scar reduction",
+                "Medicated shampoos and scalp treatments",
+                "Management of seborrheic dermatitis and scalp inflammation",
+                "Reducing itch and irritation that worsen hair loss",
+                "Regular scalp care routine guidance",
               ],
             },
             {
-              title: "Laser & Light Therapies",
+              title: "Lifestyle Guidance",
               items: [
-                "Fractional CO2 laser for acne scar resurfacing",
-                "ND:YAG laser for active acne and inflammation",
-                "Blue light therapy for bacterial reduction",
-                "IPL for post-acne pigmentation and redness",
+                "Stress management techniques",
+                "Sleep hygiene recommendations",
+                "Dietary improvements for better hair health",
+                "Avoiding hairstyles and practices that damage hair",
               ],
             },
             {
-              title: "Long-Term Skin Health Maintenance",
+              title: "Ongoing Monitoring",
               items: [
-                "Personalised maintenance treatment plans",
-                "Regular follow-up to monitor progress",
-                "Adjustment of treatment based on skin response",
-                "Preventive strategies to reduce recurrence",
+                "Regular follow-up visits to track progress",
+                "Adjustments to treatment based on response",
+                "Hair growth assessment at each visit",
+                "Long-term maintenance plans",
               ],
             },
           ].map((treatment, i) => (
@@ -828,22 +788,22 @@ function WhyChooseSection() {
     {
       icon: Stethoscope,
       title: `Expert Dermatologist`,
-      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of acne — from mild comedonal acne to severe cystic and hormonal acne.`,
+      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of hair loss — from temporary shedding to genetic baldness.`,
     },
     {
       icon: Microscope,
-      title: "Accurate Diagnosis",
-      desc: "We identify the root cause of your acne — whether it is hormonal imbalance, bacterial overgrowth, clogged pores, or dietary triggers — for targeted and effective treatment.",
+      title: "Thorough Diagnosis",
+      desc: "We do not guess. Every patient receives a detailed scalp examination and, when needed, blood tests to identify the exact cause of hair loss before treatment begins.",
     },
     {
       icon: ShieldCheck,
-      title: "Advanced Treatment Options",
-      desc: "We offer prescription-grade medications, medical-grade chemical peels, microneedling, laser therapy, and isotretinoin — all under expert supervision for safe results.",
+      title: "Personalised Treatment",
+      desc: "Your hair loss treatment plan is tailored to your specific condition, hair type, lifestyle, and goals. No two treatment plans are the same.",
     },
     {
       icon: Sparkles,
-      title: "Long-Term Skin Health",
-      desc: "Beyond treating active acne, we guide you on maintaining clear skin with personalised advice on skincare routines, products, diet, and lifestyle adjustments.",
+      title: "Patient Education",
+      desc: "We believe in empowering you with knowledge. You will understand your condition, the treatment options, and how to maintain healthy hair at home.",
     },
   ];
 
@@ -855,10 +815,11 @@ function WhyChooseSection() {
             Why Choose Us
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Why {CLINIC_NAME} for Acne Treatment?
+            Why {CLINIC_NAME} for Hair Loss Treatment?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We combine medical expertise with genuine care to help you achieve clear, healthy skin.
+            We combine medical expertise with genuine care to help you achieve healthier, fuller
+            hair.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -889,18 +850,18 @@ function ProcessSection() {
     },
     {
       step: "02",
-      title: "Skin Assessment",
-      desc: `${DOCTOR_NAME} examines your skin, discusses your acne history and skincare routine, and identifies the underlying cause of your breakouts.`,
+      title: "Hair & Scalp Examination",
+      desc: `${DOCTOR_NAME} evaluates your scalp and hair, discusses your medical history, and performs necessary assessments to identify the cause.`,
     },
     {
       step: "03",
       title: "Personalised Treatment Plan",
-      desc: "A customised treatment plan is created based on your acne type and severity — combining medications, in-clinic procedures, and skincare guidance.",
+      desc: "A customised treatment plan is created based on your diagnosis — combining medications, procedures, and lifestyle recommendations.",
     },
     {
       step: "04",
-      title: "Follow-up & Maintenance",
-      desc: "Regular follow-up visits to assess response, adjust treatment as needed, and establish a long-term skincare routine to prevent recurrence.",
+      title: "Follow-up & Monitoring",
+      desc: "Regular follow-up visits to track your progress, adjust treatment as needed, and ensure you achieve the best possible results.",
     },
   ];
 
@@ -915,7 +876,7 @@ function ProcessSection() {
             Our Treatment Process
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            From your first visit to long-term skin health — here is what you can expect.
+            From your first visit to long-term hair health — here is what you can expect.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -937,34 +898,36 @@ function ProcessSection() {
 function TipsSection() {
   const tips = [
     {
-      icon: Droplets,
-      title: "Cleanse Gently Twice Daily",
-      desc: "Wash your face with a gentle, non-comedogenic cleanser in the morning and evening. Avoid harsh scrubs that can irritate the skin and worsen inflammation.",
+      title: "Eat a Balanced Diet",
+      desc: "Include protein-rich foods (eggs, fish, legumes), iron-rich greens, and vitamin-rich fruits in your daily meals. Hair is made of protein, and deficiencies directly impact growth.",
     },
     {
-      icon: Wind,
-      title: "Follow a Consistent Skincare Routine",
-      desc: "Use a routine that suits your skin type: cleanse, treat (with prescribed medication), moisturise, and protect with sunscreen. Consistency is key to seeing results.",
+      title: "Prioritise Protein Intake",
+      desc: "Since hair is primarily composed of keratin (a protein), insufficient protein intake can slow hair growth and lead to brittle, weak hair.",
     },
     {
-      icon: Sun,
-      title: "Protect Your Skin from the Sun",
-      desc: "Sun exposure can darken acne spots and cause pigmentation. Use an oil-free, non-comedogenic sunscreen with SPF 30+ daily, even on cloudy days.",
+      title: "Include Iron & Vitamin-Rich Foods",
+      desc: "Leafy greens, nuts, seeds, citrus fruits, and dairy products provide essential nutrients like iron, vitamin C, vitamin D, and zinc that support healthy hair growth.",
     },
     {
-      icon: Sparkles,
-      title: "Manage Stress Levels",
-      desc: "Stress can trigger hormonal changes that worsen acne. Incorporate relaxation techniques like meditation, yoga, or deep breathing into your daily routine.",
+      title: "Be Gentle With Your Hair",
+      desc: "Avoid tight hairstyles, excessive brushing, hot styling tools, and chemical treatments. Use a wide-tooth comb and let hair air-dry when possible.",
     },
     {
-      icon: Scissors,
-      title: "Avoid Picking or Popping Pimples",
-      desc: "Picking at acne lesions pushes bacteria deeper, increases inflammation, delays healing, and causes permanent scarring. Leave extractions to your dermatologist.",
+      title: "Manage Stress Effectively",
+      desc: "Chronic stress can trigger or worsen hair loss. Incorporate relaxation techniques like meditation, deep breathing, or gentle exercise into your routine.",
     },
     {
-      icon: ShieldCheck,
-      title: "Moisturise Daily",
-      desc: "Even oily, acne-prone skin needs moisturiser. Use a lightweight, oil-free, non-comedogenic moisturiser to keep the skin barrier healthy and prevent irritation from medications.",
+      title: "Get Adequate Sleep",
+      desc: "Your body repairs and regenerates cells, including hair follicles, during sleep. Aim for 7–8 hours of quality sleep each night.",
+    },
+    {
+      title: "Avoid Harsh Chemicals",
+      desc: "Limit the use of hair dyes, bleaches, perms, and relaxers. When you do use them, opt for gentle, ammonia-free products and space out treatments.",
+    },
+    {
+      title: "Seek Help Early",
+      desc: "If you notice persistent or excessive hair loss, consult a dermatologist promptly. Early intervention significantly improves treatment outcomes.",
     },
   ];
   return (
@@ -972,45 +935,42 @@ function TipsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Skincare Tips
+            Hair Care Tips
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Tips for Managing Acne
+            Hair Care Tips for Healthier Hair
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Small changes in your skincare routine can make a significant difference in controlling
-            acne and keeping your skin clear.
+            Small changes in your daily routine can make a big difference in maintaining healthy
+            hair and reducing hair loss.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {tips.map((tip) => (
             <div
               key={tip.title}
               className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/5 text-primary">
-                <tip.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 font-display text-base font-bold text-foreground">{tip.title}</h3>
+              <h3 className="font-display text-base font-bold text-foreground">{tip.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{tip.desc}</p>
             </div>
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne skincare routine illustration */}
+          {/* IMAGE PLACEHOLDER: Healthy hair illustration */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <Sparkles className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Skincare Routine
+                Healthy Hair Illustration
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing a skincare routine for acne-prone skin
+                Replace with an image showing healthy, well-maintained hair
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of daily skincare routine for managing acne-prone skin
+                Alt: Illustration of healthy, strong hair after treatment
               </p>
             </div>
           </div>
@@ -1023,52 +983,52 @@ function TipsSection() {
 function FAQSection() {
   const faqs = [
     {
-      q: "Can acne be cured permanently?",
-      a: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+      q: "What causes hair loss?",
+      a: "Hair fall can be caused by genetics, hormonal imbalances, nutritional deficiencies (iron, vitamin D, zinc, B12), stress, thyroid disorders, PCOS, scalp infections, dandruff, certain medications, and lifestyle factors. A dermatologist can help identify the specific cause through evaluation and tests.",
     },
     {
-      q: "How long does acne treatment take to show results?",
-      a: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+      q: "Is hair loss permanent?",
+      a: "Not all hair loss is permanent. Temporary shedding from stress, illness, or nutritional deficiencies often reverses with treatment. Genetic hair loss (androgenetic alopecia) is progressive and requires ongoing management, but treatment can significantly slow its progression and stimulate regrowth.",
     },
     {
-      q: "Can acne scars be removed completely?",
-      a: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+      q: "Can hair grow back after falling out?",
+      a: "In many cases, yes. If the hair follicle is still active and has not been scarred, regrowth is possible with appropriate treatment. The earlier treatment is started, the better the chances of regrowth.",
     },
     {
-      q: "Is acne treatment painful?",
-      a: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort.",
+      q: "How long does hair loss treatment take to show results?",
+      a: "Hair grows slowly. Most patients notice reduced shedding within 4–8 weeks. Visible new hair growth typically takes 3–6 months, and optimal results may require 6–12 months of consistent treatment and follow-up.",
     },
     {
-      q: "What is the best treatment for cystic acne?",
-      a: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach.",
+      q: "Is PRP effective for hair loss?",
+      a: "PRP (Platelet-Rich Plasma) therapy has shown good results for androgenetic alopecia and certain types of hair thinning. It uses your own blood platelets to stimulate hair follicles. Our dermatologist can assess whether you are a suitable candidate during your consultation.",
     },
     {
-      q: "Is acne caused by diet?",
-      a: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+      q: "Which vitamin deficiency causes hair loss?",
+      a: "Common deficiencies linked to hair loss include iron (low ferritin), vitamin D, vitamin B12, zinc, and biotin. A simple blood test can identify these deficiencies, and correction through diet or supplements can help reduce hair loss.",
     },
     {
-      q: "How much does acne treatment cost in Armoor?",
-      a: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+      q: "Does dandruff cause hair loss?",
+      a: "Yes, persistent dandruff and scalp inflammation can contribute to hair loss. Itching and scratching weaken hair follicles, and inflammation can disrupt the normal hair growth cycle. Treating dandruff often helps reduce associated hair loss.",
     },
     {
-      q: "Can hormonal acne be treated?",
-      a: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+      q: "Can stress increase hair loss?",
+      a: "Yes, stress is a common trigger for hair loss. Conditions like telogen effluvium (temporary excessive shedding) often follow stressful events. Managing stress through lifestyle changes, exercise, and relaxation techniques can help improve hair health.",
     },
     {
-      q: "Does popping pimples make acne worse?",
-      a: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+      q: "When should I see a dermatologist for hair loss?",
+      a: "You should consult a dermatologist if you notice sudden or excessive hair shedding, visible thinning, bald patches, a receding hairline, or if hair loss is causing you concern. Early diagnosis leads to more effective treatment.",
     },
     {
-      q: "What should I avoid during acne treatment?",
-      a: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance.",
+      q: "How much does hair loss treatment cost in Armoor?",
+      a: `The cost depends on the type and duration of treatment required. At ${CLINIC_NAME}, we offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
     },
     {
-      q: "Can adults get acne?",
-      a: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
+      q: "Can hair loss be reversed naturally?",
+      a: "Mild, temporary hair loss caused by stress or nutritional issues may improve with lifestyle changes, a balanced diet, and stress management. However, genetic or medical hair loss typically requires professional treatment for meaningful improvement.",
     },
     {
-      q: "Is isotretinoin safe for acne treatment?",
-      a: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+      q: "Is it normal to lose hair after shampooing?",
+      a: "Yes, losing 50–100 hairs per day is normal, and many of these shed during washing. However, if you notice clumps of hair or significantly more shedding than usual, it is worth consulting a dermatologist for evaluation.",
     },
   ];
 
@@ -1080,7 +1040,7 @@ function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-center text-[15px] text-muted-foreground">
-            Common questions about acne treatment at our clinic in Armoor.
+            Common questions about hair loss treatment at our clinic in Armoor.
           </p>
           <div className="mt-8 space-y-4">
             {faqs.map((faq, i) => (
@@ -1114,27 +1074,27 @@ function FAQSection() {
 function ReviewsSection() {
   const reviews = [
     {
-      name: "Reshma",
+      name: "Srinivas Reddy",
       location: "Armoor",
-      text: "I struggled with acne for over 5 years and tried every product on the market. Dr. Raghavendhra diagnosed my condition as hormonal acne and put me on a combination of topical treatment and oral medication. Within 3 months, my skin cleared up significantly. I am so thankful for the personalised care I received.",
+      text: "I was losing a lot of hair and tried many products that did not work. Dr. Raghavendhra took the time to understand my condition and ran blood tests that showed I was low on iron and vitamin D. After three months of treatment, my hair loss has reduced significantly, and I can see new growth. Highly recommend.",
       rating: 5,
     },
     {
-      name: "Sandeep",
+      name: "Rajeshwari",
+      location: "Balkonda",
+      text: "I was very anxious about my hair thinning. The doctor explained everything clearly and put together a treatment plan that suited my lifestyle. The PRP sessions were comfortable, and the staff made me feel at ease. I have been coming here for six months and am happy with the progress.",
+      rating: 5,
+    },
+    {
+      name: "Kishan Rao",
       location: "Nizamabad",
-      text: "I had severe cystic acne that left me with deep scars. The doctor recommended microneedling sessions along with medical treatment. After 4 sessions, my scars have faded remarkably and my active acne is under control. The clinic is very professional and the doctor explains everything in detail.",
+      text: "After chemotherapy, I was worried my hair would not grow back. Dr. Raghavendhra reassured me and guided me through the recovery process. My hair has started growing back steadily. Grateful for the care and support.",
       rating: 5,
     },
     {
       name: "Anjali",
-      location: "Balkonda",
-      text: "My daughter's acne was getting worse and she was losing confidence. Dr. Raghavendhra was very gentle with her and designed a treatment plan that suited her sensitive skin. The chemical peels and topical medications made a huge difference. Her skin is now clear and glowing.",
-      rating: 5,
-    },
-    {
-      name: "Mahesh",
       location: "Mortad",
-      text: "I came to the clinic with persistent back acne that I had for years. The doctor prescribed a combination of medicated cleansers, topical treatments, and oral medication. The results have been excellent — my back is almost completely clear now. Highly recommend this clinic for acne treatment.",
+      text: "I had dandruff and hair loss for over a year. A friend recommended this clinic, and I am glad I came. The scalp treatment and medicated shampoos helped control the dandruff, and the hair loss has reduced. The doctor advised me on diet changes too. Very satisfied.",
       rating: 5,
     },
   ];
@@ -1150,7 +1110,7 @@ function ReviewsSection() {
             What Our Patients Say
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Real experiences from patients who have undergone acne treatment at our clinic.
+            Real experiences from patients who have undergone hair loss treatment at our clinic.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -1192,12 +1152,13 @@ function AreasWeServeSection() {
   const areas = [
     { name: "Armoor", isLocal: true },
     { name: "Balkonda" },
-    { name: "Nizamabad" },
     { name: "Mortad" },
-    { name: "Bodhan" },
-    { name: "Kamareddy" },
-    { name: "Yellareddy" },
-    { name: "Sadasivanagar" },
+    { name: "Mupkal" },
+    { name: "Velpur" },
+    { name: "Kammarpally" },
+    { name: "Nandipet" },
+    { name: "Navipet" },
+    { name: "Nizamabad" },
   ];
 
   return (
@@ -1211,9 +1172,9 @@ function AreasWeServeSection() {
             Conveniently Located in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert acne
-            treatment. Our clinic is easily accessible and welcomes patients from all nearby towns
-            and villages.
+            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert hair
+            fall treatment. Our clinic is easily accessible and welcomes patients from all nearby
+            towns and villages.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -1248,30 +1209,27 @@ function AreasWeServeSection() {
 
 function RelatedTreatmentsSection() {
   const related: { name: string; to: string; params?: Record<string, string> }[] = [
-    { name: "Hair Loss Treatment", to: "/treatments/hair-loss-treatment-armoor" },
-    { name: "Psoriasis Treatment", to: "/treatments/psoriasis-treatment-armoor" },
-    { name: "Eczema Treatment", to: "/treatments/eczema-treatment-armoor" },
+    { name: "Acne Treatment", to: "/treatments/acne-treatment-armoor" },
+    { name: "Dandruff Treatment", to: "/treatments/$slug", params: { slug: "dandruff-treatment" } },
     {
-      name: "Fungal Infection Treatment",
+      name: "Psoriasis Treatment",
       to: "/treatments/$slug",
-      params: { slug: "fungal-infection-treatment" },
-    },
-    { name: "Dandruff Treatment", to: "/treatments/dandruff-treatment-armoor" },
-    { name: "Vitiligo Treatment", to: "/treatments/$slug", params: { slug: "vitiligo-treatment" } },
-    {
-      name: "Pigmentation Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "pigmentation-treatment" },
+      params: { slug: "psoriasis-treatment" },
     },
     {
       name: "Skin Allergy Treatment",
       to: "/treatments/$slug",
       params: { slug: "skin-allergy-treatment" },
     },
-    { name: "Nail Disorders", to: "/treatments/$slug", params: { slug: "nail-disorders" } },
-    { name: "Wart Removal", to: "/treatments/$slug", params: { slug: "wart-removal" } },
-    { name: "Mole Removal", to: "/treatments/$slug", params: { slug: "mole-removal" } },
-  ].filter((r) => r.name !== "Acne Treatment");
+    { name: "Vitiligo Treatment", to: "/treatments/$slug", params: { slug: "vitiligo-treatment" } },
+    {
+      name: "Fungal Infection Treatment",
+      to: "/treatments/$slug",
+      params: { slug: "fungal-infection-treatment" },
+    },
+    { name: "Warts Treatment", to: "/treatments/$slug", params: { slug: "warts-treatment" } },
+    { name: "Eczema Treatment", to: "/treatments/$slug", params: { slug: "eczema-treatment" } },
+  ];
 
   return (
     <section className="py-20 sm:py-24">
@@ -1288,7 +1246,7 @@ function RelatedTreatmentsSection() {
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {related.slice(0, 6).map((treatment) => (
+          {related.map((treatment) => (
             <Link
               key={treatment.name}
               to={treatment.to}
@@ -1309,11 +1267,11 @@ function BookingCTA() {
     <section className="py-20" style={{ background: "var(--gradient-navy)" }}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          Ready to Get Clear Skin?
+          Ready to Get Healthier Hair?
         </h2>
         <p className="mt-4 text-lg text-white/80">
           Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Take
-          the first step towards healthy, glowing skin.
+          the first step towards fuller, healthier hair.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link

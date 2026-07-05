@@ -13,10 +13,6 @@ import {
   Quote,
   AlertCircle,
   Users,
-  Wind,
-  Droplets,
-  Scissors,
-  Sun,
 } from "lucide-react";
 import {
   CLINIC_NAME,
@@ -31,37 +27,37 @@ import {
   MAP_LINK,
 } from "../lib/clinic-data";
 
-export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
+export const Route = createFileRoute("/treatments/fungal-infection-treatment-armoor")({
   head: () => ({
     meta: [
       {
-        title: `Acne Treatment in Armoor | Pimple & Scar Removal | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        title: `Fungal Infection Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         name: "description",
-        content: `Expert acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Advanced solutions for pimples, cystic acne, acne scars, and hormonal breakouts at ${CLINIC_NAME}. Book your consultation today.`,
+        content: `Expert fungal infection treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}. Effective care for ringworm, athlete's foot, nail fungus, and skin infections at ${CLINIC_NAME}. Book your consultation.`,
       },
       { name: "robots", content: "index, follow" },
       {
         property: "og:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
+        content: `Fungal Infection Treatment in Armoor | ${CLINIC_NAME} | ${DOCTOR_NAME}`,
       },
       {
         property: "og:description",
-        content: `Effective acne and pimple treatment in Armoor by Dr. Raghavendhra MD, DVL. Advanced therapies for acne scars, cystic acne, and hormonal breakouts at Armoor Skin & Hair Clinic.`,
+        content: `Effective fungal skin infection treatment in Armoor by Dr. Raghavendhra MD, DVL. Personalised care for ringworm, itching, and nail fungus at Armoor Skin & Hair Clinic.`,
       },
-      { property: "og:url", content: `${SITE_URL}/treatments/acne-treatment-armoor` },
+      { property: "og:url", content: `${SITE_URL}/treatments/fungal-infection-treatment-armoor` },
       { property: "og:type", content: "website" },
       {
         name: "twitter:title",
-        content: `Acne Treatment in Armoor | ${CLINIC_NAME}`,
+        content: `Fungal Infection Treatment in Armoor | ${CLINIC_NAME}`,
       },
       {
         name: "twitter:description",
-        content: `Expert acne treatment in Armoor by Dr. Raghavendhra — personalised care for clear, healthy skin.`,
+        content: `Expert fungal infection treatment in Armoor by Dr. Raghavendhra — personalised care for healthy, infection-free skin.`,
       },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/acne-treatment-armoor` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/treatments/fungal-infection-treatment-armoor` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -70,9 +66,9 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
           "@graph": [
             {
               "@type": "MedicalClinic",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#clinic`,
+              "@id": `${SITE_URL}/treatments/fungal-infection-treatment-armoor#clinic`,
               name: CLINIC_NAME,
-              description: `Acne treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
+              description: `Fungal infection treatment in Armoor by ${DOCTOR_NAME} ${QUALIFICATION}.`,
               url: SITE_URL,
               telephone: PHONE_TEL,
               address: {
@@ -98,7 +94,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "LocalBusiness",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#business`,
+              "@id": `${SITE_URL}/treatments/fungal-infection-treatment-armoor#business`,
               name: CLINIC_NAME,
               image: `${SITE_URL}/og-image.jpg`,
               telephone: PHONE_TEL,
@@ -114,7 +110,7 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
             },
             {
               "@type": "BreadcrumbList",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#breadcrumbs`,
+              "@id": `${SITE_URL}/treatments/fungal-infection-treatment-armoor#breadcrumbs`,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -125,118 +121,102 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "Acne Treatment in Armoor",
-                  item: `${SITE_URL}/treatments/acne-treatment-armoor`,
+                  name: "Fungal Infection Treatment in Armoor",
+                  item: `${SITE_URL}/treatments/fungal-infection-treatment-armoor`,
                 },
               ],
             },
             {
               "@type": "FAQPage",
-              "@id": `${SITE_URL}/treatments/acne-treatment-armoor#faq`,
+              "@id": `${SITE_URL}/treatments/fungal-infection-treatment-armoor#faq`,
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Can acne be cured permanently?",
+                  name: "Are fungal infections contagious?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+                    text: "Yes, many fungal skin infections are contagious. They can spread through direct skin-to-skin contact or indirectly through contaminated items like towels, clothing, bedding, and shower floors. This is why prompt treatment and good hygiene are important.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How long does acne treatment take to show results?",
+                  name: "How long does fungal infection treatment take?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+                    text: "Treatment duration depends on the type and severity of the infection. Mild skin infections may clear in 2–4 weeks with topical creams. Nail infections can take several months of oral medication. It is important to complete the full course of treatment even if symptoms improve.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can acne scars be removed completely?",
+                  name: "Can fungal infections return after treatment?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+                    text: "Yes, fungal infections can recur if the underlying risk factors are not addressed. Poor hygiene, excessive sweating, diabetes, and incomplete treatment are common reasons for recurrence. Following prevention advice helps reduce the risk.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne treatment painful?",
+                  name: "Is ringworm caused by worms?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort. Your dermatologist will ensure you are comfortable throughout the process.",
+                    text: "No, ringworm is not caused by worms. It is a fungal infection of the skin caused by dermatophytes. The name comes from the ring-like, circular shape of the rash. It is treated with antifungal medications.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What is the best treatment for cystic acne?",
+                  name: "Can I use home remedies for fungal infections?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach based on your condition.",
+                    text: "While some home remedies may provide temporary relief, they are not a substitute for medical treatment. Fungal infections require proper antifungal medications to be fully treated. Delaying proper treatment can allow the infection to spread or worsen.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is acne caused by diet?",
+                  name: "When should I visit a dermatologist for a fungal infection?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+                    text: "You should see a dermatologist if you have a persistent itchy rash that does not improve with over-the-counter creams, if the infection is spreading, if you have nail discolouration or thickening, or if you have diabetes or a weakened immune system.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How much does acne treatment cost in Armoor?",
+                  name: "Can children get fungal infections?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+                    text: "Yes, children can get fungal infections, particularly ringworm and scalp fungal infections. These are common in school-age children and can spread through close contact or sharing items. Treatment is safe and effective for children.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can hormonal acne be treated?",
+                  name: "Does sweating increase fungal infections?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+                    text: "Yes, excessive sweating creates a warm, moist environment that encourages fungal growth. This is why fungal infections are more common in skin folds, between toes, and in the groin area. Keeping the skin dry helps prevent infections.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Does popping pimples make acne worse?",
+                  name: "How much does fungal infection treatment cost in Armoor?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+                    text: `The cost of fungal infection treatment at ${CLINIC_NAME} depends on the type and severity of the infection and the treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What should I avoid during acne treatment?",
+                  name: "How can I prevent fungal infections from recurring?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance for your specific treatment plan.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can adults get acne?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is isotretinoin safe for acne treatment?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+                    text: "To prevent recurrence, keep your skin clean and dry, wear breathable cotton clothing, avoid sharing towels or footwear, complete the full course of prescribed treatment, and manage underlying conditions like diabetes. Regular hygiene practices are essential.",
                   },
                 },
               ],
             },
             {
               "@type": "MedicalProcedure",
-              name: "Acne Treatment in Armoor",
+              name: "Fungal Infection Treatment in Armoor",
               description:
-                "Comprehensive acne treatment services including topical and oral medications, chemical peels, microneedling, laser therapy, and personalised skincare plans.",
+                "Comprehensive fungal infection treatment services including antifungal creams, oral medications, medicated shampoos, and hygiene guidance.",
               provider: {
                 "@type": "MedicalClinic",
                 name: CLINIC_NAME,
@@ -256,22 +236,22 @@ export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
       },
     ],
   }),
-  component: AcneTreatmentArmoorPage,
+  component: FungalInfectionTreatmentArmoorPage,
 });
 
-function AcneTreatmentArmoorPage() {
+function FungalInfectionTreatmentArmoorPage() {
   return (
     <>
       <HeroSection />
       <WhatIsSection />
       <SymptomsSection />
-      <CausesSection />
       <TypesSection />
+      <CausesSection />
       <DiagnosisSection />
       <TreatmentsSection />
       <WhyChooseSection />
       <ProcessSection />
-      <TipsSection />
+      <PreventionSection />
       <FAQSection />
       <ReviewsSection />
       <AreasWeServeSection />
@@ -297,22 +277,22 @@ function HeroSection() {
             Treatments
           </Link>
           <span>/</span>
-          <span className="text-white/90">Acne Treatment in Armoor</span>
+          <span className="text-white/90">Fungal Infection Treatment in Armoor</span>
         </nav>
-        {/* IMAGE PLACEHOLDER: Hero image for acne treatment page */}
+        {/* IMAGE PLACEHOLDER: Hero image for fungal infection treatment page */}
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
               <Star className="h-3.5 w-3.5 text-gold" />
-              Expert Acne Care in Armoor
+              Expert Fungal Infection Care in Armoor
             </div>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              Acne Treatment in Armoor
+              Fungal Infection Treatment in Armoor
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
-              Effective acne and pimple treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
-              {QUALIFICATION} — Armoor's trusted dermatologist for personalised acne care, scar
-              treatment, and lasting skin clarity.
+              Effective fungal skin infection treatment at {CLINIC_NAME}. Led by {DOCTOR_NAME},{" "}
+              {QUALIFICATION} — Armoor's trusted dermatologist for personalised care and
+              long-lasting relief from fungal infections.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -337,8 +317,8 @@ function HeroSection() {
               <ul className="mt-4 space-y-3">
                 {[
                   `Expert dermatologist ${DOCTOR_NAME} ${QUALIFICATION}`,
-                  "Customised treatment for all skin types",
-                  "Chemical peels, microneedling & laser therapy",
+                  "Accurate diagnosis with skin examination",
+                  "Effective antifungal treatments",
                   "Affordable consultation in Armoor",
                   `${HOURS.weekdayDays}, ${HOURS.weekday}`,
                 ].map((item) => (
@@ -363,56 +343,50 @@ function WhatIsSection() {
         <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-start">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-              Understanding Acne
+              Understanding Fungal Infections
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              What is Acne?
+              What is a Fungal Infection?
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                Acne is a common skin condition that occurs when hair follicles become clogged with
-                oil (sebum) and dead skin cells. It manifests as pimples, blackheads, whiteheads,
-                and deeper lumps like nodules and cysts. At {CLINIC_NAME}, we treat the root causes
-                of acne — excess oil production, bacteria, inflammation, and clogged pores — for
-                lasting skin clarity.
+                A fungal skin infection is caused by microscopic fungi that live on the skin, nails,
+                or scalp. While many fungi are harmless, certain types can multiply excessively and
+                cause infection, especially in warm, moist areas of the body.
               </p>
               <p>
-                Acne develops when sebaceous glands produce excess sebum, which mixes with dead skin
-                cells and blocks the follicle opening. The bacterium Cutibacterium acnes (C. acnes)
-                thrives in this environment, triggering inflammation and the formation of red,
-                swollen pimples. Acne most commonly affects the face, chest, back, and shoulders.
+                Fungal infections are very common in tropical and humid climates like Telangana.
+                They can affect anyone, but certain factors like excessive sweating, poor hygiene,
+                diabetes, and a weakened immune system increase the risk.
               </p>
               <p>
-                Acne is not just a teenage problem. Many adults, particularly women, experience acne
-                well into their 30s, 40s, and beyond. Hormonal fluctuations, stress, diet, and
-                certain medications can all trigger or worsen breakouts at any age. Effective
-                treatment begins with understanding what is driving your acne.
+                It is important to distinguish fungal infections from bacterial infections, as the
+                treatment is completely different. Bacterial infections require antibiotics, while
+                fungal infections need antifungal medications. Using the wrong treatment can worsen
+                the condition.
               </p>
               <p>
-                A common misconception is that acne is caused by poor hygiene or eating greasy food.
-                While diet can play a role in some individuals, acne is primarily a medical
-                condition driven by hormones, genetics, and bacterial activity. Even people with
-                meticulous skincare routines can experience acne. A dermatologist's evaluation is
-                essential for effective treatment.
+                Common fungal skin diseases include ringworm, athlete's foot, jock itch, and nail
+                fungus. Early treatment is important because fungal infections can spread to other
+                parts of the body and to other people if left untreated.
               </p>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Acne skin condition */}
+            {/* IMAGE PLACEHOLDER: Types of fungal infections */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <AlertCircle className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Condition
+                  Fungal Skin Infection
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing acne-affected facial skin
+                  Replace with an image showing fungal infection on skin
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing acne breakouts on facial skin including whiteheads,
-                  blackheads, and inflamed pimples
+                  Alt: Illustration showing common fungal skin infections like ringworm
                 </p>
               </div>
             </div>
@@ -426,36 +400,36 @@ function WhatIsSection() {
 function SymptomsSection() {
   const symptoms = [
     {
-      title: "Whiteheads",
-      desc: "Small, flesh-coloured or white bumps that form when pores are completely blocked with oil and dead skin. They remain closed at the surface and appear as tiny white spots on the skin.",
+      title: "Itching",
+      desc: "Intense itching is the most common symptom of fungal skin infections. The itch may worsen in warm weather or after sweating.",
     },
     {
-      title: "Blackheads",
-      desc: "Open clogged pores that turn dark due to oxidation of the trapped oil and skin cells on exposure to air. Blackheads are not dirt and can be effectively treated with topical retinoids.",
+      title: "Red Circular Rash",
+      desc: "Ringworm appears as a red, ring-shaped rash with a clear centre. The edges may be raised and scaly, giving it a worm-like appearance.",
     },
     {
-      title: "Papules",
-      desc: "Small, red, tender bumps that indicate inflammation in the hair follicle. Papules are a sign of active infection and should not be picked or squeezed as they can worsen inflammation.",
+      title: "Scaling",
+      desc: "The affected skin often becomes dry and flaky, with visible scales that may shed. This is common in athlete's foot and ringworm.",
     },
     {
-      title: "Pustules",
-      desc: "Red bumps with a white or yellow pus-filled centre. These are commonly called pimples or zits and are caused by bacterial activity and inflammation within the blocked pore.",
+      title: "Burning Sensation",
+      desc: "Many patients experience a burning or stinging sensation on the infected skin, especially in areas where skin rubs together.",
     },
     {
-      title: "Nodules",
-      desc: "Large, deep, painful lumps beneath the skin surface. Nodular acne is a severe form that requires professional medical treatment and does not respond to over-the-counter products.",
+      title: "Skin Discoloration",
+      desc: "Fungal infections can cause the skin to become lighter or darker than the surrounding area. This discolouration may persist even after treatment.",
     },
     {
-      title: "Cysts",
-      desc: "Deep, pus-filled, painful lesions that can cause scarring. Cystic acne is the most severe form and requires prompt dermatological intervention including oral medications and drainage.",
+      title: "Peeling Skin",
+      desc: "The skin may peel or crack, particularly between the toes in athlete's foot. Peeling can be accompanied by a foul odour in some cases.",
     },
     {
-      title: "Acne Scars",
-      desc: "Permanent textural changes in the skin that result from severe or poorly treated acne. Scars can be atrophic (depressed) or hypertrophic (raised) and require specialised treatments.",
+      title: "Cracking",
+      desc: "Deep, painful cracks can develop in the skin, especially on the feet and between toes. Cracked skin is prone to secondary bacterial infections.",
     },
     {
-      title: "Post-Acne Pigmentation",
-      desc: "Dark spots or red marks that remain after acne lesions heal. This pigmentation can persist for months but responds well to treatments like chemical peels and topical brightening agents.",
+      title: "Blisters",
+      desc: "In some cases, small fluid-filled blisters may form, particularly in inflammatory fungal infections. These should not be popped.",
     },
   ];
 
@@ -467,14 +441,14 @@ function SymptomsSection() {
             Recognising the Signs
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Common Symptoms of Acne
+            Common Symptoms of Fungal Infections
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne symptoms range from mild non-inflammatory comedones to severe painful cysts.
-            Recognising the type and severity helps in choosing the right treatment.
+            Fungal infections can present in different ways depending on the type and location.
+            Recognising the symptoms early helps in seeking timely treatment.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {symptoms.map((s) => (
             <div
               key={s.title}
@@ -486,21 +460,20 @@ function SymptomsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne symptoms illustration */}
+          {/* IMAGE PLACEHOLDER: Fungal infection symptoms */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <AlertCircle className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Symptoms Illustration
+                Fungal Infection Symptoms
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common acne symptoms and lesion types
+                Replace with an infographic showing common fungal infection symptoms
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing different types of acne lesions from whiteheads to cystic
-                acne on facial skin
+                Alt: Illustration showing ringworm, athlete's foot, and other fungal infections
               </p>
             </div>
           </div>
@@ -510,43 +483,31 @@ function SymptomsSection() {
   );
 }
 
-function CausesSection() {
-  const causes = [
+function TypesSection() {
+  const types = [
     {
-      title: "Excess Oil Production",
-      desc: "Overactive sebaceous glands produce excessive sebum, the natural oil that moisturises the skin. When too much oil is produced, it can combine with dead skin cells to clog hair follicles and trigger acne.",
+      title: "Ringworm (Tinea Corporis)",
+      desc: "A circular, red, ring-shaped rash with raised edges and clear centre. It can appear anywhere on the body and is highly contagious through direct contact.",
     },
     {
-      title: "Clogged Hair Follicles",
-      desc: "Dead skin cells that are not shed properly can accumulate in hair follicles and mix with sebum to form a plug. This creates an ideal environment for bacteria to multiply and cause inflammation.",
+      title: "Jock Itch (Tinea Cruris)",
+      desc: "A fungal infection of the groin area, causing redness, itching, and a burning sensation. It is more common in men and those who sweat heavily.",
     },
     {
-      title: "Bacterial Overgrowth",
-      desc: "Cutibacterium acnes (C. acnes) bacteria naturally live on the skin. When follicles become blocked, these bacteria multiply rapidly, triggering inflammation and the formation of red, pus-filled pimples.",
+      title: "Athlete's Foot (Tinea Pedis)",
+      desc: "Affects the feet, especially between the toes. Symptoms include itching, burning, peeling, and cracked skin. It is commonly picked up in public showers and changing rooms.",
     },
     {
-      title: "Hormonal Fluctuations",
-      desc: "Androgens, hormones that increase during puberty, menstrual cycles, pregnancy, and conditions like PCOS, stimulate sebaceous glands to produce more oil. This is why hormonal acne is common in teenagers and women.",
+      title: "Scalp Fungal Infection (Tinea Capitis)",
+      desc: "Affects the scalp, causing itching, scaling, and patchy hair loss. It is most common in children and requires oral antifungal treatment.",
     },
     {
-      title: "Genetics",
-      desc: "A family history of acne increases your likelihood of developing the condition. Genetic factors influence how your sebaceous glands function, how your skin sheds cells, and how your body responds to inflammation.",
+      title: "Nail Fungal Infection (Onychomycosis)",
+      desc: "Causes the nails to become thickened, discoloured, brittle, and distorted. It can affect both fingernails and toenails and requires long-term treatment.",
     },
     {
-      title: "Dietary Triggers",
-      desc: "High-glycemic foods such as refined sugars, white bread, and sugary drinks can spike insulin levels, leading to increased oil production. Dairy products may also trigger breakouts in some individuals.",
-    },
-    {
-      title: "Stress",
-      desc: "Stress triggers the release of cortisol and other hormones that increase sebum production and inflammation. Stress can also slow wound healing, making acne lesions take longer to resolve.",
-    },
-    {
-      title: "Certain Medications",
-      desc: "Some medications can cause or worsen acne, including corticosteroids, lithium, certain anticonvulsants, and hormone-containing medications. Always inform your dermatologist about all medications you are taking.",
-    },
-    {
-      title: "Skincare & Cosmetic Products",
-      desc: "Oil-based, heavy, or comedogenic skincare and makeup products can clog pores and contribute to acne breakouts. Using non-comedogenic, oil-free products is recommended for acne-prone skin.",
+      title: "Yeast Infections",
+      desc: "Caused by Candida species, these infections affect warm, moist areas like skin folds, under the breasts, and the groin. They appear as red, itchy rashes with satellite lesions.",
     },
   ];
 
@@ -555,81 +516,14 @@ function CausesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Causes and Triggers
+            Types of Infections
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            What Causes Acne?
+            Common Types of Fungal Infections
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne is caused by a combination of factors. Understanding the underlying cause is key to
-            effective treatment and prevention.
-          </p>
-        </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {causes.map((cause) => (
-            <div
-              key={cause.title}
-              className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
-            >
-              <h3 className="font-display text-base font-bold text-foreground">{cause.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{cause.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function TypesSection() {
-  const types = [
-    {
-      title: "Whiteheads (Closed Comedones)",
-      desc: "Small, flesh-coloured or white bumps that form when a pore is completely blocked by oil and dead skin. The surface remains closed, giving them a white appearance. They are non-inflammatory but can develop into inflamed acne.",
-    },
-    {
-      title: "Blackheads (Open Comedones)",
-      desc: "Open clogged pores where the trapped oil and skin cells are exposed to air and oxidise, turning dark. Blackheads are not dirt and can be effectively treated with topical retinoids and gentle exfoliation.",
-    },
-    {
-      title: "Papules",
-      desc: "Small, red, inflamed bumps that are tender to the touch. Papules indicate that the follicle wall has ruptured, causing inflammation. They do not contain pus and should not be squeezed.",
-    },
-    {
-      title: "Pustules",
-      desc: "Red, inflamed bumps with a visible white or yellow pus-filled centre. Pustules are the classic pimple and are caused by the immune system fighting bacterial overgrowth in the blocked follicle.",
-    },
-    {
-      title: "Nodules",
-      desc: "Large, deep, firm, and painful lumps beneath the skin surface. Nodular acne does not have a visible head and can persist for weeks. It carries a high risk of scarring and requires oral medications.",
-    },
-    {
-      title: "Cystic Acne",
-      desc: "The most severe form of acne, characterised by deep, soft, pus-filled lesions that are extremely painful. Cystic acne often leads to significant scarring and requires aggressive treatment including isotretinoin.",
-    },
-    {
-      title: "Hormonal Acne",
-      desc: "Acne triggered by hormonal fluctuations, typically appearing along the jawline, chin, and lower cheeks. It is common in adult women and often presents as deep, tender cysts that appear cyclically.",
-    },
-    {
-      title: "Acne Conglobata",
-      desc: "A rare but severe form of inflammatory acne characterised by large, interconnected nodules and abscesses that can cause extensive scarring. It requires immediate and intensive dermatological treatment.",
-    },
-  ];
-
-  return (
-    <section className="bg-secondary/40 py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Types of Acne
-          </p>
-          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Different Types of Acne
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Acne can present in various forms. Identifying the specific type helps guide treatment
-            decisions and improves outcomes.
+            Fungal infections can affect different parts of the body. Identifying the specific type
+            helps guide the right treatment.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -648,6 +542,77 @@ function TypesSection() {
   );
 }
 
+function CausesSection() {
+  const causes = [
+    {
+      title: "Warm & Humid Climate",
+      desc: "Fungi thrive in warm, moist environments. Telangana's tropical climate creates ideal conditions for fungal growth, especially during the monsoon and summer months.",
+    },
+    {
+      title: "Excessive Sweating",
+      desc: "Hyperhidrosis or excessive sweating keeps the skin damp, creating a breeding ground for fungi. This is a common cause of recurrent fungal infections.",
+    },
+    {
+      title: "Poor Hygiene",
+      desc: "Irregular bathing, not drying the skin properly after washing, and wearing unwashed clothes can promote fungal growth on the skin.",
+    },
+    {
+      title: "Tight Clothing",
+      desc: "Wearing tight, non-breathable synthetic clothing traps heat and moisture against the skin, increasing the risk of fungal infections in skin folds.",
+    },
+    {
+      title: "Shared Items",
+      desc: "Using shared towels, clothing, footwear, or gym equipment can transmit fungal infections from one person to another.",
+    },
+    {
+      title: "Diabetes",
+      desc: "Uncontrolled diabetes weakens the immune system and creates favourable conditions for fungal infections. People with diabetes are more prone to recurrent infections.",
+    },
+    {
+      title: "Weakened Immunity",
+      desc: "A compromised immune system due to illness, medications, or medical treatments makes it harder for the body to fight off fungal infections.",
+    },
+    {
+      title: "Obesity",
+      desc: "Excess body weight creates deeper skin folds that trap moisture, making obese individuals more susceptible to fungal infections.",
+    },
+    {
+      title: "Prolonged Moisture",
+      desc: "Keeping the skin wet for long periods — such as wearing damp socks or not drying thoroughly after bathing — encourages fungal overgrowth.",
+    },
+  ];
+
+  return (
+    <section className="bg-secondary/40 py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+            Causes and Risk Factors
+          </p>
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+            What Causes Fungal Infections?
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+            Fungal infections are caused by a combination of environmental and personal factors.
+            Understanding these helps in prevention.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {causes.map((cause) => (
+            <div
+              key={cause.title}
+              className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
+            >
+              <h3 className="font-display text-base font-bold text-foreground">{cause.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{cause.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function DiagnosisSection() {
   return (
     <section className="py-20 sm:py-24">
@@ -658,40 +623,37 @@ function DiagnosisSection() {
               Diagnosis
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              How We Diagnose Acne
+              How We Diagnose Fungal Infections
             </h2>
             <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                At {CLINIC_NAME}, we diagnose acne through a thorough clinical examination of your
-                skin. The appearance, type, and distribution of acne lesions are usually sufficient
-                to determine the type and severity of your condition.
+                At {CLINIC_NAME}, we diagnose fungal infections through a thorough clinical
+                evaluation. An accurate diagnosis is essential because many skin conditions can look
+                similar to fungal infections but require different treatment.
               </p>
               <p>
-                We begin by reviewing your medical history, including any history of hormonal
-                disorders like PCOS, medications you are taking, your skincare routine, dietary
-                habits, and any previous acne treatments you may have tried. This comprehensive
-                history helps us identify contributing factors.
+                We begin by reviewing your medical history, including when the symptoms started, any
+                previous treatments you have tried, and any underlying conditions like diabetes that
+                may be contributing.
               </p>
               <p>
-                A detailed skin examination allows us to grade the severity of acne, identify the
-                types of lesions present (comedones, papules, pustules, nodules, cysts), and assess
-                for scarring and pigmentation. We also evaluate your skin type and oil production
-                levels to tailor treatment appropriately.
+                A careful skin examination helps us identify the characteristic appearance of fungal
+                infections. In many cases, the location, shape, and pattern of the rash are enough
+                to make a confident diagnosis.
               </p>
               <p>
-                In cases where hormonal acne is suspected, we may recommend blood tests to evaluate
-                hormone levels, including androgens. This helps us determine whether hormonal
-                therapy would be beneficial. We also assess for conditions like PCOS that may
-                underlie persistent acne.
+                When the diagnosis is unclear, we may perform a simple skin scraping test. A small
+                sample of skin scales is collected and examined under a microscope to check for the
+                presence of fungi. This quick, painless test helps confirm the diagnosis.
               </p>
             </div>
             <div className="mt-8 space-y-3">
               {[
-                "Comprehensive medical and skincare history review",
-                "Detailed skin examination and acne severity grading",
-                "Identification of acne type and lesion classification",
-                "Assessment of scarring, pigmentation, and skin type",
-                "Hormonal evaluation when indicated",
+                "Detailed medical history review",
+                "Clinical skin examination",
+                "Identification of infection type and location",
+                "Skin scraping or KOH mount test when needed",
+                "Accurate diagnosis before starting treatment",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -701,21 +663,18 @@ function DiagnosisSection() {
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Dermatologist acne consultation */}
+            {/* IMAGE PLACEHOLDER: Skin examination */}
             <div className="flex aspect-[4/3] items-center justify-center p-8">
               <div className="text-center">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
                   <Stethoscope className="h-8 w-8" />
                 </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Consultation
+                <p className="mt-4 text-sm font-medium text-muted-foreground">Skin Examination</p>
+                <p className="mt-1 text-xs text-muted-foreground/60">
+                  Replace with a photo of a dermatologist examining a patient's skin
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's facial skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist examining a patient's facial skin for acne at Armoor Skin &
-                  Hair Clinic
+                  Alt: Dermatologist examining fungal infection at Armoor Skin & Hair Clinic
                 </p>
               </div>
             </div>
@@ -735,67 +694,67 @@ function TreatmentsSection() {
             Our Treatments
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Acne Treatments Available in Armoor
+            Fungal Infection Treatments Available in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We offer a comprehensive range of evidence-based treatments for all types of acne — from
-            mild comedones to severe cystic acne.
+            We offer a range of effective treatments tailored to the type and severity of your
+            fungal infection.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {[
             {
-              title: "Topical Retinoids & Medications",
+              title: "Antifungal Creams & Ointments",
               items: [
-                "Tretinoin, adapalene, and tazarotene for comedonal acne",
-                "Benzoyl peroxide to reduce bacteria and inflammation",
-                "Topical antibiotics like clindamycin for active breakouts",
-                "Topical dapsone for inflammatory acne in adults",
+                "Topical antifungal medications for mild to moderate infections",
+                "Creams containing clotrimazole, terbinafine, or miconazole",
+                "Combination preparations for inflamed or itchy skin",
+                "Clear instructions on duration and application",
               ],
             },
             {
-              title: "Oral Medications",
+              title: "Oral Antifungal Medicines",
               items: [
-                "Oral antibiotics for moderate to severe inflammatory acne",
-                "Isotretinoin for severe cystic and resistant acne",
-                "Hormonal therapy including oral contraceptives and spironolactone",
-                "Low-dose antibiotics for maintenance therapy",
+                "Oral tablets for widespread or resistant infections",
+                "Effective for scalp and nail fungal infections",
+                "Prescribed under medical supervision with monitoring",
+                "Short course for skin infections, longer course for nail infections",
               ],
             },
             {
-              title: "Chemical Peels",
+              title: "Medicated Shampoos",
               items: [
-                "Salicylic acid peels for active acne and oil control",
-                "Glycolic acid peels for exfoliation and pigmentation",
-                "Lactic acid peels for sensitive skin types",
-                "Jessner's peel for stubborn comedonal acne",
+                "Antifungal shampoos for scalp fungal infections",
+                "Ketoconazole and selenium sulphide preparations",
+                "Regular use for effective control",
+                "Guidance on frequency and technique",
               ],
             },
             {
-              title: "Microneedling for Scars",
+              title: "Nail Infection Treatment",
               items: [
-                "Microneedling with derma roller or pen device",
-                "Platelet-rich plasma (PRP) combined with microneedling",
-                "Radiofrequency microneedling for deep scars",
-                "Multiple sessions for optimal scar reduction",
+                "Oral antifungal medications for nail fungus",
+                "Topical nail lacquers for mild cases",
+                "Nail debridement when necessary",
+                "Patience and consistency for complete clearance",
               ],
             },
             {
-              title: "Laser & Light Therapies",
+              title: "Hygiene & Prevention Guidance",
               items: [
-                "Fractional CO2 laser for acne scar resurfacing",
-                "ND:YAG laser for active acne and inflammation",
-                "Blue light therapy for bacterial reduction",
-                "IPL for post-acne pigmentation and redness",
+                "Personalised advice on keeping skin clean and dry",
+                "Recommendations for breathable clothing and footwear",
+                "Tips to avoid reinfection from contaminated items",
+                "Guidance for family members to prevent spread",
               ],
             },
             {
-              title: "Long-Term Skin Health Maintenance",
+              title: "Management of Underlying Factors",
               items: [
-                "Personalised maintenance treatment plans",
-                "Regular follow-up to monitor progress",
-                "Adjustment of treatment based on skin response",
-                "Preventive strategies to reduce recurrence",
+                "Diabetes screening and management advice",
+                "Guidance on controlling excessive sweating",
+                "Weight management support when relevant",
+                "Addressing immune-compromising conditions",
               ],
             },
           ].map((treatment, i) => (
@@ -828,22 +787,22 @@ function WhyChooseSection() {
     {
       icon: Stethoscope,
       title: `Expert Dermatologist`,
-      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of acne — from mild comedonal acne to severe cystic and hormonal acne.`,
+      desc: `Led by ${DOCTOR_NAME}, ${QUALIFICATION}, with extensive experience in diagnosing and treating all types of fungal infections — from mild to severe cases.`,
     },
     {
       icon: Microscope,
       title: "Accurate Diagnosis",
-      desc: "We identify the root cause of your acne — whether it is hormonal imbalance, bacterial overgrowth, clogged pores, or dietary triggers — for targeted and effective treatment.",
+      desc: "We use clinical examination and laboratory tests when needed to confirm the diagnosis. Proper identification ensures the right treatment from the start.",
     },
     {
       icon: ShieldCheck,
-      title: "Advanced Treatment Options",
-      desc: "We offer prescription-grade medications, medical-grade chemical peels, microneedling, laser therapy, and isotretinoin — all under expert supervision for safe results.",
+      title: "Personalised Treatment",
+      desc: "Your treatment plan is tailored to the type, location, and severity of your infection, as well as your overall health and medical history.",
     },
     {
       icon: Sparkles,
-      title: "Long-Term Skin Health",
-      desc: "Beyond treating active acne, we guide you on maintaining clear skin with personalised advice on skincare routines, products, diet, and lifestyle adjustments.",
+      title: "Prevention-Focused Care",
+      desc: "We do not just treat the infection — we guide you on how to prevent recurrence and protect your family from spread.",
     },
   ];
 
@@ -855,10 +814,11 @@ function WhyChooseSection() {
             Why Choose Us
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Why {CLINIC_NAME} for Acne Treatment?
+            Why {CLINIC_NAME} for Fungal Infection Treatment?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            We combine medical expertise with genuine care to help you achieve clear, healthy skin.
+            We combine medical expertise with genuine care to help you achieve healthy,
+            infection-free skin.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -889,18 +849,18 @@ function ProcessSection() {
     },
     {
       step: "02",
-      title: "Skin Assessment",
-      desc: `${DOCTOR_NAME} examines your skin, discusses your acne history and skincare routine, and identifies the underlying cause of your breakouts.`,
+      title: "Skin Examination",
+      desc: `${DOCTOR_NAME} examines the affected area, discusses your symptoms and medical history, and performs tests if needed.`,
     },
     {
       step: "03",
-      title: "Personalised Treatment Plan",
-      desc: "A customised treatment plan is created based on your acne type and severity — combining medications, in-clinic procedures, and skincare guidance.",
+      title: "Personalised Treatment",
+      desc: "A customised treatment plan is created — combining antifungal medications, skincare guidance, and preventive advice.",
     },
     {
       step: "04",
-      title: "Follow-up & Maintenance",
-      desc: "Regular follow-up visits to assess response, adjust treatment as needed, and establish a long-term skincare routine to prevent recurrence.",
+      title: "Follow-up & Prevention",
+      desc: "Regular follow-up visits to monitor progress, ensure complete clearance, and guide you on preventing recurrence.",
     },
   ];
 
@@ -915,7 +875,7 @@ function ProcessSection() {
             Our Treatment Process
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            From your first visit to long-term skin health — here is what you can expect.
+            From your first visit to complete recovery — here is what you can expect.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -934,37 +894,31 @@ function ProcessSection() {
   );
 }
 
-function TipsSection() {
+function PreventionSection() {
   const tips = [
     {
-      icon: Droplets,
-      title: "Cleanse Gently Twice Daily",
-      desc: "Wash your face with a gentle, non-comedogenic cleanser in the morning and evening. Avoid harsh scrubs that can irritate the skin and worsen inflammation.",
+      title: "Keep Skin Dry",
+      desc: "Dry your skin thoroughly after bathing, especially in skin folds and between toes. Fungi thrive in moisture, so keeping the skin dry is the most effective prevention.",
     },
     {
-      icon: Wind,
-      title: "Follow a Consistent Skincare Routine",
-      desc: "Use a routine that suits your skin type: cleanse, treat (with prescribed medication), moisturise, and protect with sunscreen. Consistency is key to seeing results.",
+      title: "Wear Breathable Clothing",
+      desc: "Choose loose-fitting, cotton clothes that allow the skin to breathe. Avoid synthetic fabrics that trap heat and moisture against the skin.",
     },
     {
-      icon: Sun,
-      title: "Protect Your Skin from the Sun",
-      desc: "Sun exposure can darken acne spots and cause pigmentation. Use an oil-free, non-comedogenic sunscreen with SPF 30+ daily, even on cloudy days.",
+      title: "Avoid Sharing Items",
+      desc: "Do not share towels, clothing, shoes, combs, or bedding with others, especially if someone in the family has a fungal infection.",
     },
     {
-      icon: Sparkles,
-      title: "Manage Stress Levels",
-      desc: "Stress can trigger hormonal changes that worsen acne. Incorporate relaxation techniques like meditation, yoga, or deep breathing into your daily routine.",
+      title: "Maintain Good Hygiene",
+      desc: "Bathe regularly, change into clean clothes daily, and wash towels and bedsheets frequently in hot water to kill fungi.",
     },
     {
-      icon: Scissors,
-      title: "Avoid Picking or Popping Pimples",
-      desc: "Picking at acne lesions pushes bacteria deeper, increases inflammation, delays healing, and causes permanent scarring. Leave extractions to your dermatologist.",
+      title: "Complete the Full Course",
+      desc: "Finish the entire course of prescribed treatment even if the symptoms disappear. Stopping early can lead to recurrence and drug resistance.",
     },
     {
-      icon: ShieldCheck,
-      title: "Moisturise Daily",
-      desc: "Even oily, acne-prone skin needs moisturiser. Use a lightweight, oil-free, non-comedogenic moisturiser to keep the skin barrier healthy and prevent irritation from medications.",
+      title: "Manage Diabetes",
+      desc: "If you have diabetes, keeping your blood sugar under control significantly reduces your risk of recurrent fungal infections.",
     },
   ];
   return (
@@ -972,14 +926,14 @@ function TipsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Skincare Tips
+            Prevention Tips
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Tips for Managing Acne
+            How to Prevent Fungal Infections
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Small changes in your skincare routine can make a significant difference in controlling
-            acne and keeping your skin clear.
+            Simple daily habits can significantly reduce your risk of developing or recurring fungal
+            infections.
           </p>
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -988,29 +942,26 @@ function TipsSection() {
               key={tip.title}
               className="rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
             >
-              <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/5 text-primary">
-                <tip.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 font-display text-base font-bold text-foreground">{tip.title}</h3>
+              <h3 className="font-display text-base font-bold text-foreground">{tip.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{tip.desc}</p>
             </div>
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne skincare routine illustration */}
+          {/* IMAGE PLACEHOLDER: Healthy skin after treatment */}
           <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
             <div className="text-center">
               <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
                 <Sparkles className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Skincare Routine
+                Healthy Skin Illustration
               </p>
               <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing a skincare routine for acne-prone skin
+                Replace with an image showing healthy, clear skin
               </p>
               <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of daily skincare routine for managing acne-prone skin
+                Alt: Illustration of healthy skin after fungal infection treatment
               </p>
             </div>
           </div>
@@ -1023,52 +974,44 @@ function TipsSection() {
 function FAQSection() {
   const faqs = [
     {
-      q: "Can acne be cured permanently?",
-      a: "While acne may recur in some individuals, it can be effectively controlled with proper treatment. Most patients achieve long-term clearance with a combination of medical therapy, good skincare habits, and maintenance treatments as needed.",
+      q: "Are fungal infections contagious?",
+      a: "Yes, many fungal skin infections are contagious. They can spread through direct skin contact or indirectly through shared towels, clothing, bedding, and shower floors. This is why early treatment and good hygiene are important to prevent spread to others.",
     },
     {
-      q: "How long does acne treatment take to show results?",
-      a: "Most patients notice visible improvement within 4–6 weeks of starting treatment. Complete clearance typically takes 3–6 months depending on the severity of your acne. Consistency with the prescribed regimen is key to achieving the best results.",
+      q: "How long does fungal infection treatment take?",
+      a: "Treatment duration varies by type and severity. Mild skin infections may clear in 2–4 weeks with topical creams. Nail infections can require 3–6 months of oral medication. It is important to complete the full course even after symptoms improve.",
     },
     {
-      q: "Can acne scars be removed completely?",
-      a: "While complete removal may not always be possible, modern treatments like microneedling, chemical peels, and laser therapy can significantly reduce the appearance of acne scars by up to 70–80%. Early treatment of active acne also helps prevent new scars.",
+      q: "Can fungal infections return after treatment?",
+      a: "Yes, recurrence is possible if underlying risk factors like moisture, poor hygiene, or diabetes are not addressed. Incomplete treatment is another common cause. Following prevention advice reduces the chance of recurrence.",
     },
     {
-      q: "Is acne treatment painful?",
-      a: "Most treatments are well-tolerated. Chemical peels may cause mild tingling, and microneedling is performed under numbing cream for your comfort. Oral medications involve no discomfort.",
+      q: "Is ringworm caused by worms?",
+      a: "No, ringworm is not caused by worms. It is a fungal infection caused by dermatophytes. The name refers to the ring-like, circular shape of the rash. It is treated with antifungal medications, not deworming medicine.",
     },
     {
-      q: "What is the best treatment for cystic acne?",
-      a: "Cystic acne requires professional medical treatment. Options include oral antibiotics, hormonal therapy, isotretinoin, intralesional steroid injections for individual cysts, and drainage of large cysts. A dermatologist will determine the best approach.",
+      q: "Can I use home remedies for fungal infections?",
+      a: "While some home remedies may provide temporary relief, they cannot cure fungal infections. Proper antifungal medication is necessary for complete treatment. Delaying proper treatment can allow the infection to spread.",
     },
     {
-      q: "Is acne caused by diet?",
-      a: "Diet can influence acne in some people. High-glycemic foods like refined sugars and carbohydrates, as well as dairy products, may trigger breakouts in susceptible individuals. A balanced diet with low-glycemic foods may help improve acne.",
+      q: "When should I visit a dermatologist for a fungal infection?",
+      a: "You should see a dermatologist if the infection is spreading, if over-the-counter creams are not working, if you have nail changes, if you have recurrent infections, or if you have diabetes or a weakened immune system.",
     },
     {
-      q: "How much does acne treatment cost in Armoor?",
-      a: `The cost of acne treatment at ${CLINIC_NAME} depends on the type and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
+      q: "Can children get fungal infections?",
+      a: "Yes, children are quite susceptible to fungal infections, especially ringworm and scalp infections. These are common in school settings. Treatment is safe and effective for children when prescribed by a doctor.",
     },
     {
-      q: "Can hormonal acne be treated?",
-      a: "Yes, hormonal acne responds well to targeted therapy. Treatment may include oral contraceptive pills, spironolactone, or other hormonal modulators, combined with topical medications. A dermatologist can assess your hormonal profile and recommend appropriate treatment.",
+      q: "Does sweating increase fungal infections?",
+      a: "Yes, excessive sweating creates a warm, moist environment where fungi thrive. This is why fungal infections are common in skin folds, between toes, and in the groin area. Keeping skin dry helps prevent infections.",
     },
     {
-      q: "Does popping pimples make acne worse?",
-      a: "Yes, popping or picking pimples can push bacteria deeper into the skin, causing more inflammation, increasing the risk of scarring, and delaying healing. It is best to leave extractions to a trained dermatologist.",
+      q: "How much does fungal infection treatment cost in Armoor?",
+      a: `The cost of fungal infection treatment at ${CLINIC_NAME} depends on the type, severity, and duration of treatment required. We offer affordable and transparent pricing. Please book a consultation for a personalised treatment plan and cost estimate.`,
     },
     {
-      q: "What should I avoid during acne treatment?",
-      a: "Avoid harsh scrubs, picking or popping pimples, excessive sun exposure without protection, heavy oil-based skincare and makeup products, and frequent touching of the face. Your dermatologist will provide complete guidance.",
-    },
-    {
-      q: "Can adults get acne?",
-      a: "Yes, adult acne is very common and affects many people beyond their teenage years. It is often linked to hormonal changes, stress, medications, or underlying medical conditions. Adult acne can be effectively treated with the right approach.",
-    },
-    {
-      q: "Is isotretinoin safe for acne treatment?",
-      a: `Isotretinoin is a highly effective medication for severe cystic acne that has not responded to other treatments. It is used under strict medical supervision at ${CLINIC_NAME} with regular monitoring of blood parameters. Your dermatologist will discuss all benefits and risks before starting treatment.`,
+      q: "How can I prevent fungal infections from recurring?",
+      a: "Keep your skin clean and dry, wear breathable cotton clothing, avoid sharing personal items, complete the full course of treatment, and manage underlying conditions like diabetes. Good hygiene is your best defence against recurrence.",
     },
   ];
 
@@ -1080,7 +1023,7 @@ function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-center text-[15px] text-muted-foreground">
-            Common questions about acne treatment at our clinic in Armoor.
+            Common questions about fungal infection treatment at our clinic in Armoor.
           </p>
           <div className="mt-8 space-y-4">
             {faqs.map((faq, i) => (
@@ -1114,27 +1057,27 @@ function FAQSection() {
 function ReviewsSection() {
   const reviews = [
     {
-      name: "Reshma",
-      location: "Armoor",
-      text: "I struggled with acne for over 5 years and tried every product on the market. Dr. Raghavendhra diagnosed my condition as hormonal acne and put me on a combination of topical treatment and oral medication. Within 3 months, my skin cleared up significantly. I am so thankful for the personalised care I received.",
-      rating: 5,
-    },
-    {
-      name: "Sandeep",
-      location: "Nizamabad",
-      text: "I had severe cystic acne that left me with deep scars. The doctor recommended microneedling sessions along with medical treatment. After 4 sessions, my scars have faded remarkably and my active acne is under control. The clinic is very professional and the doctor explains everything in detail.",
-      rating: 5,
-    },
-    {
-      name: "Anjali",
-      location: "Balkonda",
-      text: "My daughter's acne was getting worse and she was losing confidence. Dr. Raghavendhra was very gentle with her and designed a treatment plan that suited her sensitive skin. The chemical peels and topical medications made a huge difference. Her skin is now clear and glowing.",
-      rating: 5,
-    },
-    {
       name: "Mahesh",
+      location: "Armoor",
+      text: "I had ringworm on my arms for weeks and tried over-the-counter creams that did not help. Dr. Raghavendhra diagnosed it quickly and prescribed the right medication. The itching stopped in a few days, and the patches cleared completely in three weeks. Very happy with the treatment.",
+      rating: 5,
+    },
+    {
+      name: "Swathi",
+      location: "Nizamabad",
+      text: "I was embarrassed by the dark patches on my neck and underarms. I thought it was a hygiene issue, but the doctor explained it was a fungal infection. The treatment was simple and affordable. The patches are gone now. Highly recommend this clinic.",
+      rating: 5,
+    },
+    {
+      name: "Ravi Kumar",
+      location: "Balkonda",
+      text: "I had athlete's foot for months. It was itchy and uncomfortable, especially during summer. The doctor prescribed a combination of cream and oral medication, along with advice on keeping my feet dry. Completely cured now. Thank you.",
+      rating: 5,
+    },
+    {
+      name: "Padma",
       location: "Mortad",
-      text: "I came to the clinic with persistent back acne that I had for years. The doctor prescribed a combination of medicated cleansers, topical treatments, and oral medication. The results have been excellent — my back is almost completely clear now. Highly recommend this clinic for acne treatment.",
+      text: "My son got a fungal infection on his scalp from school. The doctor was very gentle with him and prescribed a medicated shampoo and oral medicine. His scalp is clear now, and his hair is growing back. Very grateful for the care.",
       rating: 5,
     },
   ];
@@ -1150,7 +1093,8 @@ function ReviewsSection() {
             What Our Patients Say
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Real experiences from patients who have undergone acne treatment at our clinic.
+            Real experiences from patients who have undergone fungal infection treatment at our
+            clinic.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -1192,12 +1136,13 @@ function AreasWeServeSection() {
   const areas = [
     { name: "Armoor", isLocal: true },
     { name: "Balkonda" },
-    { name: "Nizamabad" },
     { name: "Mortad" },
-    { name: "Bodhan" },
-    { name: "Kamareddy" },
-    { name: "Yellareddy" },
-    { name: "Sadasivanagar" },
+    { name: "Mupkal" },
+    { name: "Velpur" },
+    { name: "Kammarpally" },
+    { name: "Nandipet" },
+    { name: "Navipet" },
+    { name: "Nizamabad" },
   ];
 
   return (
@@ -1211,9 +1156,9 @@ function AreasWeServeSection() {
             Conveniently Located in Armoor
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert acne
-            treatment. Our clinic is easily accessible and welcomes patients from all nearby towns
-            and villages.
+            Patients visit {CLINIC_NAME} from across Armoor and surrounding areas for expert fungal
+            infection treatment. Our clinic is easily accessible and welcomes patients from all
+            nearby towns and villages.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -1248,30 +1193,19 @@ function AreasWeServeSection() {
 
 function RelatedTreatmentsSection() {
   const related: { name: string; to: string; params?: Record<string, string> }[] = [
-    { name: "Hair Loss Treatment", to: "/treatments/hair-loss-treatment-armoor" },
-    { name: "Psoriasis Treatment", to: "/treatments/psoriasis-treatment-armoor" },
+    { name: "Acne Treatment", to: "/treatments/acne-treatment-armoor" },
+    { name: "Hair Fall Treatment", to: "/treatments/hair-fall-treatment-armoor" },
     { name: "Eczema Treatment", to: "/treatments/eczema-treatment-armoor" },
-    {
-      name: "Fungal Infection Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "fungal-infection-treatment" },
-    },
-    { name: "Dandruff Treatment", to: "/treatments/dandruff-treatment-armoor" },
+    { name: "Psoriasis Treatment", to: "/treatments/psoriasis-treatment-armoor" },
     { name: "Vitiligo Treatment", to: "/treatments/$slug", params: { slug: "vitiligo-treatment" } },
-    {
-      name: "Pigmentation Treatment",
-      to: "/treatments/$slug",
-      params: { slug: "pigmentation-treatment" },
-    },
+    { name: "Warts Treatment", to: "/treatments/$slug", params: { slug: "warts-treatment" } },
     {
       name: "Skin Allergy Treatment",
       to: "/treatments/$slug",
       params: { slug: "skin-allergy-treatment" },
     },
-    { name: "Nail Disorders", to: "/treatments/$slug", params: { slug: "nail-disorders" } },
-    { name: "Wart Removal", to: "/treatments/$slug", params: { slug: "wart-removal" } },
-    { name: "Mole Removal", to: "/treatments/$slug", params: { slug: "mole-removal" } },
-  ].filter((r) => r.name !== "Acne Treatment");
+    { name: "Dandruff Treatment", to: "/treatments/$slug", params: { slug: "dandruff-treatment" } },
+  ];
 
   return (
     <section className="py-20 sm:py-24">
@@ -1288,7 +1222,7 @@ function RelatedTreatmentsSection() {
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {related.slice(0, 6).map((treatment) => (
+          {related.map((treatment) => (
             <Link
               key={treatment.name}
               to={treatment.to}
@@ -1309,11 +1243,11 @@ function BookingCTA() {
     <section className="py-20" style={{ background: "var(--gradient-navy)" }}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-          Ready to Get Clear Skin?
+          Ready to Treat Your Fungal Infection?
         </h2>
         <p className="mt-4 text-lg text-white/80">
           Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Take
-          the first step towards healthy, glowing skin.
+          the first step towards healthy, infection-free skin.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link

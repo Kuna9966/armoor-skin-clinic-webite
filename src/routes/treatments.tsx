@@ -93,12 +93,27 @@ function TreatmentGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {treatments.map((t) => {
-            const isAcneCity = t.slug === "acne-treatment";
+            const citySlug = `${t.slug}-armoor`;
+            const cityPages = [
+              "acne-treatment",
+              "hair-loss-treatment",
+              "eczema-treatment",
+              "psoriasis-treatment",
+              "fungal-infection-treatment",
+              "dandruff-treatment",
+              "vitiligo-treatment",
+              "pigmentation-treatment",
+              "skin-allergy-treatment",
+              "nail-disorders",
+              "wart-removal",
+              "mole-removal",
+            ];
+            const isCityPage = cityPages.includes(t.slug);
             return (
               <Link
                 key={t.slug}
-                to={isAcneCity ? "/treatments/acne-treatment-armoor" : "/treatments/$slug"}
-                {...(isAcneCity ? {} : { params: { slug: t.slug } })}
+                to={isCityPage ? `/treatments/${citySlug}` : "/treatments/$slug"}
+                {...(isCityPage ? {} : { params: { slug: citySlug } })}
                 className="group rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
               >
                 <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/5 text-primary">
