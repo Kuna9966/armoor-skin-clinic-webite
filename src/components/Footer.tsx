@@ -1,17 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Twitter, Mail, MapPin, Phone, Clock } from "lucide-react";
 import logoCircleImg from "@/assets/logocircle.png";
-import {
-  CLINIC_NAME,
-  PHONE,
-  PHONE_TEL,
-  SOCIAL,
-} from "../lib/clinic-data";
+import { CLINIC_NAME, PHONE, PHONE_TEL, SOCIAL } from "../lib/clinic-data";
 import { NAV } from "./Header";
 
 export function Footer() {
   return (
     <footer
+      data-header-theme="dark"
       className="relative pt-16 pb-8 text-white"
       style={{ background: "var(--gradient-navy)" }}
     >

@@ -196,6 +196,7 @@ function Hero() {
   return (
     <section
       id="home"
+      data-header-theme="dark"
       className="relative isolate min-h-[100svh] overflow-hidden"
       style={{
         background:
@@ -490,6 +491,7 @@ function Treatments() {
 function WhyUs() {
   return (
     <section
+      data-header-theme="dark"
       className="relative overflow-hidden py-20 sm:py-28"
       style={{ background: "var(--gradient-hero)" }}
     >
@@ -1053,7 +1055,7 @@ function Reviews() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28">
+    <section data-header-theme="dark" className="relative overflow-hidden py-20 sm:py-28">
       <div
         className="absolute inset-0"
         style={{
@@ -1144,7 +1146,7 @@ function FAQ() {
     categories.find((c) => c.faqs.includes(idx))?.label ?? "General";
 
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28">
+    <section data-header-theme="light" className="relative overflow-hidden py-20 sm:py-28">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -1327,16 +1329,19 @@ function Section({
   title,
   children,
   tone = "default",
+  headerTheme = "light",
 }: {
   id?: string;
   eyebrow?: string;
   title?: string;
   children: React.ReactNode;
   tone?: "default" | "muted";
+  headerTheme?: "dark" | "light";
 }) {
   return (
     <section
       id={id}
+      data-header-theme={headerTheme}
       className={`scroll-mt-24 py-20 sm:py-28 ${tone === "muted" ? "bg-secondary/40" : ""}`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
