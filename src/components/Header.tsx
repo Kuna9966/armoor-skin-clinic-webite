@@ -2,16 +2,11 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone, Calendar } from "lucide-react";
 import logoCircleImg from "@/assets/logocircle.png";
-import {
-  CLINIC_NAME,
-  PHONE,
-  PHONE_TEL,
-} from "../lib/clinic-data";
+import { CLINIC_NAME, PHONE, PHONE_TEL } from "../lib/clinic-data";
 
 export const NAV = [
   { label: "Home", href: "#home", path: "/" },
   { label: "About", href: "#about", path: "/" },
-  { label: "Services", href: "#services", path: "/" },
   { label: "Treatments", href: "/treatments", path: "/treatments" },
   { label: "Doctor", href: "#doctor", path: "/" },
   { label: "Gallery", href: "#gallery", path: "/" },
