@@ -133,9 +133,8 @@ const APPOINTMENT_TIMES = [
 
 const GALLERY = [
   { label: "Clinic Exterior", tag: "Building Front", image: clinicExteriorImg },
-  { label: "Clinic Interior", tag: "Waiting Area" },
+  { label: "Clinic Interior", tag: "Waiting Area", image: "/images/gallery/reception-3.webp" },
   { label: "Clinic Interior", tag: "Consultation Room", image: consultationRoomImg },
-  { label: "Clinic Interior", tag: "Treatment Room" },
 ];
 
 let adDismissed = false;
