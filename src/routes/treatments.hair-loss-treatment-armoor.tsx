@@ -12,7 +12,6 @@ import {
   MapPin,
   Quote,
   Clock,
-  AlertCircle,
   Users,
 } from "lucide-react";
 import {
@@ -374,24 +373,12 @@ function WhatIsSection() {
               </p>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Hair thinning illustration */}
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <AlertCircle className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Hair Growth Cycle Illustration
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing normal vs. thinning hair
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration comparing healthy hair density to thinning hair
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/diseases/hair-loss-1.png"
+              alt="Comparison of healthy hair density to thinning hair"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -458,22 +445,12 @@ function SignsSymptomsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Signs of hair loss illustration */}
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <AlertCircle className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Hair Loss Symptoms Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common signs of hair loss
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing receding hairline, thinning crown, and widening part line
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/diseases/hair-loss-2.png"
+              alt="Common signs of hair loss including receding hairline and thinning crown"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -663,22 +640,12 @@ function DiagnosisSection() {
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Scalp examination */}
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <Stethoscope className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">Scalp Examination</p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's scalp
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist performing scalp examination at Armoor Skin & Hair Clinic
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/diseases/hair-loss-3.png"
+              alt="Dermatologist performing scalp examination"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -957,22 +924,12 @@ function TipsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Healthy hair illustration */}
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <Sparkles className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Healthy Hair Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing healthy, well-maintained hair
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of healthy, strong hair after treatment
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/diseases/hair-loss-4.png"
+              alt="Healthy, strong hair after treatment"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>

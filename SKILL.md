@@ -77,4 +77,4 @@ When adding images from `Special-Images/` to a treatment page:
 3. Replace the placeholder div with an `<img>` tag pointing to `/images/diseases/<filename>`
 4. Remove any unused icon imports (e.g. `AlertCircle`, `Sparkles`) from the import block if they were only used in the replaced placeholder
 
-Three images to a page pattern: WhatIsSection (1st), SymptomsSection (2nd), DiagnosisSection (3rd), TipsSection (4th).
+Four images per page pattern: WhatIsSection 1st column (1st), SymptomsSection bottom (2nd), DiagnosisSection 2nd column (3rd), TipsSection bottom (4th). Images go in `public/images/diseases/` as kebab-case. Remove unused `AlertCircle`/`Sparkles` imports after replacement.
