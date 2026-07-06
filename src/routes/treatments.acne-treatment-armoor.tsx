@@ -11,7 +11,6 @@ import {
   Star,
   MapPin,
   Quote,
-  AlertCircle,
   Users,
   Wind,
   Droplets,
@@ -397,25 +396,12 @@ function WhatIsSection() {
               </p>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Acne skin condition */}
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <AlertCircle className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Condition
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing acne-affected facial skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing acne breakouts on facial skin including whiteheads,
-                  blackheads, and inflamed pimples
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/diseases/acne-1.png"
+              alt="Acne breakouts on facial skin including whiteheads, blackheads, and inflamed pimples"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -486,23 +472,12 @@ function SymptomsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne symptoms illustration */}
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <AlertCircle className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Symptoms Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common acne symptoms and lesion types
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing different types of acne lesions from whiteheads to cystic
-                acne on facial skin
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/diseases/acne-2.png"
+              alt="Different types of acne lesions from whiteheads to cystic acne on facial skin"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -700,25 +675,12 @@ function DiagnosisSection() {
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Dermatologist acne consultation */}
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <Stethoscope className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Acne Skin Consultation
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's facial skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist examining a patient's facial skin for acne at Armoor Skin &
-                  Hair Clinic
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/diseases/acne-3.jpg"
+              alt="Dermatologist examining a patient's facial skin for acne"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -997,22 +959,12 @@ function TipsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Acne skincare routine illustration */}
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <Sparkles className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Acne Skincare Routine
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing a skincare routine for acne-prone skin
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of daily skincare routine for managing acne-prone skin
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/diseases/acne-4.png"
+              alt="Daily skincare routine for managing acne-prone skin"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>

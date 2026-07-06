@@ -67,3 +67,14 @@ src/
 - Nav hover temporarily moves pill; mouse leave returns to scroll-active section
 - Mobile nav is separate from desktop nav — no pill on mobile
 - All durations: 300ms for most transitions
+
+## Adding Treatment Images
+
+When adding images from `Special-Images/` to a treatment page:
+
+1. Copy the image to `public/images/diseases/` with a kebab-case name (e.g. `acne-4.png`)
+2. Find the `IMAGE PLACEHOLDER` comment in the corresponding `src/routes/treatments.*.tsx` file
+3. Replace the placeholder div with an `<img>` tag pointing to `/images/diseases/<filename>`
+4. Remove any unused icon imports (e.g. `AlertCircle`, `Sparkles`) from the import block if they were only used in the replaced placeholder
+
+Three images to a page pattern: WhatIsSection (1st), SymptomsSection (2nd), DiagnosisSection (3rd), TipsSection (4th).
