@@ -134,6 +134,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: `${SITE_URL}/og-image.jpg`,
       },
       {
+        property: "og:image:type",
+        content: "image/jpeg",
+      },
+      {
         property: "og:image:width",
         content: "1200",
       },
@@ -151,8 +155,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "apple-touch-icon", href: "/favicon.ico" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "alternate icon", href: "/images/favicon/favicon-32.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/images/favicon/favicon-256.png" },
     ],
     scripts: [
       {
@@ -177,7 +182,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               url: SITE_URL,
               telephone: PHONE_TEL,
               email: "contact@armoorskinclinic.com",
-              logo: `${SITE_URL}/favicon.ico`,
+              logo: `${SITE_URL}/favicon.svg`,
               image: `${SITE_URL}/og-image.jpg`,
               address: {
                 "@type": "PostalAddress",
@@ -276,7 +281,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@id": `${SITE_URL}/#organization`,
               name: CLINIC_NAME,
               url: SITE_URL,
-              logo: `${SITE_URL}/favicon.ico`,
+              logo: `${SITE_URL}/favicon.svg`,
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: PHONE_TEL,

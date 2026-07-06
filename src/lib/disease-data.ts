@@ -11,20 +11,20 @@ export interface Disease {
 }
 
 const IMAGE_MAP: Record<string, string> = {
-  "Atopic Dermatitis": "/images/diseases/Atopic Dermatitis.jpg",
-  "Back Acne": "/images/diseases/back acne.jpg",
-  "Seborrheic Keratosis": "/images/diseases/eborrheic Keratoses.jpg",
-  Eczema: "/images/diseases/Eczema.jpg",
-  Hyperpigmentation: "/images/diseases/hyperpigmentation.jpeg",
-  "Nail Psoriasis": "/images/diseases/Nail_psoriasis.jpeg",
-  Psoriasis: "/images/diseases/Psoriasis.jpg",
-  "Stevens-Johnson Syndrome": "/images/diseases/SJS-TEN.jpeg",
-  Vitiligo: "/images/diseases/Vitiligo.jpg",
-  "Warts & Molluscum": "/images/diseases/Warts Molluscum.jpg",
+  "Atopic Dermatitis": "/images/diseases/atopic-dermatitis.webp",
+  "Back Acne": "/images/diseases/back-acne.webp",
+  "Seborrheic Keratosis": "/images/diseases/seborrheic-keratosis.webp",
+  Eczema: "/images/diseases/eczema.webp",
+  Hyperpigmentation: "/images/diseases/hyperpigmentation.webp",
+  "Nail Psoriasis": "/images/diseases/nail-psoriasis.webp",
+  Psoriasis: "/images/diseases/psoriasis.webp",
+  "Stevens-Johnson Syndrome": "/images/diseases/sjs-ten.webp",
+  Vitiligo: "/images/diseases/vitiligo.webp",
+  "Warts & Molluscum": "/images/diseases/warts-molluscum.webp",
 };
 
 function findImage(name: string): string {
-  return IMAGE_MAP[name] || "/images/diseases/Psoriasis.jpg";
+  return IMAGE_MAP[name] || "/images/diseases/psoriasis.webp";
 }
 
 function treatmentList(name: string): string[] {
@@ -165,7 +165,7 @@ export const hairDiseases: Disease[] = [
     description: "Hair loss can result from genetics, hormonal changes, medical conditions, or stress. A thorough evaluation helps identify the underlying cause and guides personalized treatment for optimal hair regrowth.",
     symptoms: ["Gradual thinning", "Bald patches", "Excessive shedding", "Receding hairline", "Widening part"],
     category: "hair",
-    image: "/images/diseases/Psoriasis.jpg",
+    image: "/images/diseases/psoriasis.webp",
     treatments: ["Medical Management", "PRP Therapy", "Hair Transplant Evaluation", "Topical Solutions"],
   },
   {
@@ -176,7 +176,7 @@ export const hairDiseases: Disease[] = [
     description: "Dandruff is a common scalp condition causing flaking and itching. It can result from dry skin, seborrheic dermatitis, or fungal overgrowth. Proper treatment controls flaking and soothes the scalp.",
     symptoms: ["White flakes", "Itchy scalp", "Dryness", "Redness", "Greasy patches"],
     category: "hair",
-    image: "/images/diseases/Psoriasis.jpg",
+    image: "/images/diseases/psoriasis.webp",
     treatments: ["Medicated Shampoos", "Topical Treatments", "Medical Management", "Scalp Therapy"],
   },
 ];

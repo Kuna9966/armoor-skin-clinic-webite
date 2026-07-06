@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Twitter, Mail, MapPin, Phone, Clock } from "lucide-react";
-import logoCircleImg from "@/assets/logocircle.png";
+const logoCircleImg = "/images/logo/logocircle.webp";
 import { CLINIC_NAME, PHONE, PHONE_TEL, SOCIAL } from "../lib/clinic-data";
 import { NAV } from "./Header";
 
@@ -19,7 +19,10 @@ export function Footer() {
                 <img
                   src={logoCircleImg}
                   alt="Armoor Skin & Hair Clinic logo"
+                  width={192}
+                  height={192}
                   className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div>

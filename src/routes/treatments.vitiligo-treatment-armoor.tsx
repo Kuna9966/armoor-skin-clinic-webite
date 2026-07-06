@@ -11,7 +11,6 @@ import {
   Star,
   MapPin,
   Quote,
-  AlertCircle,
   Sun,
 } from "lucide-react";
 import {
@@ -375,23 +374,15 @@ function WhatIsSection() {
               </p>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <AlertCircle className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Vitiligo Skin Condition
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing vitiligo-affected skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing white patches of vitiligo on skin
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/treatments/vitiligo/vitiligo-1.webp"
+              alt="White patches of vitiligo on skin"
+              width={800}
+              height={600}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -462,22 +453,15 @@ function SymptomsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <AlertCircle className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Vitiligo Symptoms Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common vitiligo symptoms
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing white patches, hair whitening, and symmetrical
-                depigmentation caused by vitiligo
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/treatments/vitiligo/vitiligo-2.webp"
+              alt="White patches, hair whitening, and symmetrical depigmentation caused by vitiligo"
+              width={800}
+              height={600}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -671,23 +655,15 @@ function DiagnosisSection() {
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <Stethoscope className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Dermatologist Consultation
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist consulting a patient
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist examining a patient's skin at Armoor Skin & Hair Clinic
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/treatments/vitiligo/vitiligo-3.webp"
+              alt="Dermatologist examining a patient's skin"
+              width={800}
+              height={600}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -976,21 +952,15 @@ function TipsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <Sun className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Skin Care Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing sun protection and skincare for vitiligo
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of sun protection and skincare routine for managing vitiligo
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/treatments/vitiligo/vitiligo-4.webp"
+              alt="Sun protection and skincare routine for managing vitiligo"
+              width={800}
+              height={600}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>

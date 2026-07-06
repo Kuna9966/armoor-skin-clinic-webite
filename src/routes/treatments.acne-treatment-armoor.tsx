@@ -398,8 +398,11 @@ function WhatIsSection() {
           </div>
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="/images/diseases/acne-1.png"
+              src="/images/treatments/acne/acne-1.webp"
               alt="Acne breakouts on facial skin including whiteheads, blackheads, and inflamed pimples"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
@@ -474,8 +477,11 @@ function SymptomsSection() {
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
             <img
-              src="/images/diseases/acne-2.png"
+              src="/images/treatments/acne/acne-2.webp"
               alt="Different types of acne lesions from whiteheads to cystic acne on facial skin"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
@@ -677,8 +683,11 @@ function DiagnosisSection() {
           </div>
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="/images/diseases/acne-3.jpg"
+              src="/images/treatments/acne/acne-3.webp"
               alt="Dermatologist examining a patient's facial skin for acne"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
@@ -961,8 +970,11 @@ function TipsSection() {
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
             <img
-              src="/images/diseases/acne-4.png"
+              src="/images/treatments/acne/acne-4.webp"
               alt="Daily skincare routine for managing acne-prone skin"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>

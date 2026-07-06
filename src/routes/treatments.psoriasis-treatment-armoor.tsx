@@ -376,8 +376,11 @@ function WhatIsSection() {
           </div>
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="/images/diseases/psoriasis-1.png"
+              src="/images/treatments/psoriasis/psoriasis-1.webp"
               alt="Red, scaly psoriasis patches on skin"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
@@ -452,8 +455,11 @@ function SymptomsSection() {
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
             <img
-              src="/images/diseases/psoriasis-2.png"
+              src="/images/treatments/psoriasis/psoriasis-2.webp"
               alt="Red patches, silvery scales, and nail changes caused by psoriasis"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
@@ -649,8 +655,11 @@ function DiagnosisSection() {
           </div>
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="/images/diseases/psoriasis-3.png"
+              src="/images/treatments/psoriasis/psoriasis-3.webp"
               alt="Dermatologist examining a patient's skin"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
@@ -924,8 +933,11 @@ function LivingWithSection() {
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
             <img
-              src="/images/diseases/psoriasis-4.png"
+              src="/images/treatments/psoriasis/psoriasis-4.webp"
               alt="Daily skincare routine for managing psoriasis"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>

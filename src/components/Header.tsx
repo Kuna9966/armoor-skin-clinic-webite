@@ -1,7 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState, useRef, useCallback } from "react";
 import { Menu, X, Phone, Calendar } from "lucide-react";
-import logoCircleImg from "@/assets/logocircle.png";
+const logoCircleImg = "/images/logo/logocircle.webp";
 import { CLINIC_NAME, PHONE, PHONE_TEL } from "../lib/clinic-data";
 
 export const NAV = [
@@ -134,7 +134,10 @@ export function Header() {
             <img
               src={logoCircleImg}
               alt="Armoor Skin & Hair Clinic logo"
+              width={192}
+              height={192}
               className="h-full w-full object-cover"
+              loading="eager"
             />
           </div>
           <div className="min-w-0 leading-tight">

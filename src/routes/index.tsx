@@ -31,13 +31,13 @@ import { Calendar as DatePicker } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import heroImg from "@/assets/Clinic Exterior.jpg";
-import profileImg from "@/assets/Profile.jpg";
-import clinicExteriorImg from "@/assets/Clinic Exterior.webp";
-import consultationRoomImg from "@/assets/Clinic Interior Consultation Room.webp";
-import adBannerImg from "@/assets/AdBanner.jpg";
-import skinDiseaseImg from "@/assets/SkinDisease.png";
-import hairDiseaseImg from "@/assets/Hairdisease.jpg";
+const heroImg = "/images/clinic/hero-exterior.webp";
+const profileImg = "/images/doctor/profile.webp";
+const clinicExteriorImg = "/images/clinic/exterior.webp";
+const consultationRoomImg = "/images/clinic/consultation-room.webp";
+const adBannerImg = "/images/banner/ad-banner.webp";
+const skinDiseaseImg = "/images/diseases/skin-disease.webp";
+const hairDiseaseImg = "/images/diseases/hair-disease.webp";
 import {
   CLINIC_NAME,
   DOCTOR_NAME,
@@ -168,6 +168,8 @@ function Home() {
             <img
               src={adBannerImg}
               alt="Armoor Skin & Hair Clinic promotional banner - Book your dermatology consultation"
+              width={1774}
+              height={887}
               className="w-full h-auto rounded-lg shadow-2xl object-contain"
               loading="lazy"
             />
@@ -207,6 +209,8 @@ function Hero() {
         <img
           src={heroImg}
           alt="Armoor Skin & Hair Clinic exterior - dermatology clinic in Armoor"
+          width={1344}
+          height={1170}
           className="h-full w-full object-cover mix-blend-multiply"
           loading="eager"
         />
@@ -328,6 +332,8 @@ function Doctor() {
               <img
                 src={profileImg}
                 alt="Dr. Raghavendhra MD, DVL - Consultant Dermatologist at Armoor Skin & Hair Clinic"
+                width={1309}
+                height={1600}
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
@@ -436,6 +442,8 @@ function Treatments() {
             <img
               src={skinDiseaseImg}
               alt="Skin disease diagnosis and treatment"
+              width={600}
+              height={420}
               loading="lazy"
               className="h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-105"
             />
@@ -464,6 +472,8 @@ function Treatments() {
             <img
               src={hairDiseaseImg}
               alt="Hair treatment and scalp diagnosis"
+              width={740}
+              height={492}
               loading="lazy"
               className="h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-105"
             />
@@ -1384,6 +1394,8 @@ function ImagePlaceholder({
         <img
           src={image}
           alt={`${label}${sublabel ? ` - ${sublabel}` : ""} at Armoor Skin & Hair Clinic, Armoor`}
+          width={800}
+          height={600}
           className="absolute inset-0 h-full w-full object-cover"
           loading="lazy"
         />

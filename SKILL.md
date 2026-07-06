@@ -68,13 +68,62 @@ src/
 - Mobile nav is separate from desktop nav — no pill on mobile
 - All durations: 300ms for most transitions
 
-## Adding Treatment Images
+## Image Optimization Standard
 
+This is a permanent project standard. Apply to every new page, component, blog post, gallery, treatment page, or feature added in the future without requiring additional prompts.
+
+### Format Rules
+- **Photographs** → WebP at ~80% quality (75–85% acceptable)
+- **Vector graphics, logos, icons, illustrations** → SVG whenever possible
+- **Favicons** → SVG primary, PNG fallback for older browsers
+- **Open Graph / Social images** → JPEG (best cross-platform support)
+- Never introduce PNG or JPEG photos unless a technical reason prevents WebP
+
+### Optimization
+- Export WebP at ~80% quality using `cwebp -q 80`
+- Strip unnecessary metadata
+- Use sRGB color profile
+- Keep file sizes as small as possible without noticeable quality loss
+
+### Responsive Images
+- Use `srcset` and `sizes` for responsive breakpoints where practical
+- Serve appropriately sized images for desktop, tablet, and mobile
+
+### Lazy Loading
+- `loading="lazy"` on all non-critical images
+- Do NOT lazy-load hero / LCP images — use `loading="eager"`
+
+### Layout Shift (CLS) Prevention
+- Every `<img>` must include explicit `width` and `height` attributes
+
+### Folder Structure
+```
+public/images/
+├── doctor/           # Doctor profile photos
+├── clinic/           # Clinic exterior, interior photos
+├── treatments/       # Treatment-specific images per subfolder
+│   ├── acne/
+│   ├── hair-loss/
+│   ├── psoriasis/
+│   └── vitiligo/
+├── diseases/         # Disease card listing images
+├── gallery/          # Gallery photos
+├── blog/             # Blog post images
+├── banner/           # Promotional banners
+├── logo/             # Logo assets
+└── favicon/          # Favicon SVG + PNG variants
+```
+
+### SEO
+- Maintain descriptive, kebab-case filenames
+- Keep meaningful alt attributes on every image
+- Do not change existing alt text unless necessary
+
+### Adding New Treatment Images
 When adding images from `Special-Images/` to a treatment page:
 
-1. Copy the image to `public/images/diseases/` with a kebab-case name (e.g. `acne-4.png`)
-2. Find the `IMAGE PLACEHOLDER` comment in the corresponding `src/routes/treatments.*.tsx` file
-3. Replace the placeholder div with an `<img>` tag pointing to `/images/diseases/<filename>`
-4. Remove any unused icon imports (e.g. `AlertCircle`, `Sparkles`) from the import block if they were only used in the replaced placeholder
-
-Four images per page pattern: WhatIsSection 1st column (1st), SymptomsSection bottom (2nd), DiagnosisSection 2nd column (3rd), TipsSection bottom (4th). Images go in `public/images/diseases/` as kebab-case. Remove unused `AlertCircle`/`Sparkles` imports after replacement.
+1. Convert to WebP: `cwebp -q 80 "input.png" -o "public/images/treatments/<condition>/<name>.webp"`
+2. Update `src/routes/treatments.*.tsx`:
+   - Replace the placeholder div with `<img src="/images/treatments/<condition>/<name>.webp" alt="..." width={800} height={600} loading="lazy" />`
+   - Remove unused icon imports from the import block
+3. Four images per page: WhatIsSection (1st), SymptomsSection (2nd), DiagnosisSection (3rd), TipsSection (4th)

@@ -375,8 +375,11 @@ function WhatIsSection() {
           </div>
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="/images/diseases/hair-loss-1.png"
+              src="/images/treatments/hair-loss/hair-loss-1.webp"
               alt="Comparison of healthy hair density to thinning hair"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
@@ -447,8 +450,11 @@ function SignsSymptomsSection() {
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
             <img
-              src="/images/diseases/hair-loss-2.png"
+              src="/images/treatments/hair-loss/hair-loss-2.webp"
               alt="Common signs of hair loss including receding hairline and thinning crown"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
@@ -642,8 +648,11 @@ function DiagnosisSection() {
           </div>
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="/images/diseases/hair-loss-3.png"
+              src="/images/treatments/hair-loss/hair-loss-3.webp"
               alt="Dermatologist performing scalp examination"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
@@ -926,8 +935,11 @@ function TipsSection() {
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
             <img
-              src="/images/diseases/hair-loss-4.png"
+              src="/images/treatments/hair-loss/hair-loss-4.webp"
               alt="Healthy, strong hair after treatment"
+              width={800}
+              height={600}
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
