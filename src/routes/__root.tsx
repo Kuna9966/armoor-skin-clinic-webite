@@ -155,10 +155,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico?v=2", type: "image/x-icon" },
-      { rel: "icon", href: "/images/favicon/favicon-32.png?v=2", type: "image/png", sizes: "32x32" },
-      { rel: "icon", href: "/images/favicon/favicon-192.png?v=2", type: "image/png", sizes: "192x192" },
-      { rel: "apple-touch-icon", href: "/images/favicon/favicon-256.png?v=2" },
+      { rel: "icon", href: "/favicon.ico" },
+      { rel: "icon", href: "/favicon-48x48.png", type: "image/png", sizes: "48x48" },
+      { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { rel: "icon", href: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
     scripts: [
       {
@@ -183,7 +185,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               url: SITE_URL,
               telephone: PHONE_TEL,
               email: "contact@armoorskinclinic.com",
-              logo: `${SITE_URL}/images/favicon/favicon-192.png`,
+              logo: `${SITE_URL}/android-chrome-192x192.png`,
               image: `${SITE_URL}/og-image.jpg`,
               address: {
                 "@type": "PostalAddress",
@@ -282,7 +284,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@id": `${SITE_URL}/#organization`,
               name: CLINIC_NAME,
               url: SITE_URL,
-              logo: `${SITE_URL}/images/favicon/favicon-192.png`,
+              logo: `${SITE_URL}/android-chrome-192x192.png`,
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: PHONE_TEL,
