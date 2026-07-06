@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /admin/
 
-Sitemap: https://www.armoorskinclinic.com/sitemap.xml
+Sitemap: https://armoorskinclinic.com/sitemap.xml
