@@ -11,7 +11,6 @@ import {
   Star,
   MapPin,
   Quote,
-  AlertCircle,
   Users,
 } from "lucide-react";
 import {
@@ -375,24 +374,12 @@ function WhatIsSection() {
               </p>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Psoriasis skin condition */}
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <AlertCircle className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Psoriasis Skin Condition
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing psoriasis-affected skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing red, scaly psoriasis patches on skin
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/diseases/psoriasis-1.png"
+              alt="Red, scaly psoriasis patches on skin"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -463,23 +450,12 @@ function SymptomsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Psoriasis symptoms illustration */}
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <AlertCircle className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Psoriasis Symptoms Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common psoriasis symptoms
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing red patches, silvery scales, and nail changes caused by
-                psoriasis
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/diseases/psoriasis-2.png"
+              alt="Red patches, silvery scales, and nail changes caused by psoriasis"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -671,24 +647,12 @@ function DiagnosisSection() {
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Dermatologist consultation */}
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <Stethoscope className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Dermatologist Consultation
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist consulting a patient
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist examining a patient's skin at Armoor Skin & Hair Clinic
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/diseases/psoriasis-3.png"
+              alt="Dermatologist examining a patient's skin"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -958,22 +922,12 @@ function LivingWithSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Skin care illustration */}
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <Sparkles className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Skin Care Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing healthy skincare routine
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of daily skincare routine for managing psoriasis
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/diseases/psoriasis-4.png"
+              alt="Daily skincare routine for managing psoriasis"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>

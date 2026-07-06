@@ -113,7 +113,11 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row">
+        <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs leading-relaxed text-white/50">
+          ⚠️ AI-Assisted Content: Some content on this website is created or enhanced using AI and
+          reviewed by qualified medical professionals for accuracy.
+        </div>
+        <div className="mt-4 flex flex-col items-center justify-between gap-3 text-xs text-white/60 sm:flex-row">
           <div>&copy; 2026 Armoor Skin & Hair Clinic. All rights reserved.</div>
           <div>Designed with care for our patients.</div>
         </div>
