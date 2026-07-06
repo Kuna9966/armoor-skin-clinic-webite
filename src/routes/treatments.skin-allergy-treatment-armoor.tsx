@@ -11,7 +11,6 @@ import {
   Star,
   MapPin,
   Quote,
-  AlertCircle,
   Users,
 } from "lucide-react";
 import {
@@ -365,23 +364,14 @@ function WhatIsSection() {
               </p>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <AlertCircle className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Skin Allergy Condition
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing allergic skin reaction
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration showing red, itchy rash from a skin allergy
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/treatments/skin-allergy/skin-allergy-1.webp"
+              alt="Red, itchy rash from a skin allergy"
+              width={800}
+              height={600}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -634,21 +624,14 @@ function DiagnosisSection() {
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <Stethoscope className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">Allergy Evaluation</p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of patch testing or allergy consultation
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist performing allergy patch test at Armoor Skin & Hair Clinic
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/treatments/skin-allergy/skin-allergy-2.webp"
+              alt="Dermatologist performing allergy patch test"
+              width={800}
+              height={600}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -919,21 +902,14 @@ function TipsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <Sparkles className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Allergy Prevention Tips
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing skin allergy prevention tips
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of tips for preventing skin allergic reactions
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/treatments/skin-allergy/skin-allergy-3.webp"
+              alt="Tips for preventing skin allergic reactions"
+              width={800}
+              height={600}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
