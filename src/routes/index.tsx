@@ -21,7 +21,6 @@ import {
   ImageIcon,
   ArrowRight,
   GraduationCap,
-  Award,
   Star,
   Loader2,
   MessageCircle,
@@ -32,7 +31,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 const heroImg = "/images/clinic/hero-exterior.webp";
-const profileImg = "/images/doctor/profile.webp";
 const clinicExteriorImg = "/images/clinic/exterior.webp";
 const consultationRoomImg = "/images/clinic/consultation-room.webp";
 const adBannerImg = "/images/banner/ad-banner.webp";
@@ -321,37 +319,7 @@ function Doctor() {
       title="Led by an experienced dermatologist"
       tone="muted"
     >
-      <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[1fr_1.3fr]">
-        {/* Left: Photo */}
-        <div className="relative mx-auto w-full max-w-sm">
-          <div className="absolute -left-4 -top-4 h-72 w-72 rounded-3xl bg-gradient-to-br from-teal-400/20 to-blue-400/10 md:h-80 md:w-80" />
-          <div className="absolute -bottom-3 -right-3 h-48 w-48 rounded-full bg-primary/[0.04]" />
-          <div className="relative overflow-hidden rounded-3xl border-2 border-white/50 shadow-[0_20px_60px_-15px_oklch(0.16_0.06_265/0.3)]">
-            <div className="absolute inset-0" style={{ background: "var(--gradient-navy)" }} />
-            <div className="relative aspect-[3/4] overflow-hidden">
-              <img
-                src={profileImg}
-                alt="Dr. Raghavendhra MD, DVL - Consultant Dermatologist at Armoor Skin & Hair Clinic"
-                width={1309}
-                height={1600}
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          {/* Floating Credential Badge */}
-          <div className="absolute -right-3 -top-3 flex items-center gap-2 rounded-xl border border-border bg-white px-4 py-2.5 shadow-[var(--shadow-card)]">
-            <div className="grid h-8 w-8 place-items-center rounded-lg bg-primary/5 text-primary">
-              <Award className="h-4 w-4" />
-            </div>
-            <div className="leading-tight">
-              <p className="text-xs font-bold text-foreground">MD, DVL</p>
-              <p className="text-[10px] text-muted-foreground">Dermatologist</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Right: Content */}
+      <div className="mx-auto max-w-3xl text-center">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Meet Your Dermatologist
@@ -765,24 +733,24 @@ function Contact() {
 
         <form
           onSubmit={handleAppointmentSubmit}
-          className="rounded-2xl border border-blue-100 bg-white p-6 shadow-[0_20px_60px_rgba(37,99,235,0.12)] transition-all hover:shadow-[0_24px_70px_rgba(37,99,235,0.16)] sm:p-8"
+          className="rounded-2xl border border-blue-100 bg-white p-4 shadow-[0_20px_60px_rgba(37,99,235,0.12)] transition-all hover:shadow-[0_24px_70px_rgba(37,99,235,0.16)] sm:p-5"
         >
-          <div className="flex items-start gap-4">
-            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-blue-50 text-[#2563EB]">
+          <div className="flex items-start gap-3">
+            <div className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-blue-50 text-[#2563EB]">
               <Calendar className="h-5 w-5" />
             </div>
             <div>
-              <h3 className="font-display text-2xl font-bold text-foreground">
+              <h3 className="font-display text-xl font-bold text-foreground">
                 Book Your Consultation
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                 Choose your preferred date and time, and our team will contact you to confirm your
                 appointment with Dr. Raghavendhra.
               </p>
             </div>
           </div>
 
-          <div className="mt-7 grid gap-4 sm:grid-cols-2">
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <AppointmentField
               icon={User}
               label="Full Name"
@@ -903,7 +871,7 @@ function Contact() {
           <button
             type="submit"
             disabled={isSaving}
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(37,99,235,0.28)] transition-all hover:-translate-y-0.5 hover:bg-[#1D4ED8] hover:shadow-[0_20px_45px_rgba(37,99,235,0.34)] focus:outline-none focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:bg-[#2563EB]"
+            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(37,99,235,0.28)] transition-all hover:-translate-y-0.5 hover:bg-[#1D4ED8] hover:shadow-[0_20px_45px_rgba(37,99,235,0.34)] focus:outline-none focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:bg-[#2563EB]"
           >
             {isSaving ? (
               <>

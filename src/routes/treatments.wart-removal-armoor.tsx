@@ -1236,16 +1236,16 @@ function RelatedTreatmentsSection() {
 
 function BookingCTA() {
   return (
-    <section className="py-20" style={{ background: "var(--gradient-navy)" }}>
+    <section className="py-12" style={{ background: "var(--gradient-navy)" }}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
           Ready to Remove Your Warts?
         </h2>
-        <p className="mt-4 text-lg text-white/80">
+        <p className="mt-3 text-base text-white/80">
           Book a consultation with {DOCTOR_NAME}, {QUALIFICATION}, at {CLINIC_NAME} in Armoor. Say
           goodbye to warts with safe, effective treatment.
         </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <div className="mt-5 flex flex-wrap justify-center gap-3">
           <Link
             to="/"
             hash="contact"
