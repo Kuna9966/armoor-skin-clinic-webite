@@ -11,7 +11,6 @@ import {
   Star,
   MapPin,
   Quote,
-  AlertCircle,
   Users,
 } from "lucide-react";
 import {
@@ -373,24 +372,14 @@ function WhatIsSection() {
               </p>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Eczema symptoms illustration */}
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <AlertCircle className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">
-                  Eczema Skin Condition
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with an image showing eczema-affected skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Illustration comparing healthy skin to eczema-affected skin
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/treatments/eczema/eczema-1.webp"
+              alt="Comparison of healthy skin to eczema-affected skin"
+              width={800}
+              height={600}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -457,22 +446,14 @@ function SymptomsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Eczema symptoms illustration */}
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <AlertCircle className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Eczema Symptoms Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an infographic showing common eczema symptoms
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration showing dry, red, and itchy skin affected by eczema
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/treatments/eczema/eczema-2.webp"
+              alt="Dry, red, and itchy skin affected by eczema"
+              width={800}
+              height={600}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -654,22 +635,14 @@ function DiagnosisSection() {
               ))}
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-secondary/40">
-            {/* IMAGE PLACEHOLDER: Skin examination */}
-            <div className="flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-primary/10 text-primary">
-                  <Stethoscope className="h-8 w-8" />
-                </div>
-                <p className="mt-4 text-sm font-medium text-muted-foreground">Skin Examination</p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Replace with a photo of a dermatologist examining a patient's skin
-                </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
-                  Alt: Dermatologist performing skin examination at Armoor Skin & Hair Clinic
-                </p>
-              </div>
-            </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="/images/treatments/eczema/eczema-3.webp"
+              alt="Dermatologist performing skin examination"
+              width={800}
+              height={600}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -948,22 +921,14 @@ function TipsSection() {
           ))}
         </div>
         <div className="mx-auto mt-16 max-w-3xl">
-          {/* IMAGE PLACEHOLDER: Healthy skin after treatment */}
-          <div className="flex aspect-[2/1] items-center justify-center rounded-2xl bg-card p-8 shadow-[var(--shadow-soft)]">
-            <div className="text-center">
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <Sparkles className="h-6 w-6" />
-              </div>
-              <p className="mt-3 text-sm font-medium text-muted-foreground">
-                Healthy Skin Illustration
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
-                Replace with an image showing healthy, well-cared-for skin
-              </p>
-              <p className="text-xs text-muted-foreground/60">
-                Alt: Illustration of healthy, moisturised skin after eczema treatment
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
+            <img
+              src="/images/treatments/eczema/eczema-4.webp"
+              alt="Healthy, moisturised skin after eczema treatment"
+              width={800}
+              height={600}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
