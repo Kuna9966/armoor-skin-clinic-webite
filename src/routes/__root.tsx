@@ -155,10 +155,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "icon", href: "/images/favicon/favicon-32.png", type: "image/png", sizes: "32x32" },
-      { rel: "icon", href: "/images/favicon/favicon-192.png", type: "image/png", sizes: "192x192" },
-      { rel: "apple-touch-icon", href: "/images/favicon/favicon-256.png" },
+      { rel: "icon", href: "/favicon.ico?v=2", type: "image/x-icon" },
+      { rel: "icon", href: "/images/favicon/favicon-32.png?v=2", type: "image/png", sizes: "32x32" },
+      { rel: "icon", href: "/images/favicon/favicon-192.png?v=2", type: "image/png", sizes: "192x192" },
+      { rel: "apple-touch-icon", href: "/images/favicon/favicon-256.png?v=2" },
     ],
     scripts: [
       {
