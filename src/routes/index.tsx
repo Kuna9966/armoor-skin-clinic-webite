@@ -133,9 +133,10 @@ const APPOINTMENT_TIMES = [
 ];
 
 const GALLERY = [
-  { label: "Clinic Exterior", tag: "Building Front", image: clinicExteriorImg },
-  { label: "Clinic Interior", tag: "Waiting Area", image: "/images/gallery/reception-3.webp" },
-  { label: "Clinic Interior", tag: "Consultation Room", image: consultationRoomImg },
+  { label: "Clinic Exterior", tag: "Building Front", image: clinicExteriorImg, span: "lg:col-span-2", ratio: "aspect-[4/3]" },
+  { label: "Reception Area", tag: "Front Desk", image: "/images/gallery/reception-1.webp", span: "lg:row-span-2", ratio: "aspect-[3/5]" },
+  { label: "Consultation Room", tag: "Treatment Room", image: consultationRoomImg, span: "", ratio: "aspect-[4/3]" },
+  { label: "Reception Area", tag: "Waiting Area", image: "/images/gallery/reception-3.webp", span: "", ratio: "aspect-[4/3]" },
 ];
 
 let adDismissed = false;
@@ -509,14 +510,14 @@ function WhyUs() {
 function Gallery() {
   return (
     <Section id="gallery" eyebrow="Gallery" title="Inside our clinic">
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2">
         {GALLERY.map((g, i) => (
           <ImagePlaceholder
             key={i}
             label={g.label}
             sublabel={g.tag}
             image={g.image}
-            className={i === 0 ? "aspect-[4/3] lg:col-span-2 lg:aspect-[16/9]" : "aspect-[4/3]"}
+            className={`${g.ratio} ${g.span} overflow-hidden rounded-2xl shadow-[var(--shadow-soft)] transition-all duration-500 hover:shadow-[var(--shadow-elegant)] hover:-translate-y-0.5`}
           />
         ))}
       </div>
@@ -1357,7 +1358,7 @@ function ImagePlaceholder({
 }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl border border-border bg-secondary/60 ${className}`}
+      className={`group relative overflow-hidden rounded-2xl border border-border bg-secondary/60 ${className}`}
     >
       {image && (
         <img
@@ -1365,7 +1366,7 @@ function ImagePlaceholder({
           alt={`${label}${sublabel ? ` - ${sublabel}` : ""} at Armoor Skin & Hair Clinic, Armoor`}
           width={800}
           height={600}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           loading="lazy"
         />
       )}
