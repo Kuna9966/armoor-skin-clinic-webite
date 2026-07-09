@@ -374,10 +374,10 @@ function WhatIsSection() {
                   <AlertCircle className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">Mole on Skin</p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with an image showing different types of moles
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Illustration of various mole types on skin
                 </p>
               </div>
@@ -460,10 +460,10 @@ function SymptomsSection() {
               <p className="mt-3 text-sm font-medium text-muted-foreground">
                 ABCDE Mole Check Guide
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an ABCDE mole self-examination infographic
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: ABCDE rule for mole self-examination — Asymmetry, Border, Colour, Diameter,
                 Evolving
               </p>
@@ -658,10 +658,10 @@ function DiagnosisSection() {
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
                   Dermoscopic Evaluation
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with a photo of dermoscopic mole examination
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Dermatologist using a dermoscope to examine a mole at Armoor Skin & Hair
                   Clinic
                 </p>
@@ -931,10 +931,10 @@ function TipsSection() {
               <p className="mt-3 text-sm font-medium text-muted-foreground">
                 Skin Self-Examination Guide
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an illustration showing monthly skin self-examination steps
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: Step-by-step guide for performing a monthly skin self-examination
               </p>
             </div>

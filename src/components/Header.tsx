@@ -62,28 +62,29 @@ export function Header() {
 
   useEffect(() => {
     if (!isHome) return;
-    let ticking = false;
-    const detectSection = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const offset = 120;
-        const sections = document.querySelectorAll<HTMLElement>("section[id]");
-        let found = 0;
-        sections.forEach((el) => {
-          const top = el.getBoundingClientRect().top;
-          if (top <= offset && top > -el.offsetHeight) {
-            const idx = SECTION_TO_NAV[el.id];
-            if (idx !== undefined) found = idx;
-          }
-        });
-        setScrollIdx(found);
-        ticking = false;
-      });
-    };
-    detectSection();
-    window.addEventListener("scroll", detectSection, { passive: true });
-    return () => window.removeEventListener("scroll", detectSection);
+    const sectionIds = Object.keys(SECTION_TO_NAV);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length > 0) {
+          const closest = visible.reduce((a, b) =>
+            Math.abs(a.boundingClientRect.top) < Math.abs(b.boundingClientRect.top) ? a : b,
+          );
+          const idx = SECTION_TO_NAV[closest.target.id];
+          if (idx !== undefined) setScrollIdx(idx);
+        }
+      },
+      { rootMargin: "-120px 0px -60% 0px", threshold: 0 },
+    );
+    const els: Element[] = [];
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) {
+        observer.observe(el);
+        els.push(el);
+      }
+    });
+    return () => els.forEach((el) => observer.unobserve(el));
   }, [isHome]);
 
   useEffect(() => {
@@ -138,6 +139,7 @@ export function Header() {
               height={192}
               className="h-full w-full object-cover"
               loading="eager"
+              fetchpriority="high"
             />
           </div>
           <div className="min-w-0 leading-tight">

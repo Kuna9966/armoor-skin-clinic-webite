@@ -18,6 +18,61 @@ async function getServerEntry(): Promise<ServerEntry> {
   return serverEntryPromise;
 }
 
+const SECURITY_HEADERS: Record<string, string> = {
+  "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "Permissions-Policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+  "Content-Security-Policy": [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://ssl.google-analytics.com https://analytics.google.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com",
+    "img-src 'self' data: blob: https://www.googletagmanager.com https://ssl.google-analytics.com https://analytics.google.com",
+    "frame-src 'self' https://www.google.com",
+    "connect-src 'self' https://www.googletagmanager.com https://ssl.google-analytics.com https://analytics.google.com https://*.googleapis.com",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+  ].join("; "),
+};
+
+async function addResponseHeaders(request: Request, response: Response): Promise<Response> {
+  const url = new URL(request.url);
+  const isStaticAsset =
+    url.pathname.startsWith("/assets/") ||
+    url.pathname.startsWith("/images/") ||
+    url.pathname.match(/\.(ico|png|webp|jpg|jpeg|svg|webmanifest|txt|xml)$/i);
+
+  const headers = new Headers(response.headers);
+
+  if (!isStaticAsset) {
+    for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
+      if (!headers.has(key)) {
+        headers.set(key, value);
+      }
+    }
+  }
+
+  if (isStaticAsset) {
+    const ext = url.pathname.split(".").pop()?.toLowerCase();
+    if (ext === "js" || ext === "mjs" || ext === "css") {
+      headers.set("Cache-Control", "public, max-age=31536000, immutable");
+    } else if (ext?.match(/^(png|webp|jpg|jpeg|svg|ico)$/)) {
+      headers.set("Cache-Control", "public, max-age=31536000, immutable");
+    }
+  } else if (response.headers.get("content-type")?.includes("text/html")) {
+    headers.set("Cache-Control", "public, max-age=0, must-revalidate");
+  }
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 // h3 swallows in-handler throws into a normal 500 Response with body
 // {"unhandled":true,"message":"HTTPError"} — try/catch alone never fires for those.
 async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
@@ -49,7 +104,8 @@ export default {
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      const normalized = await normalizeCatastrophicSsrResponse(response);
+      return await addResponseHeaders(request, normalized);
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {

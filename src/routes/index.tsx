@@ -53,6 +53,7 @@ import { generalFAQs } from "../lib/faq-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [{ rel: "preload", as: "image", fetchpriority: "high", href: heroImg }],
     scripts: [
       {
         type: "application/ld+json",
@@ -210,6 +211,7 @@ function Hero() {
           height={1170}
           className="h-full w-full object-cover mix-blend-multiply"
           loading="eager"
+          fetchpriority="high"
         />
       </div>
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-4 pb-16 pt-32 sm:px-6 lg:px-8">
@@ -811,7 +813,7 @@ function Contact() {
                     <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-blue-50 text-[#2563EB] transition-colors group-hover:bg-blue-100">
                       <Calendar className="h-4 w-4" />
                     </span>
-                    <span className={selectedDate ? "" : "text-muted-foreground/70"}>
+                    <span className={selectedDate ? "" : "text-muted-foreground"}>
                       {selectedDate ? formatAppointmentDate(selectedDate) : "Select preferred date"}
                     </span>
                   </button>
@@ -918,7 +920,7 @@ function AppointmentField({
           name={rest.name ?? id}
           required={required}
           {...rest}
-          className="min-w-0 flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none"
+          className="min-w-0 flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground/80 focus:outline-none"
         />
       </div>
     </div>
@@ -1385,7 +1387,7 @@ function ImagePlaceholder({
             </div>
           )}
           {!image && (
-            <div className="mt-2 text-[10px] uppercase tracking-wider text-muted-foreground/70">
+            <div className="mt-2 text-[10px] uppercase tracking-wider text-muted-foreground">
               Image placeholder
             </div>
           )}

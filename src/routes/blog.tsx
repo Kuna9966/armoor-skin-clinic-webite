@@ -266,7 +266,7 @@ function NewsletterSection() {
             name="email"
             placeholder="Enter your email"
             required
-            className="min-w-0 flex-1 rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 sm:max-w-sm"
+            className="min-w-0 flex-1 rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/80 focus:outline-none focus:ring-2 focus:ring-primary/20 sm:max-w-sm"
           />
           <button
             type="submit"
@@ -279,5 +279,3 @@ function NewsletterSection() {
     </section>
   );
 }
-
-

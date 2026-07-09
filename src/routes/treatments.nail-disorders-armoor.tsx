@@ -381,10 +381,10 @@ function WhatIsSection() {
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
                   Nail Disorders Condition
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with an image showing nail disorders
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Illustration showing common nail disorders and conditions
                 </p>
               </div>
@@ -467,10 +467,10 @@ function SymptomsSection() {
               <p className="mt-3 text-sm font-medium text-muted-foreground">
                 Nail Disorders Symptoms Illustration
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an infographic showing common nail disorder symptoms
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: Illustration showing thickened, discoloured, and pitted nails with various nail
                 disorders
               </p>
@@ -678,10 +678,10 @@ function DiagnosisSection() {
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
                   Nail Examination Consultation
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with a photo of a dermatologist examining a patient's nails
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Dermatologist examining a patient's nails at Armoor Skin & Hair Clinic
                 </p>
               </div>
@@ -964,10 +964,10 @@ function TipsSection() {
               <p className="mt-3 text-sm font-medium text-muted-foreground">
                 Nail Care Illustration
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an image showing proper nail care routine
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: Illustration of proper nail trimming and care techniques
               </p>
             </div>

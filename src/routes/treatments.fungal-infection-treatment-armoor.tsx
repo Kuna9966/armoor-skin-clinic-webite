@@ -382,10 +382,10 @@ function WhatIsSection() {
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
                   Fungal Skin Infection
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with an image showing fungal infection on skin
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Illustration showing common fungal skin infections like ringworm
                 </p>
               </div>
@@ -469,10 +469,10 @@ function SymptomsSection() {
               <p className="mt-3 text-sm font-medium text-muted-foreground">
                 Fungal Infection Symptoms
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an infographic showing common fungal infection symptoms
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: Illustration showing ringworm, athlete's foot, and other fungal infections
               </p>
             </div>
@@ -670,10 +670,10 @@ function DiagnosisSection() {
                   <Stethoscope className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">Skin Examination</p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with a photo of a dermatologist examining a patient's skin
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Dermatologist examining fungal infection at Armoor Skin & Hair Clinic
                 </p>
               </div>
@@ -957,10 +957,10 @@ function PreventionSection() {
               <p className="mt-3 text-sm font-medium text-muted-foreground">
                 Healthy Skin Illustration
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an image showing healthy, clear skin
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: Illustration of healthy skin after fungal infection treatment
               </p>
             </div>

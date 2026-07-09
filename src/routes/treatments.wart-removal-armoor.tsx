@@ -379,10 +379,10 @@ function WhatIsSection() {
                   <AlertCircle className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">Wart on Skin</p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with an image showing wart-affected skin
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Illustration showing raised, rough wart growths on skin
                 </p>
               </div>
@@ -465,10 +465,10 @@ function SymptomsSection() {
               <p className="mt-3 text-sm font-medium text-muted-foreground">
                 Wart Symptoms Illustration
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an infographic showing common wart symptoms
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: Illustration showing different types of wart growths on skin
               </p>
             </div>
@@ -660,10 +660,10 @@ function DiagnosisSection() {
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
                   Dermatologist Consultation
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with a photo of a dermatologist examining a patient's wart
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Dermatologist examining a wart at Armoor Skin & Hair Clinic
                 </p>
               </div>
@@ -947,10 +947,10 @@ function TipsSection() {
               <p className="mt-3 text-sm font-medium text-muted-foreground">
                 Prevention Tips Illustration
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an image showing hygiene and prevention tips
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: Illustration showing wart prevention practices
               </p>
             </div>

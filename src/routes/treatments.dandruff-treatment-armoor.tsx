@@ -390,10 +390,10 @@ function WhatIsSection() {
                 <p className="mt-4 text-sm font-medium text-muted-foreground">
                   Dandruff Scalp Condition
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with an image showing dandruff-affected scalp
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Illustration showing white and yellow flakes on a scalp affected by dandruff
                 </p>
               </div>
@@ -469,10 +469,10 @@ function SymptomsSection() {
               <p className="mt-3 text-sm font-medium text-muted-foreground">
                 Dandruff Symptoms Illustration
               </p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an infographic showing common dandruff symptoms
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: Illustration showing scalp flaking, itching, and greasy patches caused by
                 dandruff
               </p>
@@ -673,10 +673,10 @@ function DiagnosisSection() {
                   <Stethoscope className="h-8 w-8" />
                 </div>
                 <p className="mt-4 text-sm font-medium text-muted-foreground">Scalp Consultation</p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Replace with a photo of a dermatologist examining a patient's scalp
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground/60">
+                <p className="mt-1 text-xs text-muted-foreground/80">
                   Alt: Dermatologist examining a patient's scalp at Armoor Skin & Hair Clinic
                 </p>
               </div>
@@ -967,10 +967,10 @@ function TipsSection() {
                 <Sparkles className="h-6 w-6" />
               </div>
               <p className="mt-3 text-sm font-medium text-muted-foreground">Scalp Care Routine</p>
-              <p className="mt-1 text-xs text-muted-foreground/60">
+              <p className="mt-1 text-xs text-muted-foreground/80">
                 Replace with an image showing healthy scalp care routine
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground/80">
                 Alt: Illustration of daily scalp care routine for managing dandruff
               </p>
             </div>

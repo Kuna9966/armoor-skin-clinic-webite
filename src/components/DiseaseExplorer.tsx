@@ -45,7 +45,10 @@ export function DiseaseExplorer({ skinDiseases, hairDiseases }: DiseaseExplorerP
   const [filter, setFilter] = useState("all");
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
-  const allDiseases = useMemo(() => [...skinDiseases, ...hairDiseases], [skinDiseases, hairDiseases]);
+  const allDiseases = useMemo(
+    () => [...skinDiseases, ...hairDiseases],
+    [skinDiseases, hairDiseases],
+  );
 
   const filtered = useMemo(() => {
     return allDiseases.filter((d) => {
@@ -58,14 +61,8 @@ export function DiseaseExplorer({ skinDiseases, hairDiseases }: DiseaseExplorerP
     });
   }, [allDiseases, search, filter]);
 
-  const skinFiltered = useMemo(
-    () => filtered.filter((d) => d.category === "skin"),
-    [filtered],
-  );
-  const hairFiltered = useMemo(
-    () => filtered.filter((d) => d.category === "hair"),
-    [filtered],
-  );
+  const skinFiltered = useMemo(() => filtered.filter((d) => d.category === "skin"), [filtered]);
+  const hairFiltered = useMemo(() => filtered.filter((d) => d.category === "hair"), [filtered]);
 
   return (
     <section className="py-20 sm:py-24" id="disease-explorer">
@@ -152,16 +149,10 @@ function DiseaseSection({
 }) {
   if (diseases.length === 0) return null;
 
-  const expandedIndex = expandedId
-    ? diseases.findIndex((d) => d.id === expandedId)
-    : -1;
-  const expandedRow =
-    expandedIndex >= 0 ? Math.floor(expandedIndex / 2) : -1;
+  const expandedIndex = expandedId ? diseases.findIndex((d) => d.id === expandedId) : -1;
+  const expandedRow = expandedIndex >= 0 ? Math.floor(expandedIndex / 2) : -1;
   // Insert the full-width panel after the last item in the expanded row
-  const insertAfter =
-    expandedIndex >= 0
-      ? Math.min(expandedRow * 2 + 1, diseases.length - 1)
-      : -1;
+  const insertAfter = expandedIndex >= 0 ? Math.min(expandedRow * 2 + 1, diseases.length - 1) : -1;
 
   // Build flat render list
   const renderItems: {
@@ -184,9 +175,17 @@ function DiseaseSection({
   return (
     <div className="mt-12">
       <h3
-        id={title === "Skin Diseases" ? "skin-diseases" : title === "Hair Diseases" ? "hair-diseases" : undefined}
+        id={
+          title === "Skin Diseases"
+            ? "skin-diseases"
+            : title === "Hair Diseases"
+              ? "hair-diseases"
+              : undefined
+        }
         className="font-display text-2xl font-bold text-foreground scroll-mt-24"
-      >{title}</h3>
+      >
+        {title}
+      </h3>
       <p className="mt-1 text-sm text-muted-foreground">
         Click on a condition to learn more about symptoms and treatments.
       </p>
@@ -207,15 +206,10 @@ function DiseaseSection({
                 <DiseaseCard
                   disease={item.disease}
                   isExpanded={false}
-                  onToggle={() =>
-                    onToggle(expandedId === item.disease.id ? null : item.disease.id)
-                  }
+                  onToggle={() => onToggle(expandedId === item.disease.id ? null : item.disease.id)}
                 />
               ) : (
-                <ExpandedPanel
-                  disease={item.disease}
-                  onClose={() => onToggle(null)}
-                />
+                <ExpandedPanel disease={item.disease} onClose={() => onToggle(null)} />
               )}
             </motion.div>
           ))}
@@ -275,13 +269,7 @@ function DiseaseCard({
 /* -------------------------------------------------------- */
 /*  Expanded Panel — full-width landscape row               */
 /* -------------------------------------------------------- */
-function ExpandedPanel({
-  disease,
-  onClose,
-}: {
-  disease: Disease;
-  onClose: () => void;
-}) {
+function ExpandedPanel({ disease, onClose }: { disease: Disease; onClose: () => void }) {
   return (
     <div className="overflow-hidden rounded-3xl border border-border bg-white shadow-[var(--shadow-elegant)]">
       <div className="flex flex-col sm:flex-row min-h-[320px] sm:min-h-[360px] lg:min-h-[400px]">
