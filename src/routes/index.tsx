@@ -184,6 +184,7 @@ function Home() {
       <WhyUs />
       <Gallery />
       <Reviews />
+      <ReviewCTA />
       <FAQ />
       <Contact />
       <Footer />
@@ -1107,6 +1108,121 @@ function Reviews() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- Review CTA ---------------- */
+const GOOGLE_REVIEW_URL = "https://g.page/r/CWYmHRHhqTqnEAE/review";
+
+function ReviewCTA() {
+  return (
+    <section id="review" className="relative overflow-hidden py-20 sm:py-28">
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, oklch(0.97 0.01 85) 0%, oklch(0.95 0.02 85) 100%)",
+        }}
+      />
+      <div className="absolute inset-0 opacity-[0.06]" aria-hidden>
+        <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-gold blur-3xl" />
+        <div className="absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-primary blur-3xl" />
+      </div>
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            Share Your Experience
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-bold text-foreground sm:text-4xl">
+            Loved your visit? Leave us a review!
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-muted-foreground">
+            Your feedback helps others find trusted dermatology care in Armoor. It only takes a minute — and means the world to us.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-8 sm:grid-cols-2 sm:gap-12">
+          {/* QR Code Card */}
+          <div className="group relative overflow-hidden rounded-3xl border border-border bg-white p-8 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
+            <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/10 blur-2xl" />
+            <div className="relative text-center">
+              <div className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-6 w-6"
+                >
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                </svg>
+              </div>
+              <h3 className="mt-4 font-display text-lg font-bold text-foreground">
+                Scan & Review
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Point your phone camera at the QR code
+              </p>
+              <div className="mx-auto mt-5 flex items-center justify-center">
+                <a
+                  href={GOOGLE_REVIEW_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-2xl border border-border bg-white p-3 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <img
+                    src="/images/Review-QR.png"
+                    alt="Scan QR code to leave a Google review for Armoor Skin & Hair Clinic"
+                    width={180}
+                    height={180}
+                    className="h-[180px] w-[180px]"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Card */}
+          <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/15 text-gold">
+              <Star className="h-6 w-6 fill-gold" />
+            </div>
+            <h3 className="mt-4 font-display text-2xl font-bold text-foreground">
+              Rate us on Google
+            </h3>
+            <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+              Had a great experience at {CLINIC_NAME}? Your honest review helps
+              other patients discover quality dermatology care in Armoor and
+              motivates our team to keep delivering the best.
+            </p>
+            <div className="mt-2 flex items-center gap-1">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="h-5 w-5 fill-gold text-gold" />
+              ))}
+              <span className="ml-2 text-sm font-semibold text-muted-foreground">
+                4.9 average
+              </span>
+            </div>
+            <a
+              href={GOOGLE_REVIEW_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-gold-foreground shadow-[var(--shadow-elegant)] transition-all hover:-translate-y-0.5 hover:brightness-110"
+            >
+              <Star className="h-4 w-4" />
+              Write a Review
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+            <p className="mt-3 text-xs text-muted-foreground">
+              Takes less than a minute. No sign-up required.
+            </p>
+          </div>
         </div>
       </div>
     </section>
