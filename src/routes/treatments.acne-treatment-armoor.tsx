@@ -28,6 +28,7 @@ import {
   ADDRESS,
   HOURS,
   MAP_LINK,
+  AREAS_WE_SERVE,
 } from "../lib/clinic-data";
 
 export const Route = createFileRoute("/treatments/acne-treatment-armoor")({
@@ -1153,16 +1154,7 @@ function ReviewsSection() {
 }
 
 function AreasWeServeSection() {
-  const areas = [
-    { name: "Armoor", isLocal: true },
-    { name: "Balkonda" },
-    { name: "Nizamabad" },
-    { name: "Mortad" },
-    { name: "Bodhan" },
-    { name: "Kamareddy" },
-    { name: "Yellareddy" },
-    { name: "Sadasivanagar" },
-  ];
+  const areas = AREAS_WE_SERVE;
 
   return (
     <section className="bg-secondary/40 py-20 sm:py-24">

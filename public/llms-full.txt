@@ -1,0 +1,831 @@
+# Armoor Skin & Hair Clinic — Complete AI Knowledge Base
+
+> This document is a structured, machine-readable representation of the content on https://armoorskinclinic.com. It is designed for use by LLMs, AI assistants, and generative search engines. All information below is sourced directly from the website. No information has been invented.
+
+---
+
+## Website Overview
+
+- **Name:** Armoor Skin & Hair Clinic
+- **Short Name:** Armoor Skin Clinic
+- **Tagline:** Dermatology · Trichology · Cosmetology
+- **URL:** https://armoorskinclinic.com
+- **Description:** Expert dermatology care for acne, hair loss, psoriasis, eczema, fungal infections, pigmentation, and more by Dr. Raghavendhra MD, DVL in Armoor, Telangana.
+- **Language:** English (also available: Telugu, Hindi, Urdu)
+- **Canonical Domain:** https://armoorskinclinic.com
+- **Google Analytics:** G-137R4392R4
+- **AI Content Notice:** Some content on this website is created or enhanced using AI and reviewed by qualified medical professionals for accuracy.
+
+---
+
+## Mission
+
+To provide accessible, affordable, and expert dermatology, trichology, and cosmetology care to patients in Armoor, Telangana, and surrounding areas through accurate diagnosis, modern treatments, and compassionate patient care.
+
+---
+
+## Clinic Overview
+
+Armoor Skin & Hair Clinic is a dermatology clinic located in Armoor, Nizamabad district, Telangana, India. The clinic provides comprehensive skin, hair, and nail care services. It was founded by Dr. Raghavendhra and serves patients from Armoor and nearby mandals including Balkonda, Bheemgal, Mortad, Kammarpalle, Mupkal, and Nizamabad, covering 130+ villages.
+
+---
+
+## Doctor Profile
+
+- **Name:** Dr. Raghavendhra
+- **Qualification:** MD, DVL (Dermatology, Venereology & Leprosy)
+- **Institution:** Osmania Medical College
+- **Designation:** Skin Specialist · Consultant Dermatologist
+- **Experience:** 20+ years
+- **Bio:** Dr. Raghavendhra is dedicated to helping patients achieve healthy skin and confident living through accurate diagnosis, modern treatments, and compassionate care.
+- **Speaks:** English, Telugu, Hindi, Urdu
+- **Knows About:** Acne Treatment, Hair Loss Treatment, Psoriasis, Eczema, Vitiligo, Pigmentation, Skin Allergies, Fungal Infections, Pediatric Dermatology, Cosmetic Dermatology
+
+---
+
+## Medical Expertise
+
+### Specializations
+
+- Dermatology
+- Trichology (Hair and Scalp Disorders)
+- Cosmetology
+- Pediatric Dermatology
+- Cosmetic Dermatology
+
+### Conditions Treated
+
+- Acne & Acne Scars
+- Hair Fall & Baldness
+- Pigmentation & Melasma
+- Psoriasis (plaque, scalp, nail)
+- Eczema (Atopic Dermatitis)
+- Vitiligo
+- Fungal Infections
+- Skin Allergies
+- Warts & Molluscum
+- Nail Disorders
+- Dandruff
+- Seborrheic Keratosis
+- Back Acne
+- Stevens-Johnson Syndrome
+- Hyperpigmentation
+
+---
+
+## Complete Treatment Catalogue
+
+### 1. Acne Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/acne-treatment-armoor
+- **Summary:** Comprehensive acne treatment tailored to skin type and severity — from mild breakouts to severe cystic acne and acne scars.
+- **Symptoms Treated:** Whiteheads and blackheads, papules, pustules, nodules, cystic lesions, post-acne dark spots and scars.
+- **Causes Addressed:** Excess sebum production, clogged hair follicles, bacterial overgrowth (Cutibacterium acnes), hormonal fluctuations, stress and lifestyle factors, certain medications.
+- **Methods:** Personalised topical and oral medications, chemical peels, acne scar management with microneedling and laser therapy, dietary and lifestyle guidance, regular follow-ups.
+- **Technologies:** Chemical peels, microneedling, laser therapy (Fractional CO2 laser, ND:YAG laser).
+- **Results Timeline:** Most patients notice improvement within 4–6 weeks. Complete clearance may take 3–6 months.
+
+### 2. Hair Loss Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/hair-loss-treatment-armoor
+- **Summary:** Diagnosis of the root cause of hair fall with evidence-based treatments to promote hair growth and prevent further loss.
+- **Symptoms Treated:** Gradual thinning on crown, sudden patchy hair loss (alopecia areata), excessive shedding, receding hairline, widening part line, itchy or flaky scalp.
+- **Causes Addressed:** Genetic predisposition (androgenetic alopecia), hormonal changes, nutritional deficiencies, stress, scalp conditions, certain medications.
+- **Methods:** Comprehensive hair and scalp evaluation, topical and oral medications, nutritional supplementation, PRP therapy, management of underlying scalp conditions.
+- **Technologies:** PRP (Platelet-Rich Plasma) therapy, mesotherapy.
+- **Results Timeline:** Most patients require 4–6 sessions spaced 4–6 weeks apart.
+
+### 3. Psoriasis Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/psoriasis-treatment-armoor
+- **Summary:** Comprehensive management of psoriasis to reduce flare-ups and improve quality of life.
+- **Symptoms Treated:** Thick red patches with silvery-white scales, dry cracked skin, itching/burning/soreness, thickened nails, scalp psoriasis, joint pain (psoriatic arthritis).
+- **Causes Addressed:** Autoimmune response, genetic predisposition, triggers (stress, infections, injury, medications), weather changes, smoking and alcohol.
+- **Methods:** Topical treatments (corticosteroids, vitamin D analogues), phototherapy (NB-UVB), systemic medications, scalp psoriasis management, lifestyle modifications, long-term maintenance plans.
+- **Technologies:** Phototherapy (NB-UVB light therapy).
+- **Key Fact:** Psoriasis is not contagious. It is an autoimmune condition.
+
+### 4. Eczema Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/eczema-treatment-armoor
+- **Summary:** Comprehensive eczema care to soothe symptoms, prevent flare-ups, and improve skin barrier function.
+- **Symptoms Treated:** Intense itching (especially at night), dry/scaly/cracked skin, red to brownish-grey patches, small raised bumps, thickened leathery skin, raw sensitive skin.
+- **Causes Addressed:** Genetic factors affecting skin barrier, immune system overreaction, environmental triggers (pollen, dust mites, pet dander), irritants (soaps, detergents), stress, climate changes.
+- **Methods:** Moisturisation and skin barrier repair, topical corticosteroids and non-steroidal anti-inflammatories, antihistamines, trigger identification and avoidance, wet wrap therapy, long-term maintenance with gentle skincare.
+- **Technologies:** Phototherapy for moderate to severe cases.
+- **Pediatric Note:** Gentle, child-safe treatments available for paediatric eczema.
+
+### 5. Vitiligo Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/vitiligo-treatment-armoor
+- **Summary:** Medical and surgical treatment options to help restore skin colour and boost confidence.
+- **Symptoms Treated:** White patches on skin, premature whitening of hair, patches sensitive to sun, gradual spread, symmetrical or localised distribution.
+- **Causes Addressed:** Autoimmune destruction of melanocytes, genetic factors, oxidative stress, association with other autoimmune conditions.
+- **Methods:** Topical corticosteroids and calcineurin inhibitors, phototherapy (narrowband UVB and excimer laser), oral medications and antioxidants, surgical options (skin grafting for stable vitiligo), camouflage therapy and sun protection guidance.
+- **Technologies:** Narrowband UVB phototherapy, excimer laser.
+- **Results Timeline:** Repigmentation typically begins after 3–6 months. Full results may take 12–18 months.
+
+### 6. Pigmentation Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/pigmentation-treatment-armoor
+- **Summary:** Advanced treatments to lighten pigmentation and restore a clear, even complexion.
+- **Symptoms Treated:** Dark patches on face (cheeks, forehead, upper lip), sun spots/age spots, post-inflammatory hyperpigmentation, uneven skin tone, dark circles.
+- **Causes Addressed:** Sun exposure and UV damage, hormonal changes (melasma), post-inflammatory response, genetic predisposition, certain medications.
+- **Methods:** Medical-grade chemical peels, topical depigmenting agents (hydroquinone, kojic acid, vitamin C), oral antioxidants, laser therapy, sun protection counselling, maintenance and prevention plans.
+- **Technologies:** Q-switched Nd:YAG laser, chemical peels (medical-grade), Wood's lamp, dermoscopy.
+- **Results Timeline:** 4–6 sessions of chemical peels or laser therapy spaced 3–4 weeks apart. Topical treatments show results in 8–12 weeks.
+
+### 7. Fungal Infection Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/fungal-infection-treatment-armoor
+- **Summary:** Accurate diagnosis and effective treatment for all types of fungal infections affecting the skin, nails, and scalp.
+- **Symptoms Treated:** Red itchy ring-shaped rashes (ringworm/tinea), scaly peeling skin between toes (athlete's foot), nail discolouration, itchy flaky scalp, moist red areas in skin folds, white discharge and itching in genital areas.
+- **Causes Addressed:** Dermatophyte fungi, poor hygiene, excessive sweating, weakened immune system, diabetes, close contact with infected individuals or pets.
+- **Methods:** Topical antifungal creams/powders/sprays, oral antifungal medications, scalp and nail fungus protocols, prevention advice, management of underlying conditions.
+- **Results Timeline:** Skin fungal infections typically resolve in 2–4 weeks. Nail fungus may require 3–6 months of oral medication.
+
+### 8. Skin Allergy Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/skin-allergy-treatment-armoor
+- **Summary:** Diagnosis of underlying causes of allergic reactions with effective relief and prevention strategies.
+- **Symptoms Treated:** Red itchy rash or hives (urticaria), swelling of face/lips/eyelids (angioedema), burning or stinging, dry cracked peeling skin, blisters or oozing, chronic itching without visible rash.
+- **Causes Addressed:** Contact allergens (nickel, latex, fragrances), food allergies, medication reactions, insect bites/stings, seasonal allergens, stress-induced urticaria.
+- **Methods:** Allergen identification through clinical history, antihistamines and anti-allergy medications, topical corticosteroids, avoidance strategies, chronic urticaria management, emergency action plans for severe reactions.
+
+### 9. Dandruff Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/dandruff-treatment-armoor
+- **Summary:** Treatment of the root cause of dandruff — whether dry skin, seborrheic dermatitis, or fungal overgrowth.
+- **Symptoms Treated:** White or yellow flakes on scalp/hair/shoulders, itchy scalp, red greasy patches, dry or oily scalp, flaking worsening in cold weather, mild hair fall associated with scalp inflammation.
+- **Causes Addressed:** Overgrowth of Malassezia yeast, excess oil production, dry skin, seborrheic dermatitis, infrequent shampooing, sensitivity to hair care products.
+- **Methods:** Medicated anti-dandruff shampoos (ketoconazole, zinc pyrithione, selenium sulphide), scalp treatments and lotions, seborrheic dermatitis management, hair care routine guidance, treatment of associated conditions like scalp psoriasis.
+
+### 10. Nail Disorders Treatment
+
+- **URL:** https://armoorskinclinic.com/treatments/nail-disorders-armoor
+- **Summary:** Diagnosis and treatment of all types of nail conditions, from fungal infections to ingrown nails and psoriatic nail changes.
+- **Symptoms Treated:** Thickened discoloured nails, brittle/splitting/peeling nails, pitted or ridged nail surface, pain/redness/swelling around nail, white spots or streaks, nail separation from nail bed.
+- **Causes Addressed:** Fungal infections (onychomycosis), psoriasis affecting nails, trauma/injury, nutritional deficiencies, bacterial infections (paronychia), underlying medical conditions.
+- **Methods:** Oral and topical antifungal medications, nail care and hygiene guidance, treatment of ingrown nails and paronychia, psoriatic nail management, nutritional counselling.
+- **Results Timeline:** Fingernail fungus: 3–6 months. Toenail fungus: 6–12 months.
+
+### 11. Wart Removal
+
+- **URL:** https://armoorskinclinic.com/treatments/wart-removal-armoor
+- **Summary:** Safe, effective wart removal treatments with minimal discomfort.
+- **Symptoms Treated:** Small rough bumps, plantar warts on soles, flat warts on face/hands, filiform warts on face/neck, clusters of warts, black dots inside wart.
+- **Causes Addressed:** Human papillomavirus (HPV) infection, direct skin-to-skin contact, contact with contaminated surfaces, minor skin breaks, weakened immune system.
+- **Methods:** Cryotherapy (freezing with liquid nitrogen), electrocautery and curettage, chemical cautery with trichloroacetic acid, topical medications and immunotherapy, laser treatment for resistant warts, prevention advice.
+- **Results Timeline:** Most warts resolve in 1–3 sessions.
+
+### 12. Mole Removal
+
+- **URL:** https://armoorskinclinic.com/treatments/mole-removal-armoor
+- **Summary:** Mole evaluation and removal with precision and care for medical or cosmetic reasons.
+- **Symptoms Treated:** Brown/black/flesh-coloured spots, raised or flat moles, moles changing in size/shape/colour, itching/bleeding/crusting moles, moles causing irritation, atypical moles.
+- **Causes Addressed:** Clusters of melanocytes, genetic factors, sun exposure/UV damage, hormonal changes.
+- **Methods:** Clinical and dermoscopic evaluation, shave excision for raised moles, surgical excision with sutures for deeper moles, histopathological examination when indicated, ABCDE mole check for skin cancer screening.
+
+### Additional Services (Not Dedicated Pages)
+
+- **Chemical Peels:** Medical-grade chemical peels for acne, pigmentation, and skin rejuvenation.
+- **PRP Therapy:** Platelet-Rich Plasma therapy for hair regrowth and acne scar treatment.
+- **Phototherapy:** NB-UVB light therapy for psoriasis, eczema, vitiligo, and nail psoriasis.
+- **Pediatric Dermatology:** Gentle dermatology care for infants, children, and adolescents.
+- **Cosmetic Dermatology:** Cosmetic skin treatments and procedures.
+
+---
+
+## Complete Disease Catalogue
+
+### Skin Diseases
+
+| Disease | Summary | Treatments Available |
+|---------|---------|---------------------|
+| Atopic Dermatitis | Chronic skin condition causing dry, itchy, red, and inflamed skin. Often affects children but can occur at any age. | Medical Management, Moisturising Therapy, Topical Steroids, Antihistamines |
+| Back Acne | Develops when hair follicles become clogged with oil, bacteria, and dead skin cells. May leave permanent scars without treatment. | Topical Medications, Oral Antibiotics, Chemical Peels, Laser Therapy |
+| Seborrheic Keratosis | Common, non-cancerous skin growth that usually appears with age. May resemble skin cancer — requires accurate diagnosis. | Dermatological Evaluation, Cryotherapy, Electrocautery, Surgical Removal |
+| Eczema | Skin condition causing inflammation, dryness, redness, and intense itching. Triggers include allergies, weather, soaps, or stress. | Medical Management, Topical Steroids, Moisturising Therapy, Phototherapy |
+| Hyperpigmentation | Dark patches due to excess melanin production from sun exposure, acne marks, hormonal changes, or skin injuries. | Topical Lightening Agents, Chemical Peels, Laser Therapy, Medical Management |
+| Nail Psoriasis | Affects fingernails or toenails causing pitting, discoloration, thickening, and nail separation. Early treatment prevents permanent damage. | Topical Treatments, Medical Management, Phototherapy, Nail Care |
+| Psoriasis | Chronic autoimmune condition causing thick, red, scaly skin patches. Effectively managed with modern treatments. | Medical Management, Phototherapy, Biologics, Topical Steroids |
+| Stevens-Johnson Syndrome | Rare but serious skin reaction often triggered by medications or infections. Requires immediate medical attention. | Immediate Hospitalisation, Specialised Wound Care, Medical Management |
+| Vitiligo | Skin loses natural pigment leading to white patches. Not contagious. Modern treatments help restore pigmentation. | Topical Immunomodulators, Phototherapy, Excimer Laser, Medical Management |
+| Warts & Molluscum | Viral skin infections producing small bumps. Professional treatment provides faster clearance and reduces spreading. | Cryotherapy, Electrocautery, Topical Treatments, Laser Removal |
+
+### Hair Diseases
+
+| Disease | Summary | Treatments Available |
+|---------|---------|---------------------|
+| Hair Loss | Results from genetics, hormonal changes, medical conditions, or stress. Thorough evaluation identifies underlying cause. | Medical Management, PRP Therapy, Hair Transplant Evaluation, Topical Solutions |
+| Dandruff | Common scalp condition causing flaking and itching. Results from dry skin, seborrheic dermatitis, or fungal overgrowth. | Medicated Shampoos, Topical Treatments, Medical Management, Scalp Therapy |
+
+---
+
+## Patient Services
+
+### Consultation Process
+
+1. Complete Skin Examination
+2. Hair & Scalp Assessment
+3. Nail Evaluation
+4. Diagnosis
+5. Personalised Treatment Plan
+6. Prescription Guidance
+7. Lifestyle & Skincare Advice
+
+### Consultation Departments
+
+- General Dermatology Consultation
+- Skin Consultation
+- Hair Consultation
+- Acne Treatment
+- Hair Loss Treatment
+- Pigmentation Treatment
+- Allergy & Skin Infection
+- Nail Disorders
+- Cosmetic Dermatology
+
+### Conditions for Consultation
+
+Acne / Pimples, Hair Fall, Skin Allergy, Pigmentation, Psoriasis, Eczema, Fungal Infection, Vitiligo, Nail Problems, Dandruff, Cosmetic Consultation, PRP, Laser Treatment, Other
+
+---
+
+## Appointment Information
+
+- **URL:** https://armoorskinclinic.com/appointments
+- **Phone:** +91 9603 752 752
+- **WhatsApp:** +91 9603 752 752
+- **Email:** info@armoorskinclinic.com
+- **Booking Methods:** Phone call, WhatsApp message, or online appointment form on the website
+- **Walk-ins:** Welcome
+- **Appointments:** Recommended
+- **Available Time Slots:** 09:30 AM through 07:30 PM (16 slots)
+
+---
+
+## Working Hours
+
+- **Monday – Saturday:** 11:00 AM – 6:00 PM
+- **Sunday:** Closed
+- **Walk-ins Welcome**
+- **Appointments Recommended**
+
+---
+
+## Contact Details
+
+- **Phone:** +91 9603 752 752
+- **Email:** contact@armoorskinclinic.com
+- **WhatsApp:** +91 9603 752 752
+- **Google Maps:** https://maps.app.goo.gl/fKuVMvEnVS5Pjtne8
+- **Google Review:** https://g.page/r/CWYmHRHhqTqnEAE/review
+- **Facebook:** https://facebook.com/armoorskinclinic
+- **Instagram:** https://instagram.com/armoorskinclinic
+- **Twitter:** https://twitter.com/armoorskinclinic
+
+---
+
+## Location
+
+- **Full Address:** Opposite VR Hospital, Beside LK Hospital, Mahalaxmi Colony, Armoor, Telangana, India
+- **Pin Code:** 503224
+- **District:** Nizamabad
+- **State:** Telangana
+- **Country:** India
+- **Latitude:** 18.796
+- **Longitude:** 78.289
+- **Google Maps Link:** https://maps.app.goo.gl/fKuVMvEnVS5Pjtne8
+
+---
+
+## Coverage Areas
+
+Patients visit Armoor Skin & Hair Clinic from across 7 mandals and 130+ villages in Nizamabad district, Telangana. These are the areas where patients commonly travel from for treatment.
+
+### Armoor Mandal (23 villages)
+
+Alur, Amdapur, Ankapur, Armur (M + OG), Bardipur, Chepur, Degaon, Fathepur, Gaggupalle, Govindpet, Issapalle, Khanapur, Komanpalle, Kotha Armur, Macherla, Magdi, Mamidipalle (OG), Manthani, Merdepalle, Perkit (OG), Pipri, Rampur, Surbiriyal
+
+### Balkonda Mandal (26 villages)
+
+Balkonda, Bodepalle, Bussapur, Chakeriyal, Chittapur, Doodgaon, Jalalpur, Keshapur, Kisannagar, Kodecherla, Kojan Kothur, Kothapalle, Mendora, Mukpal, Nagampet, Nagapur, Nallur, Ratnapur, Renjarla, Sangam, Savel, Soanpet (CT), Vannel Bashirabad, Velgatur, Vempalle, Venchariyal
+
+### Bheemgal Mandal (24 villages)
+
+Babanagar, Babapur, Bachanpalle, Bejjora, Bheemgal, Changal, Devakkapet, Devan Palle, Gangarai, Gongappul, Jagriyal, Karepalle, Kupkal, Lingapurchouth, Mendhora, Muchkur, Pallikonda, Pedda Bheemgal, Pipri, Puranipet, Rahathnagar, Salampur, Sikandrapur, Thallapalle
+
+### Mortad Mandal (17 villages)
+
+Battapur, Dharmora, Domchanda, Donkal, Donpal, Gumeriyal, Mortad, Palem, Ramannapet, Shetpalle, Sunkat, Tadla Rampur, Tadpakal, Thimmapur, Thurat, Vaddiyat, Yergatla
+
+### Kammarpalle Mandal (18 villages)
+
+Basheerabad, Belur, Choutupalle, Dammannapet, Dammanpet (Ameernagar), Gudilingapur, Guntepalle, Hasakothur, Inayat Nagar, Kammar Palle, Konapur, Konasamandar, Lakshmapur, Manal, Nagapur, Narsapur, Reachpalle, Uploor
+
+### Mupkal Mandal (7 villages)
+
+Mupkal, Nalloor, Renjarla, Vempally, Kothapalli, Nagampet, Venchiryal
+
+### Nizamabad (City)
+
+Nizamabad
+
+---
+
+## Frequently Asked Questions
+
+### General FAQs
+
+**Q: When should I visit a dermatologist?**
+A: You should visit a dermatologist if you have persistent skin, hair, or nail concerns that do not improve with over-the-counter treatments. Signs include chronic itching, rashes, hair loss, mole changes, acne that affects your quality of life, or any unusual growth on your skin.
+
+**Q: How is acne treated by a dermatologist?**
+A: Acne treatment depends on the severity and type. It may include topical medications, oral medications, chemical peels, and lifestyle modifications. Our dermatologist creates a personalised plan to clear existing acne and prevent future breakouts while minimising scarring.
+
+**Q: Can hair fall be stopped?**
+A: In most cases, hair fall can be significantly reduced and managed with proper treatment. The key is early diagnosis of the underlying cause — whether genetic, hormonal, nutritional, or stress-related — followed by a targeted treatment plan. While complete regrowth is not always possible, progression can be halted.
+
+**Q: Is psoriasis contagious?**
+A: No, psoriasis is not contagious. It is an autoimmune condition where the immune system mistakenly attacks healthy skin cells. You cannot catch psoriasis through touch, sharing personal items, or close contact with someone who has it.
+
+**Q: How long does fungal infection treatment take?**
+A: Most skin fungal infections respond well within 2–4 weeks of treatment. However, nail fungus may require 3–6 months of oral medication for complete clearance. Consistent use of prescribed medications and good hygiene are essential for lasting results.
+
+**Q: Are chemical peels safe for all skin types?**
+A: Yes, chemical peels can be safely performed on all skin types when done by a qualified dermatologist. The peel strength and formulation are customised to your skin type and concern. Sun protection after a peel is essential for optimal results.
+
+**Q: How can I prevent hair loss?**
+A: Preventive measures include maintaining a balanced diet rich in iron, protein, and vitamins; avoiding harsh hair treatments; managing stress; using gentle hair care products; and getting regular check-ups if you notice unusual shedding. Early intervention gives the best outcomes.
+
+**Q: What is the difference between a dermatologist and a trichologist?**
+A: A dermatologist is a medical doctor specialised in diagnosing and treating all skin, hair, and nail conditions. A trichologist focuses specifically on hair and scalp health but is not necessarily a medical doctor. Dr. Raghavendhra, being an MD, DVL dermatologist, is qualified to treat both skin and hair conditions comprehensively.
+
+**Q: Does vitiligo treatment work?**
+A: Yes, vitiligo treatment can be very effective. Options include topical medications, phototherapy, and surgical grafting for stable cases. Treatment response varies, but many patients achieve significant repigmentation with consistent therapy over several months.
+
+**Q: How often should I get a skin check-up?**
+A: We recommend an annual skin check-up for everyone, especially if you have a family history of skin cancer, many moles, or significant sun exposure. Patients with chronic skin conditions may need more frequent visits as advised by their dermatologist.
+
+**Q: Is PRP treatment effective for hair regrowth?**
+A: Yes, Platelet-Rich Plasma (PRP) therapy is an effective treatment for androgenetic alopecia (pattern baldness). It uses your own blood platelets to stimulate hair follicles, promoting natural hair growth. Most patients require multiple sessions for optimal results.
+
+**Q: Can children see a dermatologist?**
+A: Absolutely. Our clinic provides paediatric dermatology services for infants, children, and adolescents. Common childhood concerns include eczema, birthmarks, allergic rashes, warts, and skin infections. We provide gentle, age-appropriate care.
+
+**Q: What should I bring to my first dermatology appointment?**
+A: Please bring any previous medical records, a list of current medications, and details about your skin concern including when it started and what makes it better or worse. If you use skincare products, bring them along or have photos ready to show.
+
+**Q: How do I book an appointment?**
+A: You can book an appointment by calling us at 9603 752 752, sending a WhatsApp message to the same number, or using the appointment form on our website. We recommend booking in advance for preferred time slots.
+
+**Q: Are consultation fees affordable in Armoor?**
+A: Yes, we offer affordable, transparent consultation fees to ensure quality dermatology care is accessible to everyone in Armoor and surrounding areas. Please contact us for current consultation charges.
+
+### Appointment FAQs
+
+**Q: How do I book an appointment?**
+A: You can book by calling +91 9603 752 752, sending a WhatsApp message, or using the online appointment form at https://armoorskinclinic.com/appointments.
+
+**Q: Do I need prior registration?**
+A: No prior registration is required. You can book directly or walk in during clinic hours.
+
+**Q: Can I walk in without an appointment?**
+A: Yes, walk-ins are welcome. However, appointments are recommended to avoid waiting.
+
+**Q: What conditions do you treat?**
+A: We treat acne, hair fall, skin allergies, pigmentation, psoriasis, eczema, fungal infections, vitiligo, nail problems, dandruff, and provide cosmetic dermatology, PRP, and laser treatments.
+
+**Q: How long does a consultation take?**
+A: A typical consultation takes 15–30 minutes depending on the complexity of the condition.
+
+**Q: Do you provide cosmetic treatments?**
+A: Yes, we offer cosmetic dermatology services including chemical peels, PRP therapy, and laser treatments.
+
+**Q: Do you treat children?**
+A: Yes, we provide paediatric dermatology services for infants, children, and adolescents.
+
+**Q: Is follow-up consultation available?**
+A: Yes, follow-up consultations are available and recommended for monitoring treatment progress.
+
+---
+
+## Patient Instructions
+
+### What to Bring to Your First Visit
+
+- Previous medical records
+- List of current medications
+- Details about your skin concern (when it started, what makes it better or worse)
+- Skincare products you use (or photos of them)
+
+### Emergency Notice
+
+This clinic is intended for routine dermatology appointments. For medical emergencies, please visit your nearest emergency healthcare facility immediately.
+
+---
+
+## Technology and Treatments Used
+
+### Laser Therapies
+
+- Fractional CO2 laser (acne scars)
+- ND:YAG laser (active acne)
+- Q-switched Nd:YAG laser (pigmentation and melasma)
+- Excimer laser (vitiligo)
+- Fractional laser (resurfacing)
+- Low-fluence laser protocols (melasma)
+
+### Light-Based Therapies
+
+- Phototherapy (NB-UVB) — for psoriasis, eczema, vitiligo, nail psoriasis
+
+### Injection Therapies
+
+- PRP (Platelet-Rich Plasma) therapy — for hair loss, acne scars
+- Mesotherapy — for hair loss
+
+### Minimally Invasive Procedures
+
+- Microneedling (including radiofrequency microneedling) — for acne scars
+- Chemical peels (medical-grade) — for acne, pigmentation, skin rejuvenation
+
+### Cryotherapy and Electro Procedures
+
+- Cryotherapy (freezing with liquid nitrogen) — for warts, seborrheic keratosis, mole removal
+- Electrocautery — for warts, seborrheic keratosis
+
+### Diagnostic Tools
+
+- Dermoscopy — for mole evaluation, pigmentation diagnosis
+- Wood's lamp — for pigmentation diagnosis, fungal infections
+
+---
+
+## Facilities
+
+- Modern Diagnostic Methods
+- Evidence-Based Medical Care
+- Modern Equipment
+- Comfortable clinic environment
+- Strict sterilisation protocols
+
+---
+
+## Insurance
+
+Information about insurance or cashless facilities is not currently published on the website.
+
+---
+
+## Pricing
+
+Pricing information is not currently published on the website. The clinic offers affordable, transparent consultation fees. Contact the clinic for current charges.
+
+---
+
+## Blog Content
+
+### Article Categories
+
+- Hair Care
+- Skin Care
+- Skin Allergies
+- General
+
+### Published Articles
+
+#### 1. How to Prevent Hair Fall: Expert Tips from a Dermatologist
+
+- **URL:** https://armoorskinclinic.com/blog/how-to-prevent-hair-fall
+- **Date:** July 2026
+- **Read Time:** 5 min
+- **Category:** Hair Care
+- **Summary:** Expert strategies to prevent hair fall including balanced diet (protein, iron, zinc, biotin, vitamin D), avoiding harsh treatments, using gentle hair products, managing stress, staying hydrated, and getting regular check-ups.
+
+#### 2. Best Acne Treatments: A Complete Guide to Clear Skin
+
+- **URL:** https://armoorskinclinic.com/blog/best-acne-treatments
+- **Date:** June 2026
+- **Read Time:** 6 min
+- **Category:** Skin Care
+- **Summary:** Comprehensive guide covering topical treatments (benzoyl peroxide, salicylic acid, retinoids), oral medications (antibiotics, hormonal treatments, isotretinoin), chemical peels, laser and light therapy, and lifestyle modifications for acne management.
+
+#### 3. Essential Skin Care Tips for Summer in Telangana
+
+- **URL:** https://armoorskinclinic.com/blog/skin-care-during-summer
+- **Date:** May 2026
+- **Read Time:** 4 min
+- **Category:** Skin Care
+- **Summary:** Dermatologist-approved summer skin care tips for Telangana including SPF 50+ sunscreen, hydration, gentle cleansing, weekly exfoliation, lightweight products, and lip/eye protection.
+
+#### 4. Understanding Skin Allergies: Causes, Symptoms, and Treatment
+
+- **URL:** https://armoorskinclinic.com/blog/understanding-skin-allergies
+- **Date:** April 2026
+- **Read Time:** 5 min
+- **Category:** Skin Allergies
+- **Summary:** Comprehensive guide to contact dermatitis, urticaria (hives), and angioedema. Covers common triggers (nickel, fragrances, latex, medications, food, insect stings, pollen), symptoms, and treatment options (antihistamines, topical corticosteroids, trigger avoidance).
+
+#### 5. Dandruff Prevention: Tips for a Healthy Scalp
+
+- **URL:** https://armoorskinclinic.com/blog/dandruff-prevention-tips
+- **Date:** March 2026
+- **Read Time:** 4 min
+- **Category:** Hair Care
+- **Summary:** Practical dandruff prevention tips including regular washing, anti-dandruff shampoos (ketoconazole, zinc pyrithione, selenium sulphide, salicylic acid), avoiding scratching, stress management, healthy diet (zinc, B vitamins, omega-3), and limiting styling products.
+
+#### 6. 5 Signs You Should Visit a Dermatologist
+
+- **URL:** https://armoorskinclinic.com/blog/signs-you-need-a-dermatologist
+- **Date:** February 2026
+- **Read Time:** 4 min
+- **Category:** General
+- **Summary:** Five signs indicating need for professional dermatological care: persistent acne (not improving after 2–3 months), changing moles, chronic skin conditions (eczema, psoriasis, rosacea), unexplained hair loss, and persistent/severe rashes.
+
+---
+
+## Health Education Topics Covered
+
+- Acne prevention and management
+- Hair fall prevention strategies
+- Summer skin care in tropical climates
+- Skin allergy identification and management
+- Dandruff prevention and scalp health
+- When to visit a dermatologist
+- Sun protection and sunscreen usage
+- Stress-related skin conditions
+- Nutritional factors affecting skin and hair health
+- Pediatric skin care
+
+---
+
+## Internal Page Hierarchy
+
+```
+https://armoorskinclinic.com/
+├── /treatments
+│   ├── /treatments/acne-treatment-armoor
+│   ├── /treatments/hair-loss-treatment-armoor
+│   ├── /treatments/psoriasis-treatment-armoor
+│   ├── /treatments/eczema-treatment-armoor
+│   ├── /treatments/vitiligo-treatment-armoor
+│   ├── /treatments/pigmentation-treatment-armoor
+│   ├── /treatments/fungal-infection-treatment-armoor
+│   ├── /treatments/skin-allergy-treatment-armoor
+│   ├── /treatments/dandruff-treatment-armoor
+│   ├── /treatments/nail-disorders-armoor
+│   ├── /treatments/wart-removal-armoor
+│   └── /treatments/mole-removal-armoor
+├── /appointments
+└── /blog
+    ├── /blog/how-to-prevent-hair-fall
+    ├── /blog/best-acne-treatments
+    ├── /blog/skin-care-during-summer
+    ├── /blog/understanding-skin-allergies
+    ├── /blog/dandruff-prevention-tips
+    └── /blog/signs-you-need-a-dermatologist
+```
+
+### Homepage Sections (Anchor Links)
+
+- #home — Hero section with clinic introduction
+- #about — About the clinic
+- #doctor — Dr. Raghavendhra profile
+- #gallery — Clinic photos
+- #contact — Contact information and map
+
+---
+
+## Important URLs
+
+### Canonical URLs
+
+| Page | URL |
+|------|-----|
+| Home | https://armoorskinclinic.com/ |
+| Treatments | https://armoorskinclinic.com/treatments |
+| Acne Treatment | https://armoorskinclinic.com/treatments/acne-treatment-armoor |
+| Hair Loss Treatment | https://armoorskinclinic.com/treatments/hair-loss-treatment-armoor |
+| Psoriasis Treatment | https://armoorskinclinic.com/treatments/psoriasis-treatment-armoor |
+| Eczema Treatment | https://armoorskinclinic.com/treatments/eczema-treatment-armoor |
+| Vitiligo Treatment | https://armoorskinclinic.com/treatments/vitiligo-treatment-armoor |
+| Pigmentation Treatment | https://armoorskinclinic.com/treatments/pigmentation-treatment-armoor |
+| Fungal Infection Treatment | https://armoorskinclinic.com/treatments/fungal-infection-treatment-armoor |
+| Skin Allergy Treatment | https://armoorskinclinic.com/treatments/skin-allergy-treatment-armoor |
+| Dandruff Treatment | https://armoorskinclinic.com/treatments/dandruff-treatment-armoor |
+| Nail Disorders Treatment | https://armoorskinclinic.com/treatments/nail-disorders-armoor |
+| Wart Removal | https://armoorskinclinic.com/treatments/wart-removal-armoor |
+| Mole Removal | https://armoorskinclinic.com/treatments/mole-removal-armoor |
+| Appointments | https://armoorskinclinic.com/appointments |
+| Blog | https://armoorskinclinic.com/blog |
+
+---
+
+## Navigation Map
+
+### Primary Navigation
+
+1. Home (/)
+2. About (/#about)
+3. Treatments (/treatments)
+4. Doctor (/#doctor)
+5. Gallery (/#gallery)
+6. Contact (/#contact)
+
+### Footer Quick Links
+
+1. Home
+2. About
+3. Treatments
+4. Doctor
+5. Gallery
+6. Contact
+7. Blog
+
+### Header CTAs
+
+- Call 9603 752 752
+- Book Appointment (/appointments)
+
+---
+
+## Medical Topics Covered
+
+### Dermatology
+
+Acne, cystic acne, acne scars, back acne, psoriasis (plaque, scalp, nail), eczema (atopic dermatitis), vitiligo, hyperpigmentation, melasma, skin allergies, contact dermatitis, urticaria (hives), angioedema, fungal infections (tinea, ringworm, athlete's foot, candidiasis), warts, molluscum contagiosum, seborrheic keratosis, moles, Stevens-Johnson syndrome, nail disorders (onychomycosis, paronychia)
+
+### Trichology
+
+Hair loss (androgenetic alopecia, alopecia areata), dandruff, seborrheic dermatitis (scalp), scalp psoriasis
+
+### Cosmetology
+
+Chemical peels, PRP therapy, laser treatments, cosmetic dermatology
+
+### Pediatric Dermatology
+
+Childhood eczema, birthmarks, allergic rashes, warts, skin infections in children
+
+---
+
+## Entity Relationships
+
+### Medical Entities
+
+- **Dermatologist** → Dr. Raghavendhra, MD, DVL
+- **MedicalClinic** → Armoor Skin & Hair Clinic
+- **Location** → Armoor, Nizamabad, Telangana, India
+- **MedicalSpecialty** → Dermatology, Venereology, Leprosy
+- **MedicalProcedure** → Acne Treatment, Hair Loss Treatment, Psoriasis Treatment, etc.
+- **Disease** → Acne, Psoriasis, Eczema, Vitiligo, etc.
+- **Therapy** → Phototherapy, PRP Therapy, Chemical Peels, Cryotherapy, etc.
+
+### Business Entities
+
+- **Organization** → Armoor Skin & Hair Clinic
+- **LocalBusiness** → Armoor Skin & Hair Clinic
+- **Physician** → Dr. Raghavendhra, MD, DVL
+- **PostalAddress** → Opposite VR Hospital, Beside LK Hospital, Mahalaxmi Colony, Armoor, Telangana, India
+- **ContactPoint** → +91 9603 752 752
+
+### Content Entities
+
+- **WebPage** → Treatment pages, Blog posts, Appointment page
+- **Article** → Blog posts
+- **FAQPage** → General FAQs, Appointment FAQs, Treatment FAQs
+- **BreadcrumbList** → Home > Treatments, Home > Blog, etc.
+- **MedicalWebPage** → Treatment detail pages
+
+---
+
+## Knowledge Graph Summary
+
+**Armoor Skin & Hair Clinic** is a dermatology clinic in **Armoor, Telangana, India**, founded by **Dr. Raghavendhra, MD, DVL** (Osmania Medical College). The clinic provides **dermatology, trichology, and cosmetology** services with **20+ years of experience**. Key services include treatment for **acne, hair loss, psoriasis, eczema, vitiligo, pigmentation, fungal infections, skin allergies, dandruff, nail disorders, wart removal, and mole removal**. The clinic also offers **chemical peels, PRP therapy, phototherapy, pediatric dermatology, and cosmetic dermatology**. The clinic is open **Monday–Saturday, 11:00 AM–6:00 PM** and serves patients from **7 mandals and 130+ villages** in Nizamabad district including Armoor, Balkonda, Bheemgal, Mortad, Kammarpalle, Mupkal, and Nizamabad.
+
+---
+
+## Structured Data Summary
+
+### Schema Types Found on Website
+
+| Schema Type | Location | Key Properties |
+|-------------|----------|----------------|
+| MedicalClinic | Homepage, Appointments | Name, URL, telephone, email, address, geo, openingHours, medicalSpecialty, availableService, founder |
+| Physician | Homepage, Appointments | Name, qualification, medicalSpecialty, knowsAbout, worksFor |
+| LocalBusiness | Homepage | Name, URL, telephone, address, priceRange, openingHours |
+| Organization | Homepage | Name, URL, logo, contactPoint with availableLanguage |
+| WebSite | Homepage | Name, URL, description, potentialAction (SearchAction) |
+| BreadcrumbList | Homepage, Treatment pages | Hierarchical page structure |
+| FAQPage | Homepage, Treatment pages | Question and answer pairs |
+| MedicalProcedure | Treatment pages (catch-all) | Name, description, provider, relevantSpecialty |
+| MedicalWebPage | Dedicated treatment pages | Treatment information with FAQ |
+| Article | Blog posts | Headline, description, author, publisher, datePublished |
+
+### JSON-LD @graph Structure (Homepage)
+
+The homepage contains a comprehensive @graph with MedicalClinic, Physician, LocalBusiness, Organization, WebSite, and BreadcrumbList schemas interconnected through @id references.
+
+---
+
+## Content Taxonomy
+
+### Primary Categories
+
+1. **Dermatology Treatments** — 12 dedicated treatment pages
+2. **Skin Diseases** — 10 skin conditions documented
+3. **Hair Conditions** — 2 hair conditions documented
+4. **Health Education** — 6 blog articles
+5. **Patient Services** — Appointments, consultation, contact
+
+### Secondary Categories
+
+1. **Technologies** — Laser, phototherapy, PRP, cryotherapy, chemical peels
+2. **Diagnostic Methods** — Dermoscopy, Wood's lamp
+3. **Pediatric Care** — Children's dermatology
+4. **Cosmetic Procedures** — Chemical peels, PRP, laser treatments
+
+---
+
+## Keywords Naturally Extracted from Website
+
+### Medical Terms
+
+Dermatology, trichology, cosmetology, androgenetic alopecia, alopecia areata, Cutibacterium acnes, Malassezia, onychomycosis, paronychia, seborrheic dermatitis, melasma, hyperpigmentation, angioedema, urticaria, dermatophyte, candidiasis, psoriatic arthritis, calcineur inhibitors, corticosteroids, antihistamines, isotretinoin, NB-UVB, excimer laser, fractional CO2 laser, Q-switched Nd:YAG, PRP therapy, microneedling, chemical peels, cryotherapy, electrocautery, dermoscopy, Wood's lamp
+
+### Location Terms
+
+Armoor, Armur, Nizamabad, Telangana, India, Mahalaxmi Colony, Balkonda, Bheemgal, Mortad, Kammarpalle, Mupkal, Kotha Armur, Alur, Amdapur, Ankapur, Bardipur, Chepur, Degaon, Fathepur, Gaggupalle, Govindpet, Issapalle, Khanapur, Komanpalle, Macherla, Magdi, Manthani, Merdepalle, Pipri, Rampur, Surbiriyal, Bodepalle, Bussapur, Chakeriyal, Chittapur, Doodgaon, Jalalpur, Keshapur, Kisannagar, Kodecherla, Kojan Kothur, Kothapalle, Mendora, Mukpal, Nagampet, Nagapur, Nallur, Ratnapur, Renjarla, Sangam, Savel, Velgatur, Vempalle, Venchariyal, Babanagar, Babapur, Bachanpalle, Bejjora, Changal, Devakkapet, Devan Palle, Gangarai, Gongappul, Jagriyal, Karepalle, Kupkal, Lingapurchouth, Mendhora, Muchkur, Pallikonda, Pedda Bheemgal, Puranipet, Rahathnagar, Salampur, Sikandrapur, Thallapalle, Battapur, Dharmora, Domchanda, Donkal, Donpal, Gumeriyal, Palem, Ramannapet, Shetpalle, Sunkat, Tadla Rampur, Tadpakal, Thimmapur, Thurat, Vaddiyat, Yergatla, Basheerabad, Belur, Choutupalle, Dammannapet, Dammanpet, Gudilingapur, Guntepalle, Hasakothur, Inayat Nagar, Kammar Palle, Konapur, Konasamandar, Lakshmapur, Manal, Narsapur, Reachpalle, Uploor, Nalloor, Vempally, Kothapalli, Venchiryal
+
+### Service Terms
+
+Skin specialist, hair specialist, dermatologist near me, skin clinic Armoor, acne treatment, hair fall treatment, psoriasis treatment, eczema treatment, vitiligo treatment, pigmentation treatment, fungal infection treatment, wart removal, mole removal, chemical peel, PRP treatment, phototherapy, dandruff treatment
+
+### Business Terms
+
+Armoor Skin & Hair Clinic, Dr. Raghavendhra, MD DVL, dermatologist Armoor, skin doctor Armoor, book appointment, consultation, walk-in, dermatologist Balkonda, dermatologist Bheemgal, dermatologist Mortad, dermatologist Kammarpalle, dermatologist Mupkal, skin specialist Nizamabad
+
+---
+
+## Medical Entities
+
+### Conditions (ICD-10 Related)
+
+- Acne vulgaris (L70)
+- Psoriasis (L40)
+- Atopic dermatitis / Eczema (L20-L30)
+- Vitiligo (L80)
+- Melasma (L81.0)
+- Hyperpigmentation (L81)
+- Fungal skin infections (B35-B49)
+- Urticaria (L50)
+- Warts (B07)
+- Onychomycosis (B35.1)
+
+### Treatments
+
+- Topical corticosteroids
+- Systemic medications
+- Phototherapy (NB-UVB)
+- Excimer laser therapy
+- Chemical peels
+- PRP (Platelet-Rich Plasma) therapy
+- Microneedling
+- Cryotherapy
+- Electrocautery
+- Surgical excision
+- Mesotherapy
+
+---
+
+## Locations Served
+
+### Primary
+
+Armoor, Telangana, India (Pin: 503224)
+
+### Mandals Covered
+
+Armoor, Balkonda, Bheemgal, Mortad, Kammarpalle, Mupkal, Nizamabad
+
+### Total Villages
+
+130+ villages across 7 mandals in Nizamabad district, Telangana
+
+---
+
+## Last Updated
+
+July 2026
+
+---
+
+## File Information
+
+- **Generated for:** https://armoorskinclinic.com
+- **Purpose:** LLM discovery and Generative Engine Optimization (GEO)
+- **Companion File:** https://armoorskinclinic.com/llms.txt (concise version)
+- **Sitemap:** https://armoorskinclinic.com/sitemap.xml
+- **robots.txt:** https://armoorskinclinic.com/robots.txt

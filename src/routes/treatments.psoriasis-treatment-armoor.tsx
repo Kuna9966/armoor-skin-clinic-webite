@@ -24,6 +24,7 @@ import {
   ADDRESS,
   HOURS,
   MAP_LINK,
+  AREAS_WE_SERVE,
 } from "../lib/clinic-data";
 
 export const Route = createFileRoute("/treatments/psoriasis-treatment-armoor")({
@@ -1116,17 +1117,7 @@ function ReviewsSection() {
 }
 
 function AreasWeServeSection() {
-  const areas = [
-    { name: "Armoor", isLocal: true },
-    { name: "Balkonda" },
-    { name: "Mortad" },
-    { name: "Mupkal" },
-    { name: "Velpur" },
-    { name: "Kammarpally" },
-    { name: "Nandipet" },
-    { name: "Navipet" },
-    { name: "Nizamabad" },
-  ];
+  const areas = AREAS_WE_SERVE;
 
   return (
     <section className="bg-secondary/40 py-20 sm:py-24">
