@@ -147,7 +147,10 @@ function ManageReviewsPage() {
             return (
               <button
                 key={item.id}
-                onClick={() => setTab(item.id)}
+                onClick={() => {
+                  setTab(item.id);
+                  setRefreshKey((k) => k + 1);
+                }}
                 className={`flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium transition-all ${
                   active
                     ? "gradient-bg text-white shadow-glow"
@@ -226,8 +229,8 @@ function ManageReviewsPage() {
         <main className="flex-1 overflow-auto p-4 sm:p-6 lg:p-8">
           {tab === "dashboard" && <DashboardTab refreshKey={refreshKey} />}
           {tab === "import" && <ImportTab />}
-          {tab === "queue" && <QueueTab />}
-          {tab === "history" && <HistoryTab />}
+          {tab === "queue" && <QueueTab refreshKey={refreshKey} />}
+          {tab === "history" && <HistoryTab refreshKey={refreshKey} />}
           {tab === "settings" && <SettingsTab onReset={refreshStats} />}
         </main>
       </div>
@@ -749,7 +752,7 @@ function ImportTab() {
 
 /* ── Queue ────────────────────────────────────────────────── */
 
-function QueueTab() {
+function QueueTab({ refreshKey }: { refreshKey: number }) {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [q, setQ] = useState("");
   const [filter, setFilter] = useState<"all" | "unused" | "assigned" | "used">("all");
@@ -757,8 +760,11 @@ function QueueTab() {
   const PAGE_SIZE = 6;
 
   useEffect(() => {
-    getQueue().then(setReviews);
-  }, []);
+    const load = () => getQueue().then(setReviews);
+    load();
+    const interval = setInterval(load, 20000);
+    return () => clearInterval(interval);
+  }, [refreshKey]);
 
   const filtered = useMemo(() => {
     return reviews.filter((r) => {
@@ -896,12 +902,15 @@ function QueueTab() {
 
 /* ── History ──────────────────────────────────────────────── */
 
-function HistoryTab() {
+function HistoryTab({ refreshKey }: { refreshKey: number }) {
   const [history, setHistory] = useState<HistoryEntry[]>([]);
 
   useEffect(() => {
-    getHistory().then(setHistory);
-  }, []);
+    const load = () => getHistory().then(setHistory);
+    load();
+    const interval = setInterval(load, 20000);
+    return () => clearInterval(interval);
+  }, [refreshKey]);
 
   const iconMap = {
     import: <Upload className="h-4 w-4" />,
@@ -1222,11 +1231,24 @@ function ConfirmAction({
   description: string;
   action: string;
   icon: React.ElementType;
-  onConfirm: () => void;
+  onConfirm: () => void | Promise<void>;
   destructive?: boolean;
 }) {
+  const [open, setOpen] = useState(false);
+  const [running, setRunning] = useState(false);
+
+  const handleConfirm = async () => {
+    setRunning(true);
+    try {
+      await onConfirm();
+    } finally {
+      setRunning(false);
+      setOpen(false);
+    }
+  };
+
   return (
-    <AlertDialog>
+    <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogTrigger asChild>
         <button className="group w-full rounded-xl border border-border bg-card/50 p-4 text-left backdrop-blur-sm transition-colors hover:border-destructive/50">
           <div className="flex items-center gap-2">
@@ -1242,16 +1264,17 @@ function ConfirmAction({
           <AlertDialogDescription>{description}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogCancel disabled={running}>Cancel</AlertDialogCancel>
           <AlertDialogAction
-            onClick={onConfirm}
+            onClick={handleConfirm}
+            disabled={running}
             className={
               destructive
                 ? "bg-destructive text-destructive-foreground hover:bg-destructive/90"
                 : ""
             }
           >
-            {action}
+            {running ? "Working..." : action}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
