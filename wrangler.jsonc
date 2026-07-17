@@ -8,7 +8,7 @@
     {
       "binding": "DB",
       "database_name": "reviews-db",
-      "database_id": "<YOUR_DATABASE_ID>"
+      "database_id": "30d06106-e731-4c49-8af6-6a857da36ad9"
     }
   ]
 }
