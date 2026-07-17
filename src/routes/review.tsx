@@ -17,6 +17,7 @@ import {
   getAssignedReview,
   copyReview,
   copyAndRedirect,
+  markReviewCopied,
   openGoogleReview,
   GOOGLE_REVIEW_URL,
   type Review,
@@ -66,6 +67,7 @@ function PublicReviewPage() {
   async function handleCopy() {
     if (!review) return;
     await copyReview(review.text);
+    markReviewCopied(review.numericId);
     setCopied(true);
     toast.success("Review copied", {
       description: "Ready to paste on Google Reviews.",
@@ -76,6 +78,7 @@ function PublicReviewPage() {
   async function handleCopyAndRedirect() {
     if (!review) return;
     await copyAndRedirect(review.text);
+    markReviewCopied(review.numericId);
     setCopied(true);
     setRedirecting(true);
     toast.success("Review copied", {

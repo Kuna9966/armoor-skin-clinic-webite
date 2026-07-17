@@ -2,6 +2,7 @@ export const GOOGLE_REVIEW_URL = "https://g.page/r/CWYmHRHhqTqnEAE/review";
 
 export interface Review {
   id: string;
+  numericId: number;
   text: string;
   status: "unused" | "assigned" | "used";
   createdAt: string;
@@ -58,6 +59,7 @@ export async function getAssignedReview(): Promise<Review | null> {
     const data = await apiFetch<{ id: number; review: string }>("/review");
     return {
       id: `R-${String(data.id).padStart(4, "0")}`,
+      numericId: data.id,
       text: data.review,
       status: "assigned",
       createdAt: new Date().toISOString(),
@@ -70,6 +72,17 @@ export async function getAssignedReview(): Promise<Review | null> {
 
 export async function copyReview(text: string): Promise<void> {
   await navigator.clipboard.writeText(text);
+}
+
+export async function markReviewCopied(numericId: number): Promise<void> {
+  try {
+    await apiFetch("/copy", {
+      method: "POST",
+      body: JSON.stringify({ reviewId: numericId }),
+    });
+  } catch {
+    // Non-critical — clipboard already succeeded
+  }
 }
 
 export async function copyAndRedirect(text: string): Promise<void> {
@@ -203,6 +216,7 @@ export async function getQueue(): Promise<Review[]> {
     }>; total: number }>("/queue");
     return data.items.map((r) => ({
       id: `R-${String(r.id).padStart(4, "0")}`,
+      numericId: r.id,
       text: r.review,
       status: r.status as "unused" | "assigned" | "used",
       createdAt: r.created_at,
