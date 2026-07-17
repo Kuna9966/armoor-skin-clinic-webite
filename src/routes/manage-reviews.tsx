@@ -1008,7 +1008,7 @@ function SettingsTab({ onReset }: { onReset?: () => void }) {
   const doReset = async () => {
     try {
       await resetQueue();
-      toast.success("Queue reset — all reviews set back to unused");
+      toast.success("Queue reset — all reviews restored to unused");
       onReset?.();
     } catch {
       toast.error("Failed to reset queue. Please try again.");

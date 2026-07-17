@@ -189,8 +189,8 @@ export class ReviewDB {
     const result = await this.db
       .prepare(
         `UPDATE reviews
-       SET status = 'unused', assigned_at = NULL
-       WHERE status = 'assigned'`,
+       SET status = 'unused', assigned_at = NULL, copied_at = NULL
+       WHERE status != 'unused'`,
       )
       .run();
 
