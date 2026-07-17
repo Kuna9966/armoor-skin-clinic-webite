@@ -198,8 +198,27 @@ export class ReviewDB {
   }
 
   async deleteAllReviews(): Promise<number> {
-    const result = await this.db.prepare("DELETE FROM reviews").run();
-    return result.meta?.changes ?? 0;
+    const count = await this.db
+      .prepare("SELECT COUNT(*) as c FROM reviews")
+      .first<{ c: number }>();
+    await this.db.prepare("DROP TABLE IF EXISTS reviews").run();
+    await this.db
+      .prepare(
+        `CREATE TABLE reviews (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          review TEXT NOT NULL,
+          status TEXT NOT NULL DEFAULT 'unused' CHECK (status IN ('unused', 'assigned', 'used')),
+          assigned_at TEXT,
+          copied_at TEXT,
+          created_at TEXT NOT NULL DEFAULT (datetime('now'))
+        )`,
+      )
+      .run();
+    await this.db.prepare("CREATE INDEX IF NOT EXISTS idx_reviews_status ON reviews(status)").run();
+    await this.db.prepare("CREATE INDEX IF NOT EXISTS idx_reviews_created_at ON reviews(created_at)").run();
+    await this.db.prepare("CREATE INDEX IF NOT EXISTS idx_reviews_assigned_at ON reviews(assigned_at)").run();
+    await this.db.prepare("CREATE INDEX IF NOT EXISTS idx_reviews_copied_at ON reviews(copied_at)").run();
+    return count?.c ?? 0;
   }
 
   async exportCsv(): Promise<string> {
