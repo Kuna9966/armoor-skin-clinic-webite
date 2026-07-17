@@ -23,6 +23,16 @@ export class ReviewDB {
   async getNextReview(): Promise<ReviewAssignment | null> {
     const now = new Date().toISOString();
 
+    // 1. If there's already an assigned (not yet used) review, return it
+    const existing = await this.db
+      .prepare(
+        `SELECT id, review FROM reviews WHERE status = 'assigned' ORDER BY assigned_at ASC LIMIT 1`,
+      )
+      .first<ReviewAssignment>();
+
+    if (existing) return existing;
+
+    // 2. Otherwise assign the next unused review
     const result = await this.db
       .prepare(
         `UPDATE reviews
