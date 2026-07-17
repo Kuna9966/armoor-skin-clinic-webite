@@ -232,6 +232,10 @@ export async function resetQueue(): Promise<void> {
   await apiFetch("/reset", { method: "POST" });
 }
 
+export async function deleteAllReviews(): Promise<{ deletedCount: number }> {
+  return apiFetch("/all", { method: "DELETE" });
+}
+
 function formatTimeAgo(iso: string): string {
   const diff = Date.now() - new Date(iso).getTime();
   const mins = Math.floor(diff / 60000);

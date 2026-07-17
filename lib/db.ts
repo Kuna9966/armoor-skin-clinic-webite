@@ -187,6 +187,11 @@ export class ReviewDB {
     return result.meta?.changes ?? 0;
   }
 
+  async deleteAllReviews(): Promise<number> {
+    const result = await this.db.prepare("DELETE FROM reviews").run();
+    return result.meta?.changes ?? 0;
+  }
+
   async exportCsv(): Promise<string> {
     const reviews = await this.db
       .prepare(

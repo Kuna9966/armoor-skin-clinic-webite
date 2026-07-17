@@ -88,6 +88,16 @@ export async function handleApiRoute(
       });
     }
 
+    if (route === "/all" && request.method === "DELETE") {
+      const db = getDb();
+      const deletedCount = await db.deleteAllReviews();
+      return json({
+        success: true,
+        deletedCount,
+        message: `Deleted ${deletedCount} reviews from database`,
+      });
+    }
+
     if (route === "/export") {
       const db = getDb();
       const csv = await db.exportCsv();

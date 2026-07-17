@@ -69,6 +69,7 @@ import {
   getHistory,
   importReviews,
   resetQueue,
+  deleteAllReviews,
   type Review,
   type HistoryEntry,
   type DashboardStats,
@@ -1000,6 +1001,16 @@ function SettingsTab({ onReset }: { onReset?: () => void }) {
     }
   };
 
+  const doDeleteAll = async () => {
+    try {
+      await deleteAllReviews();
+      toast.success("All reviews deleted — database is now empty");
+      onReset?.();
+    } catch {
+      toast.error("Failed to delete reviews. Please try again.");
+    }
+  };
+
   return (
     <div className="space-y-6 max-w-4xl">
       <motion.section
@@ -1065,13 +1076,20 @@ function SettingsTab({ onReset }: { onReset?: () => void }) {
         </div>
         <p className="mt-1 text-xs text-muted-foreground">These actions cannot be undone.</p>
 
-        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+        <div className="mt-5 grid gap-3 sm:grid-cols-3">
           <ConfirmAction
             title="Reset queue"
             description="Restore all reviews to unused state."
             action="Reset"
             icon={RotateCcw}
             onConfirm={doReset}
+          />
+          <ConfirmAction
+            title="Delete all reviews"
+            description="Permanently remove every review from the database."
+            action="Delete All"
+            icon={Trash2}
+            onConfirm={doDeleteAll}
           />
           <ConfirmAction
             title="Export data"
