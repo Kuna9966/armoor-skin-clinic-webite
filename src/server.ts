@@ -104,9 +104,7 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const url = new URL(request.url);
-      console.log(`[SERVER] fetch called: ${request.method} ${url.pathname}`);
       if (url.pathname.startsWith("/api/")) {
-        console.log(`[SERVER] API intercept: ${url.pathname}`);
         return await handleApiRoute(url.pathname, request);
       }
 

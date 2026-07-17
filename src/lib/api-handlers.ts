@@ -23,7 +23,6 @@ export async function handleApiRoute(
   pathname: string,
   request: Request,
 ): Promise<Response> {
-  console.log(`[API] handleApiRoute called: ${pathname}`);
   try {
     const route = pathname.replace(/^\/api\/?/, "/").replace(/\/$/, "") || "/";
 
