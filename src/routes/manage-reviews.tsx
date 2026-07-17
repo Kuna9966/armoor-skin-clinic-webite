@@ -103,7 +103,13 @@ function ManageReviewsPage() {
   const [tab, setTab] = useState<Tab>("dashboard");
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sidebarStats, setSidebarStats] = useState<DashboardStats | null>(null);
+  const [refreshKey, setRefreshKey] = useState(0);
   const info = TAB_TITLES[tab];
+
+  const refreshStats = () => {
+    getDashboardStats().then(setSidebarStats).catch(console.error);
+    setRefreshKey((k) => k + 1);
+  };
 
   useEffect(() => {
     getDashboardStats().then(setSidebarStats).catch(console.error);
@@ -217,11 +223,11 @@ function ManageReviewsPage() {
 
         {/* Content */}
         <main className="flex-1 overflow-auto p-4 sm:p-6 lg:p-8">
-          {tab === "dashboard" && <DashboardTab />}
+          {tab === "dashboard" && <DashboardTab refreshKey={refreshKey} />}
           {tab === "import" && <ImportTab />}
           {tab === "queue" && <QueueTab />}
           {tab === "history" && <HistoryTab />}
-          {tab === "settings" && <SettingsTab />}
+          {tab === "settings" && <SettingsTab onReset={refreshStats} />}
         </main>
       </div>
     </div>
@@ -239,14 +245,14 @@ const COLORS = {
   muted: "oklch(0.92 0.01 260)",
 };
 
-function DashboardTab() {
+function DashboardTab({ refreshKey }: { refreshKey: number }) {
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [charts, setCharts] = useState<ChartData | null>(null);
 
   useEffect(() => {
     getDashboardStats().then(setStats);
     getChartData().then(setCharts);
-  }, []);
+  }, [refreshKey]);
 
   if (!stats || !charts) {
     return (
@@ -980,13 +986,18 @@ function HistoryTab() {
 
 /* ── Settings ─────────────────────────────────────────────── */
 
-function SettingsTab() {
+function SettingsTab({ onReset }: { onReset?: () => void }) {
   // Google Review URL for Armoor Skin & Hair Clinic
   const [reviewUrl, setReviewUrl] = useState("https://g.page/r/CWYmHRHhqTqnEAE/review");
 
   const doReset = async () => {
-    await resetQueue();
-    toast.success("Queue reset");
+    try {
+      await resetQueue();
+      toast.success("Queue reset — all reviews set back to unused");
+      onReset?.();
+    } catch {
+      toast.error("Failed to reset queue. Please try again.");
+    }
   };
 
   return (
