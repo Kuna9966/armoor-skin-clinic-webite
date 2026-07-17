@@ -70,6 +70,7 @@ import {
   importReviews,
   resetQueue,
   deleteAllReviews,
+  resetIdSequence,
   type Review,
   type HistoryEntry,
   type DashboardStats,
@@ -1025,6 +1026,17 @@ function SettingsTab({ onReset }: { onReset?: () => void }) {
     }
   };
 
+  const doResetIds = async () => {
+    try {
+      await resetIdSequence();
+      toast.success("Review ID sequence reset successfully. The next imported review will start from ID 1.");
+      onReset?.();
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : "Failed to reset IDs.";
+      toast.error(msg);
+    }
+  };
+
   return (
     <div className="space-y-6 max-w-4xl">
       <motion.section
@@ -1090,13 +1102,20 @@ function SettingsTab({ onReset }: { onReset?: () => void }) {
         </div>
         <p className="mt-1 text-xs text-muted-foreground">These actions cannot be undone.</p>
 
-        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
           <ConfirmAction
             title="Reset queue"
             description="Restore all reviews to unused state."
             action="Reset"
             icon={RotateCcw}
             onConfirm={doReset}
+          />
+          <ConfirmAction
+            title="Reset Review IDs"
+            description="Reset the ID sequence so the next imported review starts from ID 1. Use only after deleting all reviews."
+            action="Reset IDs"
+            icon={RotateCcw}
+            onConfirm={doResetIds}
           />
           <ConfirmAction
             title="Delete all reviews"

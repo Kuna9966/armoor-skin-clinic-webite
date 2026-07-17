@@ -236,6 +236,10 @@ export async function deleteAllReviews(): Promise<{ deletedCount: number }> {
   return apiFetch("/all", { method: "DELETE" });
 }
 
+export async function resetIdSequence(): Promise<void> {
+  await apiFetch("/reset-ids", { method: "POST" });
+}
+
 function formatTimeAgo(iso: string): string {
   const diff = Date.now() - new Date(iso).getTime();
   const mins = Math.floor(diff / 60000);

@@ -98,6 +98,18 @@ export async function handleApiRoute(
       });
     }
 
+    if (route === "/reset-ids" && request.method === "POST") {
+      const db = getDb();
+      const result = await db.resetIdSequence();
+      if (!result.success) {
+        return error(result.error!, 400);
+      }
+      return json({
+        success: true,
+        message: "Review ID sequence reset successfully. The next imported review will start from ID 1.",
+      });
+    }
+
     if (route === "/export") {
       const db = getDb();
       const csv = await db.exportCsv();
