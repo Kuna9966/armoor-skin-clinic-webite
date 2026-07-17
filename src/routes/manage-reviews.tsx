@@ -113,8 +113,8 @@ function ManageReviewsPage() {
   };
 
   useEffect(() => {
-    getDashboardStats().then(setSidebarStats).catch(console.error);
-  }, []);
+    refreshStats();
+  }, [tab]);
 
   return (
     <div className="hero-glow flex min-h-screen bg-background">
@@ -251,8 +251,13 @@ function DashboardTab({ refreshKey }: { refreshKey: number }) {
   const [charts, setCharts] = useState<ChartData | null>(null);
 
   useEffect(() => {
-    getDashboardStats().then(setStats);
-    getChartData().then(setCharts);
+    const load = () => {
+      getDashboardStats().then(setStats);
+      getChartData().then(setCharts);
+    };
+    load();
+    const interval = setInterval(load, 15000);
+    return () => clearInterval(interval);
   }, [refreshKey]);
 
   if (!stats || !charts) {

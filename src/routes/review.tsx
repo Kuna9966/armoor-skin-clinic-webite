@@ -33,8 +33,11 @@ function PublicReviewPage() {
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [redirecting, setRedirecting] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
-  useEffect(() => {
+  const fetchReview = () => {
+    setLoading(true);
+    setError(null);
     getAssignedReview()
       .then((r) => {
         setReview(r);
@@ -45,6 +48,10 @@ function PublicReviewPage() {
         setError("Unable to load review. Please try again later.");
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchReview();
   }, []);
 
   useEffect(() => {
@@ -67,23 +74,37 @@ function PublicReviewPage() {
   async function handleCopy() {
     if (!review) return;
     await copyReview(review.text);
-    markReviewCopied(review.numericId);
     setCopied(true);
     toast.success("Review copied", {
       description: "Ready to paste on Google Reviews.",
     });
+    setRefreshing(true);
+    try {
+      await markReviewCopied(review.numericId);
+    } catch {
+      // non-critical
+    }
+    fetchReview();
+    setRefreshing(false);
     setTimeout(() => setCopied(false), 2200);
   }
 
   async function handleCopyAndRedirect() {
     if (!review) return;
     await copyAndRedirect(review.text);
-    markReviewCopied(review.numericId);
     setCopied(true);
     setRedirecting(true);
     toast.success("Review copied", {
       description: "Redirecting to Google Reviews\u2026",
     });
+    setRefreshing(true);
+    try {
+      await markReviewCopied(review.numericId);
+    } catch {
+      // non-critical
+    }
+    fetchReview();
+    setRefreshing(false);
     setTimeout(() => {
       window.open(GOOGLE_REVIEW_URL, "_blank");
       setRedirecting(false);
