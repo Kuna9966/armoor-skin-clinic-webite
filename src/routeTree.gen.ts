@@ -10,6 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TreatmentsRouteImport } from './routes/treatments'
+import { Route as ReviewRouteImport } from './routes/review'
+import { Route as ManageReviewsRouteImport } from './routes/manage-reviews'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AppointmentsRouteImport } from './routes/appointments'
 import { Route as IndexRouteImport } from './routes/index'
@@ -31,6 +33,16 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 const TreatmentsRoute = TreatmentsRouteImport.update({
   id: '/treatments',
   path: '/treatments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewRoute = ReviewRouteImport.update({
+  id: '/review',
+  path: '/review',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManageReviewsRoute = ManageReviewsRouteImport.update({
+  id: '/manage-reviews',
+  path: '/manage-reviews',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -135,6 +147,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/appointments': typeof AppointmentsRoute
   '/blog': typeof BlogRouteWithChildren
+  '/manage-reviews': typeof ManageReviewsRoute
+  '/review': typeof ReviewRoute
   '/treatments': typeof TreatmentsRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/treatments/$slug': typeof TreatmentsSlugRoute
@@ -155,6 +169,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/appointments': typeof AppointmentsRoute
   '/blog': typeof BlogRouteWithChildren
+  '/manage-reviews': typeof ManageReviewsRoute
+  '/review': typeof ReviewRoute
   '/treatments': typeof TreatmentsRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/treatments/$slug': typeof TreatmentsSlugRoute
@@ -176,6 +192,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/appointments': typeof AppointmentsRoute
   '/blog': typeof BlogRouteWithChildren
+  '/manage-reviews': typeof ManageReviewsRoute
+  '/review': typeof ReviewRoute
   '/treatments': typeof TreatmentsRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/treatments/$slug': typeof TreatmentsSlugRoute
@@ -198,6 +216,8 @@ export interface FileRouteTypes {
     | '/'
     | '/appointments'
     | '/blog'
+    | '/manage-reviews'
+    | '/review'
     | '/treatments'
     | '/blog/$slug'
     | '/treatments/$slug'
@@ -218,6 +238,8 @@ export interface FileRouteTypes {
     | '/'
     | '/appointments'
     | '/blog'
+    | '/manage-reviews'
+    | '/review'
     | '/treatments'
     | '/blog/$slug'
     | '/treatments/$slug'
@@ -238,6 +260,8 @@ export interface FileRouteTypes {
     | '/'
     | '/appointments'
     | '/blog'
+    | '/manage-reviews'
+    | '/review'
     | '/treatments'
     | '/blog/$slug'
     | '/treatments/$slug'
@@ -259,6 +283,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppointmentsRoute: typeof AppointmentsRoute
   BlogRoute: typeof BlogRouteWithChildren
+  ManageReviewsRoute: typeof ManageReviewsRoute
+  ReviewRoute: typeof ReviewRoute
   TreatmentsRoute: typeof TreatmentsRouteWithChildren
 }
 
@@ -269,6 +295,20 @@ declare module '@tanstack/react-router' {
       path: '/treatments'
       fullPath: '/treatments'
       preLoaderRoute: typeof TreatmentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/review': {
+      id: '/review'
+      path: '/review'
+      fullPath: '/review'
+      preLoaderRoute: typeof ReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manage-reviews': {
+      id: '/manage-reviews'
+      path: '/manage-reviews'
+      fullPath: '/manage-reviews'
+      preLoaderRoute: typeof ManageReviewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -450,6 +490,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppointmentsRoute: AppointmentsRoute,
   BlogRoute: BlogRouteWithChildren,
+  ManageReviewsRoute: ManageReviewsRoute,
+  ReviewRoute: ReviewRoute,
   TreatmentsRoute: TreatmentsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
