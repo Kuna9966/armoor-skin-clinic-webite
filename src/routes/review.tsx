@@ -92,11 +92,12 @@ function PublicReviewPage() {
   async function handleCopyAndRedirect() {
     if (!review) return;
     await copyAndRedirect(review.text);
-    setCopied(true);
-    setRedirecting(true);
     toast.success("Review copied", {
       description: "Redirecting to Google Reviews\u2026",
     });
+    window.location.href = GOOGLE_REVIEW_URL;
+    setCopied(true);
+    setRedirecting(true);
     setRefreshing(true);
     try {
       await markReviewCopied(review.numericId);
@@ -105,10 +106,7 @@ function PublicReviewPage() {
     }
     fetchReview();
     setRefreshing(false);
-    setTimeout(() => {
-      window.open(GOOGLE_REVIEW_URL, "_blank");
-      setRedirecting(false);
-    }, 1000);
+    setTimeout(() => setCopied(false), 2200);
   }
 
   return (
