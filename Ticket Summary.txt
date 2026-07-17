@@ -1,0 +1,325 @@
+================================================================================
+                    IRCTC TICKET CANCELLATION & REFUND SUMMARY
+                         (All 3 Tickets - Complete Report)
+================================================================================
+
+There are 3 unique tickets (PNRs) across all data. Each ticket was cancelled
+in multiple batches as passengers cancelled at different times. Below is the
+complete history for each ticket.
+
+================================================================================
+TICKET 1: TPTY RMM EXP (16779)
+================================================================================
+  PNR              : 4438242418
+  Route            : TIRUVANNAMALAI (TNM) → RAMESWARAM (RMM)
+  Class            : SLEEPER CLASS (SL)
+  Quota            : GENERAL (GN)
+  Journey Date     : 01 Jul 2026
+  Boarding Station : TIRUVANNAMALAI
+  Booking Amount   : ₹ 2,280.00
+  Passengers (6)   :
+    1. B Eshwar      (20 yrs | Male)
+    2. B Vishnu      (18 yrs | Male)
+    3. D Tharun      (21 yrs | Male)
+    4. D Vinay       (21 yrs | Male)
+    5. K Deekshith   (20 yrs | Male)
+    6. R Kalyan Ram  (20 yrs | Male)
+
+  ┌─────────────────────────────────────────────────────────────────────────────┐
+  │ CANCELLATION HISTORY (3 batches)                                           │
+  ├─────────────────────────────────────────────────────────────────────────────┤
+  │                                                                             │
+  │ BATCH 1                                                                     │
+  │   Cancellation ID  : 100001400393353                                        │
+  │   Cancellation Date: 24 Jun 2026 | 09:38 PM                                │
+  │   Passengers Cancelled: #1 B Eshwar, #2 B Vishnu                            │
+  │   Railway Cancellation Charges : ₹ 240.00                                  │
+  │   Travel Insurance Refund       : ₹ 0.72                                   │
+  │   Refund Amount                 : ₹ 520.72                                 │
+  │                                                                             │
+  │   --- REFUND TRANSACTION ---                                                │
+  │   Transaction ID  : 100001400393353                                        │
+  │   Transaction Date: 24 Jun 2026                                             │
+  │   Refund ID       : 100001400393353                                        │
+  │   Refund Date     : 25 Jun 2026                                             │
+  │   Refund Status   : REFUNDED                                                │
+  │   Bank Name       : IRCTC iPay                                              │
+  │   Reference No    : 1456782335294399                                        │
+  │                                                                             │
+  │ BATCH 2                                                                     │
+  │   Cancellation ID  : 100001402080805                                        │
+  │   Cancellation Date: 27 Jun 2026 | 09:26 PM                                │
+  │   Passengers Cancelled: #3 D Tharun, #4 D Vinay                             │
+  │   Railway Cancellation Charges : ₹ 240.00                                  │
+  │   Travel Insurance Refund       : ₹ 0.72                                   │
+  │   Refund Amount                 : ₹ 520.72                                 │
+  │                                                                             │
+  │   --- REFUND TRANSACTION ---                                                │
+  │   Transaction ID  : 100001402080805                                        │
+  │   Transaction Date: 27 Jun 2026                                             │
+  │   Refund ID       : 100001402080805                                        │
+  │   Refund Date     : 28 Jun 2026                                             │
+  │   Refund Status   : REFUNDED                                                │
+  │   Bank Name       : IRCTC iPay                                              │
+  │   Reference No    : 9845782594401860                                        │
+  │                                                                             │
+  │ BATCH 3                                                                     │
+  │   Cancellation ID  : 100001402307593                                        │
+  │   Cancellation Date: 28 Jun 2026 | 09:43 AM                                │
+  │   Passengers Cancelled: #5 K Deekshith, #6 R Kalyan Ram                     │
+  │   Railway Cancellation Charges : ₹ 240.00                                  │
+  │   Travel Insurance Refund       : ₹ 0.72                                   │
+  │   Refund Amount                 : ₹ 520.72                                 │
+  │                                                                             │
+  │   --- REFUND TRANSACTION ---                                                │
+  │   Transaction ID  : 100001402307593                                        │
+  │   Transaction Date: 28 Jun 2026                                             │
+  │   Refund ID       : 100001402307593                                        │
+  │   Refund Date     : 29 Jun 2026                                             │
+  │   Refund Status   : REFUNDED                                                │
+  │   Bank Name       : IRCTC iPay                                              │
+  │   Reference No    : 8645782634794048                                        │
+  │                                                                             │
+  │ TOTAL CANCELLATION CHARGES : ₹ 720.00                                      │
+  │ TOTAL REFUNDED (this ticket): ₹ 1,562.16                                   │
+  │ TOTAL INSURANCE REFUND     : ₹ 2.16                                        │
+  └─────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+TICKET 2: RAYALASEEMA SF (12794)
+================================================================================
+  PNR              : 4438242822
+  Route            : NIZAMABAD JN (NZB) → TIRUPATI (TPTY)
+  Class            : SLEEPER CLASS (SL)
+  Quota            : GENERAL (GN)
+  Journey Date     : 28 Jun 2026
+  Boarding Station : NIZAMABAD JN
+  Booking Amount   : ₹ 3,030.00
+  Passengers (6)   :
+    1. B Eshwar      (20 yrs | Male)
+    2. B Vishnu      (18 yrs | Male)
+    3. D Tharun      (21 yrs | Male)
+    4. D Vinay       (21 yrs | Male)
+    5. K Deekshith   (20 yrs | Male)
+    6. R Kalyan Ram  (20 yrs | Male)
+
+  ┌─────────────────────────────────────────────────────────────────────────────┐
+  │ CANCELLATION HISTORY (3 batches)                                           │
+  ├─────────────────────────────────────────────────────────────────────────────┤
+  │                                                                             │
+  │ BATCH 1                                                                     │
+  │   Cancellation ID  : 100001400393350                                        │
+  │   Cancellation Date: 24 Jun 2026 | 09:37 PM                                │
+  │   Passengers Cancelled: #1 B Eshwar, #2 B Vishnu                            │
+  │   Railway Cancellation Charges : ₹ 240.00                                  │
+  │   Travel Insurance Refund       : ₹ 0.72                                   │
+  │   Refund Amount                 : ₹ 770.72                                 │
+  │                                                                             │
+  │   --- REFUND TRANSACTION ---                                                │
+  │   Transaction ID  : 100001400393350                                        │
+  │   Transaction Date: 24 Jun 2026                                             │
+  │   Refund ID       : 100001400393350                                        │
+  │   Refund Date     : 25 Jun 2026                                             │
+  │   Refund Status   : REFUNDED                                                │
+  │   Bank Name       : IRCTC iPay                                              │
+  │   Reference No    : 9746782335293603                                        │
+  │                                                                             │
+  │ BATCH 2                                                                     │
+  │   Cancellation ID  : 100001402080801                                        │
+  │   Cancellation Date: 27 Jun 2026 | 09:25 PM                                │
+  │   Passengers Cancelled: #3 D Tharun                                         │
+  │   Railway Cancellation Charges : ₹ 130.00                                  │
+  │   Travel Insurance Refund       : ₹ 0.36                                   │
+  │   Refund Amount                 : ₹ 375.36                                 │
+  │                                                                             │
+  │   --- REFUND TRANSACTION ---                                                │
+  │   Transaction ID  : 100001402080801                                        │
+  │   Transaction Date: 27 Jun 2026                                             │
+  │   Refund ID       : 100001402080801                                        │
+  │   Refund Date     : 28 Jun 2026                                             │
+  │   Refund Status   : REFUNDED                                                │
+  │   Bank Name       : IRCTC iPay                                              │
+  │   Reference No    : 8246782594474499                                        │
+  │                                                                             │
+  │ BATCH 3                                                                     │
+  │   Cancellation ID  : 100001402307588                                        │
+  │   Cancellation Date: 28 Jun 2026 | 09:41 AM                                │
+  │   Passengers Cancelled: #4 D Vinay, #5 K Deekshith, #6 R Kalyan Ram        │
+  │   Railway Cancellation Charges : ₹ 765.00                                  │
+  │   Travel Insurance Refund       : ₹ 1.08                                   │
+  │   Refund Amount                 : ₹ 751.08                                 │
+  │                                                                             │
+  │   --- REFUND TRANSACTION ---                                                │
+  │   Transaction ID  : 100001402307588                                        │
+  │   Transaction Date: 28 Jun 2026                                             │
+  │   Refund ID       : 100001402307588                                        │
+  │   Refund Date     : 28 Jun 2026                                             │
+  │   Refund Status   : REFUNDED                                                │
+  │   Bank Name       : IRCTC iPay                                              │
+  │   Reference No    : 9646782634738692                                        │
+  │                                                                             │
+  │ TOTAL CANCELLATION CHARGES : ₹ 1,135.00                                    │
+  │ TOTAL REFUNDED (this ticket): ₹ 1,897.16                                   │
+  │ TOTAL INSURANCE REFUND     : ₹ 2.16                                        │
+  └─────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+TICKET 3: KASHI TAMIL EXP (16367)
+================================================================================
+  PNR              : 4858212096
+  Route            : MADURAI JN (MDU) → WARANGAL (WL)
+  Class            : THIRD AC (3A)
+  Quota            : GENERAL (GN)
+  Journey Date     : 03 Jul 2026
+  Boarding Station : MADURAI JN
+  Booking Amount   : ₹ 9,300.00
+  Passengers (6)   :
+    1. B Eshwar      (20 yrs | Male)
+    2. B Vishnu      (18 yrs | Male)
+    3. D Tharun      (21 yrs | Male)
+    4. D Vinay       (21 yrs | Male)
+    5. K Deekshith   (20 yrs | Male)
+    6. R Kalyan Ram  (20 yrs | Male)
+
+  ┌─────────────────────────────────────────────────────────────────────────────┐
+  │ CANCELLATION HISTORY (3 batches)                                           │
+  ├─────────────────────────────────────────────────────────────────────────────┤
+  │                                                                             │
+  │ BATCH 1                                                                     │
+  │   Cancellation ID  : 100001400393355                                        │
+  │   Cancellation Date: 24 Jun 2026 | 09:40 PM                                │
+  │   Passengers Cancelled: #1 B Eshwar, #2 B Vishnu                            │
+  │   Railway Cancellation Charges : ₹ 130.00                                  │
+  │   Travel Insurance Refund       : ₹ 0.00                                   │
+  │   Refund Amount                 : ₹ 2,970.00                               │
+  │                                                                             │
+  │   --- REFUND TRANSACTION ---                                                │
+  │   Transaction ID  : 100001400393355                                        │
+  │   Transaction Date: 24 Jun 2026                                             │
+  │   Refund ID       : 100001400393355                                        │
+  │   Refund Date     : 25 Jun 2026                                             │
+  │   Refund Status   : REFUNDED                                                │
+  │   Bank Name       : IRCTC iPay                                              │
+  │   Reference No    : 3555782335308206                                        │
+  │                                                                             │
+  │ BATCH 2                                                                     │
+  │   Cancellation ID  : 100001402080815                                        │
+  │   Cancellation Date: 27 Jun 2026 | 09:28 PM                                │
+  │   Passengers Cancelled: #3 D Tharun, #4 D Vinay                             │
+  │   Railway Cancellation Charges : ₹ 130.00                                  │
+  │   Travel Insurance Refund       : ₹ 0.00                                   │
+  │   Refund Amount                 : ₹ 2,970.00                               │
+  │                                                                             │
+  │   --- REFUND TRANSACTION ---                                                │
+  │   Transaction ID  : 100001402080815                                        │
+  │   Transaction Date: 27 Jun 2026                                             │
+  │   Refund ID       : 100001402080815                                        │
+  │   Refund Date     : 28 Jun 2026                                             │
+  │   Refund Status   : REFUNDED                                                │
+  │   Bank Name       : IRCTC iPay                                              │
+  │   Reference No    : 8345782594421556                                        │
+  │                                                                             │
+  │ BATCH 3                                                                     │
+  │   Cancellation ID  : 100001402307589                                        │
+  │   Cancellation Date: 28 Jun 2026 | 09:42 AM                                │
+  │   Passengers Cancelled: #5 K Deekshith, #6 R Kalyan Ram                     │
+  │   Railway Cancellation Charges : ₹ 130.00                                  │
+  │   Travel Insurance Refund       : ₹ 0.00                                   │
+  │   Refund Amount                 : ₹ 2,970.00                               │
+  │                                                                             │
+  │   --- REFUND TRANSACTION ---                                                │
+  │   Transaction ID  : 100001402307589                                        │
+  │   Transaction Date: 28 Jun 2026                                             │
+  │   Refund ID       : 100001402307589                                        │
+  │   Refund Date     : 28 Jun 2026                                             │
+  │   Refund Status   : REFUNDED                                                │
+  │   Bank Name       : IRCTC iPay                                              │
+  │   Reference No    : 7629782635065373                                        │
+  │                                                                             │
+  │ TOTAL CANCELLATION CHARGES : ₹ 390.00                                      │
+  │ TOTAL REFUNDED (this ticket): ₹ 8,910.00                                   │
+  │ TOTAL INSURANCE REFUND     : ₹ 0.00                                        │
+  └─────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+                         GRAND TOTAL SUMMARY
+================================================================================
+
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │  Ticket                    │  PNR          │  Booked  │  Refunded  │
+  ├────────────────────────────┼───────────────┼──────────┼────────────┤
+  │  TPTY RMM EXP (16779)      │  4438242418   │ 2,280.00 │ 1,562.16   │
+  │  RAYALASEEMA SF (12794)    │  4438242822   │ 3,030.00 │ 1,897.16   │
+  │  KASHI TAMIL EXP (16367)   │  4858212096   │ 9,300.00 │ 8,910.00   │
+  ├────────────────────────────┼───────────────┼──────────┼────────────┤
+  │  TOTAL                     │               │14,610.00 │12,369.32   │
+  └──────────────────────────────────────────────────────────────────────┘
+
+  Total Booking Amount     : ₹ 14,610.00
+  Total Refund Received    : ₹ 12,369.32
+  Total Cancellation Charges: ₹ 2,245.00  (720 + 1,135 + 390)
+  Total Insurance Refund   : ₹ 4.32       (2.16 + 2.16 + 0.00)
+  ─────────────────────────────────────────
+  Net Loss (Charges)       : ₹ 2,240.68  (14,610.00 - 12,369.32)
+
+
+================================================================================
+                    REFUND STATUS: ALL 9 REFUNDS → REFUNDED
+                    (All refunds processed via IRCTC iPay)
+================================================================================
+
+
+================================================================================
+              ALL 9 CANCELLATION IDs (QUICK REFERENCE)
+================================================================================
+
+  1.  100001400393350  |  RAYALASEEMA SF   |  24 Jun 2026  |  ₹ 770.72
+  2.  100001400393353  |  TPTY RMM EXP     |  24 Jun 2026  |  ₹ 520.72
+  3.  100001400393355  |  KASHI TAMIL EXP  |  24 Jun 2026  |  ₹ 2,970.00
+  4.  100001402080801  |  RAYALASEEMA SF   |  27 Jun 2026  |  ₹ 375.36
+  5.  100001402080805  |  TPTY RMM EXP     |  27 Jun 2026  |  ₹ 520.72
+  6.  100001402080815  |  KASHI TAMIL EXP  |  27 Jun 2026  |  ₹ 2,970.00
+  7.  100001402307588  |  RAYALASEEMA SF   |  28 Jun 2026  |  ₹ 751.08
+  8.  100001402307589  |  KASHI TAMIL EXP  |  28 Jun 2026  |  ₹ 2,970.00
+  9.  100001402307593  |  TPTY RMM EXP     |  28 Jun 2026  |  ₹ 520.72
+
+
+================================================================================
+                   ALL 9 REFUND TRANSACTION IDs
+================================================================================
+
+  Refund ID           │ Refund Date │ Bank Ref No          │ Amount
+  ────────────────────┼─────────────┼──────────────────────┼────────────
+  100001400393350     │ 25 Jun 2026 │ 9746782335293603     │   770.72
+  100001400393353     │ 25 Jun 2026 │ 1456782335294399     │   520.72
+  100001400393355     │ 25 Jun 2026 │ 3555782335308206     │ 2,970.00
+  100001402080801     │ 28 Jun 2026 │ 8246782594474499     │   375.36
+  100001402080805     │ 28 Jun 2026 │ 9845782594401860     │   520.72
+  100001402080815     │ 28 Jun 2026 │ 8345782594421556     │ 2,970.00
+  100001402307588     │ 28 Jun 2026 │ 9646782634738692     │   751.08
+  100001402307589     │ 28 Jun 2026 │ 7629782635065373     │ 2,970.00
+  100001402307593     │ 29 Jun 2026 │ 8645782634794048     │   520.72
+  ────────────────────┼─────────────┼──────────────────────┼────────────
+  TOTAL               │             │                      │12,369.32
+
+
+================================================================================
+                         PASSENGER CANCELLATION TIMELINE
+================================================================================
+
+  All 3 tickets had the same 6 passengers. Below shows when each passenger
+  was cancelled on each ticket:
+
+  Passenger         │ PNR 4438242418  │ PNR 4438242822  │ PNR 4858212096
+  ──────────────────┼─────────────────┼─────────────────┼────────────────
+  B Eshwar          │ 24 Jun 09:38 PM │ 24 Jun 09:37 PM │ 24 Jun 09:40 PM
+  B Vishnu          │ 24 Jun 09:38 PM │ 24 Jun 09:37 PM │ 24 Jun 09:40 PM
+  D Tharun          │ 27 Jun 09:26 PM │ 27 Jun 09:25 PM │ 27 Jun 09:28 PM
+  D Vinay           │ 27 Jun 09:26 PM │ 28 Jun 09:41 AM │ 27 Jun 09:28 PM
+  K Deekshith       │ 28 Jun 09:43 AM │ 28 Jun 09:41 AM │ 28 Jun 09:42 AM
+  R Kalyan Ram      │ 28 Jun 09:43 AM │ 28 Jun 09:41 AM │ 28 Jun 09:42 AM
+
+================================================================================
