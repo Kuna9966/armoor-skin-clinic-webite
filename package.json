@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build && node -e \"const fs=require('fs');const p='.output/server/wrangler.json';const c=JSON.parse(fs.readFileSync(p,'utf8'));if(c.assets)delete c.assets;fs.writeFileSync(p,JSON.stringify(c,null,2));\"",
+    "build": "vite build && node -e \"const fs=require('fs');const p='.output/server/wrangler.json';const c=JSON.parse(fs.readFileSync(p,'utf8'));delete c.pages_build_output_dir;if(!c.assets)c.assets={};c.assets.directory='../public';c.assets.binding='ASSETS';fs.writeFileSync(p,JSON.stringify(c,null,2));\"",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",

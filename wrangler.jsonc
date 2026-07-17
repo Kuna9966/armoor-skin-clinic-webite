@@ -2,8 +2,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "armoor-skin-clinic-website",
   "compatibility_date": "2024-09-23",
-  "pages_build_output_dir": ".output/public",
   "main": ".output/server/index.mjs",
+  "assets": {
+    "directory": ".output/public",
+    "binding": "ASSETS"
+  },
   "d1_databases": [
     {
       "binding": "DB",
