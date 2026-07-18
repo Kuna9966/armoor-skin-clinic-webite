@@ -239,8 +239,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                 name: DOCTOR_NAME,
               },
               sameAs: [
-                "https://facebook.com/armoorskinclinic",
-                "https://instagram.com/armoorskinclinic",
+                "https://www.facebook.com/people/Armoor-Skin-and-Hair-Clinic/61591523830492/",
+                "https://www.instagram.com/armoorskinclinic?utm_source=qr",
                 "https://twitter.com/armoorskinclinic",
               ],
             },

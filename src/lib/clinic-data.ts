@@ -35,8 +35,8 @@ export const SITE_DESCRIPTION =
   "Expert dermatology care for acne, hair loss, psoriasis, eczema, fungal infections, pigmentation, and more by Dr. Raghavendhra MD, DVL in Armoor, Telangana.";
 
 export const SOCIAL = {
-  facebook: "https://facebook.com/armoorskinclinic",
-  instagram: "https://instagram.com/armoorskinclinic",
+  facebook: "https://www.facebook.com/people/Armoor-Skin-and-Hair-Clinic/61591523830492/",
+  instagram: "https://www.instagram.com/armoorskinclinic?utm_source=qr",
   twitter: "https://twitter.com/armoorskinclinic",
 };
 

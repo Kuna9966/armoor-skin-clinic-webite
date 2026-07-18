@@ -10,6 +10,8 @@ import {
   ShieldCheck,
   Home,
   AlertTriangle,
+  Instagram,
+  Facebook,
 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -22,6 +24,7 @@ import {
   GOOGLE_REVIEW_URL,
   type Review,
 } from "@/services/mockApi";
+import { SOCIAL } from "@/lib/clinic-data";
 
 export const Route = createFileRoute("/review")({
   component: PublicReviewPage,
@@ -299,6 +302,27 @@ function PublicReviewPage() {
                 <ExternalLink className="h-4 w-4" />
                 Open Google Review
               </Button>
+            </div>
+
+            <div className="mt-4 flex items-center justify-center gap-3">
+              <a
+                href={SOCIAL.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 rounded-full border border-border/70 bg-card/50 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors hover:bg-card hover:border-pink-500/50 hover:text-pink-500"
+              >
+                <Instagram className="h-4 w-4" />
+                Follow on Instagram
+              </a>
+              <a
+                href={SOCIAL.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 rounded-full border border-border/70 bg-card/50 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors hover:bg-card hover:border-blue-500/50 hover:text-blue-500"
+              >
+                <Facebook className="h-4 w-4" />
+                Follow on Facebook
+              </a>
             </div>
 
             <p className="mt-3 text-center text-xs text-muted-foreground">
