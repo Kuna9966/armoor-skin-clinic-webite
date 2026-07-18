@@ -1115,7 +1115,6 @@ function Reviews() {
 }
 
 /* ---------------- Review CTA ---------------- */
-const GOOGLE_REVIEW_URL = "https://g.page/r/CWYmHRHhqTqnEAE/review";
 
 function ReviewCTA() {
   return (
@@ -1170,10 +1169,8 @@ function ReviewCTA() {
                 Point your phone camera at the QR code
               </p>
               <div className="mx-auto mt-5 flex items-center justify-center">
-                <a
-                  href={GOOGLE_REVIEW_URL}
-                  target="_blank"
-                  rel="noreferrer"
+                <Link
+                  to="/review"
                   className="block rounded-2xl border border-border bg-white p-3 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <img
@@ -1183,7 +1180,7 @@ function ReviewCTA() {
                     height={180}
                     className="h-[180px] w-[180px]"
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -1209,16 +1206,14 @@ function ReviewCTA() {
                 4.9 average
               </span>
             </div>
-            <a
-              href={GOOGLE_REVIEW_URL}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              to="/review"
               className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-gold-foreground shadow-[var(--shadow-elegant)] transition-all hover:-translate-y-0.5 hover:brightness-110"
             >
               <Star className="h-4 w-4" />
               Write a Review
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </a>
+            </Link>
             <p className="mt-3 text-xs text-muted-foreground">
               Takes less than a minute. No sign-up required.
             </p>

@@ -78,6 +78,12 @@ import {
 } from "@/services/mockApi";
 
 export const Route = createFileRoute("/manage-reviews")({
+  head: () => ({
+    meta: [
+      { name: "robots", content: "noindex, nofollow, noarchive, nosnippet" },
+      { name: "googlebot", content: "noindex, nofollow" },
+    ],
+  }),
   component: ManageReviewsPage,
 });
 
