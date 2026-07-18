@@ -10,6 +10,7 @@ export const NAV = [
   { label: "Treatments", href: "/treatments", path: "/treatments" },
   { label: "Doctor", href: "#doctor", path: "/" },
   { label: "Gallery", href: "#gallery", path: "/" },
+  { label: "Review", href: "#review", path: "/" },
   { label: "Contact", href: "#contact", path: "/" },
 ];
 
@@ -18,7 +19,8 @@ const SECTION_TO_NAV: Record<string, number> = {
   about: 1,
   doctor: 3,
   gallery: 4,
-  contact: 5,
+  review: 5,
+  contact: 6,
 };
 
 function getActiveIndex(pathname: string) {
