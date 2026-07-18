@@ -188,7 +188,7 @@ export async function getHistory(): Promise<HistoryEntry[]> {
       status: string;
       event_type: string;
       event_time: string;
-    }>>("/history");
+    }>>("/history?limit=200");
     return data.map((e) => ({
       id: `R-${String(e.id).padStart(4, "0")}`,
       text: e.review,
@@ -213,7 +213,7 @@ export async function getQueue(): Promise<Review[]> {
       assigned_at: string | null;
       copied_at: string | null;
       created_at: string;
-    }>; total: number }>("/queue");
+    }>; total: number }>("/queue?pageSize=1000");
     return data.items.map((r) => ({
       id: `R-${String(r.id).padStart(4, "0")}`,
       numericId: r.id,

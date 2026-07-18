@@ -142,6 +142,8 @@ export class ReviewDB {
   }
 
   async getHistory(limit: number = 50): Promise<HistoryEntry[]> {
+    const subLimit = limit * 3;
+
     const importHistory = await this.db
       .prepare(
         `SELECT id, review, NULL as assigned_at, NULL as copied_at, status,
@@ -150,7 +152,7 @@ export class ReviewDB {
        ORDER BY created_at DESC
        LIMIT ?`,
       )
-      .bind(limit)
+      .bind(subLimit)
       .all<HistoryEntry>();
 
     const assignHistory = await this.db
@@ -162,7 +164,7 @@ export class ReviewDB {
        ORDER BY assigned_at DESC
        LIMIT ?`,
       )
-      .bind(limit)
+      .bind(subLimit)
       .all<HistoryEntry>();
 
     const copyHistory = await this.db
@@ -174,7 +176,7 @@ export class ReviewDB {
        ORDER BY copied_at DESC
        LIMIT ?`,
       )
-      .bind(limit)
+      .bind(subLimit)
       .all<HistoryEntry>();
 
     const all = [...importHistory.results, ...assignHistory.results, ...copyHistory.results]

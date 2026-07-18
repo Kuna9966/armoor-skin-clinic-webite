@@ -148,8 +148,8 @@ export async function handleApiRoute(
       const pageSize = pageSizeParam ? parseInt(pageSizeParam, 10) : 20;
 
       if (isNaN(page) || page < 1) return error("Invalid page number", 400);
-      if (isNaN(pageSize) || pageSize < 1 || pageSize > 100) {
-        return error("Invalid page size: must be between 1 and 100", 400);
+      if (isNaN(pageSize) || pageSize < 1 || pageSize > 1000) {
+        return error("Invalid page size: must be between 1 and 1000", 400);
       }
 
       const db = getDb();
