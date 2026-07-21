@@ -1,0 +1,5 @@
+brave-browser-release.list
+claude-desktop.list
+google-chrome.sources
+onlyoffice.list
+spotify.list

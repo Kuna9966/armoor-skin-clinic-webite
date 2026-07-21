@@ -1,0 +1,7 @@
+/home/kuna/.nvm/versions/node/v22.23.1/lib
++-- @google/gemini-cli@0.49.0
++-- corepack@0.34.6
++-- npm@10.9.8
++-- uipro-cli@2.2.3
+`-- wrangler@4.112.0
+
